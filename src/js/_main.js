@@ -1,0 +1,811 @@
+/* ========================================================================
+ * DOM-based Routing
+ * Based on http://goo.gl/EUTi53 by Paul Irish
+ *
+ * Only fires on body classes that match. If a body class contains a dash,
+ * replace the dash with an underscore when adding it to the object below.
+ *
+ * .noConflict()
+ * The routing is enclosed within an anonymous function so that you can
+ * always reference jQuery with $, even when in .noConflict() mode.
+ * ======================================================================== */
+(function ($) {
+	// Use this variable to set up the common and page specific functions. If you
+	// rename this variable, you will also need to rename the namespace below.
+	var Sage = {
+		// All pages
+		'common': {
+			init: function () {
+				// JavaScript to be fired on all pages
+
+				paddingHelp();
+				$('.mm').matchHeight();
+
+				pulseSet();
+				fullHero();
+
+
+				$(window).resize(function () {
+					paddingHelp();
+					pulseSet();
+					fullHero();
+
+				})
+
+				function paddingHelp() {
+					if ($(window).width() > 768) {
+
+						$('.page-cta .content').each(function () {
+							var containerWidth = $('.container').outerWidth(),
+								windowWidth = $(window).outerWidth(),
+								remainingPad = (windowWidth - containerWidth),
+								half = (remainingPad / 2);
+							$(this).css('padding-right', half);
+						});
+						$('.content-left .content').each(function () {
+							var containerWidth = $('.container').outerWidth(),
+								windowWidth = $(window).outerWidth(),
+								remainingPad = (windowWidth - containerWidth),
+								half = ((remainingPad / 2));
+
+							if ($('html').hasClass('ie')) {
+
+
+								$(this).css('padding-left', half + 30);
+
+							} else {
+								$(this).css('padding-left', half + 15);
+
+
+							}
+						});
+					}
+				}
+
+				function fullHero() {
+					var fullHeight = $(window).outerHeight(),
+						header = $('header').outerHeight(),
+						contentHeight = $('.home-hero .container').outerHeight(),
+						remaining = ((fullHeight + header) - contentHeight),
+						padding = (remaining / 2);
+
+					if ($('body').hasClass('admin-bar')) {
+						$('.full-menu').css('padding-top', header + 82);
+
+
+					} else {
+
+
+						if ($(window).width() < 415 && $('html').hasClass('orientation_portrait')) {
+
+							$('.full-menu').css('padding-top', header);
+							$('section').first('section').not('.home-hero').css('padding-top', (header + 10));
+							$('footer').css('padding-bottom', ($('.donate-bar').outerHeight() - 20));
+
+
+							//						$('.post-image').css('margin-top', header);
+
+
+						} else if ($(window).width() < 767 && $('html').hasClass('orientation_landscape')) {
+
+							$('.full-menu').css('padding-top', ($('.menu-toggle').outerHeight() + 20));
+							//							$('section').first('section').not('.home-hero').css('padding-top', (header + 10));
+							$('footer').css('padding-bottom', ($('.donate-bar').outerHeight() - 20));
+
+
+						} else {
+
+							$('.home-hero').css('padding-top', padding).css('padding-bottom', padding);
+							$('.full-menu').css('padding-top', header + 50);
+							$('.page-main section').first('section').css('padding-top', (header + 50));
+							$('.post-image').css('margin-top', header);
+						}
+
+
+
+					}
+
+
+				}
+
+				function pulseSet() {
+
+
+					if ($(window).width() < 415 && $('html').hasClass('mobile')) {
+
+
+						var fullheight = $(window).height();
+						var auto = 'auto' + fullheight;
+
+						$('.donate-hero h2').fitText(1);
+						//					$('.page-main .home-hero h2').fitText(1);
+						$('.home .home-hero h2').fitText(.9);
+						$('.invert-header .home-hero h2.clone-shadow, .invert-header .home-hero h2').fitText(3.75);
+						$('.home-play i').fitText(.33);
+						$('.home .home-hero h2').css('background-size', auto);
+						console.log('mobile portrait');
+
+					} else {
+
+						$('.donate-hero h2').fitText(2);
+						$('.home-hero h2').fitText(1.75);
+						$('.page-main .home-hero h2').fitText(4);
+						$('.hidden-xs .home-play i').fitText(.35);
+						$('.visible-xs .home-play i').fitText(1);
+
+					}
+
+
+
+				}
+
+
+
+				$('.page-cta').each(function () {
+
+					var wrapper = $('.over h3'),
+						movethis = $(wrapper).text(),
+						movethis2 = movethis.split(" ").pop(),
+						thisHeight = $(wrapper).outerHeight();
+
+					console.log(movethis2);
+
+					$(wrapper).html($(wrapper).html().split(movethis2).join(""));
+
+					$(this).find('.dupe h3').text(movethis2);
+
+
+
+					$(this).find('.content').css("padding-top", (thisHeight * 3))
+
+				});
+				$('.img-attrib').each(function () {
+
+
+					var width = $(this).prev('img').outerWidth();
+
+					$(this).css('width', width - 20);
+
+				});
+
+				$('a').not('.full-menu ul li a, .home-play, .task-link, .logo').each(function () {
+					if ($('html').not('.mobile')) {
+						var title = $(this).text();
+
+						$(this).attr('title', title);
+					}
+
+
+				});
+
+
+
+
+
+
+
+				$('.gallery').slick({
+					dots: true,
+					infinite: true,
+					speed: 750,
+					autoplay: true,
+					autoplaySpeed: 5000,
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					responsive: [
+
+
+						{
+							breakpoint: 1025,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1
+							}
+							},
+
+						{
+							breakpoint: 414,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1
+							}
+							}
+
+                          ]
+
+				});
+
+
+
+
+
+				//				$('body').css('height', $('body').outerHeight());
+				//
+				//
+				//				$(window).resize(function () {
+				//					$('body').css('height', $('body').outerHeight());
+				//
+				//
+				//				})
+
+			},
+			finalize: function () {
+				// JavaScript to be fired on all pages, after page specific JS is fired
+
+				if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					var $document = $(document),
+						$element = $('body'),
+						className = 'scrolled';
+
+					var headerHeight = ($('.home-hero').outerHeight() - $('header').outerHeight());
+					if ($('.home-hero').length) {
+
+						$document.scroll(function () {
+							$element.toggleClass(className, $document.scrollTop() > headerHeight);
+
+
+						});
+
+
+					} else {
+
+						$document.scroll(function () {
+							$element.toggleClass(className, $document.scrollTop() > $('header').outerHeight());
+
+
+						});
+
+
+
+					}
+				}
+
+
+				$('.home-play').click(function () {
+					//						$('body').removeClass('loaded');
+					$('video').get(0).play();
+
+					$('video').prev('.play-button').velocity("fadeOut", {
+						duration: 250
+					});
+
+					setTimeout(function () {
+
+
+
+						$('body').addClass('modal-open');
+					}, 250);
+
+					$('body').addClass('modal-open');
+
+					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+						var videoPlayer = document.getElementById('home-video_html5_api');
+						videoPlayer.webkitEnterFullscreen();
+						videoPlayer.addEventListener('webkitendfullscreen', function (e) {
+							$('body').removeClass('modal-open');
+
+							setTimeout(function () {
+
+
+
+								$('video').get(0).pause();
+
+							}, 250);
+
+						});
+
+
+					}
+
+
+					return false;
+
+
+				});
+
+
+				function onVideoEnded(event) {
+					var videoPlayer = document.getElementById('home-video_html5_api');
+					videoPlayer.webkitExitFullscreen();
+				}
+
+				function onVideoEnded(event) {
+					var videoPlayer = document.getElementById('video_html5_api');
+					videoPlayer.webkitExitFullscreen();
+				}
+
+
+
+
+				$('.video-modal .close').click(function () {
+					//						$('body').removeClass('loaded');
+					$('body').removeClass('modal-open');
+
+					setTimeout(function () {
+
+
+
+						$('video').get(0).pause();
+
+					}, 250);
+
+
+					return false;
+
+
+				});
+
+				$('.pop-link').click(function (e) {
+
+					e.preventDefault();
+					var poplink = $(this).attr('href');
+					window.open(poplink, 'name', 'height=750,width=880');
+					return false;
+
+				});
+
+				$('.modal-toggle').click(function (e) {
+					//						$('body').removeClass('loaded');
+
+					if ($('body').hasClass('menu-open')) {
+
+						$('body').removeClass('modal-open');
+
+
+					} else {
+
+
+						$('body').addClass('menu-open modal-open');
+
+					}
+
+
+					var target = $(this).attr('href');
+
+					$('.modal').not(target).removeClass('view-modal');
+					$(target).addClass('view-modal');
+
+					if (target == '#contact-modal') {
+
+						$('.video-modal').addClass('poof');
+
+						setTimeout(function () {
+							$('body').addClass('contact-modal-open');
+							$('html, body').animate({
+								scrollTop: $('#returnTop').offset().top
+							}, 0);
+
+
+						}, 500);
+
+
+
+
+
+
+
+					}
+
+
+					return false;
+
+
+				});
+
+				if ($('#featured-image').length) {
+
+
+
+
+
+					// try to create a WebGL canvas (will fail if WebGL isn't supported)
+
+
+					// convert the image to a texture
+
+					var image = document.getElementById('featured-image');
+
+					image.crossOrigin = 'Anonymous';
+					window.onload = function () {
+
+						var canvas = fx.canvas();
+
+						var texture = canvas.texture(image);
+						// apply the ink filter
+						canvas.draw(texture).colorHalftone(320, 239.5, 0.25, 4).update();
+
+						// replace the image with the canvas
+						image.parentNode.insertBefore(canvas, image);
+						image.parentNode.removeChild(image);
+
+						// Note: instead of swapping the &lt;canvas&gt; tag with the &lt;img&gt; tag
+						// as done above, we could have just transferred the contents of
+						// the image directly:
+						//
+						//     image.src = canvas.toDataURL('image/png');
+						//
+						// This has two disadvantages. First, it is much slower, so it
+						// would be a bad idea to do this repeatedly. If you are going
+						// to be repeatedly updating a filter it's much better to use
+						// the &lt;canvas&gt; tag directly. Second, this requires that the
+						// image is hosted on the same domain as the script because
+						// JavaScript has direct access to the image contents. When the
+						// two tags were swapped using the previous method, JavaScript
+						// actually doesn't have access to the image contents and this
+						// does not violate the same origin policy.
+					};
+					image.src = $('#featured-image').attr('src');
+
+				}
+
+
+				$('.mobile-tooltip').on({
+					'touchstart': function () {
+						$(this).fadeOut(300);
+						return false;
+					}
+				});
+
+				//				$('.slick-slider').on({ 'touchstart' : function(){ 
+				//
+				//					$(this).prev('.mobile-tooltip').fadeOut(300);
+				//					return false;
+				//
+				//
+				//				} });
+
+				$('.over-video').click(function () {
+
+
+
+					$(this).find('label').velocity("fadeOut", {
+						duration: 250
+					});
+
+
+
+					return false;
+
+
+				});
+				$('.menu-toggle').click(function () {
+					$('.video-modal').removeClass('poof');
+					$('body').removeClass('modal-open').removeClass('contact-modal-open');
+					$('body').toggleClass('menu-open');
+					$('.full-menu').addClass('transition');
+
+
+
+
+					return false;
+
+
+				});
+				$(".full-menu li a").hover(
+					function () {
+						$('.full-menu').removeClass("transition");
+					}
+				);
+				$("a").not('a[href="#"], .nturl, .modal-toggle, .modal-toggle a').click(function (e) {
+
+
+					var link = $(this).attr('href');
+
+					e.preventDefault();
+					//					$('body').removeClass('loaded');
+
+					//					setTimeout(function () {
+					//					$('.loader').addClass('visible');	
+					//					}, 250);
+					//					setTimeout(function () {
+					//					$('.loader').addClass('animate');	
+					//					}, 500);
+					//					setTimeout(function () {
+					//						$('body').addClass('loaded');
+					//					}, 1500);
+
+
+					//					$('.loader').removeClass('visible');
+					//					$('body').removeClass('loaded');
+
+
+					$('.loader').addClass('once');
+					$('.spinner').css('opacity', '1').css('top', e.clientY).css('left', e.clientX);
+					//										setTimeout(function () {
+					//											$('.loader').css('opacity','1');
+					//										}, 500);
+					setTimeout(function () {
+						window.location.href = link;
+
+					}, 1500);
+					setTimeout(function () {
+						$('.loader').removeClass('once');
+						$('.spinner').css('opacity', '0');
+					}, 2500);
+				});
+
+
+
+
+				if (/iPhone/i.test(navigator.userAgent)) {
+
+
+					//				$('#video_html5_api').click(function () {
+					//
+					//
+					//
+					//
+					//				var videoPlayer = $(this);
+					//				videoPlayer.webkitEnterFullscreen();
+					//				videoPlayer.addEventListener('webkitendfullscreen', function (e) {
+					//
+					//
+					//				});
+					//
+					//
+					//
+					//
+					//				});
+
+					$(window).scroll(function () {
+
+						//					e.preventDefault();
+						//					var touch = e.touches[0];
+						//					alert(touch.pageX + " - " + touch.pageY);
+
+
+						var windowfull = $.windowHeight();
+						var windowHeight = $(window).height(),
+							remaining = windowfull - windowHeight;
+
+						console.log(windowfull);
+						console.log(windowHeight);
+						console.log(remaining);
+
+						//							if (remaining > 1) {
+						//								$('body').addClass('donate-up');
+						//
+						//
+						//							} 
+
+						if (windowfull !== windowHeight) {
+
+							$('body').addClass('donate-up');
+							$('footer').css('padding-bottom', ($('.donate-bar').outerHeight()));
+
+						} else if (remaining == 0) {
+							$('body').removeClass('donate-up');
+
+						}
+
+					});
+					//								   , false);
+
+					//						window.addEventListener( "scroll", function( event ) {
+					//
+					//						
+					//
+					//						
+					//						
+					//						});
+
+
+
+
+
+
+
+
+
+					//						$('.video-js .vjs-tech').click(function(){
+					//							
+					//							var isPlaying = false;
+					//							var player = $(this).parents('.video-js').attr('id');
+					//
+					//							player.on(['waiting', 'pause'], function() {
+					//							isPlaying = false;
+					//							});
+					//
+					//							player.on('playing', function() {
+					//							isPlaying = true;
+					//							});
+					//							
+					//							if(isPlaying = true) {
+					//								
+					//								
+					//								player.pause();
+					//								
+					//							}
+					//							
+					//							
+					//						});
+
+
+				}
+
+
+				//					$('.reveal').velocity("fadeOut", {
+				//						delay: 1500,
+				//						duration: 300
+				//					});
+				//					$('.reveal').velocity({opacity:0}, {
+				//						
+				//						delay: 1500,
+				//						duration: 500
+				//						
+				//						
+				//					});
+				//					$('.reveal-layer').velocity({
+				//						
+				//						translateZ: 0, // Force HA by animating a 3D property
+				//						translateX: "-50%",
+				//						translateY: "-2%",
+				//						opacity: 1
+				//					
+				//					},
+				//						{
+				//						delay: 1000,
+				//						 duration: 1300
+				//						
+				//						}					   
+				//											   );
+
+
+
+				//					var size = $('.about-main h2').css('font-size');
+				//					$('.clone-shadow').css('font-size', size);
+
+
+				$(window).resize(function () {
+					if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+						stellarinit();
+					}
+				});
+
+				if (/iPhone/i.test(navigator.userAgent)) {
+
+					$(document).ready(function () {
+
+
+
+						setTimeout(function () {
+							$('.loader').addClass('animate visible');
+						}, 200);
+
+						setTimeout(function () {
+							$('body').addClass('loaded');
+						}, 1500);
+
+
+
+						if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+							stellarinit();
+						}
+
+
+					});
+				} else {
+					$(window).load(function () {
+
+
+
+						setTimeout(function () {
+							$('.loader').addClass('animate visible');
+						}, 200);
+
+						setTimeout(function () {
+							$('body').addClass('loaded');
+						}, 1500);
+
+
+
+						if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+							stellarinit();
+						}
+
+
+					});
+
+
+				}
+
+				if ($('html').hasClass('ie')) {
+
+					$('.parallax-container img').each(function () {
+
+
+						var img = $(this).attr('src');
+
+
+						$(this).parent('div').css('backgroundImage', 'url(' + img + ')').addClass('ie-polyfill');
+
+
+
+					})
+
+
+				}
+
+				function stellarinit() {
+					$(window).stellar({
+
+
+						horizontalScrolling: false,
+						verticalScrolling: true,
+
+						// Set the global alignment offsets
+						horizontalOffset: 0,
+						verticalOffset: 240,
+
+						// Refreshes parallax content on window load and resize
+						responsive: true,
+
+						// Select which property is used to calculate scroll.
+						// Choose 'scroll', 'position', 'margin' or 'transform',
+						// or write your own 'scrollProperty' plugin.
+						scrollProperty: 'scroll',
+
+						// Select which property is used to position elements.
+						// Choose between 'position' or 'transform',
+						// or write your own 'positionProperty' plugin.
+						positionProperty: 'transform',
+
+						// Enable or disable the two types of parallax
+						parallaxBackgrounds: false,
+						parallaxElements: true,
+
+						// Hide parallax elements that move outside the viewport
+						hideDistantElements: false,
+						//				responsive: true,	
+					});
+				}
+
+			}
+		}, // Home page
+		'home': {
+			init: function () {
+				// JavaScript to be fired on the home page
+
+
+			},
+			finalize: function () {
+				// JavaScript to be fired on the home page, after the init JS
+
+
+			}
+		}, // About us page, note the change from about-us to about_us.
+		'about_us': {
+			init: function () {
+				// JavaScript to be fired on the about us page
+			}
+		}
+	};
+	// The routing fires all common scripts, followed by the page specific scripts.
+	// Add additional events for more control over timing e.g. a finalize event
+	var UTIL = {
+		fire: function (func, funcname, args) {
+			var fire;
+			var namespace = Sage;
+			funcname = (funcname === undefined) ? 'init' : funcname;
+			fire = func !== '';
+			fire = fire && namespace[func];
+			fire = fire && typeof namespace[func][funcname] === 'function';
+			if (fire) {
+				namespace[func][funcname](args);
+			}
+		},
+		loadEvents: function () {
+			// Fire common init JS
+			UTIL.fire('common');
+			// Fire page-specific init JS, and then finalize JS
+			$.each(document.body.className.replace(/-/g, '_').split(/\s+/), function (i, classnm) {
+				UTIL.fire(classnm);
+				UTIL.fire(classnm, 'finalize');
+			});
+			// Fire common finalize JS
+			UTIL.fire('common', 'finalize');
+		}
+	};
+	// Load Events
+	$(document).ready(UTIL.loadEvents);
+})(jQuery); // Fully reference jQuery after this point.

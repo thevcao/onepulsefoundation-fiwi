@@ -1,0 +1,51 @@
+// Smores Starter kit
+// findsomewinmore
+// Licensed under MIT Open Source
+// Make sure the charset is set appropriately
+@charset 'UTF-8';
+// This is based on the 7-1 Pattern. For more info:
+// http://sass-guidelin.es/#the-7-1-pattern
+// Base
+@import 'base/variables',
+'vendor/normalize',
+//  'vendor/foundation', //Foundation
+'vendor/grid', //Bootstrap Grid
+'vendor/video-js',
+'base/fonts',
+'base/typography',
+'base/flaticon',
+'vendor/slick',
+'vendor/slick-theme';
+// Layout 
+@import 
+'parts/reveal',	
+'layout/header',
+'layout/nav',
+'layout/footer',
+'layout/main',
+'layout/buttons',
+'parts/home',
+'parts/cta',
+'parts/parallax',
+'parts/gallery',
+'parts/modal',
+'parts/videojs',
+'parts/task',
+'parts/contact',
+'page/about',
+'page/posts',
+'page/member',
+'page/donate',
+'parts/float';
+
+
+// Components
+//  @import 
+//    'components/name';
+// Utils
+@import 'utils/mixins',
+'utils/helpers',
+'utils/qa';
+// Vendor
+@import 'vendor/animate';
+@import 'shame';

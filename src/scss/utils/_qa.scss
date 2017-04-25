@@ -1,0 +1,248 @@
+.development img:not([alt]),
+.development img[alt=''] {
+	position: relative;
+	border: solid 5px;
+	-webkit-animation: pulse 1s linear infinite;
+	-moz-animation: pulse 1s linear infinite;
+	-ms-animation: pulse 1s linear infinite;
+	animation: pulse 1s linear infinite;
+}
+@keyframes "pulse" {
+	0% {
+		border-color: rgba(165, 25, 25, 1);
+	}
+	90% {
+		border-color: rgba(255, 0, 0, 0.0);
+	}
+	100% {
+		border-color: rgba(255, 0, 0, 1.0);
+	}
+}
+@-webkit-keyframes "pulse" {
+	0% {
+		border-color: rgba(165, 25, 25, 1);
+	}
+	90% {
+		border-color: rgba(255, 0, 0, 0.0);
+	}
+	100% {
+		border-color: rgba(255, 0, 0, 1.0);
+	}
+}
+.firefox {
+	h1,
+	h2,
+	:before,
+	.home-play span {
+		background-attachment: scroll !important;
+		background-size: 100vw 100vh !important;
+		background-position: 50% !important;
+	}
+	
+	.home-hero .home-play i::after, .home-hero .home-play span span::after, .home-hero .home-play span:before {
+		
+		background-attachment: scroll !important;
+		background-size: 100vw 100vh !important;
+		opacity: .8;
+		
+	}
+	
+	.home-hero .home-play span span::after, .home-hero .home-play span:before {
+		
+//		content: none;
+	}
+}
+.ie {
+	h1,
+	h2,
+	:before,
+	.home-play span {
+		background: none !important;
+	}
+	.home-hero .home-play i:after,
+	.home-hero .home-play span:before,
+	.home-hero .home-play span span:after {
+		content: none !important;
+		background: none !important;
+	}
+	.home-hero .home-play span {
+		background: none !important;
+	}
+	.home .home-hero h2 {
+		
+		opacity: 0;
+	}
+	
+	.home .home-hero {
+		
+		background-image: url(../../dist/img/hero-ie.svg);
+		background-size: cover;
+		background-position: 50% 0%;
+		background-repeat: no-repeat;
+	
+	}
+	
+	.clip {
+		
+		background: none !important;
+		
+		&.red {
+			color: $r;
+		}
+		&.orange {
+			color: $o;
+		}
+		&.green {
+			color: $g;
+		}
+		&.blue {
+			color: $b;
+		}
+		&.purple {
+			color: $p;
+		}	
+	
+	}
+	.task-link {
+		span {
+			background: none !important;
+		}
+		&.red span {
+			color: $r;
+		}
+		&.orange span {
+			color: $o;
+		}
+		&.green span {
+			color: $g;
+		}
+		&.blue span {
+			color: $b;
+		}
+		&.purple span {
+			color: $p;
+		}
+	}
+	a {
+		&:not(.home-play, .task-link, .close) {}
+		&:not(.home-play, .task-link):before {
+			//		color: $r;
+			//		background: none !important;
+			//		animation: animation-ie 10s ease infinite both;
+			content: none !important;
+			opacity: 0 !important;
+		}
+		&:not(.home-play, .task-link):hover:before {
+			//		opacity: 0;
+		}
+		&:not(.home-play, .task-link):hover {
+			//		color: $r;
+			//		animation: animation-ie 10s ease infinite both;
+			color: white;
+		}
+	}
+	.main-header .menu-container li a:before,
+	.full-menu h4 a:before {
+		content: none !important;
+		opacity: 0 !important;
+	}
+	.main-header .menu-container li a:hover,
+	.full-menu h4 a:hover {
+		color: $r;
+		animation: animation-ie 10s ease infinite both;
+	}
+	.page-main .home-hero h2.clone-shadow,
+	.invert-header .home-hero h2.clone-shadow {
+		display: none;
+	}
+	.page-main .home-hero h2 {
+		background: none;
+		color: white;
+		opacity: .8;
+	}
+	.invert-header .main-header svg path,
+	.page-id-12 .main-header svg path,
+	.invert-header .main-header svg polygon,
+	.page-id-12 .main-header svg polygon,
+	.invert-header .main-header svg rect,
+	.page-id-12 .main-header svg rect {
+		fill: white;
+	}
+	
+	.over.clipped.btn {
+		
+		background: none;
+		color: black;
+	
+}
+}
+.maxw_767.orientation_portrait:not(.mobile) {
+	.home-hero .home-play {
+		text-align: center;
+		i:after {
+			left: 0;
+			top: auto;
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+
+.android {
+	
+	
+.home-hero .home-play i:before, .home-hero .home-play i:after, .home-hero .home-play span:before, .home-hero .home-play span span:after, .mobile-links ul li a span, .donate-bar.visible-xs, .mobile-links ul li a:before, .clip, .home-hero .home-play i:after 
+	
+	{
+	
+	animation: none;
+	background-attachment: scroll;
+	}	
+	
+	
+	.home-play span, .home-hero .home-play i::after, .home-hero .home-play span span::after, .home-hero .home-play span:before, .home-hero h2 {
+		background-attachment: scroll !important;
+		background-size: auto 100vh !important;
+		background-position: 50% !important;
+	}
+	
+}
+@media(max-width: 414px) {
+	.translated-ltr {
+		.home .home-hero h2 {
+			font-size: 23vw !important;
+		}
+		a.home-play.visible-xs {
+			top: 0;
+		}
+		a.home-play.visible-xs i {
+			font-size: 21vw !important;
+		}
+		.mobile-cta .btn.clipped {
+			//			padding: 13 20px;
+			-webkit-text-fill-color: black;
+			font-size: 4vw;
+			i {
+				margin-left: 5px;
+			}
+		}
+		.mobile-cta .btn.clipped:before {
+			content: none !important;
+		}
+		.invert-header.menu-open .full-menu * {
+			color: black;
+		}
+	}
+}
+
+.ie-polyfill {
+	
+	background-size: cover;
+	background-position: 50%;
+	
+	img {
+		
+		opacity: 0;
+		pointer-events: none;
+	}
+}

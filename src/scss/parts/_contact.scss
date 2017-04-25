@@ -1,0 +1,96 @@
+.contact-form {
+	form {
+		pointer-events: all;
+	}
+	input.wpcf7-form-control {
+		width: 95%;
+		padding: 20px 5px 5px;
+		margin-bottom: 10px;
+		border: none;
+		border-bottom: 3px solid #EEE;
+		font-size: 14px;
+		outline: none;
+		transition: all .3s ease;
+		-webkit-border-radius: 0;
+	}
+	textarea.wpcf7-form-control {
+		padding: 20px 5px 5px;
+		width: 95%;
+		border: none;
+		border-bottom: 3px solid #eee;
+		margin-bottom: 10px;
+		font-size: 14px;
+		outline: none;
+		transition: all .3s ease;
+	}
+	.wpcf7-form-control:active,
+	.wpcf7-form-control:focus {
+		border-bottom-color: black;
+	}
+	input.wpcf7-form-control.wpcf7-submit.btn {
+		padding: 10px;
+		font-size: 22px;
+		background: #fff;
+		border: 3px solid #000;
+		color: #000;
+		outline: none;
+		transition: all .3s ease;
+		margin: 10px 20px 10px auto;
+		border-radius: 100px;
+	}
+	input.wpcf7-form-control.wpcf7-submit.btn:hover {
+		background: black;
+		color: white;
+	}
+	.contact-info p {
+		line-height: 1.5;
+		span {
+			font-weight: bold;
+		}
+	}
+}
+span.wpcf7-not-valid-tip {
+	font-size: 10px;
+	position: absolute;
+	width: 100px;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	margin-top: -10px;
+	text-align: right;
+	opacity: .5;
+}
+.contact-form input.wpcf7-form-control.wpcf7-not-valid {
+	border-color: rgba(233, 30, 99, 0.69);
+}
+.wpcf7-response-output {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
+	animation: donateanimate 3s alternate linear infinite;
+	background-size: 500%;
+	color: #fff;
+	border: none !important;
+	margin: 0 !important;
+	text-align: center;
+	font-weight: bold;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+	.contact-form.pb120 {
+		padding-bottom: 32px;
+	}
+}
+@media (max-width:414px) {
+	.page-id-20 .contact-form.pb120.hidden-xs {
+		display: block !important;
+	}
+	.page-id-20 .mobile-cta {
+		display: none !important
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {}
