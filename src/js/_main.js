@@ -17,12 +17,16 @@
 		'common': {
 			init: function () {
 				// JavaScript to be fired on all pages
-
+				$(window).load(function(){
+					
 				paddingHelp();
 				$('.mm').matchHeight();
 
 				pulseSet();
 				fullHero();
+					
+				});
+
 
 
 				$(window).resize(function () {
@@ -91,7 +95,7 @@
 					} else {
 
 
-						if ($(window).width() < 415 && $('html').hasClass('orientation_portrait')) {
+						if ($('html').hasClass('orientation_portrait') && $('html').hasClass('mobile')) {
 
 							$('.full-menu').css('padding-top', header);
 							$('section').first('section').not('.home-hero').css('padding-top', (header + 10));
@@ -101,7 +105,7 @@
 							//						$('.post-image').css('margin-top', header);
 
 
-						} else if ($(window).width() < 767 && $('html').hasClass('orientation_landscape')) {
+						} else if ($('html').hasClass('orientation_landscape') && $('html').hasClass('mobile')) {
 
 							$('.full-menu').css('padding-top', ($('.menu-toggle').outerHeight() + 20));
 							//							$('section').first('section').not('.home-hero').css('padding-top', (header + 10));
