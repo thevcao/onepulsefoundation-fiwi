@@ -817,7 +817,7 @@
 									setTimeout(function () {
 
 										$('body').addClass('loaded');
-									}, 2000);
+									}, 1700);
 
 
 								})
