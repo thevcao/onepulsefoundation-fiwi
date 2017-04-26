@@ -312,6 +312,15 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {}
 @media (max-width:414px) {
 	
+	
+	
+.loader.intro .spinner {
+    width: 25vw;
+    height: 25vw;
+    top: 35%;
+}
+	
+	
 .quote .quote-container p,.quote .quote-container p.sig {
     width: 80%;
     font-size: 3vw;

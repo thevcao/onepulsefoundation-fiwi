@@ -96,6 +96,12 @@
 			background: black;
 			color: white;
 			
+			i {
+				
+				
+				
+			}
+			
 		}
 	}
 }
@@ -154,6 +160,12 @@
 	}
 }
 @media (max-width:414px) {
+	
+	.socials.shares li a i {
+		
+		line-height: 1.5;
+		
+	}
 	.post-body .post-image .row {
 		margin: 0;
 	}

@@ -39,9 +39,7 @@
 							</video>
 							<?php echo '<label class="img-attrib">' . $poster['caption'] . '</label>';?>
 						</div>
-						<?php endif;?>
-						
-						<?php if($ext_source == 'youtube'): ?>
+						<?php elseif($ext_source == 'youtube'): ?>
 						<div class="over-video">
 						<label>
 							<span>Video</span>
@@ -50,8 +48,7 @@
 							<video id='video' class='video-js vjs-sublime-skin' playsinline controls poster="<?php echo $poster['sizes']['large'];?>" preload='none' width='100%' height='800' data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "<?php echo $url;?>" }]}'></video>
 							<?php echo '<label class="img-attrib">' . $poster['caption'] . '</label>';?>
 						</div>
-						<?php endif;?>
-						<?php if($ext_source == 'vimeo'): ?>
+						<?php elseif($ext_source == 'vimeo'): ?>
 							<div class="over-video">
 						<label>
 							<span>Video</span>
