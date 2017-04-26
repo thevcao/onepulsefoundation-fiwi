@@ -66,9 +66,8 @@ endif;
 
     ?>
 
-	<script src="http://vjs.zencdn.net/5.19.1/video.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs-youtube.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs-vimeo.js"></script>
+
+<script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs.js"></script>
 
 <?php  $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner' ); $url = $thumb['0']; ?>
 <?php if( has_post_thumbnail()): echo '<style> .loader, .donate-hero h2 { background-image:url('. $url .');}</style>'; endif;?>
@@ -119,9 +118,8 @@ endif;
 	<div class="land-notice"></div>
 	<div class="reveal"></div>
         <div class="loader">
-            <div class="spinner">
-
-            </div>
+            <div class="spinner"></div>
+<?php if(is_page(7)): echo '<div class="quote"><div class="quote-container"><p>Darkness cannot drive out darkness: only light can do that.<br>Hate cannot drive out hate: only love can do that.</p><p class="sig">- Dr. Martin Luther King, Jr</p></div></div>'; endif;?>			
 			<?php if (!$homeHero['caption'] == null && is_page('home')): echo '<label class="img-attrib">' . $homeHero['caption'] . '</label>'; endif; ?>
 			
 				<?php // check if the flexible content field has rows of data

@@ -90,9 +90,20 @@
 
 							<div class="col-md-8">
 								<h1><span><?php echo get_the_date();?></span><?php echo get_the_title();?></h1>
-
+								<h4 class="text-left mb8">Share this</h4>
+								<ul class="socials shares">
+									<li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://twitter.com/home?status=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="https://plus.google.com/share?url=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+								</ul>
 
 								<?php the_content();?>
+								
+								<?php $pr = get_field('include_pr_snippet'); if(!$pr == null):?>
+								<h3>About onePULSE Foundation</h3>
+								<?php the_field('about_info');?>
+								<?php endif;?>
 
 							</div>
 
@@ -109,7 +120,7 @@
 							<?php if($source == 'File'): ?>
 									<a href="<?php echo $video; ?>" class="btn mt16" download>Download Video </a>
 									
-									<?php endif;?>
+									<?php else:?>
 									
 									<?php if($ext_source == 'youtube'): ?>
 									<a href="<?php echo $url;?>" class="btn mt16 pop-link">View on YouTube </a>
@@ -117,6 +128,9 @@
 									<?php if($ext_source == 'vimeo'): ?>
 									<a href="<?php echo $url;?>" class="btn mt16 pop-link">View on Vimeo </a>
 									<?php endif;?>
+									<?php endif;?>
+									
+									
 								</div>
 
 							</div>

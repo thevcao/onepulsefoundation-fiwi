@@ -206,6 +206,12 @@
 		background-position: 50% !important;
 	}
 	
+	
+	.main-header .menu-container .menu-toggle span:before {
+		
+		opacity: 0 !important;
+	}
+	
 }
 @media(max-width: 414px) {
 	.translated-ltr {

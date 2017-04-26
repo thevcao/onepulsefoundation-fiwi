@@ -221,8 +221,19 @@
 <div class="copy">
 	<div class="container">
 		<div class="row">
+
+		<div class="col-md-4 col-md-offset-8">
+		
+			<ul class="socials">
+				<li><a href="http://www.facebook.com/onepulseorg" class="pop-link"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="http://www.twitter.com/onepulseorg" class="pop-link"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://www.instagram.com/onepulseorg/" class="pop-link"><i class="fa fa-instagram"></i></a></li>
+			</ul>
+		</div>
+			</div>
+		<div class="row">
 		<div class="col-md-8">
-			<p>&copy; <?php echo date("Y"); ?> onePULSE Foundation <span class="hidden-xs">•</span><br class="visible-xs"> 1912 S Orange Ave, Orlando, FL 32806 • (407) 649-3888</p></div>
+			<p>&copy; <?php echo date("Y"); ?> onePULSE Foundation</div>
 		<div class="col-md-4">
 		<img src="<?php echo get_template_directory_uri(); ?>/dist/img/FIWI-classic-website-by-white.svg" class="fiwi">
 		</div>

@@ -87,7 +87,7 @@ foreach( $images as $image ): ?>
 </section>
 
 
-		<section class="home-about pt120 pt-sm-0 pt-xs-16 hidden-xs">
+		<section class="home-about pt120 pb120 pt-sm-0 pt-xs-16 hidden-xs">
 			<div class="container"> 
 
 				
@@ -95,9 +95,9 @@ foreach( $images as $image ): ?>
 					<div class="col-md-5">
 						<h2>About onePULSE Foundation Memorial</h2>
 	
-						<p>The onePULSE Foundation is the only official 501(c)(3) incorporated by the owners of Pulse Nightclub. onePULSE Foundation’s initial focused mission is to provide financial assistance to victims affected by the attack at Pulse Nightclub. It will also contribute to the creation of a permanent memorial at the existing site of Pulse Nightclub providing a sanctuary of hope dedicated to the lives affected and taken by the tragedy in Orlando, FL. on 06/12/2016.</p>
+						<p>The onePULSE Foundation is a 501(c)(3) incorporated by the owners of Pulse Nightclub. The onePULSE Foundation was established to create a sanctuary of hope following the tragic day in American history – Sunday, June 12, 2016 – to honor the 49 lives that were taken, the 68 others who were injured and the countless first responders and healthcare professionals who treated them.</p>
 
-						<p>The onePULSE Foundation is the only official 501(c)(3) incorporated by the owners of Pulse Nightclub. onePULSE Foundation’s initial focused mission is to provide financial assistance to victims affected by the attack at Pulse Nightclub. </p>
+						<p>This fund is intended to support construction and maintenance of the memorial, community grants to care for the survivors and victims’ families, endowed scholarships for each of the 49 angels, and ultimately a museum showcasing historic artifacts and stories from the event. All donations will be used for the construction and operation of the official memorial and museum, community grants and educational scholarships. This is a defining mission and healing initiative that we hope inspires supporters who share our vision and understand the sacred responsibility to which we have been entrusted.</p>
 						<div class="mt32"></div>
 						<a href="<?php the_permalink(12);?>" class="btn left">Learn More</a>
 					</div>

@@ -42,7 +42,13 @@
 					<div class="col-md-5">
 						<h1>Support onePULSE Foundation with a fully tax-deductible contribution</h1>
 
-
+								<h4 class="text-left mb8">Share this</h4>
+								<ul class="socials shares">
+									<li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://twitter.com/home?status=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="https://plus.google.com/share?url=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+								</ul>
 
 						<div class="hidden-sm"><?php the_content();?></div>
 

@@ -115,8 +115,8 @@
 					&:hover span:before {
 						opacity: 1;
 					}
-					&:hover span {
-						background: transparent;
+					&:hover span, span:hover:nth-child(2) {
+						background: transparent !important;
 					}
 					span:nth-child(1) {
 						transform: translateX(15px) translateZ(0);
@@ -356,7 +356,7 @@
 						opacity: 1;
 					}
 					&:hover {
-						color: rgba(0, 0, 0, 0);
+						color: rgba(0, 0, 0, 0) !important;
 					}
 				}
 			}

@@ -152,6 +152,8 @@
 			background-size: auto 100vh;
 			//		background-attachment: scroll;
 			padding-right: 10vw;
+			width: 100%;
+			display: block; 
 		}
 	}
 	a.home-play.visible-xs {
@@ -269,10 +271,17 @@
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
 	.home-hero .home-play i:after {
-		top: auto;
+		top: 0;
 		left: 0;
 		text-align: center;
 		width: 100%;
+	}
+	
+	.home-hero .home-play {
+		    width: 25vw;
+    margin: 0 auto;
+		position: relative;
+		
 	}
 	.home-hero .home-play i {
 		text-align: center;
