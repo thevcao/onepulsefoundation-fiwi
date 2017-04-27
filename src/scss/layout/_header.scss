@@ -865,6 +865,13 @@
 					}
 				}
 			}
+			.main-header .menu-container .menu-toggle:hover span {
+					background: black !important;
+				}
+			.menu-open .main-header .menu-toggle:hover span {
+				
+				background: transparent !important;
+			}
 			.menu-container .es.Spanish.single-language:after {
 				filter: invert(0);
 			}
