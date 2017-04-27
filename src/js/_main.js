@@ -520,7 +520,13 @@
 					$('body').toggleClass('menu-open');
 					$('.full-menu').addClass('transition');
 
-
+					if (/iPhone/i.test(navigator.userAgent) && $('body').hasClass('contact-modal-open')) {
+					   
+					   
+					  	pulseSet();
+ 
+					   
+					   }
 
 
 					return false;
