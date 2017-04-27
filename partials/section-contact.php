@@ -28,7 +28,7 @@
 
 				<div class="contact-info">
 				<h3>onePULSE Foundation</h3>
-				<p class="mt0 mb16">1912 South Orange Avenue<br>Orlando, FL 32806</p>
+				<!--<p class="mt0 mb16">1912 South Orange Avenue<br>Orlando, FL 32806</p>-->
 				<p class="mt0 mb0"><span>office</span> <a href="tel":><?php the_field('contact_office','options');?></a></p>	
 				<p class="mt0 mb16"><span>email</span> <a href="mailto:info@onePULSEFoundation.org">info@onePULSEFoundation.org</a></p>
 				<p class="mt0 mb8">For all media inquires please contact:</p>
