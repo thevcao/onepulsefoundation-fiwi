@@ -152,7 +152,7 @@
 					line-height: 1.1;
 				}
 				.single-language:before {
-									margin-top: 2px;
+									margin-top: 1px;
 				}
 				.en.English.single-language:after {
 					content: '';
@@ -266,6 +266,13 @@
 					}
 				}
 			}
+			
+			.home-hero h2 span {
+				margin-bottom: -.75em;
+				margin-top: .25em;
+				opacity: .5;
+				-webkit-text-fill-color: white;
+			}			
 		}
 		.scrolled {
 			.main-header {
