@@ -720,8 +720,24 @@
 	.mb80 {
 		margin-bottom: 20px;
 	}
+section.home-hero.pt240.pt-xs-64 {
+    padding-bottom: 120px;
+}	
+	
+	.full-menu {
+    padding-top: 120px !important;
+}
+	
+	.socials li a i {
+    line-height: 1.75;
+}
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+	
+	.socials li a i {
+    line-height: 1.75;
+}
+	
 	.hidden-ls-pt {
 		display: none;
 	}
@@ -739,12 +755,22 @@
 	.visible-tab-pt {
 		display: block !important;
 	}
-}
-@media (max-width:414px) {
 	
+section.home-about.pt120.pb120.pt-sm-0.pt-xs-16.hidden-xs {
+    padding-bottom: 0;
+}
+	
+	section.home-hero.pt240.pt-xs-64 {
+    padding-bottom: 240px;
+}
+}
+@media (max-width:768px) {
+		html:not(.ipad) {
+
 	.p-xs-0 {
 		
 		padding: 0;
+	}
 	}
 	
 }

@@ -813,4 +813,8 @@ add_action( 'init', 'register_my_menu' );
 add_image_size( 'banner',1800,9999999999999 );
 
 
-
+//
+//add_action( 'after_setup_theme', 'woocommerce_support' );
+//function woocommerce_support() {
+//    add_theme_support( 'woocommerce' );
+//}

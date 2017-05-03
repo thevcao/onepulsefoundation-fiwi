@@ -30,16 +30,17 @@
 //			pointer-events: none;
 //		}
 		.vjs-tech {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			min-width: 100%;
-			min-height: 100%;
-			width: auto;
-			height: auto;
-			transform: translateX(-50%) translateY(-50%);
-			border: none;
+//			position: absolute;
+//			top: 50%;
+//			left: 50%;
+//			min-width: 100%;
+//			min-height: 100%;
+//			width: auto;
+//			height: auto;
+//			transform: translateX(-50%) translateY(-50%);
+//			border: none;
 			pointer-events: none;
+			background: black;
 		}
 		.vjs-big-play-button {
 			pointer-events: none;
@@ -155,6 +156,7 @@ $center-big-play-button: true; // true default
 	border: 0;
 	/* 0.3em = 9px default */
 	border-radius: 0.3em;
+	background-color: transparent !important;
 	@if $center-big-play-button {
 		/* Align center */
 		left: 25%;
@@ -245,6 +247,7 @@ $slider-bg-color: lighten($primary-background-color, 33%);
 }
 .vjs-sublime-skin:hover .vjs-big-play-button {
 	background-color: transparent;
+	outline: none;
 }
 .vjs-sublime-skin .vjs-fullscreen-control:before,
 .vjs-sublime-skin.vjs-fullscreen .vjs-fullscreen-control:before {
@@ -398,7 +401,9 @@ and (orientation : portrait) {
 
 }
 
-@media (max-width:414px) {
+@media (max-width:768px) {
+		html:not(.ipad) {
+
     	.video-modal .video-js .vjs-tech {
 		top: auto;
 		left: auto;
@@ -409,6 +414,7 @@ and (orientation : portrait) {
     .vjs-controls-disabled .vjs-big-play-button, .vjs-has-started .vjs-big-play-button, .vjs-using-native-controls .vjs-big-play-button, .vjs-error .vjs-big-play-button {
     pointer-events: all;
 }
+	}
     
 }
 

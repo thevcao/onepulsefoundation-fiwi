@@ -22,7 +22,7 @@
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="description" content="<?php bloginfo('description') ?>" />
-  <meta name="author" content="Findsome &amp; Winmore" />
+
   <meta name="google-site-verification" content="" />
   <meta name="Copyright" content="<?php echo date('Y'); ?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
@@ -69,19 +69,19 @@ endif;
 
 <script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs.js"></script>
 
-<?php  $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner' ); $url = $thumb['0']; ?>
-<?php if( has_post_thumbnail()): echo '<style> .loader, .donate-hero h2 { background-image:url('. $url .');}</style>'; endif;?>
-<?php //if (get_field('banner')): $banner = get_field('banner'); 
+<?php  $featbanner = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner' ); $featurl = $featbanner['0']; ?>
+<?php if( has_post_thumbnail()): echo '<style> .loader, .donate-hero h2 { background-image:url('. $featurl .');}</style>'; endif;?>
+<?php if (get_field('banner')): $banner = get_field('banner'); 
 	
-	//echo '<style> .reveal { background-image:url('. $banner['sizes']['banner'] .');}</style>' ;
+	echo '<meta property="og:image" content="'. $banner['sizes']['large'] .'" />';
 	
-	//endif;
+	endif;
 	
-	//if(get_field('video_poster')): $poster = get_field('video_poster'); 
+	if(get_field('video_poster')): $banner = get_field('video_poster'); 
 	
-	//echo '<style> .reveal { background-image:url('. $poster['sizes']['banner'] .');}</style>' ; 
+	echo '<meta property="og:image" content="'. $banner['sizes']['large'] .'" />';
 	
-	//endif; ?>	
+	endif;  wp_reset_postdata();?>
 	
 	
 	<?php // check if the flexible content field has rows of data
@@ -93,15 +93,15 @@ if( have_rows('section') ):
         if( get_row_layout() == 'large_hero' ):
 			$image = get_sub_field('hero_image'); 
         	echo '<style>.loader, .page-main .home-hero h2, .page-main .home-hero h2.clone-shadow, .page-main .home-hero {background-image:url('. $image['sizes']['banner'] .')</style>';
+			echo '<meta property="og:image" content="'. $image['sizes']['large'] .'" />';
 
 		endif;
 
 
     endwhile;
 
-endif;
+endif; wp_reset_postdata();?>
 
-?>
 <?php if (get_field('home_hero', 'options')): 
 	
 	$homeHero = get_field('home_hero', 'options');  
@@ -110,8 +110,14 @@ endif;
 	
 	echo '<style> .home .loader, .home .home-hero h2, .home .home-hero .home-play i:before, .home .home-hero .home-play span, .home .home-hero .home-play span span { background-image:url('. $homeHero['sizes']['banner'] .');} .mobile-cta, .mobile-cta.clipped:before {background-image:url('. $mobileCTA['sizes']['large'] .');} .donate-hero h2, .page-template-donate .loader {background-image:url('. $donateImage['sizes']['banner'] .');}
 	</style>' ;
+	if(is_page('home')):
+	echo '<meta property="og:image" content="'. $homeHero['sizes']['large'] .'" />';
+	endif;
+	if(is_page('donate')):
+	echo '<meta property="og:image" content="'. $donateImage['sizes']['large'] .'" />';
+	endif;
 	
-	endif;?>
+	endif; wp_reset_postdata();?>
 </head>
 	
 <body <?php if(get_field('invert_header')): body_class('invert-header'); else: body_class(); endif; ?>>

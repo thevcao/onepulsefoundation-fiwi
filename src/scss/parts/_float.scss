@@ -68,20 +68,26 @@ and (orientation : portrait) {
 		margin-left: 45%;
 		margin-top: -50%;
 		margin-bottom: 10%;
+		width: 100%;
 	}
 	.home-about .img-parallax.float-over {
 		height: 200px;
 	}
-	
+	.parallax-container .img-attrib {
+    left: auto;
+    display: none;
+}
 
 }
 
-@media (max-width:414px) {
-    
+@media (max-width:768px) {
+    	html:not(.ipad) {
+
 	.home-about .video-container .img-attrib {
 		
 		left: 25px;
 		bottom: 8px;
+	}
 	}
     
 }

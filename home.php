@@ -21,12 +21,23 @@
 
 <div class="main-wrapper">
 <div class="video-modal">
-
+<?php 
+	$source = get_field('main_video_source', 'options');
+	$ext_source = get_field('video_type', 'options');
 	
+	;?>
+	<?php if($source == 'File'): ?>
   <video id="home-video" class="video-js vjs-sublime-skin" playsinline controls preload="none" width="100%" height="800"
-  poster="<?php echo get_template_directory_uri(); ?>/dist/img/video-poster.jpg" data-setup="{}">
+  poster="<?php echo get_template_directory_uri(); ?>/dist/img/video-poster.jpg" data-setup='{"ga": {"eventsToTrack": ["play"]}}'>
     <source src="<?php the_field('main_video','options');?>" type='video/mp4'>
   </video>	
+	<?php elseif($ext_source == 'youtube'): ?>
+<video id='home-video' class='video-js vjs-sublime-skin' playsinline controls poster="<?php echo get_template_directory_uri(); ?>/dist/img/video-poster.jpg" preload='none' width='100%' height='800' data-setup='{ "ga": {"eventsToTrack": ["play"]}, "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "<?php the_field('ext_main_video','options');?>" }]}'></video>
+	
+	<?php elseif($ext_source == 'vimeo'): ?>
+	<video id='home-video' class='video-js vjs-sublime-skin' playsinline controls poster="<?php echo get_template_directory_uri(); ?>/dist/img/video-poster.jpg" preload='none' width='100%' height='800' data-setup='{ "ga": {"eventsToTrack": ["play"]}, "techOrder": ["vimeo"], "sources": [{ "type": "video/vimeo", "src": "<?php the_field('ext_main_video','options');?>" }], "vimeo": { "ytControls": 2 }}'></video>		
+	
+	<?php endif;?>		
 	<a href="#" class="close"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/close.svg"></a>
 </div>
 
@@ -40,7 +51,7 @@
 							<div class="row mt32">
 							<div class="col-sm-2 mm"><i class="flaticon-play-button"></i>
 							</div>
-							<div class="col-sm-8 mm p0"><span title="Together We Can">Together We Can<span title="Founder Barbara Poma Shares Her Message">Founder Barbara Poma Shares Her Message</span></span>
+							<div class="col-sm-8 mm p0"><span title="Together We Can">Together We Can<span title="Witness Our Story Where Love Wins">Witness Our Story Where Love Wins</span></span>
 							</div>
 							</a>
 							<a href="#" class="home-play visible-xs"><i class="flaticon-play-button"></i></a>

@@ -64,15 +64,16 @@
 				bottom: 10px;
 			}
 			.vjs-tech {
-				position: absolute;
-				top: 50% !important;
-				left: 50% !important;
-				min-width: 100%;
-				min-height: 100%;
-				width: auto;
-				height: auto;
-				transform: translateX(-50%) translateY(-50%);
-				border: none;
+//				position: absolute;
+//				top: 50% !important;
+//				left: 50% !important;
+//				min-width: 100%;
+//				min-height: 100%;
+//				width: auto;
+//				height: auto;
+//				transform: translateX(-50%) translateY(-50%);
+//				border: none;
+				background: black;
 			}
 		}
 
@@ -161,8 +162,9 @@
 		margin-bottom: 100px;
 	}
 }
-@media (max-width:414px) {
-	
+@media (max-width:768px) {
+		html:not(.ipad) {
+
 	.socials.shares li a i {
 		
 		line-height: 1.5;
@@ -213,6 +215,7 @@
 		left: 0 !important;
 		top: auto !important;
 		height: 57vw !important;
+	}
 	}
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {

@@ -1,0 +1,106 @@
+.woocommerce div.product {
+    pointer-events: all;
+}
+
+
+.woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover, .woocommerce a.button.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce button.button.alt.disabled:hover, .woocommerce button.button.alt:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce button.button.alt:disabled[disabled], .woocommerce button.button.alt:disabled[disabled]:hover, .woocommerce input.button.alt.disabled, .woocommerce input.button.alt.disabled:hover, .woocommerce input.button.alt:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce input.button.alt:disabled[disabled], .woocommerce input.button.alt:disabled[disabled]:hover, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+    background: none;
+    border: 2px solid BLACK;
+    COLOR: BLACK;
+    border-radius: 100px;
+outline: none;
+    margin: 10px auto;
+    font-weight: bold;
+    letter-spacing: -.025em;
+	transition: .3s ease;
+}
+
+
+.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
+	
+	background: black;
+}
+
+.woocommerce div.product form.cart .variations select {
+    -webkit-appearance: none;
+    apperance: none;
+    background: none;
+    padding: 0 0px 0 45px;
+    text-align: center;
+    border-radius: 100px;
+    border: 2px solid black;
+    font-weight: bold;
+    letter-spacing: -.025em;
+	min-width: 0;
+	outline: none;
+}
+
+.woocommerce div.product form.cart div.quantity {
+    width: 47%;
+    float: none;
+    margin: 0 0 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+}
+
+.woocommerce .quantity .qty {
+    width: 40px;
+    padding: 6px 0px 6px 10px;
+    border-radius: 0;
+    border: none;
+    background: white;
+    text-align: center;
+    font-weight: bold;
+    outline: none;
+    margin: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.woocommerce div.product form.cart .button, .woocommerce button.button.alt.disabled, .woocommerce button.button.alt.disabled:hover {
+    float: none;
+    margin: 0;
+	width: 300px;
+	margin-left: 0;
+	margin-right: 0;
+	display: block;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before {
+    border: none;
+    box-shadow: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active::before,.woocommerce div.product .woocommerce-tabs ul.tabs li.active::after {
+    box-shadow: none;
+    border: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li,.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    background: none;
+    border-radius: 0;
+    border: 2px solid black;
+    border-radius: 100px;
+    margin-right: 5px;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before {
+    border: none;
+}
+.woocommerce div.product form.cart .variations {
+    float: left;
+    width: 50%;
+}
+.woocommerce div.product .product_title {
+    font-size: 2.5em;
+}
+
+.woocommerce div.product p.price, .woocommerce div.product span.price {
+    font-weight: bold;
+    color: black;
+    font-size: 2em;
+    margin: 0;
+    line-height: 1;
+    margin-bottom: 25px;
+}

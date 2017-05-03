@@ -6,6 +6,12 @@
 	.video-modal {
 		opacity: 1;
 		pointer-events: all;
+		
+		.vimeoFrame, .vjs-youtube .vimeoplayer {
+			
+			
+			pointer-events: all;
+		}
 		.close {
 			pointer-events: all;
 		}
@@ -23,6 +29,11 @@
 	background: rgba(255, 255, 255, 1);
 	transition: .5s ease;
 	overflow: hidden;
+	
+	.vimeoFrame, .vjs-youtube, .vimeoplayer {
+		
+		pointer-events: none
+	}
 }
 .video-modal video {
 	//	width: 100%;
@@ -91,7 +102,10 @@
 //    transform: translateY(0%) translateZ(0);
 //    pointer-events: all;
 //}
-@media (max-width:414px) {
+@media (max-width:768px) {
+	
+		html:not(.ipad) {
+
 	.modal {
 		padding: 15vw 5%;
 	}
@@ -112,6 +126,7 @@
 		&.video-modal {
 			display: none;
 		}
+	}
 	}
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {

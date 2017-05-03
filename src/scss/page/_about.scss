@@ -137,7 +137,12 @@
 		width: 100%;
 	}
 }
-@media (max-width:414px) {
+@media (max-width:768px) {
+	
+	html:not(.ipad) {
+		
+		
+	
 	.page-main .home-hero h2.clone-shadow,
 	.page-main .home-hero h2 {
 		font-size: 8.5vw !important;
@@ -174,7 +179,11 @@
 	label {
 		font-size: 4vw;
 	}
-}
+
+	
+	}
+	}
+	
 
 @media (max-width:375px) {}
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {

@@ -49,9 +49,15 @@
 									<li><a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 									<li><a href="https://plus.google.com/share?url=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-google-plus"></i></a></li>
 								</ul>
+						
 
-						<div class="hidden-sm"><?php the_content();?></div>
+						
 
+						<div class="hidden-sm hidden-xs"><?php the_content();?></div>
+						<div class="shirt-cta">
+						<img src="<?php echo get_template_directory_uri(); ?>/dist/img/shirt.svg">
+						<a href="https://pulse-orlando-shirts.myshopify.com/products/onepulse-foundation-shirt" class="btn shirt-btn" target="_blank">Get Yours</a>
+						</div>
 					</div>
 
 

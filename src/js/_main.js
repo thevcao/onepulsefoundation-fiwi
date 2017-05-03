@@ -239,7 +239,7 @@
 
 
 
-				$('footer .pop-link').click(function (e) {
+				$('footer .pop-link, .pop-link').click(function (e) {
 					e.preventDefault();
 					var poplink = $(this).attr('href');
 					newwindow = window.open(poplink, 'name', 'height=800,width=1024');
@@ -303,69 +303,163 @@
 
 				$('.home-play').click(function () {
 					//						$('body').removeClass('loaded');
-					$('video').get(0).play();
-
-					$('video').prev('.play-button').velocity("fadeOut", {
-						duration: 250
-					});
-
-					setTimeout(function () {
 
 
+					var myPlayer = videojs("home-video");
 
-						$('body').addClass('modal-open');
-					}, 250);
-
-					$('body').addClass('modal-open');
-
-					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-						var videoPlayer = document.getElementById('home-video_html5_api');
-						videoPlayer.webkitEnterFullscreen();
-						videoPlayer.addEventListener('webkitendfullscreen', function (e) {
-							$('body').removeClass('modal-open');
-
-							setTimeout(function () {
-
-
-
-								$('video').get(0).pause();
-
-							}, 250);
-
+					myPlayer.play();
+					
+					if (!/iPhone/i.test(navigator.userAgent)) {
+						$('video').prev('.play-button').velocity("fadeOut", {
+							duration: 250
 						});
 
+						setTimeout(function () {
+
+
+
+							$('body').addClass('modal-open');
+						}, 250);
+
+						$('body').addClass('modal-open');
+					}
+				});
+				
+				
+				if($('#home-video').length){
+					
+					
+					videojs('home-video', {}, function() {
+					  this.ga(); // "load the plugin, by defaults tracks everything!!"
+					});
+					
+					
+				}
+	
+					if ($('#video').length) {
+
+
+						videojs('video', {}, function () {
+							this.ga(); // "load the plugin, by defaults tracks everything!!"
+						});
 
 					}
-
-
-					return false;
-
-
+				
+				
+				$('.shirt-btn').click(function () {
+					
+					
+					ga('send', {
+						hitType: 'event',
+						eventCategory: 'Shirt Click',
+						eventAction: 'click'
+					});
+					
+				});				
+				$('a[title="Donate"]').click(function () {
+					
+					
+					ga('send', {
+						hitType: 'event',
+						eventCategory: 'Donate Click',
+						eventAction: 'click'
+					});
+					
+				});		
+				$('.donate-bar a').click(function () {
+					
+					
+					ga('send', {
+						hitType: 'event',
+						eventCategory: 'Donate Click - Mobile',
+						eventAction: 'click'
+					});
+					
 				});
 
-
-				function onVideoEnded(event) {
-					var videoPlayer = document.getElementById('home-video_html5_api');
-					videoPlayer.webkitExitFullscreen();
-				}
-
-				function onVideoEnded(event) {
-					var videoPlayer = document.getElementById('video_html5_api');
-					videoPlayer.webkitExitFullscreen();
-				}
+				
+				
+				
+				//					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
 
+
+
+				//						videoPlayer.webkitEnterFullscreen();
+				//						videoPlayer.addEventListener('webkitExitFullscreen', function (e) {
+				//							
+				//
+				//							setTimeout(function () {
+				//
+				//
+				//
+				//								videoPlayer.pause();
+				//
+				//							}, 250);
+				//
+				//						});
+
+
+				////					}
+				//				var vid = document.getElementById("home-video_Vimeo_api");
+				//
+				//				vid.addEventListener('webkitendfullscreen', function (e) { 
+				//							  $('body').removeClass('modal-open');
+				//								console.log('hay');
+				//				
+				//				
+				//				});
+				//
+				//				vid.addEventListener('webkitenterfullscreen', function (e) { 
+				//				  // handle enter full screen 
+				//				});
+				//
+				//					return false;
+				//
+				//
+				//				});
+				//
+				//			$('video').bind('webkitfullscreenchange mozfullscreenchange fullscreenchange', function(e) {
+				//				var state = document.fullScreen || document.mozFullScreen || document.webkitIsFullScreen;
+				//				var event = state ? 'FullscreenOn' : 'FullscreenOff';
+				//
+				//				// Now do something interesting
+				//							  $('body').removeClass('modal-open');
+				//			});
+
+				//				function onVideoEnded(event) {
+				//					var myPlayer = videojs("home-video");
+				//					myPlayer.webkitExitFullscreen();
+				//				}
+				//
+				//				function onVideoEnded(event) {
+				//					var myPlayer = videojs("home-video");
+				//					myPlayer.webkitExitFullscreen();
+				//				}
+
+				$('.woocommerce-product-gallery__image a').magnificPopup({
+					type: 'image',
+					mainClass: 'mfp-with-zoom mfp-fade',
+					removalDelay: 500,
+					preloader: false,
+					fixedContentPos: false,
+
+
+					gallery: {
+						enabled: true
+					}
+				});
 
 
 				$('.video-modal .close').click(function () {
 					//						$('body').removeClass('loaded');
 					$('body').removeClass('modal-open');
-
+					var myPlayer = videojs("home-video");
 					setTimeout(function () {
 
 
 
-						$('video').get(0).pause();
+						myPlayer.pause();
 
 					}, 250);
 
@@ -480,7 +574,7 @@
 				});
 
 
-				
+
 
 				$('.over-video').click(function () {
 
@@ -512,20 +606,20 @@
 						$('.full-menu').removeClass("transition");
 					}
 				);
-				$("a").not('a[href="#"], .nturl, .modal-toggle, .modal-toggle a, .pop-link').click(function (e) {
+				$("a").not('a[href="#"], .nturl, .modal-toggle, .modal-toggle a, .pop-link, ul.tabs li a, .woocommerce-product-gallery__image a, a[target="_blank"], a[target="blank"]').click(function (e) {
 
 
 					var link = $(this).attr('href');
 
 					e.preventDefault();
 
-					
+
 
 
 					$('.loader').addClass('once');
 					$('.spinner').css('opacity', '1').css('top', e.clientY).css('left', e.clientX);
 
-					
+
 					setTimeout(function () {
 						window.location.href = link;
 
@@ -543,12 +637,12 @@
 
 
 
-					
+
 
 					$(window).scroll(function () {
 
 
-						
+
 
 
 						var windowfull = $.windowHeight();
@@ -560,7 +654,7 @@
 						console.log(remaining);
 
 
-						
+
 
 						if (windowfull !== windowHeight) {
 
@@ -573,14 +667,14 @@
 
 					});
 
-					
+
 
 
 				}
 
 
 
-				
+
 
 
 				$(window).resize(function () {
@@ -712,6 +806,27 @@
 
 								})
 
+
+
+								setTimeout(function () {
+
+									$.cookie('hide-after-load', 'yes', {
+										expires: 1
+									});
+
+									$('.loader').addClass('intro-out');
+
+									setTimeout(function () {
+
+										$('body').addClass('loaded');
+									}, 1700);
+
+
+
+
+
+								}, 15000);
+
 							}
 
 
@@ -745,6 +860,8 @@
 						}
 
 
+
+
 					});
 
 				}
@@ -767,37 +884,77 @@
 				}
 
 				function stellarinit() {
-					$(window).stellar({
+
+					if ($('html.mac.safari').length) {
+
+						$(window).stellar({
 
 
-						horizontalScrolling: false,
-						verticalScrolling: true,
+							horizontalScrolling: false,
+							verticalScrolling: true,
 
-						// Set the global alignment offsets
-						horizontalOffset: 0,
-						verticalOffset: 240,
+							// Set the global alignment offsets
+							horizontalOffset: 0,
+							verticalOffset: 240,
 
-						// Refreshes parallax content on window load and resize
-						responsive: true,
+							// Refreshes parallax content on window load and resize
+							responsive: true,
 
-						// Select which property is used to calculate scroll.
-						// Choose 'scroll', 'position', 'margin' or 'transform',
-						// or write your own 'scrollProperty' plugin.
-						scrollProperty: 'scroll',
+							// Select which property is used to calculate scroll.
+							// Choose 'scroll', 'position', 'margin' or 'transform',
+							// or write your own 'scrollProperty' plugin.
+							scrollProperty: 'scroll',
 
-						// Select which property is used to position elements.
-						// Choose between 'position' or 'transform',
-						// or write your own 'positionProperty' plugin.
-						positionProperty: 'transform',
+							// Select which property is used to position elements.
+							// Choose between 'position' or 'transform',
+							// or write your own 'positionProperty' plugin.
+							positionProperty: 'transform',
 
-						// Enable or disable the two types of parallax
-						parallaxBackgrounds: false,
-						parallaxElements: true,
+							// Enable or disable the two types of parallax
+							parallaxBackgrounds: false,
+							parallaxElements: true,
 
-						// Hide parallax elements that move outside the viewport
-						hideDistantElements: true
-						//				responsive: true,	
-					});
+							// Hide parallax elements that move outside the viewport
+							hideDistantElements: true
+								//				responsive: true,	
+						});
+
+					} else {
+
+						$(window).stellar({
+
+
+							horizontalScrolling: false,
+							verticalScrolling: true,
+
+							// Set the global alignment offsets
+							horizontalOffset: 0,
+							verticalOffset: 240,
+
+							// Refreshes parallax content on window load and resize
+							responsive: true,
+
+							// Select which property is used to calculate scroll.
+							// Choose 'scroll', 'position', 'margin' or 'transform',
+							// or write your own 'scrollProperty' plugin.
+							scrollProperty: 'scroll',
+
+							// Select which property is used to position elements.
+							// Choose between 'position' or 'transform',
+							// or write your own 'positionProperty' plugin.
+							positionProperty: 'transform',
+
+							// Enable or disable the two types of parallax
+							parallaxBackgrounds: false,
+							parallaxElements: true,
+
+							// Hide parallax elements that move outside the viewport
+							hideDistantElements: false
+								//				responsive: true,	
+						});
+
+					}
+
 				}
 
 

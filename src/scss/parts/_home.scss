@@ -148,7 +148,10 @@
 		margin: 0 auto;
 	}
 }
-@media (max-width:414px) {
+@media (max-width:768px) {
+	
+		html:not(.ipad) {
+
 	.home .home-hero .col-md-10.col-center-ls-tab {
 		padding: 0 10%;
 	}
@@ -261,6 +264,7 @@
 		background-size: 500%;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+	}
 	}
 }
 @media (max-width:375px) {

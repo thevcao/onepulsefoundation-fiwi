@@ -60,18 +60,18 @@
 				<?php if($source == 'File'): ?>
 						
 							
-						<label class="" ata-stellar-ratio="1"><span><?php the_sub_field('video_label_1');?></span><?php the_sub_field('video_label_2');?><div class="line"></div></label>
-						<video id="video" class="video-js vjs-sublime-skin" playsinline controls preload="none" width="100%" height="800" poster="<?php echo $poster['sizes']['large'];?>" data-setup="{}"><source src="<?php echo $video;?>" type="video/mp4"></video>
+						<label class=""><span><?php the_sub_field('video_label_1');?></span><?php the_sub_field('video_label_2');?><div class="line"></div></label>
+						<video id="video" class="video-js vjs-sublime-skin" playsinline controls preload="none" width="100%" height="800" poster="<?php echo $poster['sizes']['large'];?>" data-setup='{"ga": {"eventsToTrack": ["play"]}}'><source src="<?php echo $video;?>" type="video/mp4"></video>
 									<?php echo '<label class="img-attrib">' . $poster['caption'] . '</label>';?>	
 						<?php endif;?>
 						
 						<?php if($ext_source == 'youtube'): ?>
-						<label class="" ata-stellar-ratio="1"><span><?php the_sub_field('video_label_1');?></span><?php the_sub_field('video_label_2');?><div class="line"></div></label>
-							<video id='video' class='video-js vjs-sublime-skin' playsinline controls preload='none' width='100%' height='800' poster="<?php echo $poster['sizes']['large'];?>" data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "<?php echo $url;?>" }]}'></video>
+						<label class=""><span><?php the_sub_field('video_label_1');?></span><?php the_sub_field('video_label_2');?><div class="line"></div></label>
+							<video id='video' class='video-js vjs-sublime-skin' playsinline controls preload='none' width='100%' height='800' poster="<?php echo $poster['sizes']['large'];?>" data-setup='{ "ga": {"eventsToTrack": ["play"]}, "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "<?php echo $url;?>" }]}'></video>
 						<?php endif;?>
 						<?php if($ext_source == 'vimeo'): ?>
-						<label class="" ata-stellar-ratio="1"><span><?php the_sub_field('video_label_1');?></span><?php the_sub_field('video_label_2');?><div class="line"></div></label>
-					<video id='video' class='video-js vjs-sublime-skin' playsinline controls preload='none' width='100%' height='800' poster="<?php echo $poster['sizes']['large'];?>" data-setup='{ "techOrder": ["vimeo"], "sources": [{ "type": "video/vimeo", "src": "<?php echo $url;?>" }], "vimeo": { "ytControls": 2 }}'></video>
+						<label class=""><span><?php the_sub_field('video_label_1');?></span><?php the_sub_field('video_label_2');?><div class="line"></div></label>
+					<video id='video' class='video-js vjs-sublime-skin' playsinline controls preload='none' width='100%' height='800' poster="<?php echo $poster['sizes']['large'];?>" data-setup='{ "ga": {"eventsToTrack": ["play"]}, "techOrder": ["vimeo"], "sources": [{ "type": "video/vimeo", "src": "<?php echo $url;?>" }], "vimeo": { "ytControls": 2 }}'></video>
 					<?php echo '<label class="img-attrib">' . $poster['caption'] . '</label>';?>
 				</div>
 

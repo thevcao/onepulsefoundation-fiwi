@@ -104,7 +104,19 @@ footer {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {}
-@media (max-width:414px) {
+
+
+@media(max-width:1300px) {
+	
+.socials li a i {
+    line-height: 1.5;
+}	
+	
+}
+@media (max-width:768px) {
+	
+		html:not(.ipad) {
+
 	footer {
 		padding: 10px 0 0;
 		padding-bottom: calc(8vw + 20px);
@@ -122,6 +134,8 @@ footer {
 			}
 		}
 	}
+			
+			
 	.donate-up footer {
 		padding-bottom: calc(8vw + 40px);
 	}
@@ -161,6 +175,7 @@ footer {
 		
 		display: none;
 		
+	}
 	}
 }
 

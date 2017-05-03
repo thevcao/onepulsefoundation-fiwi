@@ -298,7 +298,7 @@
 			pointer-events: none;
 			transition: transform 0.3s ease-in;
 			-webkit-transform: translateY(-100vh) translateZ(0);
-			transform: translateY(-100vh) translateZ(0);
+			transform: translateY(-100%) translateZ(0);
 			will-change: transform;
 			* {
 				pointer-events: none;
@@ -844,7 +844,10 @@
 				padding: 0px 5px;
 			}
 		}
-		@media (max-width:414px) {
+		@media (max-width:768px) {
+			
+				html:not(.ipad) {
+
 			.full-menu {
 				padding-top: 50px;
 			}
@@ -988,6 +991,8 @@
 			
 			.mobile-links ul li a:before {
 				content: none !important;
+			}
+					
 			}
 		}
 		@media (max-width: 375px) {

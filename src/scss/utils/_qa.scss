@@ -29,6 +29,22 @@
 		border-color: rgba(255, 0, 0, 1.0);
 	}
 }
+
+.mac.safari:not(.mobile) {
+	
+	
+	overflow-x: hidden;
+	
+	body {
+		
+		
+		overflow-x: hidden;
+		
+	}
+	
+	
+	
+}
 .firefox {
 	h1,
 	h2,
@@ -37,6 +53,13 @@
 		background-attachment: scroll !important;
 		background-size: 100vw 100vh !important;
 		background-position: 50% !important;
+	}
+	
+	
+	body:not(.home) .home-hero h2 {
+		
+	background-image: none !important;	
+		
 	}
 	
 	.home-hero .home-play i::after, .home-hero .home-play span span::after, .home-hero .home-play span:before {
@@ -57,6 +80,27 @@
 	margin-top: 0;	
 		
 	}
+	
+	.clip {
+		
+			animation: none !important;
+	
+	}
+//	.task-link {
+//		span {
+//			animation: none !important;
+//		}
+//	}
+	
+	.video-modal .video-js {
+		
+		position: absolute;
+	}
+	
+//.img-attrib {
+//    left: 25px !important;
+//}
+	
 }
 .ie {
 	h1,
@@ -82,8 +126,8 @@
 	.home .home-hero {
 		
 		background-image: url(../../dist/img/hero-ie.svg);
-		background-size: cover;
-		background-position: 50% 0%;
+		background-size: 110%;
+		background-position: 50% 20%;
 		background-repeat: no-repeat;
 	
 	}
@@ -219,7 +263,9 @@
 	}
 	
 }
-@media(max-width: 414px) {
+@media(max-width: 768px) {
+		html:not(.ipad) {
+
 	.translated-ltr {
 		.home .home-hero h2 {
 			font-size: 23vw !important;
@@ -253,6 +299,7 @@
 			.contact-modal-open.home .home-hero h2 {
 //				font-size: 26vw !important;
 		}	
+	}
 }
 
 .ie-polyfill {

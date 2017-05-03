@@ -110,7 +110,9 @@
 		}
 	}
 }
-@media (max-width:414px) {
+@media (max-width:768px) {
+		html:not(.ipad) {
+
 	.member-body .post-image canvas {
 		display: none;
 	}
@@ -137,6 +139,7 @@
 	}
 	.task-force .container {
 		padding: 0 7%;
+	}
 	}
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {

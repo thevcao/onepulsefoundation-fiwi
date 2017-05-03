@@ -144,6 +144,11 @@
 		//	height: auto !important;
 	}
 	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		
+		html, body {
+			
+			overflow-x: hidden;
+		}
 		body:not(.home) section:nth-of-type(1) {
 			padding-top: 100px !important;
 		}
@@ -165,6 +170,12 @@
 		}
 	}
 	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+		
+		
+		html, body {
+			
+			overflow-x: hidden;
+		}		
 		.spacer {
 			&.large {
 				min-height: 80px;
@@ -185,7 +196,10 @@
 			}
 		}
 	}
-	@media (max-width:414px) {
+	@media (max-width:768px) {
+		
+			html:not(.ipad) {
+
 		html, body {
 			overflow-x: hidden;
 		}
@@ -220,6 +234,7 @@
 		.row.tab-pt-resize {
 			margin: 0;
 			padding: 0 7px;
+		}
 		}
 	}
 	@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {

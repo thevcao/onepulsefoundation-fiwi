@@ -90,7 +90,7 @@
 		margin: 0;
 	}
 	
-	.gallery img {
+	.gallery .item img {
 		margin: 0 auto;
 		height: 400px;
 		width: 80%;
@@ -147,9 +147,10 @@
 		bottom: -50px;
 	}
 }
-@media (max-width:414px) {
+@media (max-width:768px) {
 
-	
+		html:not(.ipad) {
+
 
 	.gallery .item {
 		
@@ -199,7 +200,7 @@
 .gallery .slick-dots li {
     width: 3.5vw;
 }
-	
+	}
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
 	
