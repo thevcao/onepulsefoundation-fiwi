@@ -24,9 +24,19 @@
 						
 				if(!$source == null){?>
 
-						<?php  $featbanner = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner' ); $featurl = $featbanner['0']; ?>
-							<?php if( has_post_thumbnail()): echo '<img id="featured-image" class="hidden-xs" src="'. $featurl .'" crossorigin="anonymous">'; endif;?>
-						<?php if( has_post_thumbnail()): echo '<img class="over-image" src="'. $featurl .'">'; endif;?>
+						<?php  $featbanner = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner' ); $featurl = $featbanner['0']; 
+						
+						
+						$featnurl = str_replace('fiwi-onepulsefoundation.s3.amazonaws.com', 'onepulsefoundation.org', $featurl);
+						
+						
+						?>
+						
+						<script>
+						console.log('<?php echo $featnurl;?>');
+						</script>
+							<?php if( has_post_thumbnail()): echo '<img id="featured-image" class="hidden-xs" src="'. $featnurl .'">'; endif;?>
+						<?php //if( has_post_thumbnail()): echo '<img class="over-image" src="'. $featurl .'">'; endif;?>
 						
 						<?php if($source == 'File'): ?>
 						
@@ -35,7 +45,7 @@
 								<span>Video</span>
 								<?php the_field('video_title');?>
 							</label>
-							<video id="video" class="video-js vjs-sublime-skin" playsinline controls poster="<?php echo $poster['sizes']['large'];?>" preload="none" width="100%" height="800" data-setup='{"ga": {"eventsToTrack": ["play"]}}'>
+							<video id="video" class="video-js vjs-sublime-skin" controls poster="<?php echo $poster['sizes']['large'];?>" preload="none" width="100%" height="800" data-setup='{"ga": {"eventsToTrack": ["play"]}}'>
 								<source src="<?php echo $video;?>" type="video/mp4">
 							</video>
 							<?php echo '<label class="img-attrib">' . $poster['caption'] . '</label>';?>
@@ -63,7 +73,7 @@
 						
 			<?php } else{ ?>			
 						<?php  $featbanner = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner' ); $featurl = $featbanner['0']; ?>
-							<?php if( has_post_thumbnail()): echo '<img id="featured-image" class="hidden-xs" src="'. $featurl .'" crossorigin="anonymous">'; endif;?>
+							<?php if( has_post_thumbnail()): echo '<img id="featured-image" class="hidden-xs" src="'. $featurl .'">'; endif;?>
 						<?php if( has_post_thumbnail()): echo '<img class="over-image" src="'. $featurl .'">'; endif;?>
 						
 			<?php } ?>

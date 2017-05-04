@@ -13,7 +13,11 @@
 			<section class="post-image">
 				<div class="row">
 					<div class="col-lg-5 col-md-4 <?php the_field('overlay_color');?>" >
-						<?php $banner = get_field('banner'); echo '<img id="featured-image" src="'. $banner['sizes']['large'] .'" alt="';
+						<?php $banner = get_field('banner'); 
+						$bannerlarge = $banner['sizes']['large'];
+						$bannerlarge = str_replace('https://fiwi-onepulsefoundation.s3.amazonaws.com', 'https://onepulsefoundation.org', $bannerlarge);
+						
+						echo '<img id="featured-image" src="'. $bannerlarge .'" alt="';
 						
 							if (!$banner['alt'] == null): 
 							echo $banner['alt']; else: 

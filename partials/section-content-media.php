@@ -3,6 +3,9 @@
 
 				<?php $media_type = get_sub_field('media_type');
 					$image = get_sub_field('image');
+					$large = $image['sizes']['large'];
+					$large = str_replace('https://fiwi-onepulsefoundation.s3.amazonaws.com', 'https://onepulsefoundation.org', $large);
+
 					$video = get_sub_field('video');
 					$poster = get_sub_field('poster');
 
@@ -46,7 +49,7 @@
 				
 				<div class="mm" data-stellar-ratio="1">
 					<div class="line mb16"></div>
-					<img id="featured-image" class="grayscale mm" src="<?php echo $image['sizes']['large'];?>" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
+					<img id="featured-image" class="grayscale mm" src="<?php echo $large;?>" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
 					<img data-stellar-ratio="1.25" class="over-image" src="<?php echo $image['sizes']['large'];?>" data-stellar-offset-parent="true" data-stellar-vertical-offset="-200" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
 				</div>
 				
@@ -61,7 +64,7 @@
 						
 							
 						<label class=""><span><?php the_sub_field('video_label_1');?></span><?php the_sub_field('video_label_2');?><div class="line"></div></label>
-						<video id="video" class="video-js vjs-sublime-skin" playsinline controls preload="none" width="100%" height="800" poster="<?php echo $poster['sizes']['large'];?>" data-setup='{"ga": {"eventsToTrack": ["play"]}}'><source src="<?php echo $video;?>" type="video/mp4"></video>
+						<video id="video" class="video-js vjs-sublime-skin" controls preload="none" width="100%" height="800" poster="<?php echo $poster['sizes']['large'];?>" data-setup='{"ga": {"eventsToTrack": ["play"]}}'><source src="<?php echo $video;?>" type="video/mp4"></video>
 									<?php echo '<label class="img-attrib">' . $poster['caption'] . '</label>';?>	
 						<?php endif;?>
 						

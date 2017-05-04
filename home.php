@@ -27,7 +27,7 @@
 	
 	;?>
 	<?php if($source == 'File'): ?>
-  <video id="home-video" class="video-js vjs-sublime-skin" playsinline controls preload="none" width="100%" height="800"
+  <video id="home-video" class="video-js vjs-sublime-skin" controls preload="none" width="100%" height="800"
   poster="<?php echo get_template_directory_uri(); ?>/dist/img/video-poster.jpg" data-setup='{"ga": {"eventsToTrack": ["play"]}}'>
     <source src="<?php the_field('main_video','options');?>" type='video/mp4'>
   </video>	

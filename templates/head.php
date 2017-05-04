@@ -108,7 +108,7 @@ endif; wp_reset_postdata();?>
 	$mobileCTA = get_field('mobile_contact_image', 'options');
 	$donateImage = get_field('donate_hero', 'options');
 	
-	echo '<style> .home .loader, .home .home-hero h2, .home .home-hero .home-play i:before, .home .home-hero .home-play span, .home .home-hero .home-play span span { background-image:url('. $homeHero['sizes']['banner'] .');} .mobile-cta, .mobile-cta.clipped:before {background-image:url('. $mobileCTA['sizes']['large'] .');} .donate-hero h2, .page-template-donate .loader {background-image:url('. $donateImage['sizes']['banner'] .');}
+	echo '<style> .home .loader, .home .home-hero h2, .home .home-hero .home-play i:before, .home .home-hero .home-play span, .home .home-hero .home-play span span { background-image:url('. $homeHero['sizes']['banner'] .');} html:not(.ipad) .mobile-cta, .mobile-cta.clipped:before {background-image:url('. $mobileCTA['sizes']['large'] .');} .donate-hero h2, .page-template-donate .loader {background-image:url('. $donateImage['sizes']['banner'] .');}
 	</style>' ;
 	if(is_page('home')):
 	echo '<meta property="og:image" content="'. $homeHero['sizes']['large'] .'" />';

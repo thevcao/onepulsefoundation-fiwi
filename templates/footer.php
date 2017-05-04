@@ -254,6 +254,53 @@ Orlando Fl 32853-0036</div>
 
 <?php wp_footer(); ?>
 <script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs.ga.min.js"></script>
+<script>
+				if ($('#featured-image').length) {
 
+
+
+
+
+					// try to create a WebGL canvas (will fail if WebGL isn't supported)
+
+
+					// convert the image to a texture
+
+//					var image = document.getElementById('featured-image');
+//
+//					
+//					window.onload = function () {
+//
+//						var canvas = fx.canvas();
+//
+//						var texture = canvas.texture(image);
+//						// apply the ink filter
+//						canvas.draw(texture).colorHalftone(320, 239.5, 0.25, 4).update();
+//
+//						// replace the image with the canvas
+//						image.parentNode.insertBefore(canvas, image);
+//						image.parentNode.removeChild(image);
+//
+//						// Note: instead of swapping the &lt;canvas&gt; tag with the &lt;img&gt; tag
+//						// as done above, we could have just transferred the contents of
+//						// the image directly:
+//						//
+//						//     image.src = canvas.toDataURL('image/png');
+//						//
+//						// This has two disadvantages. First, it is much slower, so it
+//						// would be a bad idea to do this repeatedly. If you are going
+//						// to be repeatedly updating a filter it's much better to use
+//						// the &lt;canvas&gt; tag directly. Second, this requires that the
+//						// image is hosted on the same domain as the script because
+//						// JavaScript has direct access to the image contents. When the
+//						// two tags were swapped using the previous method, JavaScript
+//						// actually doesn't have access to the image contents and this
+//						// does not violate the same origin policy.
+//					};
+//					image.crossOrigin = 'anonymous';
+//					image.src = $('#featured-image').attr('src');
+
+				}
+</script>
   </body>
 </html>

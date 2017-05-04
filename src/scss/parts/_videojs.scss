@@ -414,6 +414,11 @@ and (orientation : portrait) {
     .vjs-controls-disabled .vjs-big-play-button, .vjs-has-started .vjs-big-play-button, .vjs-using-native-controls .vjs-big-play-button, .vjs-error .vjs-big-play-button {
     pointer-events: all;
 }
+			
+			
+			.video-modal .vjs-has-started .vjs-big-play-button {
+				pointer-events: none !important;
+}
 	}
     
 }

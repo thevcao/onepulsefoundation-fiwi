@@ -54,7 +54,7 @@
 						
 
 						<div class="hidden-sm hidden-xs"><?php the_content();?></div>
-						<div class="shirt-cta">
+						<div class="shirt-cta hidden-sm hidden-xs">
 						<img src="<?php echo get_template_directory_uri(); ?>/dist/img/shirt.svg">
 						<a href="https://pulse-orlando-shirts.myshopify.com/products/onepulse-foundation-shirt" class="btn shirt-btn" target="_blank">Get Yours</a>
 						</div>
@@ -66,7 +66,10 @@
 
 
 						<iframe id="mc-donation" src="https://app.mobilecause.com/form/bgKlMw" width="100%" height="1300" overflow="scroll" onLoad="window.scrollTo(0,0);"></iframe>
-
+							<div class="shirt-cta visible-sm visible-xs">
+						<img src="<?php echo get_template_directory_uri(); ?>/dist/img/shirt.svg">
+						<a href="https://pulse-orlando-shirts.myshopify.com/products/onepulse-foundation-shirt" class="btn shirt-btn" target="_blank">Get Yours</a>
+						</div>
 					</div>
 
 

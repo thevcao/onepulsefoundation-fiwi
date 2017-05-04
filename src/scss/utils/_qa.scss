@@ -313,3 +313,35 @@
 		pointer-events: none;
 	}
 }
+
+
+@media(max-height:700px) {
+	
+	
+	html:not(.mobile) {
+		
+		
+		.full-menu {
+			
+			
+			padding-top: 120px !important;
+		}	
+		
+		
+		.full-menu ul li a {
+			
+			
+			font-size: 18px;
+		}
+		
+	}
+}
+@media(max-width:375px) {
+	
+	iframe#mc-donation {
+		
+		
+		height: 1200px !important;
+	}
+	
+}
