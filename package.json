@@ -25,6 +25,7 @@
     "gulp-concat": "^2.5.2",
     "gulp-imagemin": "^2.4.0",
     "gulp-load-plugins": "^0.8.0",
+    "gulp-modernizr": "^1.0.0-alpha",
     "gulp-plumber": "^1.0.1",
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",

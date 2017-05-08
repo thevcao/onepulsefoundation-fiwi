@@ -21,13 +21,7 @@ gulp.task('styles', () => {
     .pipe(plugins.size({ title: 'styles' }));
 });
 
-gulp.task('modernizr', () => {
-  return gulp.src('src/js/**/*.js')
-    .pipe(plugins.modernizr())
-    .pipe(plugins.concat('modernizr.min.js'))
-    .pipe(plugins.uglify())
-    .pipe(gulp.dest("dist/js/vendor/"))
-});
+
 
 // Fonts
 gulp.task('fonts', () => {
@@ -51,6 +45,18 @@ gulp.task('scripts', () => {
     .pipe(gulp.dest('dist/js'))
     .pipe(plugins.size({ title: 'scripts' }));
 })
+
+
+gulp.task('modernizr', () => {
+  return gulp.src([
+	  'dist/js/*.js',
+	  'dist/css/*.css'
+  ])
+    .pipe(plugins.modernizr())
+    .pipe(plugins.concat('modernizr.min.js'))
+    .pipe(plugins.uglify())
+    .pipe(gulp.dest("dist/js/vendor/"))
+});
 
 // Optimizes images
 gulp.task('images', () => {
