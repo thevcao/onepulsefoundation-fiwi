@@ -1009,91 +1009,100 @@
 			}
 		}
 		@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-			.main-header,
-			.page-id-12 .main-header,
-			.invert-header .main-header {
-				position: relative;
-				padding: 15px 5px;
-				background: #fff;
-				position: relative !important;
-				.height {
-					height: 40px;
+			html:not(.ipad) {
+				.main-header,
+				.page-id-12 .main-header,
+				.invert-header .main-header {
+					position: relative;
+					padding: 15px 5px;
+					background: #fff;
+					position: relative !important;
+					.height {
+						height: 40px;
+					}
+					svg,
+					.menu-container ul li a {
+						filter: invert(0);
+						color: black;
+					}
+					.menu-toggle {
+						span,
+						span:nth-child(2) {
+							background: black;
+						}
+						span:nth-child(2):after {
+							background-image: url(../../dist/img/close.svg);
+						}
+					}
 				}
-				svg,
-				.menu-container ul li a {
+				.menu-container .es.Spanish.single-language:after {
 					filter: invert(0);
-					color: black;
 				}
-				.menu-toggle {
-					span,
-					span:nth-child(2) {
-						background: black;
-					}
-					span:nth-child(2):after {
-						background-image: url(../../dist/img/close.svg);
+				.page-id-12 .menu-container .menu-toggle span:after,
+				.page-id-12 .menu-container .menu-toggle span:nth-child(2):after,
+				.invert-header .menu-container .menu-toggle span:after,
+				.invert-header .menu-container .menu-toggle span:nth-child(2):after {
+					background-image: url(../../dist/img/close.svg);
+				}
+				.invert-header {
+					.full-menu {
+						background: white;
+						position: absolute;
 					}
 				}
-			}
-			.menu-container .es.Spanish.single-language:after {
-				filter: invert(0);
-			}
-			.page-id-12 .menu-container .menu-toggle span:after,
-			.page-id-12 .menu-container .menu-toggle span:nth-child(2):after,
-			.invert-header .menu-container .menu-toggle span:after,
-			.invert-header .menu-container .menu-toggle span:nth-child(2):after {
-				background-image: url(../../dist/img/close.svg);
-			}
-			.invert-header {
 				.full-menu {
+					position: absolute;
+				}
+				.main-header img,
+				.main-header svg {
+					width: 180px;
+					height: 100%;
+					object-fit: contain;
+				}
+				.main-header .height {
+					height: auto;
+				}
+				.main-header {}
+				.main-header .menu-container .menu-toggle {
+					margin-left: 25px;
+				}
+				.full-menu ul li a {
+					text-align: left;
+					display: block;
+					font-size: 4vw;
+					letter-spacing: -.05em;
+					opacity: 0;
+					transition: none;
+					padding: 3vw 0;
+					transform: translateY(-10px);
+				}
+				.full-menu ul li {
+					display: inline-block;
+					width: 49%;
+				}
+				.menu-open .full-menu ul li a {
+					opacity: 1;
+					transition: opacity .5s ease, transform .5s ease;
+					transform: translateY(0px);
+				}
+				#menu-mobile-menu.menu li a span {
+					display: block;
+					font-size: 2.25vw;
+					margin-bottom: 1vw;
+					letter-spacing: -.05em;
+				}
+				.invert-header.menu-open .full-menu {
 					background: white;
 				}
-			}
-			.main-header img,
-			.main-header svg {
-				width: 100%;
-				height: 100%;
-				object-fit: contain;
-			}
-			.main-header .height {
-				height: auto;
-			}
-			.main-header {}
-			.main-header .menu-container .menu-toggle {
-				margin-left: 25px;
-			}
-			.full-menu ul li a {
-				text-align: left;
-				display: block;
-				font-size: 4vw;
-				letter-spacing: -.05em;
-				opacity: 0;
-				transition: none;
-				padding: 3vw 0;
-				transform: translateY(-10px);
-			}
-			.full-menu ul li {
-				display: inline-block;
-				width: 49%;
-			}
-			.menu-open .full-menu ul li a {
-				opacity: 1;
-				transition: opacity .5s ease, transform .5s ease;
-				transform: translateY(0px);
-			}
-			#menu-mobile-menu.menu li a span {
-				display: block;
-				font-size: 2.25vw;
-				margin-bottom: 1vw;
-				letter-spacing: -.05em;
-			}
-			.invert-header.menu-open .full-menu {
-				background: white;
-			}
-			.page-id-12.menu-open .full-menu a,
-			.invert-header.menu-open .full-menu a {
-				color: black;
-			}
-			.menu-open .main-header a:not(.menu-toggle) {
-				opacity: 0;
+				.page-id-12.menu-open .full-menu a,
+				.invert-header.menu-open .full-menu a {
+					color: black;
+				}
+				.menu-open .main-header a:not(.menu-toggle) {
+					//				opacity: 0;
+				}
+				.loader .img-attrib {
+					font-size: 1vw;
+				}
 			}
 		}

@@ -83,13 +83,10 @@
 	}
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-	
 	.gallery .item {
-		
 		height: 400px;
 		margin: 0;
 	}
-	
 	.gallery .item img {
 		margin: 0 auto;
 		height: 400px;
@@ -106,9 +103,7 @@
 	}
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-	
 	.gallery .item {
-		
 		height: 400px;
 		margin: 0;
 	}
@@ -126,14 +121,10 @@
 	}
 }
 @media (max-width:993px) {
-	
-	
 	.gallery .item {
-		
 		height: 400px;
 		margin: 0;
 	}
-	
 	.gallery .item img {
 		margin: 0 auto;
 		height: 400px;
@@ -148,84 +139,80 @@
 	}
 }
 @media (max-width:768px) {
-
-		html:not(.ipad) {
-
-
-	.gallery .item {
-		
-		height: 66vw;
-	}
-	
-	.gallery .item img {
-		width: 100%;
-		height: 66vw;
-		margin: 0;
-	}
-	.slick-dots {
-		bottom: -7vw;
-	}
-	//	.gallery {
-	//		
-	//		
-	//	pointer-events: none; 
-	//		
-	//		* {
-	//			
-	//			
-	//			pointer-events: none;
-	//		}
-	//}
-	.mobile-tooltip {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		height: auto;
-		width: auto;
-		z-index: 1;
-		background-image: url(../../dist/img/tooltip.png);
-		background-size: 100% auto;
-		pointer-events: all;
-		background-position: 50% 0%;
-		background-repeat: no-repeat;
-		background-color: rgba(255, 255, 255, 0.69);
-	}
-	
-.gallery .slick-dots li button:before {
-    font-size: 2vw;
-}
-
-.gallery .slick-dots li {
-    width: 3.5vw;
-}
+	html:not(.ipad) {
+		.gallery .item {
+			height: 66vw;
+		}
+		.gallery .item img {
+			width: 100%;
+			height: 66vw;
+			margin: 0;
+		}
+		.slick-dots {
+			bottom: -7vw;
+		}
+		//	.gallery {
+		//		
+		//		
+		//	pointer-events: none; 
+		//		
+		//		* {
+		//			
+		//			
+		//			pointer-events: none;
+		//		}
+		//}
+		.mobile-tooltip {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: auto;
+			width: auto;
+			z-index: 1;
+			background-image: url(../../dist/img/tooltip.png);
+			background-size: 100% auto;
+			pointer-events: all;
+			background-position: 50% 0%;
+			background-repeat: no-repeat;
+			background-color: rgba(255, 255, 255, 0.69);
+		}
+		.gallery .slick-dots li button:before {
+			font-size: 2vw;
+		}
+		.gallery .slick-dots li {
+			width: 3.5vw;
+		}
 	}
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-	
-	.slick-prev:before, .slick-next:before {
-		
-		color: black;
+	html:not(.ipad) {
+		.slick-prev:before,
+		.slick-next:before {
+			color: black;
+		}
+		.gallery .item img,
+		.gallery .item,
+		.gallery .img-attrib {
+			height: 350px;
+		}
+		.gallery .img-attrib {
+			left: 0;
+			padding: calc(250px - 30px) 0 0 0;
+			width: 100%;
+			text-shadow: none;
+			color: black;
+			text-align: center;
+			width: 100% !important;
+			height: 250px;
+		}
+		.featured-slider {
+			padding-bottom: 32px !important;
+		}
+		.mobile-tooltip {
+			background-size: 50% auto;
+			background-position: 50% 25%;
+		}
 	}
-	
-	
-	.gallery .item img, .gallery .item, .gallery .img-attrib {
-		
-		height: 250px;
-	}
-	
-	.gallery .img-attrib {
-		left: 0;
-		padding: calc(250px - 30px) 0 0 0;
-		width: 100%;
-    text-shadow: none;
-    color: black;
-    text-align: center;
-    width: 100% !important;
-		height: 250px;
-	}
-	.featured-slider {
-    padding-bottom: 32px !important;
-}
 }
