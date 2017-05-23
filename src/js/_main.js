@@ -143,14 +143,9 @@
 						remaining = ((fullHeight + header) - contentHeight),
 						padding = (remaining / 2);
 
-					if ($('body').hasClass('admin-bar')) {
-						$('.full-menu').css('padding-top', header + 82);
 
 
-					} else {
-
-
-						if ($('html').hasClass('orientation_portrait') && $('html').hasClass('mobile')) {
+						if ($('html').hasClass('orientation_portrait') && $(window).width() < 768) {
 
 							$('.full-menu').css('padding-top', header);
 							$('section').first('section').not('.home-hero').css('padding-top', (header + 10));
@@ -160,7 +155,7 @@
 							//						$('.post-image').css('margin-top', header);
 
 
-						} else if ($('html').hasClass('orientation_landscape') && $('html').hasClass('mobile')) {
+						} else if ($('html').hasClass('orientation_landscape') && $(window).width() < 768) {
 
 							$('.full-menu').css('padding-top', ($('.menu-toggle').outerHeight() + 20));
 							//							$('section').first('section').not('.home-hero').css('padding-top', (header + 10));
@@ -177,7 +172,6 @@
 
 
 
-					}
 
 
 				}
@@ -185,7 +179,7 @@
 				function pulseSet() {
 
 
-					if ($(window).width() < 415 && $('html').hasClass('mobile')) {
+					if ($(window).width() < 415) {
 
 
 						var fullheight = $(window).height();
@@ -195,14 +189,14 @@
 						//					$('.page-main .home-hero h2').fitText(1);
 						$('.home .home-hero h2').fitText(.9);
 						$('.invert-header .home-hero h2.clone-shadow, .invert-header .home-hero h2').fitText(3.75);
-						$('.home-play i').fitText(.33);
+						$('.home-play i').fitText(.33, { maxFontSize: '126px' });
 						$('.home .home-hero h2').css('background-size', auto);
 
 
 						console.log('mobile portrait');
 
 					} else {
-
+						
 						$('.donate-hero h2').fitText(2);
 						$('.home-hero h2').fitText(1.75);
 
@@ -215,8 +209,8 @@
 							$('.page-main .home-hero h2').fitText(4);
 
 						}
-						$('.hidden-xs .home-play i').fitText(.35);
-						$('.visible-xs .home-play i').fitText(1);
+						$('.hidden-xs .home-play i').fitText(.35, { maxFontSize: '126px' });
+						$('.visible-xs .home-play i').fitText(1, { maxFontSize: '126px' });
 						$('footer').css('padding-bottom', '0');
 					}
 

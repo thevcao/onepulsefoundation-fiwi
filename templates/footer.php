@@ -239,7 +239,7 @@
 			<p>&copy; <?php echo date("Y"); ?> onePULSE Foundation • PO Box 530036
 Orlando Fl 32853-0036</div>
 		<div class="col-md-4">
-		<img src="<?php echo get_template_directory_uri(); ?>/dist/img/FIWI-classic-website-by-white.svg" class="fiwi">
+		<a href="https://findsomewinmore.com" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/FIWI-classic-website-by-white.svg" class="fiwi"></a>
 		</div>
 			</div>
 
