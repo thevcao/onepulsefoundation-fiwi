@@ -302,6 +302,20 @@
 		}
 	}
 }
+
+.translated-ltr {
+	
+	
+	.home-play span span:after {
+		content: 'testimonio de nuestra historia donde el amor gana' !important;
+		text-transform: lowercase;
+	}
+
+.home-play span span:before {
+    content: none !important;
+}
+	
+}
 .ie-polyfill {
 	background-size: cover;
 	background-position: 50%;
