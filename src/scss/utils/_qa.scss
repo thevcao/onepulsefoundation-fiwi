@@ -29,6 +29,13 @@
 		border-color: rgba(255, 0, 0, 1.0);
 	}
 }
+html:not(.ie) {
+
+	.page-id-384 .donate-hero h2 {
+		background-color: rgb(156, 39, 176);
+		background-blend-mode: overlay;
+	}
+}
 .mac.safari:not(.mobile) {
 	overflow-x: hidden;
 	body {
@@ -42,7 +49,8 @@
 		letter-spacing: -.005em;
 	}
 }
-.firefox, .edge {
+.firefox,
+.edge {
 	h1,
 	h2,
 	:before,
@@ -99,7 +107,10 @@
 	.home-hero .home-play span {
 		background: none !important;
 	}
-	.home .home-hero h2, .home-play, .home-play i:before, .home-play span  {
+	.home .home-hero h2,
+	.home-play,
+	.home-play i:before,
+	.home-play span {
 		opacity: 0 !important;
 	}
 	.home .home-hero {
@@ -109,27 +120,22 @@
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 	}
-	
 	.home .home-hero::before {
-		content: ''  !important;
-		position: absolute  !important;
+		content: '' !important;
+		position: absolute !important;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
 		z-index: 0;
-		background-image: url(https://s3.amazonaws.com/fiwi-onepulsefoundation/wp-content/themes/onepulse/dist/img/hero-ie.svg)  !important;
+		background-image: url(https://s3.amazonaws.com/fiwi-onepulsefoundation/wp-content/themes/onepulse/dist/img/hero-ie.svg) !important;
 		background-size: auto 80% !important;
 		background-position: 0% 50% !important;
 		background-repeat: no-repeat;
 	}
-	
 	.loader:before {
-		
 		background: black !important;
-		
 	}
-	
 	.clip {
 		background: none !important;
 		&.red {
@@ -235,7 +241,7 @@
 		text-align: center;
 		i:after {
 			left: 0;
-//			top: auto;
+			//			top: auto;
 			width: 100%;
 			text-align: center;
 		}
@@ -302,19 +308,14 @@
 		}
 	}
 }
-
 .translated-ltr {
-	
-	
 	.home-play span span:after {
 		content: 'testimonio de nuestra historia donde el amor gana' !important;
 		text-transform: lowercase;
 	}
-
-.home-play span span:before {
-    content: none !important;
-}
-	
+	.home-play span span:before {
+		content: none !important;
+	}
 }
 .ie-polyfill {
 	background-size: cover;
@@ -364,6 +365,9 @@
 }
 @media(max-width:375px) {
 	iframe#mc-donation {
-		height: 1200px !important;
+		height: 1350px !important;
 	}
+}
+p img {
+	height: auto;
 }

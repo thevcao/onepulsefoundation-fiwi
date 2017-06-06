@@ -40,7 +40,7 @@
 
 
 					<div class="col-md-5">
-						<h1>Support onePULSE Foundation with a fully tax-deductible contribution</h1>
+						<h1><?php the_field('headline');?></h1>
 
 								<h4 class="text-left mb8">Share this</h4>
 								<ul class="socials shares">
@@ -53,10 +53,14 @@
 
 						
 
-						<div class="hidden-sm hidden-xs"><?php the_content();?></div>
+						<div class="hidden-sm hidden-xs"><?php the_field('left_column');?></div>
 						<div class="shirt-cta hidden-sm hidden-xs">
 						<img src="<?php echo get_template_directory_uri(); ?>/dist/img/shirt.svg">
-						<a href="https://pulse-orlando-shirts.myshopify.com/products/onepulse-foundation-shirt" class="btn shirt-btn" target="_blank">Get Yours</a>
+						<a href="https://pulse-orlando-shirts.myshopify.com/products/onepulse-foundation-shirt" class="btn shirt-btn mt0 mb8" target="_blank">Get Yours</a>
+							<?php if(is_page('donate')):?>
+							<a href="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf" class="btn shirt-btn mt0 mb8" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf">Download 8 1/2' x 11' Flyer Kit</a>
+							<a href="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf" class="btn shirt-btn mt0 mb32" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf">Download 4"x 8" Banner Kit</a>
+							<?php endif;?>
 						</div>
 					</div>
 
@@ -64,9 +68,13 @@
 
 					<div class="col-md-6 col-md-offset-1 pt64 pt-sm-16 p-xs-0">
 
+						<?php the_field('right_column');?>
 
-						<iframe id="mc-donation" src="https://app.mobilecause.com/form/bgKlMw" width="100%" height="1300" overflow="scroll" onLoad="window.scrollTo(0,0);"></iframe>
-							<div class="shirt-cta visible-sm visible-xs">
+						<div class="shirt-cta visible-sm visible-xs">
+							<?php if(is_page('donate')):?>
+						<a href="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf" class="btn shirt-btn mt0 mb8" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf">Download 8 1/2' x 11' Flyer Kit</a>
+						<a href="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf" class="btn shirt-btn mt0 mb8" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf">Download 4"x 8" Banner Kit</a>
+							<?php endif;?>
 						<img src="<?php echo get_template_directory_uri(); ?>/dist/img/shirt.svg">
 						<a href="https://pulse-orlando-shirts.myshopify.com/products/onepulse-foundation-shirt" class="btn shirt-btn" target="_blank">Get Yours</a>
 						</div>

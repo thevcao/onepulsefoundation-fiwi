@@ -250,7 +250,17 @@ Orlando Fl 32853-0036</div>
 
 
 </div>
-<div class="donate-bar visible-xs"><a href="/donate">Donate to onePULSE <i class="fa fa-chevron-right"></i></a></div>
+<div class="donate-bar">
+	<div class="row">
+		<div class="col-sm-12 col-xs-6">
+			<a href="/supporter-kit" class="hidden-xs">Download Your OnePULSE Supporter Kit <i class="fa fa-chevron-right hidden-sm hidden-xs"></i></a>
+			<a href="/supporter-kit" class="visible-xs kit-btn"><i class="fa fa-chevron-left"></i> Free Supporter Kit</a>
+		</div>
+		<div class="col-sm-12 col-xs-6 visible-xs">
+			<a href="/donate" class="visible-xs">Donate <i class="fa fa-chevron-right"></i></a>
+		</div>
+	</div>
+</div>
 
 <?php wp_footer(); ?>
 <script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs.ga.min.js"></script>

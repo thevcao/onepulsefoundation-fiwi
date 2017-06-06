@@ -211,7 +211,7 @@
 						}
 						$('.hidden-xs .home-play i').fitText(.35, { maxFontSize: '126px' });
 						$('.visible-xs .home-play i').fitText(1, { maxFontSize: '126px' });
-						$('footer').css('padding-bottom', '0');
+//						$('footer').css('padding-bottom', '0');
 					}
 
 
@@ -554,7 +554,7 @@
 						$('.full-menu').removeClass("transition");
 					}
 				);
-				$("a").not('a[href="#"], .nturl, .modal-toggle, .modal-toggle a, .pop-link, ul.tabs li a, .woocommerce-product-gallery__image a, a[target="_blank"], a[target="blank"]').click(function (e) {
+				$("a").not('a[download], a[href="#"], .nturl, .modal-toggle, .modal-toggle a, .pop-link, ul.tabs li a, .woocommerce-product-gallery__image a, a[target="_blank"], a[target="blank"]').click(function (e) {
 
 
 					var link = $(this).attr('href');
