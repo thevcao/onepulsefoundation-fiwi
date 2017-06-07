@@ -370,6 +370,26 @@
 					});
 					
 				});
+				$('a[href="https://fiwi-onepulsefoundation.s3.amazonaws.com/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf"]').click(function () {
+					
+					
+					ga('send', {
+						hitType: 'event',
+						eventCategory: 'Flyer Kit',
+						eventAction: 'Download'
+					});
+					
+				});
+				$('a[href="https://fiwi-onepulsefoundation.s3.amazonaws.com/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf"]').click(function () {
+					
+					
+					ga('send', {
+						hitType: 'event',
+						eventCategory: 'Banner Click',
+						eventAction: 'Download'
+					});
+					
+				});
 
 				
 				
