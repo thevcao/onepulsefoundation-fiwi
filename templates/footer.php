@@ -253,7 +253,7 @@ Orlando Fl 32853-0036</div>
 <div class="donate-bar">
 	<div class="row">
 		<div class="col-sm-12 col-xs-6">
-			<a href="/supporter-kit" class="hidden-xs">Download Your OnePULSE Supporter Kit <i class="fa fa-chevron-right hidden-sm hidden-xs"></i></a>
+			<a href="/supporter-kit" class="hidden-xs">Download Your onePULSE Supporter Kit <i class="fa fa-chevron-right hidden-sm hidden-xs"></i></a>
 			<a href="/supporter-kit" class="visible-xs kit-btn"><i class="fa fa-chevron-left"></i> Free Supporter Kit</a>
 		</div>
 		<div class="col-sm-12 col-xs-6 visible-xs">
