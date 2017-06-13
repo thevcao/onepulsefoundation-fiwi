@@ -68,7 +68,19 @@ endif;
 
 
 <script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs.js"></script>
-
+<?php  $featbanner = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); $featurl = $featbanner['0']; ?>
+<?php if( has_post_thumbnail()): echo '<style>.page-id-' . get_the_ID() . ' .loader, .page-id-' . get_the_ID() . ' .donate-hero h2 { background-image:url('. $featurl .');}</style>'; echo '<meta property="og:image" content="'. $featurl .'" />'; endif;?>
+<?php if (get_field('banner')): $banner = get_field('banner'); 
+	
+	echo '<meta property="og:image" content="'. $banner['sizes']['large'] .'" />';
+	
+	endif;
+	
+	if(get_field('video_poster')): $banner = get_field('video_poster'); 
+	
+	echo '<meta property="og:image" content="'. $banner['sizes']['large'] .'" />';
+	
+	endif;  wp_reset_postdata();?>	
 
 	
 	
@@ -111,19 +123,7 @@ endif; wp_reset_postdata();?>
 	endif; wp_reset_postdata();?>
 	
 	
-<?php  $featbanner = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner' ); $featurl = $featbanner['0']; ?>
-<?php if( has_post_thumbnail()): echo '<style>.page-id-' . get_the_ID() . ' .loader, .page-id-' . get_the_ID() . ' .donate-hero h2 { background-image:url('. $featurl .');}</style>'; endif;?>
-<?php if (get_field('banner')): $banner = get_field('banner'); 
-	
-	echo '<meta property="og:image" content="'. $banner['sizes']['large'] .'" />';
-	
-	endif;
-	
-	if(get_field('video_poster')): $banner = get_field('video_poster'); 
-	
-	echo '<meta property="og:image" content="'. $banner['sizes']['large'] .'" />';
-	
-	endif;  wp_reset_postdata();?>	
+
 
 	
 	<!-- Facebook Pixel Code -->
