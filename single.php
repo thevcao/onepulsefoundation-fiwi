@@ -69,6 +69,9 @@
                             <?php echo '<label class="img-attrib">' . $poster['caption'] . '</label>';?>
 
                         </div>
+
+                        <?php elseif($source == 'None'): ?>
+
                         <?php endif;?>
 
             <?php } else{ ?>
@@ -118,24 +121,30 @@
 
 
                             <div class="col-md-4 mt120 mt-sm-0 mt-xs-0">
-                                <label data-stellar-ratio="1"><span>Video</span>
-                                    <?php the_field('video_title');?>
-                                        <div class="line"></div>
-                                </label>
+
 
                                 <div>
 
                             <?php if($source == 'File'): ?>
+
+                                    <label data-stellar-ratio="1"><span>Video</span>
+                                        <?php the_field('video_title');?>
+                                            <div class="line"></div>
+                                    </label>
                                     <a href="<?php echo $video; ?>" class="btn mt16" download>Download Video </a>
 
-                                    <?php else:?>
-
+                                    <?php elseif($source == 'External'): ?>
+                                    <label data-stellar-ratio="1"><span>Video</span>
+                                        <?php the_field('video_title');?>
+                                            <div class="line"></div>
+                                    </label>
                                     <?php if($ext_source == 'youtube'): ?>
                                     <a href="<?php echo $url;?>" class="btn mt16 pop-link">View on YouTube </a>
-                                    <?php endif;?>
-                                    <?php if($ext_source == 'vimeo'): ?>
+                                    <?php elseif($ext_source == 'vimeo'): ?>
                                     <a href="<?php echo $url;?>" class="btn mt16 pop-link">View on Vimeo </a>
                                     <?php endif;?>
+
+                                    <?php elseif($source == 'None'): ?>
                                     <?php endif;?>
 
 
