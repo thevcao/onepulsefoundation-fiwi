@@ -5,11 +5,37 @@ const gulp    = require('gulp');
 const merge   = require('merge-stream');
 const plugins = require('gulp-load-plugins')({ camelize: true });
 const through = require('through2');
+const sassGlob = require('gulp-sass-glob');
+const browserSync = require('browser-sync').create();
+const reload = browserSync.reload;
+const sourcemaps = require('gulp-sourcemaps');
+
+// browser-sync task for starting the server.
+gulp.task('browser-sync', function() {
+    //watch files
+    var files = [
+    '*.php',
+    './partials/*.php',
+    './partials/*/*.php',
+    './templates/*.php',
+    '/wp-json'
+    ];
+ 
+    //initialize browsersync
+    browserSync.init(files, {
+    //browsersync with a php server
+    proxy: "http://onepulsefoundation.onpu.dev",
+    notify: false
+    });
+});
+
 
 // CSS task
 gulp.task('styles', () => {
   return gulp.src('src/scss/main.scss')
-    .pipe(plugins.plumber())
+	.pipe(sassGlob())
+	.pipe(sourcemaps.init())
+	.pipe(plugins.plumber())
     .pipe(plugins.sass({ outputStyle: 'compressed' }))
     .pipe(plugins.postcss([
       require('autoprefixer')({ browsers: ['last 2 versions'] })
@@ -18,6 +44,7 @@ gulp.task('styles', () => {
     .pipe(plugins.sourcemaps.write('.'))
     .pipe(plugins.plumber.stop())
     .pipe(gulp.dest('dist/css'))
+	.pipe(browserSync.stream())
     .pipe(plugins.size({ title: 'styles' }));
 });
 
@@ -84,26 +111,5 @@ gulp.task('watch', () => {
 });
 
 
-
-//var uncss = require('gulp-uncss');
-//var rename = require('gulp-rename');
-//
-//gulp.task('uncss', function () {
-//
-//    gulp.src('dist/css/styles.min.css')
-//        .pipe(uncss({
-//    	ignore: [],
-//        html: []
-//        })).pipe(rename({
-//            suffix: '.clean'
-//        }))
-//
-//    .pipe(gulp.dest('dist/css/'));
-//
-//});
-
-// Default task w UNCSS
-//gulp.task('default', ['build', 'watch', 'uncss']);
-
 // Default task
-gulp.task('default', ['build', 'watch']);
+gulp.task('default', ['build', 'browser-sync', 'watch']);
