@@ -94,14 +94,13 @@ get_template_part('templates/head');
                 <h3>onePULSE Foundation</h3>
                 <p class="mt0 mb16">1912 South Orange Avenue<br>Orlando, FL 32806</p>
                 <p class="mt0 mb0"><span>office</span> <a href="tel":><?php the_field('contact_office','options');?></a></p>
-                <p class="mt0 mb16"><span>email</span> <a href="mailto:info@onePULSEFoundation.org">info@onePULSEFoundation.org</a></p>
-                <p class="mt0 mb8">For all media inquires please contact:</p>
+                <p class="mt0 mb8"><a class="" href="mailto:info@onePULSEFoundation.org"><b>email</b> info@onePULSEfoundation.org</a></p>
+                <p class="mt0 mb16"><a href="tel:407-775-2437"><span>office</span> 407-775-2437</a></p>
+                <p class="mt0 mb0"><span>Media Inquiries Only:</span></p>
                 <h4 class="mb8">Sara Brady</h4>
 
                 <p class="mt0 mb0"><span>office</span> <a href="tel:407-702-6632">407-702-6632</a></p>
                 <p class="mt0 mb8"><span>mobile</span> <a href="tel">407-408-4000</a></p>
-                <p class="mt0 mb0">Any remaining inquires, pleas​e contact:</p>
-                <a class="mt0 mb0" href="mailto:info@onePULSEFoundation.org">info@onePULSEFoundation.org</a>
                 </div>
 
 
