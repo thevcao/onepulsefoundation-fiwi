@@ -72,6 +72,11 @@
 
                         <?php elseif($source == 'None'): ?>
 
+                          <?php if(!empty($poster)): ?>
+                              <img class="over-image" src="<?php echo $poster['sizes']['large'];?>"  alt="<?php if (!$poster['alt'] == null): echo $poster['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
+                          <?php endif;?>
+
+
                         <?php endif;?>
 
             <?php } else{ ?>
