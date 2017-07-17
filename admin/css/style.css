@@ -178,34 +178,34 @@ div#aiosp_upgrade_wrapper {
 
 
 .login {
-	
-	background-image: url(/wp-content/uploads/2017/04/49-bg.jpg);
-	background-size: cover;
-	background-position: 50%;
+
+    background-image: url(/wp-content/uploads/2017/04/49-bg.jpg);
+    background-size: cover;
+    background-position: 50%;
 }
 
 .login.wp-core-ui .button-primary {
-	
-		margin: 10px auto;
-	padding: 5px 10px;
-	border: 3px solid #000;
-	color: black;
-	border-radius: 100px;
-	display: block;
-	text-align: center;
-	max-width: 300px;
-	font-weight: bold;
-	transition: .3s ease;
-	letter-spacing: -.025em;
-	transition: color .3s ease, border-color .3s ease;
-	position: relative;
-	background: none;
-	z-index: 1;
-	height: auto;
-	text-shadow: none;
-	box-shadow: none;
-	display: block;
-	width: 100%;
+
+        margin: 10px auto;
+    padding: 5px 10px;
+    border: 3px solid #000;
+    color: black;
+    border-radius: 100px;
+    display: block;
+    text-align: center;
+    max-width: 300px;
+    font-weight: bold;
+    transition: .3s ease;
+    letter-spacing: -.025em;
+    transition: color .3s ease, border-color .3s ease;
+    position: relative;
+    background: none;
+    z-index: 1;
+    height: auto;
+    text-shadow: none;
+    box-shadow: none;
+    display: block;
+    width: 100%;
 }
 
 body.login:before {
@@ -220,12 +220,34 @@ body.login:before {
     opacity: 1;
 }
 
+body.fiwi-redirected-user.login:before {
+    content: none !important;
+}
+
+
+    body.fiwi-redirected-user.login input[type="text"], body.fiwi-redirected-user.login input[type="password"] {
+
+
+        font-weight: normal !important;
+    }
+
+    body.fiwi-redirected-user.login.wp-core-ui .button-primary {
+
+        border-color: #fff;
+        color: #fff;
+
+
+    }
+
+
+
+
 @media screen and (max-width: 782px) {}
 
 .login form {
-	
-	background: none;
-	box-shadow: none;
+
+    background: none;
+    box-shadow: none;
 }
 
 body.login input[type="text"], body.login input[type="password"] {
@@ -238,6 +260,6 @@ body.login input[type="text"], body.login input[type="password"] {
     outline: none;
     animation: border-pulsate 5s ease alternate-reverse;
     animation-iteration-count: infinite;
-	background: none !important;
-	box-shadow: none  !important;
+    background: none !important;
+    box-shadow: none  !important;
 }
