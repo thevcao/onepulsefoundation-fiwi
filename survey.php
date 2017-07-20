@@ -33,8 +33,8 @@
 
         <h1><span>onePULSE Foundation</span>Memorial Survey</h1>
 
-        <a href="#english" class="btn survey-toggle">Continue English</a>
-        <a href="#spanish" class="btn survey-toggle" >Continue Spanish</a>
+        <a href="#english" class="btn survey-toggle">Continue in English</a>
+        <a href="#spanish" class="btn survey-toggle" >Continue in Spanish</a>
 
         <div id="english">
 
@@ -64,4 +64,12 @@
 </div>
 
 
+
+
+
         <?php get_template_part('templates/footer'); ?>
+
+        <script>
+    jQuery('li.hidden input').val('<?php $current_user = wp_get_current_user(); echo $current_user->user_email; ?>');
+
+    </script>

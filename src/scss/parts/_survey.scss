@@ -1,7 +1,26 @@
 .gform_wrapper .gf_progressbar_percentage,
 .gform_wrapper {
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    letter-spacing: -.025em
+    letter-spacing: 0;
+
+    label {
+//        letter-spacing: 0;
+        font-weight: normal;
+    }
+}
+
+.gform_wrapper p {
+
+    letter-spacing: 0;
+    font-weight: normal;
+
+}
+.ie {
+    .gform_wrapper .gf_progressbar_percentage,
+    .gform_wrapper {
+        font-family: "Arial", sans-serif;
+        letter-spacing: 0;
+    }
 }
 .gform_wrapper h1,
 .gform_wrapper h2,
@@ -11,7 +30,9 @@
 .gform_wrapper {
     padding-bottom: 5rem;
 }
-.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .gform_wrapper textarea.medium, .survey-login input {
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+.gform_wrapper textarea.medium,
+.survey-login input {
     pointer-events: all;
     padding: 20px 5px 5px;
     margin-bottom: 10px;
@@ -66,15 +87,11 @@
     font-family: inherit;
     pointer-events: all;
 }
-
-
 .survey-login {
     label {
-
         font-size: 12px;
     }
 }
-
 .survey-login input#wp-submit {
     width: 300px;
     height: auto;
@@ -91,10 +108,8 @@
     font-family: inherit;
     pointer-events: all;
 }
-
-
 .gform_wrapper p {
-    font-weight: bold;
+//    font-weight: bold;
 }
 .gform_wrapper ul.gfield_checkbox li label {
     position: relative;
@@ -126,37 +141,46 @@
     &:nth-child(5n+1) {
         input[type=radio]:checked,
         input[type=checkbox]:checked {
-            background: linear-gradient(135deg, #fd2fad 0%, #e40051 100%);
+            background: #e40051;
         }
     }
     &:nth-child(2),
     &:nth-child(5n+2) {
         input[type=radio]:checked,
         input[type=checkbox]:checked {
-            background: linear-gradient(135deg, #ffdc19 0%, #ffa207 100%);
+            background: #ffa207
         }
     }
     &:nth-child(3),
     &:nth-child(5n+3) {
         input[type=radio]:checked,
         input[type=checkbox]:checked {
-            background: linear-gradient(135deg, #97ff07 0%, #39d507 100%);
+            background: #97ff07
         }
     }
     &:nth-child(4),
     &:nth-child(5n+4) {
         input[type=radio]:checked,
         input[type=checkbox]:checked {
-            background: linear-gradient(135deg, #1e90ff 0%, #0729fe 100%);
+            background: #1e90ff
         }
     }
     &:nth-child(5),
     &:nth-child(5n+5) {
         input[type=radio]:checked,
         input[type=checkbox]:checked {
-            background: linear-gradient(135deg, #ff0bff 0%, purple 100%);
+            background: #ff0bff
         }
     }
+}
+
+.gform_wrapper .gfield_radio li input[type=radio], .gform_wrapper .gfield_checkbox li input[type=checkbox] {
+    display: block;
+}
+.gform_wrapper ul.gfield_checkbox li input[type=checkbox]:checked+label, .gform_wrapper ul.gfield_radio li input[type=radio]:checked+label {
+
+
+    font-weight: normal !important;
 }
 .gform_wrapper .gfield_required {
     display: none;
@@ -164,34 +188,55 @@
 input[type="checkbox"]:disabled + label {
     opacity: .5;
 }
-
-
-.gform_confirmation_wrapper  {
+.gform_confirmation_wrapper {
     padding-bottom: 25vh;
 }
-
-#english, #spanish {
-
+#english,
+#spanish {
     display: none;
 }
-
 .translated-ltr {
-
     #spanish {
-
         display: block !important;
     }
-    #english, .survey-toggle {
-
+    #english,
+    .survey-toggle {
         display: none !important;
     }
-
-
-
 }
-
-
+li.hidden {
+    display: none;
+}
+.gfield_error {
+    border: none !important;
+    background: none !important;
+}
+.gform_wrapper .gfield_error .gfield_label {
+    color: black;
+}
+.gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+.gform_wrapper li.gfield_error textarea {
+    border: none;
+    border-bottom: 3px solid #ea0b66;
+}
+.gform_wrapper .validation_message {
+    color: #ea0b66;
+    padding-top: 0px !important;
+}
+.gform_wrapper div.validation_error {
+    color: #000000;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    background: none;
+    max-width: 700px;
+    margin: 0 auto;
+    border: 2px solid black;
+}
 @media(max-width: 768px) {
+    .gform_wrapper div.validation_error {
+        max-width: 100%;
+    }
     .gform_wrapper ul.gfield_radio li {
         display: block;
         margin-right: 0;
