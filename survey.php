@@ -34,7 +34,7 @@
         <h1><span>onePULSE Foundation</span>Memorial Survey</h1>
 
         <a href="#english" class="btn survey-toggle">Continue in English</a>
-        <a href="#spanish" class="btn survey-toggle" >Continue in Spanish</a>
+        <a href="#spanish" class="btn survey-toggle" >Continuar en Español</a>
 
         <div id="english">
 

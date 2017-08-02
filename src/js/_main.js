@@ -978,7 +978,7 @@
 
             }
         }, // About us page, note the change from about-us to about_us.
-        'page_id_478': {
+        'page_template_survey': {
             init: function () {
 
                     $('.survey-toggle').click(function(){
@@ -989,23 +989,29 @@
                         return false;
 
                     })
-                    $('.Spanish').click(function(){
-                        $('.survey-toggle').slideUp(500);
+//                    $('.Spanish').click(function(){
+//                        $('.survey-toggle').slideUp(500);
+//
+//                        $('#english').slideUp(500);
+//                        $('#spanish').slideDown(500);
+//
+//
+//                    })
+//                    $('.English').click(function(){
+//                        $('.survey-toggle').slideUp(500);
+//
+//                        $('#spanish').slideUp(500);
+//                        $('#english').slideDown(500);
+//
+//                        return false;
+//
+//                    })
+                $(window).load(function(){
 
-                        $('#english').slideUp(500);
-                        $('#spanish').slideDown(500);
 
+                $('.English').trigger('click');
 
-                    })
-                    $('.English').click(function(){
-                        $('.survey-toggle').slideUp(500);
-
-                        $('#spanish').slideUp(500);
-                        $('#english').slideDown(500);
-
-                        return false;
-
-                    })
+                })
 
 
                 $.fn.checkboxLimit = function(n) {

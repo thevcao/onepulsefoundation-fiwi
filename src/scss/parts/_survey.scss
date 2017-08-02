@@ -68,9 +68,15 @@
 .gform_wrapper .percentbar_blue {
     background: black !important;
 }
+
+.gform_wrapper .gf_progressbar_percentage {
+
+    font-size: 11px !important;
+}
 .gform_wrapper .gf_progressbar_percentage span {
     font-weight: bold;
     letter-spacing: -.05rem;
+    line-height: 2.5 !important;
 }
 .gform_wrapper .gform_footer input.button,
 .gform_wrapper .gform_footer input[type=submit],
@@ -118,6 +124,9 @@
 }
 .gform_wrapper .gfield_radio li,
 .gform_wrapper .gfield_checkbox li {
+
+        overflow: visible !important;
+
     input {
         -webkit-appearance: none;
         padding: 15px;
@@ -129,8 +138,36 @@
         transform: scale(0.9);
         position: relative;
         cursor: pointer;
+        opacity: 0;
+        position: absolute;
     }
 }
+
+.gform_wrapper ul.gfield_radio li label:before, .gform_wrapper ul.gfield_checkbox li label:before {
+    /* position: absolute; */
+    content: '';
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 100px;
+    position: relative;
+    display: block;
+    margin-bottom: .5rem;
+    border: 5px solid #eee;
+    transition: all .35s ease;
+    outline: none;
+    transform: scale(0.9);
+    transform-origin: 50% 50% 0;
+    margin-left: -10px;
+}
+
+.gform_wrapper .gfield_checkbox li label input:checked+label:before, .gform_wrapper .gfield_radio li input:checked+label:before {
+    background: red;
+    transform: scale(1);
+}
+
 .gform_wrapper .gfield_radio li,
 .gform_wrapper .gfield_checkbox li {
     input[type=radio]:checked,
@@ -170,6 +207,50 @@
         input[type=radio]:checked,
         input[type=checkbox]:checked {
             background: #ff0bff
+        }
+    }
+}
+.gform_wrapper .gfield_radio li,
+.gform_wrapper .gfield_checkbox li {
+    input[type=radio]:checked+label:before,
+    input[type=checkbox]:checked+label:before {
+        transform: scale(1.1);
+//    transform-origin: 100% 50% 0;
+
+    }
+    &:first-child,
+    &:nth-child(5n+1) {
+        input[type=radio]:checked+label:before,
+        input[type=checkbox]:checked+label:before {
+            background: #e40051 !important;
+        }
+    }
+    &:nth-child(2),
+    &:nth-child(5n+2) {
+        input[type=radio]:checked+label:before,
+        input[type=checkbox]:checked+label:before {
+            background: #ffa207 !important;
+        }
+    }
+    &:nth-child(3),
+    &:nth-child(5n+3) {
+        input[type=radio]:checked+label:before,
+        input[type=checkbox]:checked+label:before {
+            background: #97ff07 !important;
+        }
+    }
+    &:nth-child(4),
+    &:nth-child(5n+4) {
+        input[type=radio]:checked+label:before,
+        input[type=checkbox]:checked+label:before {
+            background: #1e90ff !important;
+        }
+    }
+    &:nth-child(5),
+    &:nth-child(5n+5) {
+        input[type=radio]:checked+label:before,
+        input[type=checkbox]:checked+label:before {
+            background: #ff0bff !important;
         }
     }
 }
@@ -234,6 +315,22 @@ li.hidden {
     margin: 0 auto;
     border: 2px solid black;
 }
+
+.gform_wrapper ul.gfield_checkbox li {
+    width: 25%;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.page-template-survey {
+
+
+    .lang-toggle {
+
+        display: none;
+    }
+}
+
 @media(max-width: 768px) {
     .gform_wrapper div.validation_error {
         max-width: 100%;
@@ -243,4 +340,11 @@ li.hidden {
         margin-right: 0;
         width: 100%;
     }
+
+.gform_wrapper ul.gfield_checkbox li {
+    width: 50%;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
 }

@@ -990,3 +990,11 @@ new GFLimitCheckboxes(1, array(
         'max' => 5
         )
     ));
+new GFLimitCheckboxes(2, array(
+    35 => array(
+        'max' => 5
+        ),
+    38 => array(
+        'max' => 5
+        )
+    ));
