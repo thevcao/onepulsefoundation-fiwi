@@ -998,3 +998,20 @@ new GFLimitCheckboxes(2, array(
         'max' => 5
         )
     ));
+
+
+function admin_default_page() {
+  return '/survey';
+}
+
+add_filter('login_redirect', 'admin_default_page');
+
+// Disable Gravity forms jump on submission
+
+//add_filter("gform_confirmation_anchor", create_function("", "return false;"));
+
+//add_filter( 'gform_confirmation_anchor', '__return_true' );
+
+add_filter( 'gform_confirmation_anchor', function() {
+    return 230;
+} );

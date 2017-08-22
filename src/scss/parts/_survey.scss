@@ -76,7 +76,7 @@
 .gform_wrapper .gf_progressbar_percentage span {
     font-weight: bold;
     letter-spacing: -.05rem;
-    line-height: 2.5 !important;
+    line-height: 2 !important;
 }
 .gform_wrapper .gform_footer input.button,
 .gform_wrapper .gform_footer input[type=submit],
@@ -170,6 +170,9 @@
 
 .gform_wrapper .gfield_radio li,
 .gform_wrapper .gfield_checkbox li {
+
+        vertical-align: top;
+
     input[type=radio]:checked,
     input[type=checkbox]:checked {
         transform: scale(1.1);
@@ -329,6 +332,29 @@ li.hidden {
 
         display: none;
     }
+}
+
+
+#spanish .validation_message, #spanish div.validation_error {
+    font-size: 0;
+}
+
+.gform_confirmation_message p {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+#spanish .validation_message:before {
+    content: 'Repusta es reequrida';
+    font-size: 12px;
+}
+
+#spanish .validation_error:before {
+    content: 'Había un error con su sumisión. Favor de revisar.';
+    font-size: 16px;
+
+
 }
 
 @media(max-width: 768px) {

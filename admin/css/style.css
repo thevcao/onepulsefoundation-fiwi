@@ -233,14 +233,40 @@ body.fiwi-redirected-user.login:before {
 
     body.fiwi-redirected-user.login.wp-core-ui .button-primary {
 
+/*
         border-color: #fff;
         color: #fff;
+*/
 
 
     }
 
+.login #login_error, .login .message {
 
+        background: white;
+    margin: 1rem;
+    text-align: center;
+    border-radius: 100px;
+    border: 3px solid black;
 
+}
+
+p.description.indicator-hint:after {
+    content: 'Consejo: La contraseña debe ser de al menos 12 caracteres. Para que su contraseña sea mas segura, use una combinación de letras mayusculas, minúsculas, números, y símbolos como ! ” ? $ % ^ &';
+    margin-top: 1rem;
+    display: block;
+}
+
+.submit:after {
+    content: 're-establecer su contraseña';
+    display: block;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.login form .forgetmenot {
+    float: none;
+}
 
 @media screen and (max-width: 782px) {}
 
