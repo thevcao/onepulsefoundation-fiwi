@@ -388,7 +388,62 @@ li.hidden {
     }
 
 }
+.webkit, .mac {
 
+    .gform_wrapper .gf_progressbar_percentage {
+
+    background: linear-gradient(90deg, #00a8de 0%, #333391 17%, #e91388 34%, #eb2d2e 51%, #fde92b 68%, #009e54 85%, #00a8de 100%) !important;
+    animation: animation 10s ease infinite both  !important;
+        background-size: 100vw !important;
+    }
+
+
+}
+
+.ui-datepicker-title select {
+    color: black !important;
+}
+
+.ui-datepicker {
+    border-radius: 10px !important;
+}
+
+.ui-datepicker-header {
+    background: black !important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+.ui-datepicker-calendar .ui-state-default {
+    background: white !important;
+}
+
+table.ui-datepicker-calendar {
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+a.ui-datepicker-prev.ui-corner-all {
+    border-top-left-radius: 10px !important;
+}
+
+.ui-datepicker-title {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    background: black !important;
+}
+
+
+.ui-datepicker-calendar .ui-state-active {
+    background: black !important;
+    color: white !important;
+    text-shadow: none  !important;
+    border: none  !important;
+    box-shadow: none  !important;
+    margin: 0  !important;
+}
 
 @media(max-width: 768px) {
     .gform_wrapper div.validation_error {

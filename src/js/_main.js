@@ -249,10 +249,10 @@
                     return false;
 
                 });
-                $('.shares .pop-link').click(function (e) {
+                $(document).on('click', '.shares .pop-link', function (e) {
                     e.preventDefault();
                     var poplink = $(this).attr('href');
-                    newwindow = window.open(poplink, 'name', 'height=400,width=600');
+                    newwindow = window.open(poplink, 'name', 'height=800,width=600');
                     if (window.focus) {
                         newwindow.focus()
                     }
