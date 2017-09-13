@@ -1015,3 +1015,38 @@ add_filter('login_redirect', 'admin_default_page');
 add_filter( 'gform_confirmation_anchor', function() {
     return 230;
 } );
+add_filter( 'allow_dev_auto_core_updates', '__return_false' );
+add_filter( 'auto_update_core', '__return_true' );
+add_filter( 'auto_core_update_send_email', '__return_false' );
+add_filter( 'auto_update_plugin', '__return_true' );
+
+
+
+//$ref = $_SERVER['HTTP_REFERER'];
+//$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+//
+//
+//if(strpos($url,'wp-login.php?action=register') == true){
+//
+//if ((strpos($ref,'survey') == true && strpos($url,'wp-login.php?action=register') == true) || (strpos($ref,'wp-login.php?action=register') == true && strpos($url,'wp-login.php?action=register') == true)) {
+//// You're good to go...
+//
+//
+//
+//} else {
+//
+//
+//        header('Location: /wp-login.php?registration=disabled');
+//
+//
+//
+//}
+
+
+
+//if (strpos($url,'wp-login.php?action=register') == true) {
+
+
+//}
+
+//}

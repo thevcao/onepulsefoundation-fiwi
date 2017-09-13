@@ -113,8 +113,8 @@ $newsimage = get_field('news_image', 'options');?>
 <div class="donate-bar">
     <div class="row">
         <div class="col-sm-12 col-xs-6">
-            <a href="/supporter-kit" class="hidden-xs">Download Your onePULSE Supporter Kit <i class="fa fa-chevron-right hidden-sm hidden-xs"></i></a>
-            <a href="/supporter-kit" class="visible-xs kit-btn"><i class="fa fa-chevron-left"></i> Free Supporter Kit</a>
+            <a href="/survey" class="hidden-xs">Participate in the Memorial Survey <i class="fa fa-chevron-right hidden-sm hidden-xs"></i></a>
+            <a href="/survey" class="visible-xs kit-btn"><i class="fa fa-chevron-left"></i> Memorial Survey</a>
         </div>
         <div class="col-sm-12 col-xs-6 visible-xs">
             <a href="/donate" class="visible-xs">Donate <i class="fa fa-chevron-right"></i></a>

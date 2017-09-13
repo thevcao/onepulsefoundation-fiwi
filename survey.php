@@ -26,9 +26,7 @@
     <div class="container pb64">
 
 
-            <?php
-
-  if ( is_user_logged_in())  { ?>
+            <?php if ( is_user_logged_in())  { ?>
 
 
         <h1><span>onePULSE Foundation</span>Memorial Survey</h1>
@@ -47,13 +45,16 @@
 
         <?php the_content();?>
 
-<?php } else { ?>
+<?php } else {?>
+
 
         <h1>Please Sign in to Complete Survey</h1>
 
         <div class="survey-login">
                 <?php wp_login_form(); ?>
-</div>
+        </div>
+        <p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/us.svg"> Please create a user account to complete the survey. <a href="<?php echo wp_registration_url(); ?>">Create an Account</a></p>
+        <p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/span.svg"> Por favor crea una cuenta de usuario para completar la encuesta. <a href="<?php echo wp_registration_url(); ?>">Crea Una Cuenta</a></p>
 
 
 <?php }?>

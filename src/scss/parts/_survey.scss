@@ -357,6 +357,39 @@ li.hidden {
 
 }
 
+.lang-flag {
+
+    width: 20px;
+    height: auto;
+    margin-right: .25rem;
+}
+
+.user-login-label {
+
+
+    line-height: 1.5;
+    font-size: 14px;
+    padding: 0rem;
+
+    a {
+
+
+//        display: inliblock;
+        font-weight: bold;
+//        margin: 1rem;
+//        margin-bottom: 2rem;
+
+        &:after {
+
+            content: "\f054";
+            margin-left: .25rem;
+            font-family: fontawesome;
+        }
+    }
+
+}
+
+
 @media(max-width: 768px) {
     .gform_wrapper div.validation_error {
         max-width: 100%;

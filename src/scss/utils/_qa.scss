@@ -362,6 +362,9 @@ html:not(.ie) {
         transform: translateX(-50%) translateY(-50%);
         min-width: 100%;
     }
+    .translated-ltr .home .home-hero h2 {
+    font-size: 20vw !important;
+    }
 }
 @media(max-width:375px) {
     iframe#mc-donation {
