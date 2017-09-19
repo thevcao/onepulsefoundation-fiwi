@@ -48,7 +48,7 @@
 <?php } else {?>
 
 
-        <h1>Please Sign in to Complete Survey</h1>
+        <h1>Please Sign in or Create a User Account to Participate in the Survey</h1>
 
         <div class="survey-login">
                 <?php wp_login_form(); ?>

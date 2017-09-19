@@ -1000,11 +1000,11 @@ new GFLimitCheckboxes(2, array(
     ));
 
 
-function admin_default_page() {
-  return '/survey';
-}
-
-add_filter('login_redirect', 'admin_default_page');
+//function admin_default_page() {
+//  return '/survey';
+//}
+//
+//add_filter('login_redirect', 'admin_default_page');
 
 // Disable Gravity forms jump on submission
 
@@ -1050,3 +1050,18 @@ add_filter( 'auto_update_plugin', '__return_true' );
 //}
 
 //}
+function onpu_redirect_users_by_role() {
+
+    if ( ! defined( 'DOING_AJAX' ) ) {
+
+        $current_user   = wp_get_current_user();
+        $role_name      = $current_user->roles[0];
+
+        if ( 'subscriber' === $role_name ) {
+            wp_redirect( site_url() . '/survey/' );
+        } // if $role_name
+
+    } // if DOING_AJAX
+
+} // cm_redirect_users_by_role
+add_action( 'admin_init', 'onpu_redirect_users_by_role' );
