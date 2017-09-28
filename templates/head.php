@@ -68,9 +68,8 @@ endif;
 
 
 <script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs.js"></script>
-
-<?php  $featbanner = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner' ); $featurl = $featbanner['0']; ?>
-<?php if( has_post_thumbnail()): echo '<style> .loader, .donate-hero h2 { background-image:url('. $featurl .');}</style>'; endif;?>
+<?php  $featbanner = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); $featurl = $featbanner['0']; ?>
+<?php if( has_post_thumbnail()): echo '<style>.page-id-' . get_the_ID() . ' .loader, .page-id-' . get_the_ID() . ' .donate-hero h2 { background-image:url('. $featurl .');}</style>'; echo '<meta property="og:image" content="'. $featurl .'" />'; endif;?>
 <?php if (get_field('banner')): $banner = get_field('banner'); 
 	
 	echo '<meta property="og:image" content="'. $banner['sizes']['large'] .'" />';
@@ -81,7 +80,8 @@ endif;
 	
 	echo '<meta property="og:image" content="'. $banner['sizes']['large'] .'" />';
 	
-	endif;  wp_reset_postdata();?>
+	endif;  wp_reset_postdata();?>	
+
 	
 	
 	<?php // check if the flexible content field has rows of data
@@ -101,6 +101,9 @@ if( have_rows('section') ):
     endwhile;
 
 endif; wp_reset_postdata();?>
+	
+	
+
 
 <?php if (get_field('home_hero', 'options')): 
 	
@@ -118,6 +121,27 @@ endif; wp_reset_postdata();?>
 	endif;
 	
 	endif; wp_reset_postdata();?>
+	
+	
+
+
+	
+	<!-- Facebook Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '334045860378572'); // Insert your pixel ID here.
+	fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=334045860378572&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- DO NOT MODIFY -->
+	<!-- End Facebook Pixel Code -->	
+	
 </head>
 	
 <body <?php if(get_field('invert_header')): body_class('invert-header'); else: body_class(); endif; ?>>

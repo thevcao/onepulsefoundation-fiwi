@@ -152,7 +152,7 @@ function smores_numeric_pagination($custom_query = false, $classes = '')
 
 if( function_exists('acf_add_options_page') ) {
 
-	acf_add_options_page(array('page_title' => 'Site Options', 'icon_url' =>'dashicons-admin-generic','position' => '2'));
+    acf_add_options_page(array('page_title' => 'Site Options', 'icon_url' =>'dashicons-admin-generic','position' => '2'));
 }
 
 
@@ -393,20 +393,20 @@ function smores_recursive_copy( $src , $dst, $depth = 1000 ){
 
 function smores_clean_tmp_directory($zippedThemePlugins){
 
-	foreach (scandir( $zippedThemePlugins ) as $file){
-		if ($file == '.' || $file == '..'){
-			//do nothing
-		} else {
-			if (is_dir( $zippedThemePlugins . '/' . $file )){
-				$newDirectoryPath = $zippedThemePlugins . '/' .$file;
-				smores_clean_tmp_directory( $newDirectoryPath );
-			} else {
-				unlink( $zippedThemePlugins . '/' . $file );
-			}
-		}
-	}
+    foreach (scandir( $zippedThemePlugins ) as $file){
+        if ($file == '.' || $file == '..'){
+            //do nothing
+        } else {
+            if (is_dir( $zippedThemePlugins . '/' . $file )){
+                $newDirectoryPath = $zippedThemePlugins . '/' .$file;
+                smores_clean_tmp_directory( $newDirectoryPath );
+            } else {
+                unlink( $zippedThemePlugins . '/' . $file );
+            }
+        }
+    }
 
-	rmdir( $zippedThemePlugins );
+    rmdir( $zippedThemePlugins );
 
 }
 
@@ -426,8 +426,8 @@ function smores_clean_tmp_directory($zippedThemePlugins){
 /** Smores Admin Theme Function **/
 
 function add_favicon() {
-  	$favicon_url = get_template_directory_uri() . '/admin/img/favicon.ico';
-	echo '<link rel="shortcut icon" href="' . $favicon_url . '" />';
+      $favicon_url = get_template_directory_uri() . '/admin/img/favicon.ico';
+    echo '<link rel="shortcut icon" href="' . $favicon_url . '" />';
 }
 
 // Now, just make sure that function runs when you're on the login page and admin pages
@@ -489,239 +489,239 @@ function acf_fields_admin() {
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
-	'key' => 'group_58921d3dedafd',
-	'title' => 'FIWI Admin Settings',
-	'fields' => array (
-		array (
-			'placement' => 'top',
-			'endpoint' => 0,
-			'key' => 'field_58921d6f0db2f',
-			'label' => 'WP Admin Bar',
-			'name' => '',
-			'type' => 'tab',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-		),
-		array (
-			'return_format' => 'url',
-			'preview_size' => 'thumbnail',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-			'key' => 'field_58921d490db2d',
-			'label' => 'Admin Bar Logo',
-			'name' => 'admin_bar_logo',
-			'type' => 'image',
-			'instructions' => 'Transparent White 1:1 Logo Works Best',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-		),
-		array (
-			'placement' => 'top',
-			'endpoint' => 0,
-			'key' => 'field_58921d7c0db30',
-			'label' => 'WP Login',
-			'name' => '',
-			'type' => 'tab',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-		),
-		array (
-			'return_format' => 'url',
-			'preview_size' => 'thumbnail',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-			'key' => 'field_58921d870db31',
-			'label' => 'WP Login Logo',
-			'name' => 'wp_login_logo',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-		),
-		array (
-			'placement' => 'top',
-			'endpoint' => 0,
-			'key' => 'field_58921d990db32',
-			'label' => 'Custom Fonts',
-			'name' => '',
-			'type' => 'tab',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-		),
-		array (
-			'sub_fields' => array (
-				array (
-					'default_value' => '',
-					'maxlength' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'key' => 'field_58921db70db34',
-					'label' => 'Stylesheet',
-					'name' => 'stylesheet',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array (
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-				),
-			),
-			'min' => 0,
-			'max' => 0,
-			'layout' => 'row',
-			'button_label' => 'Add Font',
-			'collapsed' => '',
-			'key' => 'field_58921da60db33',
-			'label' => 'Font',
-			'name' => 'font',
-			'type' => 'repeater',
-			'instructions' => 'Add from <a href="https://fonts.google.com/" class="pop-link">Google Fonts</a> or other external sheet',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-		),
-		array (
-			'default_value' => '',
-			'maxlength' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'key' => 'field_5892201237ede',
-			'label' => 'Headline Font Family',
-			'name' => 'headline_font_family',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '50',
-				'class' => '',
-				'id' => '',
-			),
-		),
-		array (
-			'default_value' => '',
-			'maxlength' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'key' => 'field_5892201f37edf',
-			'label' => 'Headline Font Weight',
-			'name' => 'headline_font_weight',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '50',
-				'class' => '',
-				'id' => '',
-			),
-		),
-		array (
-			'default_value' => '',
-			'maxlength' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'key' => 'field_5892202837ee0',
-			'label' => 'Body Font Family',
-			'name' => 'body_font_family',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '50',
-				'class' => '',
-				'id' => '',
-			),
-		),
-		array (
-			'default_value' => '',
-			'maxlength' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'key' => 'field_5892202f37ee1',
-			'label' => 'Body Font Weight',
-			'name' => 'body_font_weight',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '50',
-				'class' => '',
-				'id' => '',
-			),
-		),
-	),
-	'location' => array (
-		array (
-			array (
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'admin-settings',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => 1,
-	'description' => '',
+    'key' => 'group_58921d3dedafd',
+    'title' => 'FIWI Admin Settings',
+    'fields' => array (
+        array (
+            'placement' => 'top',
+            'endpoint' => 0,
+            'key' => 'field_58921d6f0db2f',
+            'label' => 'WP Admin Bar',
+            'name' => '',
+            'type' => 'tab',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'return_format' => 'url',
+            'preview_size' => 'thumbnail',
+            'library' => 'all',
+            'min_width' => '',
+            'min_height' => '',
+            'min_size' => '',
+            'max_width' => '',
+            'max_height' => '',
+            'max_size' => '',
+            'mime_types' => '',
+            'key' => 'field_58921d490db2d',
+            'label' => 'Admin Bar Logo',
+            'name' => 'admin_bar_logo',
+            'type' => 'image',
+            'instructions' => 'Transparent White 1:1 Logo Works Best',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'placement' => 'top',
+            'endpoint' => 0,
+            'key' => 'field_58921d7c0db30',
+            'label' => 'WP Login',
+            'name' => '',
+            'type' => 'tab',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'return_format' => 'url',
+            'preview_size' => 'thumbnail',
+            'library' => 'all',
+            'min_width' => '',
+            'min_height' => '',
+            'min_size' => '',
+            'max_width' => '',
+            'max_height' => '',
+            'max_size' => '',
+            'mime_types' => '',
+            'key' => 'field_58921d870db31',
+            'label' => 'WP Login Logo',
+            'name' => 'wp_login_logo',
+            'type' => 'image',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'placement' => 'top',
+            'endpoint' => 0,
+            'key' => 'field_58921d990db32',
+            'label' => 'Custom Fonts',
+            'name' => '',
+            'type' => 'tab',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'sub_fields' => array (
+                array (
+                    'default_value' => '',
+                    'maxlength' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'key' => 'field_58921db70db34',
+                    'label' => 'Stylesheet',
+                    'name' => 'stylesheet',
+                    'type' => 'text',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array (
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                ),
+            ),
+            'min' => 0,
+            'max' => 0,
+            'layout' => 'row',
+            'button_label' => 'Add Font',
+            'collapsed' => '',
+            'key' => 'field_58921da60db33',
+            'label' => 'Font',
+            'name' => 'font',
+            'type' => 'repeater',
+            'instructions' => 'Add from <a href="https://fonts.google.com/" class="pop-link">Google Fonts</a> or other external sheet',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'default_value' => '',
+            'maxlength' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'key' => 'field_5892201237ede',
+            'label' => 'Headline Font Family',
+            'name' => 'headline_font_family',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '50',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'default_value' => '',
+            'maxlength' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'key' => 'field_5892201f37edf',
+            'label' => 'Headline Font Weight',
+            'name' => 'headline_font_weight',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '50',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'default_value' => '',
+            'maxlength' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'key' => 'field_5892202837ee0',
+            'label' => 'Body Font Family',
+            'name' => 'body_font_family',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '50',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+        array (
+            'default_value' => '',
+            'maxlength' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'key' => 'field_5892202f37ee1',
+            'label' => 'Body Font Weight',
+            'name' => 'body_font_weight',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '50',
+                'class' => '',
+                'id' => '',
+            ),
+        ),
+    ),
+    'location' => array (
+        array (
+            array (
+                'param' => 'options_page',
+                'operator' => '==',
+                'value' => 'admin-settings',
+            ),
+        ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => 1,
+    'description' => '',
 ));
 
 endif;
@@ -731,14 +731,14 @@ endif;
 add_action( 'admin_head', 'client_logos' );
 add_action( 'login_head', 'client_logos' );
 function client_logos() {
-	include( 'admin/css/style.php' );
+    include( 'admin/css/style.php' );
 }
 
 
 function remove_menus(){
-  
+
 //  remove_menu_page( 'index.php' );                  //Dashboard
-//  remove_menu_page( 'jetpack' );                    //Jetpack* 
+//  remove_menu_page( 'jetpack' );                    //Jetpack*
 //  remove_menu_page( 'edit.php' );                   //Posts
 //  remove_menu_page( 'upload.php' );                 //Media
 //  remove_menu_page( 'edit.php?post_type=page' );    //Pages
@@ -748,7 +748,7 @@ function remove_menus(){
 //  remove_menu_page( 'users.php' );                  //Users
 //  remove_menu_page( 'tools.php' );                  //Tools
 //  remove_menu_page( 'options-general.php' );        //Settings
-  
+
 }
 add_action( 'admin_menu', 'remove_menus' );
 
@@ -818,3 +818,250 @@ add_image_size( 'banner',1800,9999999999999 );
 //function woocommerce_support() {
 //    add_theme_support( 'woocommerce' );
 //}
+class GFLimitCheckboxes {
+
+    private $form_id;
+    private $field_limits;
+    private $output_script;
+
+    function __construct($form_id, $field_limits) {
+
+        $this->form_id = $form_id;
+        $this->field_limits = $this->set_field_limits($field_limits);
+
+        add_filter("gform_pre_render_$form_id", array(&$this, 'pre_render'));
+        add_filter("gform_validation_$form_id", array(&$this, 'validate'));
+
+    }
+
+    function pre_render($form) {
+
+        $script = '';
+        $output_script = false;
+
+        foreach($form['fields'] as $field) {
+
+            $field_id = $field['id'];
+            $field_limits = $this->get_field_limits($field['id']);
+
+            if( !$field_limits                                          // if field limits not provided for this field
+                || RGFormsModel::get_input_type($field) != 'checkbox'   // or if this field is not a checkbox
+                || !isset($field_limits['max'])        // or if 'max' is not set for this field
+                )
+                continue;
+
+            $output_script = true;
+            $max = $field_limits['max'];
+            $selectors = array();
+
+            foreach($field_limits['field'] as $checkbox_field) {
+                $selectors[] = "#field_{$form['id']}_{$checkbox_field} .gfield_checkbox input:checkbox";
+            }
+
+            $script .= "jQuery(\"" . implode(', ', $selectors) . "\").checkboxLimit({$max});";
+
+        }
+
+        GFFormDisplay::add_init_script($form['id'], 'limit_checkboxes', GFFormDisplay::ON_PAGE_RENDER, $script);
+
+        if($output_script):
+            ?>
+
+
+
+            <?php
+        endif;
+
+        return $form;
+    }
+
+    function validate($validation_result) {
+
+        $form = $validation_result['form'];
+        $checkbox_counts = array();
+
+        // loop through and get counts on all checkbox fields (just to keep things simple)
+        foreach($form['fields'] as $field) {
+
+            if( RGFormsModel::get_input_type($field) != 'checkbox' )
+                continue;
+
+            $field_id = $field['id'];
+            $count = 0;
+
+            foreach($_POST as $key => $value) {
+                if(strpos($key, "input_{$field['id']}_") !== false)
+                    $count++;
+            }
+
+            $checkbox_counts[$field_id] = $count;
+
+        }
+
+        // loop through again and actually validate
+        foreach($form['fields'] as &$field) {
+
+            if(!$this->should_field_be_validated($form, $field))
+                continue;
+
+            $field_id = $field['id'];
+            $field_limits = $this->get_field_limits($field_id);
+
+            $min = isset($field_limits['min']) ? $field_limits['min'] : false;
+            $max = isset($field_limits['max']) ? $field_limits['max'] : false;
+
+            $count = 0;
+            foreach($field_limits['field'] as $checkbox_field) {
+                $count += rgar($checkbox_counts, $checkbox_field);
+            }
+
+            if($count < $min) {
+                $field['failed_validation'] = true;
+                $field['validation_message'] = sprintf( _n('You must select at least %s item.', 'You must select at least %s items.', $min), $min );
+                $validation_result['is_valid'] = false;
+            }
+            else if($count > $max) {
+                $field['failed_validation'] = true;
+                $field['validation_message'] = sprintf( _n('You may only select %s item.', 'You may only select %s items.', $max), $max );
+                $validation_result['is_valid'] = false;
+            }
+
+        }
+
+        $validation_result['form'] = $form;
+
+        return $validation_result;
+    }
+
+    function should_field_be_validated($form, $field) {
+
+        if( $field['pageNumber'] != GFFormDisplay::get_source_page( $form['id'] ) )
+            return false;
+
+        // if no limits provided for this field
+        if( !$this->get_field_limits($field['id']) )
+            return false;
+
+        // or if this field is not a checkbox
+        if( RGFormsModel::get_input_type($field) != 'checkbox' )
+            return false;
+
+        // or if this field is hidden
+        if( RGFormsModel::is_field_hidden($form, $field, array()) )
+            return false;
+
+        return true;
+    }
+
+    function get_field_limits($field_id) {
+
+        foreach($this->field_limits as $key => $options) {
+            if(in_array($field_id, $options['field']))
+                return $options;
+        }
+
+        return false;
+    }
+
+    function set_field_limits($field_limits) {
+
+        foreach($field_limits as $key => &$options) {
+
+            if(isset($options['field'])) {
+                $ids = is_array($options['field']) ? $options['field'] : array($options['field']);
+            } else {
+                $ids = array($key);
+            }
+
+            $options['field'] = $ids;
+
+        }
+
+        return $field_limits;
+    }
+
+}
+
+new GFLimitCheckboxes(1, array(
+    35 => array(
+        'max' => 5
+        ),
+    38 => array(
+        'max' => 5
+        )
+    ));
+new GFLimitCheckboxes(2, array(
+    35 => array(
+        'max' => 5
+        ),
+    38 => array(
+        'max' => 5
+        )
+    ));
+
+
+//function admin_default_page() {
+//  return '/survey';
+//}
+//
+//add_filter('login_redirect', 'admin_default_page');
+
+// Disable Gravity forms jump on submission
+
+//add_filter("gform_confirmation_anchor", create_function("", "return false;"));
+
+//add_filter( 'gform_confirmation_anchor', '__return_true' );
+
+add_filter( 'gform_confirmation_anchor', function() {
+    return 230;
+} );
+add_filter( 'allow_dev_auto_core_updates', '__return_false' );
+add_filter( 'auto_update_core', '__return_true' );
+add_filter( 'auto_core_update_send_email', '__return_false' );
+add_filter( 'auto_update_plugin', '__return_true' );
+
+
+
+//$ref = $_SERVER['HTTP_REFERER'];
+//$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+//
+//
+//if(strpos($url,'wp-login.php?action=register') == true){
+//
+//if ((strpos($ref,'survey') == true && strpos($url,'wp-login.php?action=register') == true) || (strpos($ref,'wp-login.php?action=register') == true && strpos($url,'wp-login.php?action=register') == true)) {
+//// You're good to go...
+//
+//
+//
+//} else {
+//
+//
+//        header('Location: /wp-login.php?registration=disabled');
+//
+//
+//
+//}
+
+
+
+//if (strpos($url,'wp-login.php?action=register') == true) {
+
+
+//}
+
+//}
+function onpu_redirect_users_by_role() {
+
+    if ( ! defined( 'DOING_AJAX' ) ) {
+
+        $current_user   = wp_get_current_user();
+        $role_name      = $current_user->roles[0];
+
+        if ( 'subscriber' === $role_name ) {
+            wp_redirect( site_url() . '/survey/' );
+        } // if $role_name
+
+    } // if DOING_AJAX
+
+} // cm_redirect_users_by_role
+add_action( 'admin_init', 'onpu_redirect_users_by_role' );

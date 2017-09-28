@@ -17,9 +17,9 @@
 'vendor/mag',
 'vendor/slick',
 'vendor/slick-theme';
-// Layout 
-@import 
-'parts/reveal',	
+// Layout
+@import
+'parts/reveal',
 'layout/header',
 'layout/nav',
 'layout/footer',
@@ -38,11 +38,12 @@
 'page/member',
 'page/donate',
 'page/store',
+'parts/survey',
 'parts/float';
 
 
 // Components
-//  @import 
+//  @import
 //    'components/name';
 // Utils
 @import 'utils/mixins',
