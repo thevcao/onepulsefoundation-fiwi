@@ -113,8 +113,8 @@ $newsimage = get_field('news_image', 'options');?>
 <div class="donate-bar">
     <div class="row">
         <div class="col-sm-12 col-xs-6">
-            <a href="/supporter-kit" class="hidden-xs">Download Your onePULSE Supporter Kit <i class="fa fa-chevron-right hidden-sm hidden-xs"></i></a>
-            <a href="/supporter-kit" class="visible-xs kit-btn"><i class="fa fa-chevron-left"></i> Free Supporter Kit</a>
+            <a href="/survey" class="hidden-xs">Participate in the Memorial Survey <i class="fa fa-chevron-right hidden-sm hidden-xs"></i></a>
+            <a href="/survey" class="visible-xs kit-btn"><i class="fa fa-chevron-left"></i> Memorial Survey</a>
         </div>
         <div class="col-sm-12 col-xs-6 visible-xs">
             <a href="/donate" class="visible-xs">Donate <i class="fa fa-chevron-right"></i></a>
@@ -124,6 +124,34 @@ $newsimage = get_field('news_image', 'options');?>
 
 <?php wp_footer(); ?>
 <script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs.ga.min.js"></script>
+<style>
+    .debug-info {
 
+/*        position: fixed;*/
+/*        background: black;*/
+/*        color: white;*/
+/*        padding: .5rem 1rem;*/
+/*        left: 0;*/
+/*        top: 0;*/
+/*        width: 100%;*/
+/*            z-index: 10000;*/
+
+
+    }
+
+</style>
+<script>
+//(function ($) {
+//
+//    'use strict';
+//
+//
+//    var version = $('html').attr('class');
+//
+//    $('body').prepend('<p class="debug-info">' + version + '</p>');
+//
+//})(jQuery);
+
+</script>
 </body>
 </html>

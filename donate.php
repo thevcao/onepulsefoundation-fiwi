@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="shirt-cta hidden-sm hidden-xs">
                                     <img src="<?php echo get_template_directory_uri(); ?>/dist/img/shirt.svg">
-                                    <a href="https://pulse-orlando-shirts.myshopify.com/products/we-will-not-let-hate-win-t-shirt" class="btn shirt-btn mt0 mb8" target="_blank">Get Yours</a>
+                                    <a href="https://pulse-orlando-shirts.myshopify.com/collections/onepulse" class="btn shirt-btn mt0 mb8" target="_blank">Get Yours</a>
                                     <?php if(is_page('donate')):?>
                                         <a href="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf" class="btn shirt-btn mt0 mb8" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf">Download 8 1/2' x 11' Flyer Kit</a>
                                         <a href="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf" class="btn shirt-btn mt0 mb32" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf">Download 4"x 8" Banner Kit</a>
@@ -78,7 +78,7 @@
                                             <a href="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf" class="btn shirt-btn mt0 mb8" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf">Download 4"x 8" Banner Kit</a>
                                             <?php endif;?>
                                                 <img src="<?php echo get_template_directory_uri(); ?>/dist/img/shirt.svg">
-                                                <a href="https://pulse-orlando-shirts.myshopify.com/products/we-will-not-let-hate-win-t-shirt" class="btn shirt-btn" target="_blank">Get Yours</a>
+                                                <a href="https://pulse-orlando-shirts.myshopify.com/collections/onepulse" class="btn shirt-btn" target="_blank">Get Yours</a>
                                     </div>
                             </div>
 
