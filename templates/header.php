@@ -114,14 +114,14 @@ get_template_part('templates/head');
 </div>
 
 <div class="full-menu">
-    <div class="container">
-        <div class="col-md-6 hidden-xs">
+    <div class="container-fluid">
+        <div class="col-md-7 col-md-offset-1 hidden-xs">
             <?php wp_nav_menu( array( 'theme_location' => 'full-one' ) ); ?>
         </div>
         <div class="col-md-6 visible-xs">
             <?php wp_nav_menu( array( 'theme_location' => 'full-mobile' ) ); ?>
         </div>
-        <div class="col-md-6 hidden-xs">
+        <div class="col-md-3 hidden-xs">
             <h3>Latest News</h3>
             <?php $args = array(
 
