@@ -323,8 +323,8 @@
                     a {
                         color: black;
                         font-weight: bold;
-                        padding: 1.5vw 0;
-                        font-size: 24px;
+                        padding: 1rem 0;
+                        font-size: 1.25rem;
                         display: block;
                         color: rgba(0, 0, 0, 0);
                         //					opacity: 0;
@@ -333,6 +333,29 @@
                         transition: transform 0.5s ease, color .5s ease;
                         pointer-events: none;
                         will-change: transform, color;
+                    }
+
+                    &:first-child {
+
+
+                        a {
+
+                            padding-top: 0;
+                        }
+                    }
+
+                    .sub-menu {
+
+                        padding: 1rem 2rem 0;
+
+                        li {
+
+                            a {
+
+                                font-size: 1rem;
+                            }
+
+                        }
                     }
                 }
             }
@@ -344,6 +367,11 @@
                 transition: .5s ease;
                 pointer-events: none;
                 will-change: transform, opacity;
+            }
+
+            h3 {
+
+                margin-top: 0;
             }
             h4 {
                 font-size: 2em;

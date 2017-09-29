@@ -9,12 +9,32 @@
 
 <?php
 $newsimage = get_field('news_image', 'options');?>
+<section class="newsletter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h2 class="mt0">Stay Informed</h2>
+                <p>Lorem ipsum dolor sit amet, ius sale munere labores cu, erat illud similique eu duo, ex sale equidem expetenda duo.</p>
+            </div>
+            <div class="col-md-5">
+                    <?php echo do_shortcode('[contact-form-7 id="5374" title="Newsletter"]');?>
+            </div>
+        </div>
 
+    </div>
+</section>
 <section class="page-cta mb80 hidden-xs">
     <div class="">
         <div class="row">
             <div class="col-sm-7 p0 mm oh">
                 <div class="img-overlay"></div>
+
+                                            <?php
+
+                        $images = get_field('default_gallery', 'options');
+                        $random_result = array_rand($images ,1);
+                        $newsimage = $images[$random_result];?>
+
                 <img src="<?php echo $newsimage['sizes']['banner']; ?>" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
                 <?php if (!$newsimage['caption'] == null): echo '<label class="img-attrib">' . $newsimage['caption'] . '</label>'; endif; ?>
                 <div class="over">

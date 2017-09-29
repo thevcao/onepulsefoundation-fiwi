@@ -12,7 +12,7 @@
  */
 ?>
 
-	<?php get_template_part('templates/header'); ?>
+    <?php get_template_part('templates/header'); ?>
 
 
 
@@ -20,53 +20,71 @@
 <div class="main-wrapper">
 
 <div class="page-main">
-	
-	
-	<?php // check if the flexible content field has rows of data
+
+
+    <?php // check if the flexible content field has rows of data
 if( have_rows('section') ):
 
      // loop through the rows of data
     $count = 0; while ( have_rows('section') ) : the_row();
 
         if( get_row_layout() == 'large_hero' ):
-			include( locate_template( 'partials/section-hero.php', false, false ) ); 
-		endif;
+            include( locate_template( 'partials/section-hero.php', false, false ) );
+        endif;
 
         if( get_row_layout() == 'content_media' ):
-			include( locate_template( 'partials/section-content-media.php', false, false ) ); 
-	
+            include( locate_template( 'partials/section-content-media.php', false, false ) );
 
-		endif;
+
+        endif;
 
          if( get_row_layout() == 'featured_gallery' ):
-			include( locate_template( 'partials/section-gallery.php', false, false ) ); 
+            include( locate_template( 'partials/section-gallery.php', false, false ) );
 
-	
 
-		endif;
+
+        endif;
 
          if( get_row_layout() == 'task_force' ):
-	
-	
-			include( locate_template( 'partials/section-task-force.php', false, false ) ); 
-	
 
-		endif;
+
+            include( locate_template( 'partials/section-advisory-board.php', false, false ) );
+
+
+        endif;
 
          if( get_row_layout() == 'spacer' ):
-			include( locate_template( 'partials/section-spacer.php', false, false ) ); 
+            include( locate_template( 'partials/section-spacer.php', false, false ) );
 
 
-		endif;
+        endif;
 
         if( get_row_layout() == 'contact_form' ):
-			include( locate_template( 'partials/section-contact.php', false, false ) ); 
+            include( locate_template( 'partials/section-contact.php', false, false ) );
 
 
         endif;
 
         if( get_row_layout() == 'columns' ):
-			include( locate_template( 'partials/section-columns.php', false, false ) ); 
+            include( locate_template( 'partials/section-columns.php', false, false ) );
+
+
+        endif;
+
+        if( get_row_layout() == 'task_force_section' ):
+            include( locate_template( 'partials/section-taskforce.php', false, false ) );
+
+
+        endif;
+
+        if( get_row_layout() == 'board_of_trustees' ):
+            include( locate_template( 'partials/section-board.php', false, false ) );
+
+
+        endif;
+
+        if( get_row_layout() == 'council' ):
+            include( locate_template( 'partials/section-abassadors.php', false, false ) );
 
 
         endif;
@@ -80,5 +98,5 @@ endif;
 
 </div>
 
-	
-		<?php get_template_part('templates/footer'); ?>
+
+        <?php get_template_part('templates/footer'); ?>
