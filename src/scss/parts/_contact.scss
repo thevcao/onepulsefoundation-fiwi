@@ -61,6 +61,11 @@
 
         color: white;
     }
+
+    p {
+
+        margin-bottom: 0;
+    }
     form {
         pointer-events: all;
     }
@@ -108,14 +113,23 @@
     input.wpcf7-form-control.wpcf7-submit.btn {
         padding: 10px;
         font-size: 22px;
-        background: #fff;
+        background: none;
         border: 3px solid white;
-        color: black;
+        color: white;
         outline: none;
         transition: all .3s ease;
-        margin: 10px auto 10px auto;
+        margin: 10px auto 0 auto;
         border-radius: 100px;
         text-align: center;
+
+        &:hover {
+
+            background: white !important;
+            color: $r;
+//            opacity: 1 !important;
+            animation: animation-ie 10s ease infinite both;
+
+        }
     }
     input.wpcf7-form-control.wpcf7-submit.btn:hover {
         background: black;
