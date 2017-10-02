@@ -147,7 +147,7 @@
 
                     if ($('html').hasClass('orientation_portrait') && $(window).width() < 768) {
 
-                        $('.full-menu').css('padding-top', header);
+//                        $('.full-menu').css('padding-top', header);
                         $('section').first('section').not('.home-hero').css('padding-top', (header + 10));
                         $('footer').css('padding-bottom', ($('.donate-bar').outerHeight()));
 
@@ -165,7 +165,7 @@
                     } else {
 
                         $('.home-hero').css('padding-top', padding).css('padding-bottom', padding);
-                        $('.full-menu').css('padding-top', header + 50);
+//                        $('.full-menu').css('padding-top', header + 50);
                         $('.page-main section').first('section').css('padding-top', (header + 50));
                         $('.post-image').css('margin-top', header);
                     }

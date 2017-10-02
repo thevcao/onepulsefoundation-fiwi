@@ -112,6 +112,8 @@ a {
         &:hover + .over {
             background-position: 100%;
         }
+
+
         .overlay {
             background-color: #fff;
             position: absolute;
@@ -160,8 +162,8 @@ body:not(.scrolled).invert-header .btn.clipped:hover {
             padding: 15px 25px;
             text-decoration: none;
             font-size: 18px;
-            background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
-            -webkit-background-clip: none;
+//            background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
+//            -webkit-background-clip: none;
             color: #fff;
             border: none;
             width: 100%;
@@ -170,6 +172,18 @@ body:not(.scrolled).invert-header .btn.clipped:hover {
             border: 2px solid #fff;
             margin-top: -5px;
             transition: all .5s ease;
+            background: linear-gradient(135deg, #00a8de 0%, #333391 50%, #e91388 100%);
+            animation: donateanimate 3s alternate linear infinite;
+            transition: transform 300ms ease;
+            background-size: 500%;
+
+        &.right {
+            margin: 2rem 0 10px auto;
+        }
+        &.left {
+            margin: 2rem auto 10px 0;
+        }
+
             .overlay {
                 display: none;
             }
