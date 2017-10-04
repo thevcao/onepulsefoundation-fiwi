@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $admin_bar_logo = get_field('admin_bar_logo','options');
 $admin_bar_width = get_field('admin_bar_width','options');
@@ -27,18 +27,18 @@ $headline_weight = get_field('body_font_weight','options');
             }
             <?php
         }
-        
+
         else {
             ?> body,
             p,
             li, #wpadminbar * {
-				font-family: avenir, 'Avenir Next', "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",sans-serif;
-				font-weight: normal;
+                font-family: "Helvetica Neue",sans-serif;
+                font-weight: normal;
                 letter-spacing: -.025em;
             }
             <?php
         }
-        
+
         ?> .admin-color-midnight a,
         .admin-color-midnight .wrap .add-new-h2,
         .admin-color-midnight .wrap .add-new-h2:active,
@@ -46,14 +46,14 @@ $headline_weight = get_field('body_font_weight','options');
         .admin-color-midnight .wrap .page-title-action:active {
             color: #eb3a24;
         }
-        
+
         .admin-color-midnight .wrap .add-new-h2:hover,
         .admin-color-midnight .wrap .page-title-action:hover {
             border-color: #eb3a24;
             background: #eb3a24;
             color: #fff;
         }
-        
+
         <?php if(get_field('headline_font_family',
         'options')) {
             ?> h1,
@@ -68,7 +68,7 @@ $headline_weight = get_field('body_font_weight','options');
             }
             <?php
         }
-        
+
         else {
             ?> .admin-color-midnight h1,
             .admin-color-midnight h2,
@@ -90,10 +90,10 @@ $headline_weight = get_field('body_font_weight','options');
             .admin-color-midnight h5>* {
 /*                font-weight: normal !important;*/
             }
-        
+
         .admin-color-midnight .form-table th, .form-wrap label {
-            
-            
+
+
  font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
 /*			font-weight: normal;*/
 
@@ -127,7 +127,7 @@ $headline_weight = get_field('body_font_weight','options');
             }
             <?php
         }
-        
+
         ?> <?php if(get_field('wp_login_logo',
         'options')) {
             ?> .login h1 a {
@@ -149,7 +149,7 @@ $headline_weight = get_field('body_font_weight','options');
             }
             <?php
         }
-        
+
         else {
             ?> .login h1 a {
                 background: url(<?php echo get_template_directory_uri();
@@ -171,7 +171,7 @@ $headline_weight = get_field('body_font_weight','options');
             }
             <?php
         }
-        
+
         ?> <?php if(get_field('admin_bar_logo',
         'options')) {
             ?> .wp-admin #wpadminbar #wp-admin-bar-site-name>.ab-item:before {
@@ -180,9 +180,58 @@ $headline_weight = get_field('body_font_weight','options');
                 background-size: auto 80% !important;
                 background-repeat: no-repeat !important;
                 background-position: 50%!important;
+                filter: invert(1);
             }
             <?php
         }
-        
+
         ?>
+
+        #wpadminbar, #adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap {
+
+                background: linear-gradient(135deg, #00a8de 0%, #333391 50%, #e91388 100%);
+    animation: donateanimate 3s alternate linear infinite;
+    background-size: 500%;
+            background-attachment: fixed;
+
+        }
+        @keyframes donateanimate {
+    0% {
+        //		background-size: 100%;
+        background-position: 0% 50%;
+    }
+    100% {
+        //		background-size: 800%;
+        background-position: 100% 50%;
+    }
+}
+@keyframes linkanimate {
+    0% {
+        //		background-size: 100%;
+        background-position: 0% 0%;
+    }
+    100% {
+        //		background-size: 800%;
+        background-position: 100% 100%;
+    }
+}
+.wp-core-ui .button, .wp-core-ui .button-secondary {
+    padding: 5px 2rem;
+    border: 3px solid #000;
+    color: black;
+    border-radius: 100px;
+    display: block;
+    text-align: center;
+    max-width: 300px;
+    font-weight: bold;
+    transition: .3s ease;
+    letter-spacing: -.025em;
+    transition: color .3s ease, border-color .3s ease;
+    position: relative;
+    background: none;
+    z-index: 1;
+    height: auto;
+    text-shadow: none;
+    box-shadow: none;
+}
     </style>

@@ -1017,6 +1017,22 @@
                 }
 
 
+                $('.btn, .nav-previous a.left, .nav-next a.left').not('.clipped').each(function(){
+
+                    $(this).prepend('<div></div>');
+
+
+                })
+
+
+//                if($('.invert-header').length){
+//
+//                    var bg = $('.page-main .home-hero').
+//
+//
+//                }
+
+
             }
         }, // Home page
         'home': {

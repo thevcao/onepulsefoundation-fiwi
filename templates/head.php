@@ -92,7 +92,7 @@ if( have_rows('section') ):
 
         if( get_row_layout() == 'large_hero' ):
             $image = get_sub_field('hero_image');
-            echo '<style>.loader, .page-main .home-hero h2, .page-main .home-hero h2.clone-shadow, .page-main .home-hero {background-image:url('. $image['sizes']['banner'] .')</style>';
+            echo '<style>.loader, .page-main .home-hero h2, .page-main .home-hero h2.clone-shadow, .page-main .home-hero, .btn.clipped .overlay, .invert-header .home-hero .btn div {background-image:url('. $image['sizes']['banner'] .')</style>';
             echo '<meta property="og:image" content="'. $image['sizes']['large'] .'" />';
 
         endif;

@@ -52,12 +52,16 @@
             color: #000;
             background: linear-gradient(90deg, #00a8de 0%, #333391 17%, #e91388 34%, #eb2d2e 51%, #fde92b 68%, #009e54 85%, #00a8de 100%);
             animation: animation 10s ease infinite both;
+                background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, yellow 71.42%, #34d400 85.71%, #00a8de 100%);
+    animation: donateanimate 10s alternate linear infinite;
+            background-size: 500%;
+            background-attachment: fixed;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-attachment: fixed;
-            background-position: 50%;
+//            background-position: 50%;
             position: absolute;
-            z-index: 1000;
+            z-index: 1;
             //    line-height: 1.1;
         }
         &:hover {

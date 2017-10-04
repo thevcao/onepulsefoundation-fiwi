@@ -63,7 +63,7 @@
                                     <div class="pt8"></div>
                                     <a href="<?php the_permalink();?>" class="btn left">Read More</a>
                                 </div>
-                                <?php endif; endwhile; wp_reset_postdata();?>
+                                <?php endwhile; wp_reset_postdata();?>
 
 
 

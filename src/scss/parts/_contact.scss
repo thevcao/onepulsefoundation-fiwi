@@ -49,21 +49,19 @@
         }
     }
 }
-
 .newsletter {
     background: linear-gradient(135deg, #00a8de 0%, #333391 50%, #e91388 100%);
-    animation: donateanimate 3s alternate linear infinite;
-    transition: transform 300ms ease;
+    background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, yellow 71.42%, #34d400 85.71%, #00a8de 100%);
+    animation: donateanimate 10s alternate linear infinite;
+    //    transition: transform 300ms ease;
     background-size: 500%;
     padding: 3rem 0;
-
-    h2, p {
-
-        color: white;
-    }
-
+    h2,
     p {
-
+        color: white;
+        animation: newslettertext 10s alternate linear infinite;
+    }
+    p {
         margin-bottom: 0;
     }
     form {
@@ -82,19 +80,27 @@
         background: none;
         text-align: center;
         color: white;
-        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-          color: white
+        animation: bordercolor 10s alternate linear infinite;
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: white;
+            animation: newslettertext 10s alternate linear infinite;
         }
-        &::-moz-placeholder { /* Firefox 19+ */
-          color: white
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: white;
+            animation: newslettertext 10s alternate linear infinite;
         }
-        &:-ms-input-placeholder { /* IE 10+ */
-          color: white
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            color: white;
+            animation: newslettertext 10s alternate linear infinite;
         }
-        &:-moz-placeholder { /* Firefox 18- */
-          color: white
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            color: white;
+            animation: newslettertext 10s alternate linear infinite;
         }
-
     }
     textarea.wpcf7-form-control {
         padding: 20px 5px 5px;
@@ -116,24 +122,23 @@
         background: none;
         border: 3px solid white;
         color: white;
+        animation: bordercolor 10s alternate linear infinite;
         outline: none;
         transition: all .3s ease;
         margin: 10px auto 0 auto;
         border-radius: 100px;
         text-align: center;
-
         &:hover {
-
-            background: white !important;
-            color: $r;
-//            opacity: 1 !important;
-            animation: animation-ie 10s ease infinite both;
-
+//            background: white !important;
+//            color: $r !important;
+            //            opacity: 1 !important;
+//            animation: subscribehover 10s ease infinite both;
+            opacity: .5;
         }
     }
     input.wpcf7-form-control.wpcf7-submit.btn:hover {
-        background: black;
-        color: white;
+//        background: black;
+//        color: white;
     }
     .contact-info p {
         line-height: 1.5;
@@ -179,26 +184,134 @@ span.wpcf7-not-valid-tip {
     }
 }
 @media (max-width:768px) {
-
-        html:not(.ipad) {
-
-    .page-id-20 .contact-form.pb120.hidden-xs {
-        display: block !important;
-    }
-    .page-id-20 .mobile-cta {
-        display: none !important
-    }
+    html:not(.ipad) {
+        .page-id-20 .contact-form.pb120.hidden-xs {
+            display: block !important;
+        }
+        .page-id-20 .mobile-cta {
+            display: none !important
+        }
     }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-
     html:not(.ipad) {
-    .page-id-20 .contact-form.pb120.hidden-xs {
-        display: block !important;
+        .page-id-20 .contact-form.pb120.hidden-xs {
+            display: block !important;
+        }
+        .page-id-20 .mobile-cta {
+            display: none !important
+        }
     }
-    .page-id-20 .mobile-cta {
-        display: none !important
-    }
-
 }
+@keyframes newslettertext {
+    0% {
+        color: white;
+    }
+    14.28% {
+        color: white;
+    }
+    28.57% {
+        color: white;
+    }
+    42.85% {
+        color: white;
+    }
+    57.14% {
+        color: white;
+    }
+    71.42% {
+        color: black;
+    }
+    85.71% {
+        color: black;
+    }
+    100% {
+        color: black;
+    }
+}
+@keyframes bordercolor {
+    0% {
+        color: white;
+        border-color: white;
+    }
+    14.28% {
+        color: white;
+        border-color: white;
+    }
+    28.57% {
+        color: white;
+        border-color: white;
+    }
+    42.85% {
+        color: white;
+        border-color: white;
+    }
+    57.14% {
+        color: white;
+        border-color: white;
+    }
+    71.42% {
+        color: black;
+        border-color: black;
+    }
+    85.71% {
+        color: black;
+        border-color: black;
+    }
+    100% {
+        color: black;
+        border-color: black;
+    }
+}
+@keyframes subscribehover {
+    0% {
+        color: $r;
+    }
+    20% {
+        color: $o;
+    }
+    40% {
+        color: $y;
+    }
+    60% {
+        color: $g;
+    }
+    80% {
+        color: $b;
+    }
+    100% {
+        color: $r;
+    }
+    0% {
+        color: #00a8de;
+        background: white;
+    }
+    14.28% {
+        color:#333391;
+        background: white;
+    }
+    28.57% {
+        color: #e91388;
+        background: white;
+    }
+    42.85% {
+        color: #eb2d2e;
+        background: white;
+    }
+    57.14% {
+        color: orange;
+        border-color: white;
+    }
+    71.42% {
+        color: yellow;
+        background: black;
+    }
+    85.71% {
+        color: #34d400;
+        background: black;
+    }
+    100% {
+        color: #00a8de;
+        background: black;
+    }
 }

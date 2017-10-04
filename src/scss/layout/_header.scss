@@ -348,7 +348,7 @@
                     a {
                         color: black;
                         font-weight: bold;
-                        padding: 0 0 2rem;
+                        padding: 0 0;
                         font-size: 1.25rem;
                         display: inline-block;
                         color: rgba(0, 0, 0, 0);
@@ -380,12 +380,12 @@
 
                     .sub-menu {
 
-                        padding: 1rem 1rem 0;
+                        padding: 2rem 1rem 0;
                         column-count: 1;
                         @media(max-width: 1441px){
 
 //                            font-size: 1rem;
-                            padding: 1rem 1rem .5rem;
+//                            padding: 2rem 1rem .5rem;
 
 
                         }
@@ -397,6 +397,7 @@
                             a {
 
                                 font-size: 1rem;
+                                padding-bottom: 1rem;
 
                         @media(max-width: 1441px){
 

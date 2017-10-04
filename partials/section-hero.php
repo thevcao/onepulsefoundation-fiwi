@@ -8,7 +8,7 @@
                 <div class="col-md-9">
                     <h2 class="clone-shadow"><?php the_sub_field('headline');?></h2>
                     <h2><?php the_sub_field('headline');?></h2>
-                    <?php if(is_page(5286)): echo '<a href="/donate" class="btn clipped left">Donate Today</a>'; endif;?>
+                    <?php if(is_page(5286)): echo '<a href="/donate" class="btn left">Donate Today</a>'; endif;?>
                 </div>
             </div>
         </div>
