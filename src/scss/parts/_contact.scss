@@ -50,6 +50,25 @@
     }
 }
 .newsletter {
+    .flex-row {
+        display: flex;
+        &.align-items-center {
+            align-items: center;
+        }
+        @media(max-width: 769px) {
+            display: block;
+        }
+    }
+    span.wpcf7-not-valid-tip {
+        left: auto;
+        right: auto;
+        text-align: center;
+        display: block;
+        width: 100%;
+        color: white;
+        opacity: 1;
+        top: 0;
+    }
     background: linear-gradient(135deg, #00a8de 0%, #333391 50%, #e91388 100%);
     background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, yellow 71.42%, #34d400 85.71%, #00a8de 100%);
     animation: donateanimate 10s alternate linear infinite;
@@ -61,30 +80,61 @@
         color: white;
         animation: newslettertext 10s alternate linear infinite;
     }
+
+    h2 {
+        margin-bottom: 1rem;
+    }
     p {
         margin-bottom: 0;
     }
     form {
         pointer-events: all;
     }
-    input.wpcf7-form-control {
-        width: 100%;
-        padding: 20px 5px 5px;
-        margin-bottom: 10px;
-        border: none;
-        border-bottom: 3px solid #EEE;
-        font-size: 14px;
-        outline: none;
-        transition: all .3s ease;
-        -webkit-border-radius: 0;
-        background: none;
+    label {
+        left: auto;
+        right: auto;
         text-align: center;
+        display: block;
+        width: 100%;
+        color: white;
+        opacity: 1;
+        top: 0;
+        font-size: 10px;
+        margin-top: 10px;
+        animation: newslettertext 10s alternate linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease;
+    }
+    input.wpcf7-form-control {
+        //        width: 100%;
+        //        padding: 20px 5px 5px;
+        //        margin-bottom: 10px;
+        //        border: none;
+        //        border-bottom: 3px solid #EEE;
+        //        font-size: 14px;
+        //        outline: none;
+        //        transition: all .3s ease;
+        //        -webkit-border-radius: 0;
+        //        background: none;
+        //        text-align: center;
+        //        color: white;
+        //        animation: bordercolor 10s alternate linear infinite;
+        padding: 1rem 10px;
+        //        font-size: 22px;
+        background: none;
+        border: 3px solid white;
         color: white;
         animation: bordercolor 10s alternate linear infinite;
+        outline: none;
+        transition: all .3s ease;
+        margin: 2rem auto 0 auto;
+        border-radius: 100px;
+        text-align: center;
+        display: block;
         &::-webkit-input-placeholder {
             /* Chrome/Opera/Safari */
             color: white;
-            animation: newslettertext 10s alternate linear infinite;
+            animation: newslettertext 10s alternate linear infinite !important;
         }
         &::-moz-placeholder {
             /* Firefox 19+ */
@@ -103,14 +153,25 @@
         }
     }
     textarea.wpcf7-form-control {
-        padding: 20px 5px 5px;
-        width: 95%;
-        border: none;
-        border-bottom: 3px solid #eee;
-        margin-bottom: 10px;
-        font-size: 14px;
+        //        padding: 20px 5px 5px;
+        //        width: 95%;
+        //        border: none;
+        //        border-bottom: 3px solid #eee;
+        //        margin-bottom: 10px;
+        //        font-size: 14px;
+        //        outline: none;
+        //        transition: all .3s ease;
+        padding: 10px;
+        font-size: 22px;
+        background: none;
+        border: 3px solid white;
+        color: white;
+        animation: bordercolor 10s alternate linear infinite;
         outline: none;
         transition: all .3s ease;
+        margin: 10px auto 0 auto;
+        border-radius: 100px;
+        text-align: center;
     }
     .wpcf7-form-control:active,
     .wpcf7-form-control:focus {
@@ -129,16 +190,16 @@
         border-radius: 100px;
         text-align: center;
         &:hover {
-//            background: white !important;
-//            color: $r !important;
+            //            background: white !important;
+            //            color: $r !important;
             //            opacity: 1 !important;
-//            animation: subscribehover 10s ease infinite both;
+            //            animation: subscribehover 10s ease infinite both;
             opacity: .5;
         }
     }
     input.wpcf7-form-control.wpcf7-submit.btn:hover {
-//        background: black;
-//        color: white;
+        //        background: black;
+        //        color: white;
     }
     .contact-info p {
         line-height: 1.5;
@@ -287,7 +348,7 @@ span.wpcf7-not-valid-tip {
         background: white;
     }
     14.28% {
-        color:#333391;
+        color: #333391;
         background: white;
     }
     28.57% {

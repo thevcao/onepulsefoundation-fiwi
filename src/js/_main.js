@@ -1022,6 +1022,47 @@
                     $(this).prepend('<div></div>');
 
 
+                });
+
+                $('.newsletter input.wpcf7-form-control').click(function(){
+
+                    var value = $(this).val();
+
+                    if(value == 'Enter Your Email to Subscribe'){
+
+
+                    $(this).val('');
+
+                    }
+
+
+                })
+                $('.newsletter input.wpcf7-form-control').keyup(function(){
+
+                    var value = $(this).val();
+
+                    if(value !== 'Enter Your Email to Subscribe'){
+
+
+
+                        $('.newsletter label').css('opacity','1');
+                    }
+
+
+                })
+                $('.newsletter input.wpcf7-form-control').blur(function(){
+
+                    var value = $(this).val();
+
+                    if(value == ''){
+
+
+                    $(this).val('Enter Your Email to Subscribe');
+                        $('.newsletter label').css('opacity','0');
+
+                    }
+
+
                 })
 
 

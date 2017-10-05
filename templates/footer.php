@@ -11,7 +11,7 @@
 $newsimage = get_field('news_image', 'options');?>
 <section class="newsletter">
     <div class="container">
-        <div class="row m0">
+        <div class="row m0 flex-row align-items-center">
             <div class="col-md-7">
                 <h2 class="mt0">Stay Informed</h2>
                 <p>Lorem ipsum dolor sit amet, ius sale munere labores cu, erat illud similique eu duo, ex sale equidem expetenda duo.</p>

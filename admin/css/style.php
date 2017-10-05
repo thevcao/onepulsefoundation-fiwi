@@ -216,13 +216,14 @@ $headline_weight = get_field('body_font_weight','options');
     }
 }
 .wp-core-ui .button, .wp-core-ui .button-secondary {
-    padding: 5px 2rem;
-    border: 3px solid #000;
+    padding: 1rem 2rem;
+    line-height: 1;
+    border: 2px solid #000;
     color: black;
     border-radius: 100px;
-    display: block;
+/*    display: block;*/
     text-align: center;
-    max-width: 300px;
+/*    max-width: 300px;*/
     font-weight: bold;
     transition: .3s ease;
     letter-spacing: -.025em;
