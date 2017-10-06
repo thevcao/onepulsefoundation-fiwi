@@ -969,15 +969,10 @@
             finalize: function () {
                 // JavaScript to be fired on all pages, after page specific JS is fired
 
+                function halftone(){
 
-                if ($('#featured-image').length) {
-
-
-
-
-
-                    // try to create a WebGL canvas (will fail if WebGL isn't supported)
-
+                                    // try to create a WebGL canvas (will fail if WebGL isn't supported)
+ if ($('#featured-image').length) {
 
                     // convert the image to a texture
 
@@ -1013,8 +1008,25 @@
                         // does not violate the same origin policy.
                     };
                     image.src = $('#featured-image').attr('src');
+                    $('.canvas-container').css('height', $('.watch-me').outerHeight());
+                    }
 
                 }
+
+
+                    halftone();
+
+                $(window).resize(function(){
+
+
+                    halftone();
+
+                })
+
+
+
+
+
 
 
                 $('.btn, .nav-previous a.left, .nav-next a.left').not('.clipped').each(function(){

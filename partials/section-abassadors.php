@@ -28,7 +28,7 @@
                 'post_type' => 'council',
             );
 
-
+            add_filter( 'posts_orderby' , 'posts_orderby_lastname' );
 
             $loop = new WP_Query( $args );
             while ( $loop->have_posts() ) : $loop->the_post(); ?>

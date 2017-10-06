@@ -43,9 +43,9 @@ get_template_part('templates/head');
                     <div class="col-sm-2 col-xs-9 p0 tab-pt">
                         <div class="lang-toggle">
                             <ul>
-                            <li><?php echo do_shortcode('[glt language="English" label="English"]');?>
+                            <li><?php echo do_shortcode('[glt language="English" label=""]');?>
                                 </li>
-                            <li><?php echo do_shortcode('[glt language="Spanish" label="Español"]');?>
+                            <li><?php echo do_shortcode('[glt language="Spanish" label=""]');?>
                                 </li>
                             </ul>
 

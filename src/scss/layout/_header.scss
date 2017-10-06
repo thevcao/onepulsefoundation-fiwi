@@ -961,7 +961,14 @@
         @media (max-width:768px) {
             html:not(.ipad) {
                 .full-menu {
-                    padding-top: 50px;
+
+                    .container-fluid {
+                    padding: 0;
+                        margin: 0;
+                        width: 100%;
+                    }
+                    padding-top: 20vw;
+                    align-items: flex-start;
                 }
                 .main-header,
                 .page-id-12 .main-header,

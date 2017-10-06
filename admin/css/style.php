@@ -189,10 +189,10 @@ $headline_weight = get_field('body_font_weight','options');
 
         #wpadminbar, #adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap {
 
-                background: linear-gradient(135deg, #00a8de 0%, #333391 50%, #e91388 100%);
-    animation: donateanimate 3s alternate linear infinite;
-    background-size: 500%;
-            background-attachment: fixed;
+/*                background: linear-gradient(135deg, #00a8de 0%, #333391 50%, #e91388 100%);*/
+/*    animation: donateanimate 3s alternate linear infinite;*/
+/*    background-size: 500%;*/
+/*            background-attachment: fixed;*/
 
         }
         @keyframes donateanimate {
@@ -216,7 +216,7 @@ $headline_weight = get_field('body_font_weight','options');
     }
 }
 .wp-core-ui .button, .wp-core-ui .button-secondary {
-    padding: 1rem 2rem;
+    padding: 5px 1rem !important;
     line-height: 1;
     border: 2px solid #000;
     color: black;
@@ -234,5 +234,8 @@ $headline_weight = get_field('body_font_weight','options');
     height: auto;
     text-shadow: none;
     box-shadow: none;
+}
+    .gform_media_icon {
+    padding-top: 0 !important;
 }
     </style>

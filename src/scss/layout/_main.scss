@@ -45,8 +45,8 @@
             transition: opacity .5s ease;
             content: attr(title);
             color: #000;
-    background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, yellow 71.42%, #34d400 85.71%, #00a8de 100%);
-            animation: animation 10s ease infinite both;
+            background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, yellow 71.42%, #34d400 85.71%, #00a8de 100%);
+        animation: donateanimate 10s alternate linear infinite;
             background-size: 500%;
 
             -webkit-background-clip: text;
@@ -64,6 +64,17 @@
         }
         &:not(.home-play, .task-link):hover {
             color: rgba(0, 0, 0, 0);
+        }
+    }
+
+
+    html.mac.safari {
+
+        section a:not(.home-play, .task-link, .btn):before {
+
+//            opacity: 0;
+            width: 150%;
+            top: 5%;
         }
     }
     a,

@@ -27,6 +27,18 @@
                 'orderby'    => 'meta_value',
                 'order'    => 'ASC',
                 'post_type' => 'board',
+                'meta_query' => array(
+
+                    'btitle' => array(
+                        'key' => 'order',
+                        'value' => '1',
+                        'compare' => '='
+                    ),
+
+
+
+                ),
+
             );
 
 
@@ -42,6 +54,44 @@
                 </li>
             <?php endwhile; wp_reset_postdata();?>
 
+            <?php
+
+
+
+                $args = array(
+
+                'posts_per_page'    => -1,
+                'meta_key'=> 'order',
+                'orderby' => array(
+                    'meta_value' => 'ASC',
+                    'title' => 'ASC'
+                    ),
+                'post_type' => 'board',
+                'meta_query' => array(
+
+                    'btitle' => array(
+                        'key' => 'order',
+                        'value' => '1',
+                        'compare' => '!='
+                    ),
+
+
+
+                ),
+            );
+
+
+            add_filter( 'posts_orderby' , 'posts_orderby_lastname' );
+            $loop = new WP_Query( $args );
+            while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+
+                <li><a href="<?php the_permalink();?>"><?php echo get_the_title();?></a>
+                    <ul>
+                        <li><?php the_field('title');?></li>
+                    </ul>
+                </li>
+            <?php endwhile; wp_reset_postdata();?>
             </ul>
             </div>
 

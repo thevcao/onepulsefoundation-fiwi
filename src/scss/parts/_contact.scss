@@ -50,6 +50,14 @@
     }
 }
 .newsletter {
+
+    margin-bottom: 5rem;
+
+
+    @media(max-width:768px) {
+
+        margin-bottom: 0;
+    }
     .flex-row {
         display: flex;
         &.align-items-center {

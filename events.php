@@ -47,6 +47,8 @@
                             ?>
 
                                                 <?php
+
+                                                if(get_field('event_location')):
                                                   $values = get_field('event_location');
                                                   $lat = $values['lat'];
                                                   $lng = $values['lng'];
@@ -54,12 +56,15 @@
                                                   $map_center_lat = $values['center_lat'];
                                                   $map_center_lng = $values['center_lng'];
                                                   $map_zoom = $values['zoom'];
+                            endif;
                                                 ?>
 
                                 <div class="item mt32 mb64">
                                     <a href="<?php the_permalink();?>"><h2 class="mb8"><?php echo get_the_title();?></h2></a>
                                     <h3 class="mt0 mb16"><i class="fa fa-calendar"></i> <?php the_field('event_date');?></h3>
+                                    <?php if(get_field('event_location')):?>
                                     <h3 class="mt0 mb32"><a href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $address;?>" target="_blank"><i class="fa fa-location-arrow"></i> <?php echo $address;?></a></h3>
+                                    <?php endif;?>
                                     <p>
                                         <?php the_excerpt();?>
                                     </p>
@@ -70,6 +75,50 @@
 
 
 
+
+
+                        </div>
+                        <div class="col-md-3 col-md-offset-1">
+                            <h3 class="mt64">Past Events</h3>
+
+                        <?php $args = array(
+
+                                'posts_per_page'    => -1,
+                                'meta_key'         => 'event_date',
+                                'orderby'    => 'meta_value',
+                                'order'    => 'ASC',
+                                'post_type' => 'events',
+                            );
+
+
+
+                            $loop = new WP_Query( $args );
+                            while ( $loop->have_posts() ) : $loop->the_post(); $temp_date = get_post_meta( get_the_ID(), 'event_date', true );
+
+                            if ( $temp_date < $current_header  ):
+
+                            ?>
+
+                                                <?php
+
+                                                if(get_field('event_location')):
+                                                  $values = get_field('event_location');
+                                                  $lat = $values['lat'];
+                                                  $lng = $values['lng'];
+                                                  $address = $values['address'];
+                                                  $map_center_lat = $values['center_lat'];
+                                                  $map_center_lng = $values['center_lng'];
+                                                  $map_zoom = $values['zoom'];
+                            endif;
+                                                ?>
+
+                                <div class="item mt32 mb64">
+                                    <a href="<?php the_permalink();?>"><h4 class="mb8"><?php echo get_the_title();?></h4></a>
+
+                                    <div class="pt8"></div>
+                                    <a href="<?php the_permalink();?>" class="btn left">Read More</a>
+                                </div>
+                                <?php endif; endwhile; wp_reset_postdata();?>
 
 
                         </div>
