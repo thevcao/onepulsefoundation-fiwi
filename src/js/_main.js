@@ -355,6 +355,10 @@
                 }
 
 
+                if (document.location.href.indexOf('staging') === -1 || document.location.href.indexOf('dev') === -1){
+
+
+
                 $('.shirt-btn').click(function () {
 
 
@@ -365,26 +369,62 @@
                     });
 
                 });
-                $('a[title="Donate"]').click(function () {
+                $('a[title="Donate"].btn.clipped').click(function () {
 
 
                     ga('send', {
                         hitType: 'event',
-                        eventCategory: 'Donate Click',
+                        eventCategory: 'Survey Click To Click - Top Button',
                         eventAction: 'click'
                     });
 
-                });
-                $('.donate-bar a').click(function () {
+                    console.log('Donate - Top Button');
 
+                });
+                $('.donate-bar .hidden-xs, .donate-bar .visible-xs.kit-btn').click(function () {
+                    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                    ga('send', {
+                        hitType: 'event',
+                        eventCategory: 'Survey Click Mobile - Bottom Bar',
+                        eventAction: 'click'
+                    });
+                    } else {
 
                     ga('send', {
                         hitType: 'event',
-                        eventCategory: 'Donate Click - Mobile',
+                        eventCategory: 'Survey Click Desktop - Bottom Bar',
                         eventAction: 'click'
                     });
 
+                    }
+
+
+                    console.log('Survey Click To -  Bottom Bar');
                 });
+                $('.survey-toggle').click(function () {
+
+
+                    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                    ga('send', {
+                        hitType: 'event',
+                        eventCategory: 'Survey Start - Mobile',
+                        eventAction: 'click'
+                    });
+                    } else {
+
+                    ga('send', {
+                        hitType: 'event',
+                        eventCategory: 'Survey Start - Desktop',
+                        eventAction: 'click'
+                    });
+
+                    }
+
+
+
+                    console.log('Survey Start');
+                });
+
                 $('a[href="https://fiwi-onepulsefoundation.s3.amazonaws.com/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf"]').click(function () {
 
 
@@ -406,8 +446,7 @@
 
                 });
 
-
-
+                   }
 
                 //					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 

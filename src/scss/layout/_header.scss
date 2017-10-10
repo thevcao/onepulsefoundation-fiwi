@@ -963,7 +963,7 @@
                 .full-menu {
 
                     .container-fluid {
-                    padding: 0;
+//                    padding: 0;
                         margin: 0;
                         width: 100%;
                     }
@@ -1117,9 +1117,15 @@
 
                     width: 100%;
                     display: block;
+                    margin-bottom: 0;
                 }
 
 
+            }
+        }
+        @media (max-width: 414px) {
+            html:not(.ipad) .full-menu {
+                padding-top: 15vw;
             }
         }
         @media (max-width: 375px) {

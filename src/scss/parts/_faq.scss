@@ -3,6 +3,10 @@
     overflow: hidden;
     margin-bottom: 1rem;
     padding: 1rem 0;
+
+    &:first-of-type {
+        margin-top: 2rem;
+    }
     &:after {
         position: absolute;
         left: -100vw;
@@ -64,6 +68,12 @@
             //            background-position: 50%;
             position: absolute;
             z-index: 1;
+
+             @media(max-width:414px) {
+
+                 animation: none;
+                 background-position: 50% 50%;
+            }
             //    line-height: 1.1;
         }
         &:hover {
@@ -85,6 +95,12 @@
             opacity: 0;
             transition: opacity .3s ease;
             margin: 0;
+
+
+            @media(max-width:414px) {
+
+                font-size: 5vw;
+            }
         }
     }
     .bg-element {
