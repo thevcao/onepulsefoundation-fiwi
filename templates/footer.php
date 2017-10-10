@@ -14,7 +14,7 @@ $newsimage = get_field('news_image', 'options');?>
         <div class="row m0 flex-row align-items-center">
             <div class="col-md-7">
                 <h2 class="mt0">Stay Informed</h2>
-                <p>Lorem ipsum dolor sit amet, ius sale munere labores cu, erat illud similique eu duo, ex sale equidem expetenda duo.</p>
+                <p>Sign up to receive exclusive updates about the onePULSE Foundation.</p>
             </div>
             <div class="col-md-5">
                     <?php echo do_shortcode('[contact-form-7 id="5374" title="Newsletter"]');?>
@@ -26,7 +26,7 @@ $newsimage = get_field('news_image', 'options');?>
 <section class="page-cta mb80 hidden-xs">
     <div class="">
         <div class="row">
-            <div class="col-sm-7 p0 mm oh">
+            <div class="col-sm-7 p0 oh">
                 <div class="img-overlay"></div>
 
                                             <?php
@@ -41,14 +41,14 @@ $newsimage = get_field('news_image', 'options');?>
                     <h3>News and Updates</h3>
                 </div>
             </div>
-            <div class="col-sm-5 p0 mm">
+            <div class="col-sm-5 p0">
 
                 <div class="dupe"><h3></h3></div>
 
 
                 <div class="content">
 
-                    <p class="text-right">The onePULSE Foundation is the only official 501(c)(3) incorporated by the owners of Pulse Nightclub. onePULSE Foundation’s initial focused mission is to provide financial assistance to victims affected by the attack at Pulse Nightclub. </p>
+                    <p class="text-right">The onePULSE Foundation is the only official 501(c)(3) incorporated by the owners of Pulse Nightclub. “The Foundation will support the construction and maintenance of the memorial and museum; community grants to care for the survivors and victims’ families; educational programs to promote amity among all segments of society; and endowed scholarships for each of the 49 angels. </p>
 
                     <a href="/category/news" class="btn right">See All </a>
 

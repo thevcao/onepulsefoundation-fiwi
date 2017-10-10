@@ -42,8 +42,10 @@
                             $loop = new WP_Query( $args );
                             while ( $loop->have_posts() ) : $loop->the_post(); $temp_date = get_post_meta( get_the_ID(), 'event_date', true );
 
-                            if ( $temp_date != $current_header  ):
 
+                                if (strtotime($temp_date) > strtotime('now')):
+
+                                    if ( $temp_date != $current_header  ):
                             ?>
 
                                                 <?php
@@ -60,10 +62,10 @@
                                                 ?>
 
                                 <div class="item mt32 mb64">
-                                    <a href="<?php the_permalink();?>"><h2 class="mb8"><?php echo get_the_title();?></h2></a>
+                                    <a class="no-hover" href="<?php the_permalink();?>"><h2 class="mb8"><?php echo get_the_title();?></h2></a>
                                     <h3 class="mt0 mb16"><i class="fa fa-calendar"></i> <?php the_field('event_date');?></h3>
                                     <?php if(get_field('event_location')):?>
-                                    <h3 class="mt0 mb32"><a href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $address;?>" target="_blank"><i class="fa fa-location-arrow"></i> <?php echo $address;?></a></h3>
+                                    <h3 class="mt0 mb32"><a class="no-hover" href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $address;?>" target="_blank"><i class="fa fa-location-arrow"></i> <?php echo $address;?></a></h3>
                                     <?php endif;?>
                                     <p>
                                         <?php the_excerpt();?>
@@ -71,7 +73,7 @@
                                     <div class="pt8"></div>
                                     <a href="<?php the_permalink();?>" class="btn left">Read More</a>
                                 </div>
-                                <?php endif; endwhile; wp_reset_postdata();?>
+                                <?php endif; endif; endwhile; wp_reset_postdata();?>
 
 
 
@@ -93,10 +95,13 @@
 
 
                             $loop = new WP_Query( $args );
-                            while ( $loop->have_posts() ) : $loop->the_post(); $temp_date = get_post_meta( get_the_ID(), 'event_date', true );
+                            while ( $loop->have_posts() ) : $loop->the_post();
 
-                            if ( $temp_date < $current_header  ):
+                            $temp_date = get_post_meta( get_the_ID(), 'event_date', true );
 
+                            if (strtotime($temp_date) < strtotime('now')):
+
+                                if ( $temp_date > $current_header  ):
                             ?>
 
                                                 <?php
@@ -118,7 +123,7 @@
                                     <div class="pt8"></div>
                                     <a href="<?php the_permalink();?>" class="btn left">Read More</a>
                                 </div>
-                                <?php endif; endwhile; wp_reset_postdata();?>
+                                <?php endif; endif; endwhile; wp_reset_postdata();?>
 
 
                         </div>

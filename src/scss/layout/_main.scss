@@ -14,7 +14,7 @@
     .line {
         height: 5px;
         background: #000;
-            background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, yellow 71.42%, #34d400 85.71%, #00a8de 100%);
+        background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, yellow 71.42%, #34d400 85.71%, #00a8de 100%);
         animation: donateanimate 10s alternate linear infinite;
         background-attachment: fixed;
         background-size: 500%;
@@ -46,13 +46,12 @@
             content: attr(title);
             color: #000;
             background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, yellow 71.42%, #34d400 85.71%, #00a8de 100%);
-        animation: donateanimate 10s alternate linear infinite;
+            animation: donateanimate 10s alternate linear infinite;
             background-size: 500%;
-
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-attachment: fixed;
-//            background-position: 50%;
+            //            background-position: 50%;
             position: absolute;
             z-index: 1000;
             line-height: 1.1;
@@ -66,13 +65,9 @@
             color: rgba(0, 0, 0, 0);
         }
     }
-
-
     html.mac.safari {
-
         section a:not(.home-play, .task-link, .btn):before {
-
-//            opacity: 0;
+            //            opacity: 0;
             width: 150%;
             top: 5%;
         }
@@ -146,19 +141,14 @@
     //.page-main {
     //	overflow-y: visible;
     //}
-
-.media-cat {
-
-    list-style: none;
-    margin-top: 2rem;
-
-    a {
-
-        font-weight: bold;
-        font-size: 1.25rem;
-
+    .media-cat {
+        list-style: none;
+        margin-top: 2rem;
+        a {
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
     }
-}
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         //section {
         //
@@ -175,9 +165,8 @@
         //	height: auto !important;
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-
-        html, body {
-
+        html,
+        body {
             overflow-x: hidden;
         }
         body:not(.home) section:nth-of-type(1) {
@@ -201,10 +190,8 @@
         }
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-
-
-        html, body {
-
+        html,
+        body {
             overflow-x: hidden;
         }
         .spacer {
@@ -228,64 +215,59 @@
         }
     }
     @media (max-width:768px) {
-
-            html:not(.ipad) {
-
-        html, body {
-            overflow-x: hidden;
-        }
-        section {
-            //	overflow-y: auto;
-            //	overflow: auto;
-        }
-        .row,
-        [class^="col-"] {
-            //	overflow-y: auto;
-            //	overflow-x: auto;
-            //	overflow: auto;
-        }
-        a:hover {
-            opacity: 1 !important;
-        }
-        .mobile-links ul li a:hover {
-            color: black !important;
-        }
-        .mobile-links ul li a:hover:before {
-            opacity: 0 !important;
-        }
-        a:not(.home-play, .task-link):before {
-            content: none !important;
-        }
-        .page-main {
-            //    padding: 0 5%;
-        }
-        .page-main .container {
-            padding: 0 5%;
-        }
-        .row.tab-pt-resize {
-            padding: 0 20px;
-        }
+        html:not(.ipad) {
+            html,
+            body {
+                overflow-x: hidden;
+            }
+            section {
+                //	overflow-y: auto;
+                //	overflow: auto;
+            }
+            .row,
+            [class^="col-"] {
+                //	overflow-y: auto;
+                //	overflow-x: auto;
+                //	overflow: auto;
+            }
+            a:hover {
+                opacity: 1 !important;
+            }
+            .mobile-links ul li a:hover {
+                color: black !important;
+            }
+            .mobile-links ul li a:hover:before {
+                opacity: 0 !important;
+            }
+            a:not(.home-play, .task-link):before {
+                content: none !important;
+            }
+            .page-main {
+                //    padding: 0 5%;
+            }
+            .page-main .container {
+                padding: 0 5%;
+            }
+            .row.tab-pt-resize {
+                padding: 0 20px;
+            }
         }
     }
     @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-
         html:not(.ipad) {
-
             overflow-x: hidden;
-
-
-//		.home-about .container > .row > div {
-//			padding: 0;
-//		}
-        .home-about.pt120.pt-xs-32.pb-xs-32.content-left {
-            padding-top: 0;
-        }
-        .page-main .container, section > .row, .archive-body .container {
-    max-width: 80%;
-    margin: 0 auto;
-    display: block;
+            //		.home-about .container > .row > div {
+            //			padding: 0;
+            //		}
+            .home-about.pt120.pt-xs-32.pb-xs-32.content-left {
+                padding-top: 0;
             }
-
-
+            .page-main .container,
+            section > .row,
+            .archive-body .container {
+                max-width: 80%;
+                margin: 0 auto;
+                display: block;
+            }
+        }
     }
-}

@@ -55,7 +55,7 @@
                                                 ?>
 
                                 <div class="item mt32 mb64">
-                                    <a href="<?php the_permalink();?>"><h2 class="mb8"><?php echo get_the_title();?></h2></a>
+                                    <a class="no-hover" href="<?php the_permalink();?>"><h2 class="mb8"><?php echo get_the_title();?></h2></a>
 
                                     <p>
                                         <?php the_excerpt();?>

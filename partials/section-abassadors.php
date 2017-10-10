@@ -34,7 +34,7 @@
             while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 
-                <li><a href="#"><?php echo get_the_title();?></a>
+                <li><?php echo get_the_title();?>
                     <ul>
                         <li><?php the_field('title');?></li>
                     </ul>

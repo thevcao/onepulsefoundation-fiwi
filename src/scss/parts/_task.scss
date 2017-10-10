@@ -35,16 +35,41 @@
     padding: 0;
     margin: 0;
     column-count: 3;
-
-
     &.staff-display {
-
-//        column-count: 1;
+        //        column-count: 1;
     }
     li {
         font-weight: bold;
         display: inline-table;
         width: 100%;
+
+            a {
+                position: relative;
+                transition: color .5s ease;
+                &:before {
+                    opacity: 0;
+                    transition: opacity .5s ease;
+                    content: attr(title);
+                    color: #000;
+                    background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, yellow 71.42%, #34d400 85.71%, #00a8de 100%);
+                    animation: donateanimate 10s alternate linear infinite;
+                    background-size: 500%;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-attachment: fixed;
+                    //            background-position: 50%;
+                    position: absolute;
+                    z-index: 1000;
+                                line-height: 2;            //    left: 0;
+                    //    top: 0;
+                }
+                &:hover:before {
+                    opacity: 1;
+                }
+                &:hover {
+                    color: rgba(0, 0, 0, 0);
+                }
+            }
     }
     ul {
         list-style: none;
@@ -53,21 +78,15 @@
         li {
             font-weight: normal;
             display: block;
+
         }
     }
-
     @media(max-width: 993px) {
-
-
         column-count: 2;
-
     }
     @media(max-width: 768px) {
-
-
         column-count: 1;
         padding: 1rem 1rem 0;
-
     }
 }
 .donor-list {
@@ -76,12 +95,9 @@
     font-weight: bold;
     padding: 0;
     margin: 0;
-//    column-count: 3;
-
-
+    //    column-count: 3;
     &.staff-display {
-
-//        column-count: 1;
+        //        column-count: 1;
     }
     li {
         font-weight: bold;
@@ -97,18 +113,11 @@
             display: block;
         }
     }
-
     @media(max-width: 993px) {
-
-
         column-count: 2;
-
     }
     @media(max-width: 768px) {
-
-
         column-count: 1;
-
     }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
@@ -134,12 +143,10 @@
     }
 }
 @media (max-width:768px) {
-
-        html:not(.ipad) {
-
-    .task-link {
-        opacity: 1;
-    }
+    html:not(.ipad) {
+        .task-link {
+            opacity: 1;
+        }
     }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
