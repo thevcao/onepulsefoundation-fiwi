@@ -48,13 +48,32 @@
 <?php } else {?>
 
 
-        <h1>Please Sign in or Create a User Account to Participate in the Survey</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="donate-hero">
+                    <h2>Make Your Voice Heard</h2>
+                </div>
+            </div>
+            <div class="col-md-7">
 
+        <h1>Participate in the onePULSE Foundation Memorial Survey</h1>
+
+        <p>The onePULSE Foundation Memorial Survey includes a variety of questions to garner opinions about desired elements and features that participants would like to see and experience at the future site. Information collected from the survey will be analyzed to identify consensus, trends, and an overall understanding of public desires for the Pulse memorial and museum.</p>
+        <p>The tragedy that occurred at Pulse Nightclub impacted this community and it’s important that the community be involved in determining what the memorial ends up looking like,” said Barbara Poma, owner of Pulse Nightclub and Executive Director of the onePULSE Foundation.</p>
+            </div>
+            <div class="col-md-4 col-md-offset-1">
+
+        <h3 class="mt64 mb32">Please Sign In or Create an Account to Participate in the Survey</h3>
         <div class="survey-login">
                 <?php wp_login_form(); ?>
         </div>
         <p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/us.svg"> Please create a user account to complete the survey. <a href="<?php echo wp_registration_url(); ?>">Create an Account</a></p>
         <p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/span.svg"> Por favor crea una cuenta de usuario para completar la encuesta. <a href="<?php echo wp_registration_url(); ?>">Crea Una Cuenta</a></p>
+
+
+
+            </div>
+        </div>
 
 
 <?php }?>
