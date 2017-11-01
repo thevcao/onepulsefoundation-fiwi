@@ -81,7 +81,9 @@
 
                         </div>
                         <div class="col-md-3 col-md-offset-1">
-                            <h3 class="mt64">Past Events</h3>
+                            <h3 class="mt64">onePULSE Third Party Fundraiser Guidelines</h3>
+                            <a href="<?php echo get_field('fundraiser_form', 'options')['url'];?>" class="btn pop-link">Download Form <i class="fa fa-download"></i></a>
+                            <h3 class="mt32">Past Events</h3>
 
                         <?php $args = array(
 

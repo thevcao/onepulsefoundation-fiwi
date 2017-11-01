@@ -218,7 +218,7 @@
     height: 100%;
     display: table;
     z-index: 10;
-    padding-top: 25vw;
+//    padding-top: 200px;
     .quote-container {
         display: table-cell;
         vertical-align: middle;
@@ -229,7 +229,11 @@
             font-size: 16px;
             font-weight: bold;
             width: 500px;
-            margin: 0 auto 25px;
+//            margin: 0 auto 25px;
+//            width: 50%;
+            margin: 150px auto 25px;
+
+
             &.sig {
                 width: 400px;
                 margin: 0 auto;

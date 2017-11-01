@@ -238,4 +238,9 @@ $headline_weight = get_field('body_font_weight','options');
     .gform_media_icon {
     padding-top: 0 !important;
 }
+
+        .wp-core-ui .button-group.button-small .button, .wp-core-ui .button.button-small, .wp-core-ui .button-group.button-large .button, .wp-core-ui .button.button-large {
+    height: auto;
+    line-height: 1;
+}
     </style>

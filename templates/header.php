@@ -115,7 +115,7 @@ get_template_part('templates/head');
 
 <div class="full-menu">
     <div class="container-fluid">
-        <div class="col-md-7 col-md-offset-1 hidden-xs">
+        <div class="col-md-8 hidden-xs">
             <?php wp_nav_menu( array( 'theme_location' => 'full-one' ) ); ?>
         </div>
         <div class="col-md-6 visible-xs">

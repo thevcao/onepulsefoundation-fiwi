@@ -158,7 +158,7 @@ endif; wp_reset_postdata();?>
     <div class="reveal"></div>
         <div class="loader">
             <div class="spinner"></div>
-<?php if(is_page(7)): echo '<div class="quote"><div class="quote-container"><p>Darkness cannot drive out darkness: only light can do that.<br>Hate cannot drive out hate: only love can do that.</p><p class="sig">- Dr. Martin Luther King, Jr</p></div></div>'; endif;?>
+            <?php if(is_page(7)): echo '<div class="quote" data-time="30000"><div class="quote-container"><p>"Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that."</p><p class="sig">- Martin Luther King, Jr.</p></div></div>'; endif;?>
             <?php if (!$homeHero['caption'] == null && is_page('home')): echo '<label class="img-attrib">' . $homeHero['caption'] . '</label>'; endif; ?>
 
                 <?php // check if the flexible content field has rows of data

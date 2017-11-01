@@ -311,3 +311,7 @@ body.login input[type="text"], body.login input[type="password"] {
     background: none !important;
     box-shadow: none  !important;
 }
+.wp-core-ui .button-group.button-small .button, .wp-core-ui .button.button-small, .wp-core-ui .button-group.button-large .button, .wp-core-ui .button.button-large {
+    height: auto;
+    line-height: 1;
+}
