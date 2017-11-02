@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-md-8">
 
-                            <h1>FAQ</h1>
+                            <h1>FAQs</h1>
                         </div>
                     </div>
                 </div>
