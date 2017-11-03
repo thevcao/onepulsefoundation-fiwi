@@ -7,18 +7,7 @@
  */
 ?>
     <?php get_template_part('templates/header'); ?>
-                                                <?php
 
-                                                    if(get_field('event_location')):
-                                                  $values = get_field('event_location');
-                                                  $lat = $values['lat'];
-                                                  $lng = $values['lng'];
-                                                  $address = $values['address'];
-                                                  $map_center_lat = $values['center_lat'];
-                                                  $map_center_lng = $values['center_lng'];
-                                                  $map_zoom = $values['zoom'];
-                                                    endif;
-                                                ?>
 <div class="main-wrapper">
         <div class="post-body">
             <section class="post-image">
@@ -38,7 +27,7 @@
                         <?php  $featbanner = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner' ); $featurl = $featbanner['0'];
 
 
-                        $featnurl = str_replace('fiwi-onepulsefoundation.s3.amazonaws.com', 'onepulsefoundation.org', $featurl);
+                        //$featnurl = str_replace('fiwi-onepulsefoundation.s3.amazonaws.com', 'onepulsefoundation.org', $featurl);
 
 
                         ?>
@@ -115,10 +104,8 @@
 
             if(!$source == null):?>
 
-                            <div class="col-md-7">
+                            <div class="col-md-8">
                                 <h1><?php echo get_the_title();?></h1>
-                                    <h3 class="mt0 mb16"><i class="fa fa-calendar"></i> <?php the_field('event_date');?></h3>
-                                    <h3 class="mt0 mb32"><a href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $address;?>" target="_blank"><i class="fa fa-location-arrow"></i> <?php echo $address;?></a></h3>
                                 <h4 class="text-left mb8">Share this</h4>
                                 <ul class="socials shares">
                                     <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -129,24 +116,41 @@
 
                                 <?php the_content();?>
 
+                                <?php $pr = get_field('include_pr_snippet'); if(!$pr == null):?>
+                                <h3>About onePULSE Foundation</h3>
+                                <?php the_field('about_info');?>
+                                <?php endif;?>
+
                             </div>
 
 
 
-                            <div class="col-md-4 col-md-offset-1 mt120 mt-sm-0 mt-xs-0">
+                            <div class="col-md-4 mt120 mt-sm-0 mt-xs-0">
 
 
                                 <div>
 
-                                    <?php if(get_field('event_location')):?>
-                                    <div class="map-wrapper">
-                                        <div class="acf-map">
-                                            <div class="marker" data-lat="<?php echo $lat; ?>" data-lng="<?php echo $lng; ?>"></div>
-                                        </div>
-                                    </div>
+                            <?php if($source == 'File'): ?>
 
+                                    <label data-stellar-ratio="1"><span>Video</span>
+                                        <?php the_field('video_title');?>
+                                            <div class="line"></div>
+                                    </label>
+                                    <a href="<?php echo $video; ?>" class="btn mt16" download>Download Video </a>
+
+                                    <?php elseif($source == 'External'): ?>
+                                    <label data-stellar-ratio="1"><span>Video</span>
+                                        <?php the_field('video_title');?>
+                                            <div class="line"></div>
+                                    </label>
+                                    <?php if($ext_source == 'youtube'): ?>
+                                    <a href="<?php echo $url;?>" class="btn mt16 pop-link">View on YouTube </a>
+                                    <?php elseif($ext_source == 'vimeo'): ?>
+                                    <a href="<?php echo $url;?>" class="btn mt16 pop-link">View on Vimeo </a>
                                     <?php endif;?>
 
+                                    <?php elseif($source == 'None'): ?>
+                                    <?php endif;?>
 
 
                                 </div>
@@ -154,11 +158,8 @@
                             </div>
 
                             <?php else: ?>
-
-                            <div class="col-md-7">
-                                <h1><?php echo get_the_title();?></h1>
-                                    <h3 class="mt0 mb16"><i class="fa fa-calendar"></i> <?php the_field('event_date');?></h3>
-                                    <h3 class="mt0 mb32"><a href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $address;?>" target="_blank"><i class="fa fa-location-arrow"></i> <?php echo $address;?></a></h3>
+                                <div class="col-md-10">
+                                    <h1><?php echo get_the_title();?></h1>
                                 <h4 class="text-left mb8">Share this</h4>
                                 <ul class="socials shares">
                                     <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -167,32 +168,9 @@
                                     <li><a href="https://plus.google.com/share?url=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                                 </ul>
 
-                                <?php the_content();?>
-
-                            </div>
-
-
-
-                            <div class="col-md-4 col-md-offset-1 mt120 mt-sm-0 mt-xs-0">
-
-
-                                <div>
-
-                                    <?php if(get_field('event_location')):?>
-                                    <div class="map-wrapper">
-                                        <div class="acf-map">
-                                            <div class="marker" data-lat="<?php echo $lat; ?>" data-lng="<?php echo $lng; ?>"></div>
-                                        </div>
-
-                                    </div>
-
-                                    <?php endif;?>
-
-
+                                    <?php the_content();?>
 
                                 </div>
-
-                            </div>
                                 <?php endif;?>
                     </div>
                 </div>
@@ -205,191 +183,3 @@
         </div>
 
         <?php get_template_part('templates/footer'); ?>
-<style type="text/css">
-
-.acf-map {
-    width: 100%;
-    height: 400px;
-    border: #ccc solid 1px;
-    margin: 0;
-    pointer-events: all;
-}
-
-/* fixes potential theme css conflict */
-.acf-map img {
-   max-width: inherit !important;
-}
-
-</style>
-
-<script type="text/javascript">
-(function($) {
-
-/*
-*  new_map
-*
-*  This function will render a Google Map onto the selected jQuery element
-*
-*  @type	function
-*  @date	8/11/2013
-*  @since	4.3.0
-*
-*  @param	$el (jQuery element)
-*  @return	n/a
-*/
-
-function new_map( $el ) {
-
-    // var
-    var $markers = $el.find('.marker');
-
-
-    // vars
-    var args = {
-        zoom		: 16,
-        center		: new google.maps.LatLng(0, 0),
-        mapTypeId	: google.maps.MapTypeId.ROADMAP
-    };
-
-
-    // create map
-    var map = new google.maps.Map( $el[0], args);
-
-
-    // add a markers reference
-    map.markers = [];
-
-
-    // add markers
-    $markers.each(function(){
-
-        add_marker( $(this), map );
-
-    });
-
-
-    // center map
-    center_map( map );
-
-
-    // return
-    return map;
-
-}
-
-/*
-*  add_marker
-*
-*  This function will add a marker to the selected Google Map
-*
-*  @type	function
-*  @date	8/11/2013
-*  @since	4.3.0
-*
-*  @param	$marker (jQuery element)
-*  @param	map (Google Map object)
-*  @return	n/a
-*/
-
-function add_marker( $marker, map ) {
-
-    // var
-    var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
-
-    // create marker
-    var marker = new google.maps.Marker({
-        position	: latlng,
-        map			: map
-    });
-
-    // add to array
-    map.markers.push( marker );
-
-    // if marker contains HTML, add it to an infoWindow
-    if( $marker.html() )
-    {
-        // create info window
-        var infowindow = new google.maps.InfoWindow({
-            content		: $marker.html()
-        });
-
-        // show info window when marker is clicked
-        google.maps.event.addListener(marker, 'click', function() {
-
-            infowindow.open( map, marker );
-
-        });
-    }
-
-}
-
-/*
-*  center_map
-*
-*  This function will center the map, showing all markers attached to this map
-*
-*  @type	function
-*  @date	8/11/2013
-*  @since	4.3.0
-*
-*  @param	map (Google Map object)
-*  @return	n/a
-*/
-
-function center_map( map ) {
-
-    // vars
-    var bounds = new google.maps.LatLngBounds();
-
-    // loop through all markers and create bounds
-    $.each( map.markers, function( i, marker ){
-
-        var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );
-
-        bounds.extend( latlng );
-
-    });
-
-    // only 1 marker?
-    if( map.markers.length == 1 )
-    {
-        // set center of map
-        map.setCenter( bounds.getCenter() );
-        map.setZoom( 16 );
-    }
-    else
-    {
-        // fit to bounds
-        map.fitBounds( bounds );
-    }
-
-}
-
-/*
-*  document ready
-*
-*  This function will render each map when the document is ready (page has loaded)
-*
-*  @type	function
-*  @date	8/11/2013
-*  @since	5.0.0
-*
-*  @param	n/a
-*  @return	n/a
-*/
-// global var
-var map = null;
-
-$(document).ready(function(){
-
-    $('.acf-map').each(function(){
-
-        // create map
-        map = new_map( $(this) );
-
-    });
-
-});
-
-})(jQuery);
-</script>

@@ -422,3 +422,13 @@ p img {
         }
     }
 }
+.no-hover {
+    &:hover {
+        color: $r !important;
+        animation: animation-ie 10s ease infinite both;
+    }
+    &:before,
+    &:after {
+        content: none !important;
+    }
+}

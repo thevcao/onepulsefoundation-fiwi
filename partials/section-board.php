@@ -19,7 +19,8 @@
 
             <div class="col-sm-12">
 
-            <ul class="task-force-members">
+            <h3>Executive Council</h3>
+            <ul class="task-force-members mb64 mb-xs-32">
             <?php $args = array(
 
                 'posts_per_page'    => -1,
@@ -30,9 +31,8 @@
                 'meta_query' => array(
 
                     'btitle' => array(
-                        'key' => 'order',
-                        'value' => '1',
-                        'compare' => '='
+                        'key' => 'exec_council',
+                        'compare' => 'EXISTS'
                     ),
 
 
@@ -52,7 +52,16 @@
                         <li><?php the_field('title');?></li>
                     </ul>
                 </li>
+
+
             <?php endwhile; wp_reset_postdata();?>
+
+
+                </ul>
+
+            <ul class="task-force-members">
+
+
 
             <?php
 
@@ -61,18 +70,12 @@
                 $args = array(
 
                 'posts_per_page'    => -1,
-                'meta_key'=> 'order',
-                'orderby' => array(
-                    'meta_value' => 'ASC',
-                    'title' => 'ASC'
-                    ),
                 'post_type' => 'board',
                 'meta_query' => array(
 
                     'btitle' => array(
-                        'key' => 'order',
-                        'value' => '1',
-                        'compare' => '!='
+                        'key' => 'exec_council',
+                        'compare' => 'NOT EXISTS'
                     ),
 
 

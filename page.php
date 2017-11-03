@@ -89,6 +89,12 @@ if( have_rows('section') ):
 
         endif;
 
+        if( get_row_layout() == 'donors' ):
+            include( locate_template( 'partials/section-donors.php', false, false ) );
+
+
+        endif;
+
     $count++; endwhile;
 
 endif;

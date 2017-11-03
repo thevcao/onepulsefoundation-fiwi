@@ -272,9 +272,11 @@
                 $('.question').click(function () {
 
                     $('.faq-item').not($(this).parents('.faq-item')).removeClass('active');
-                    $('.faq-item .answer').children('p').not($(this).next('.answer').children('p')).slideUp(500);
-                    $(this).next('.answer').children('p').slideToggle(500);
+                    $('.faq-item .answer').children('p, ul').not($(this).next('.answer').children('p, ul')).slideUp(500);
+                    $(this).next('.answer').children('p, ul').slideToggle(500);
                     $(this).parents('.faq-item').toggleClass('active');
+
+                    return false;
 
 
                 });

@@ -11,7 +11,9 @@
      array(
          'public' => true,
          'show_ui' => true,
-
+         'supports' => array(
+             'title', 'editor', 'thumbnail'
+         ),
      )
  );
 
