@@ -48,7 +48,7 @@ $newsimage = get_field('news_image', 'options');?>
 
                 <div class="content">
 
-                    <p class="text-right">The onePULSE Foundation is the only official 501(c)(3) incorporated by the owners of Pulse Nightclub. “The Foundation will support the construction and maintenance of the memorial and museum; community grants to care for the survivors and victims’ families; educational programs to promote amity among all segments of society; and endowed scholarships for each of the 49 angels. </p>
+                    <p class="text-right">The onePULSE Foundation is the only official 501(c)(3) incorporated by the owners of Pulse Nightclub. The Foundation will support the construction and maintenance of the memorial and museum; community grants to care for the survivors and victims’ families; educational programs to promote amity among all segments of society; and endowed scholarships for each of the 49 angels. </p>
 
                     <a href="/category/news" class="btn right">See All </a>
 
