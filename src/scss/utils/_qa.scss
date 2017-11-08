@@ -432,3 +432,6 @@ p img {
         content: none !important;
     }
 }
+.home-about:not(:first-of-type) .over-image {
+    display: none !important;
+}

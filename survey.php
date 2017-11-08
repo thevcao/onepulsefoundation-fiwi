@@ -38,7 +38,7 @@
 
         <h1>The onePULSE Memorial survey is now closed</h1>
 
-        <p>We have received some phenomenal feedback and would like to thank all who participated. Each entry received will help shape the future of the Memorial and how we honor and remember the victims and all those affected for generations to come. Survey results will be shared in December, after which, a request for proposal will be created and, in June of 2018, a public design competition will be announced.</p>
+        <p>The onePULSE Foundation Memorial Survey was available online to the public from September 13 to October 31, 2017. This survey contained thoughtful questions pertaining to the look and feel to be conveyed at the future memorial site.  The survey also sought to gain insight from the community as to who to honor and what issues to address. The results of this survey will be presented in December. Following data analysis of the survey, the RFP will be created and ultimately the public design competition will be announced in June 2018.</p>
 
 <p>Please reach out to info@onePULSEfoundation.org if you wish to provide feedback for the onePULSE Foundation Memorial and Museum. </p>
 
