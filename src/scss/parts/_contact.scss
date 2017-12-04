@@ -245,6 +245,7 @@ span.wpcf7-not-valid-tip {
     margin: 0 !important;
     text-align: center;
     font-weight: bold;
+    z-index: 100000;
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
