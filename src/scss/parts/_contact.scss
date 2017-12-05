@@ -50,12 +50,8 @@
     }
 }
 .newsletter {
-
     margin-bottom: 5rem;
-
-
-    @media(max-width:768px) {
-
+    @media(max-width: 768px) {
         margin-bottom: 0;
     }
     .flex-row {
@@ -88,7 +84,6 @@
         color: white;
         animation: newslettertext 10s alternate linear infinite;
     }
-
     h2 {
         margin-bottom: 1rem;
     }
@@ -232,20 +227,48 @@ span.wpcf7-not-valid-tip {
     border-color: rgba(233, 30, 99, 0.69);
 }
 .wpcf7-response-output {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
-    animation: donateanimate 3s alternate linear infinite;
-    background-size: 500%;
-    color: #fff;
-    border: none !important;
-    margin: 0 !important;
-    text-align: center;
-    font-weight: bold;
-    z-index: 100000;
+    //    position: fixed;
+    //    bottom: 0;
+    //    left: 0;
+    //    right: 0;
+    //    z-index: 1000;
+    //    background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
+    //    animation: donateanimate 3s alternate linear infinite;
+    //    background-size: 500%;
+    //    color: #fff;
+    //    border: none !important;
+    //    margin: 0 !important;
+    //    text-align: center;
+    //    font-weight: bold;
+    //    z-index: 100000;
+}
+.newsletter {
+    div.wpcf7-response-output {
+        position: absolute;
+        top: 0;
+        padding: 1rem 10px;
+        background: none;
+        border: 3px solid white;
+        background: white;
+        outline: none;
+        transition: all .3s ease;
+        margin: 2rem auto 0 auto;
+        border-radius: 100px;
+        text-align: center;
+
+        width: auto;
+        left: 0;
+        right: 0;
+        line-height: 1.25;
+        &:before {
+            content: '';
+            position: absolute;
+            right: 10px;
+            top: 32%;
+            font-family: fontawesome;
+            pointer-events: none;
+        }
+    }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}

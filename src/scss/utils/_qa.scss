@@ -432,6 +432,38 @@ p img {
         content: none !important;
     }
 }
-.home-about:not(:first-of-type) .over-image {
-    display: none !important;
+//.home-about:not(:first-of-type) .over-image {
+//    display: none !important;
+//}
+.post-body {
+
+
+
+    .col-md-8 {
+
+        p {
+
+            .alignleft {
+
+
+                float: left;
+                margin: 1rem;
+                margin-left: 0;
+
+
+            }
+            .alignright {
+
+
+                float: right;
+                margin: 1rem;
+                margin-right: 0;
+
+
+            }
+
+
+        }
+
+    }
 }

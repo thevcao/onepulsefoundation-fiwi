@@ -28,7 +28,7 @@
 
                 <div class="contact-info">
                 <h3>onePULSE Foundation</h3>
-                <p class="mt0 mb8">PO Box 530036<br>Orlando Fl 32853-0036</p>
+                <p class="mt0 mb8">PO Box 530036<br>Orlando, Fl 32853-0036</p>
 
                 <!--<p class="mt0 mb0"><span>office</span> <a href="tel":><?php the_field('contact_office','options');?></a></p>-->
                     <p class="mt0 mb8"><a class="" href="mailto:info@onePULSEFoundation.org"><b>email</b> info@onePULSEfoundation.org</a></p>

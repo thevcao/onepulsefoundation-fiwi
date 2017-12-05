@@ -32,11 +32,11 @@
                 <div class="line"></div>
 
 
-                <p>The Task Force is an appointed volunteer coalition of family members of victims, survivors, and local community leaders.  This committee will give recommendations and guidance to the Board of Trustees to create, build, and financially maintain a permanent national memorial at the Pulse site.  The Task Force serves as the advisory committee who will formulate the process of building what will become an iconic tribute to the 49 souls taken from us on that horrible night, as well as to the survivors, brave first responders, surgeons, and medical providers who served so selflessly.</p>
+                <p>The Task Force is an appointed volunteer coalition of family members of victims, survivors, and local community leaders.  This committee will give recommendations and guidance to the Board of Trustees to create, build, and financially maintain a permanent national memorial at the Pulse site.  The Task Force serves as the advisory committee who will formulate the process of building what will become an iconic tribute to the 49 angels taken from us on that horrible night, as well as to the survivors, brave first responders, surgeons, and medical providers who served so selflessly.</p>
 
                 <p>Still in formation, the Task Force will break into different subcommittees who will each play a role in the gathering of data that will reflect the wishes of the victims’ families, the survivors, and the community at large.</p>
 
-                <h4 class="text-right hidden-sm hidden-xs mt64">Select a Advisory Board Member to Read Full Bio <i class="fa fa-chevron-right"></i></h4>
+                <h4 class="text-right hidden-sm hidden-xs mt64">Select a Advisory Council Member to Read Full Bio <i class="fa fa-chevron-right"></i></h4>
 
 
 
@@ -66,7 +66,7 @@
             </div>
 
             <div class="col-sm-8 col-sm-offset-2 visible-tab-pt visible-xs">
-            <a href="#task-modal" class="btn modal-toggle">Meet the Advisory Board</a>
+            <a href="#task-modal" class="btn modal-toggle">Meet the Advisory Council</a>
             </div>
         </div>
     </div>

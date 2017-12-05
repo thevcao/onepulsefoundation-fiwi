@@ -1013,7 +1013,7 @@
                 function halftone(){
 
                                     // try to create a WebGL canvas (will fail if WebGL isn't supported)
- if ($('#featured-image').length) {
+                     if ($('#featured-image').length) {
 
                     // convert the image to a texture
 
@@ -1089,7 +1089,16 @@
                     }
 
 
-                })
+                });
+                $('.wpcf7-response-output').click(function(){
+
+
+                    $(this).fadeOut(300);
+
+                    return false;
+
+
+                });
                 $('.newsletter input.wpcf7-form-control').keyup(function(){
 
                     var value = $(this).val();

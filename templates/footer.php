@@ -48,7 +48,7 @@ $newsimage = get_field('news_image', 'options');?>
 
                 <div class="content">
 
-                    <p class="text-right">The onePULSE Foundation is the only official 501(c)(3) incorporated by the owners of Pulse Nightclub. The Foundation will support the construction and maintenance of the memorial and museum; community grants to care for the survivors and victims’ families; educational programs to promote amity among all segments of society; and endowed scholarships for each of the 49 angels. </p>
+                    <p class="text-right">Find out the latest from the onePULSE Foundation, including important milestones and announcements, as we work to create a sanctuary of hope.</p>
 
                     <a href="/category/news" class="btn right">See All </a>
 
@@ -117,7 +117,7 @@ $newsimage = get_field('news_image', 'options');?>
             <div class="row">
                 <div class="col-md-8">
                     <p>&copy; <?php echo date("Y"); ?> onePULSE Foundation • PO Box 530036
-                        Orlando Fl 32853-0036</div>
+                        Orlando, Fl 32853-0036</div>
                 <div class="col-md-4">
                     <a href="https://findsomewinmore.com" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/FIWI-classic-website-by-white.svg" class="fiwi"></a>
                 </div>
