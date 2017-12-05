@@ -45,6 +45,14 @@
                             transition: color .5s ease;
                             position: relative;
                             line-height: 1.1;
+
+
+
+                            @media(max-width: 1300px) {
+
+                                font-size: 12px;
+                                padding: 10px 10px;
+                            }
                             &:before {
                                 opacity: 0;
                                 transition: opacity .5s ease;
