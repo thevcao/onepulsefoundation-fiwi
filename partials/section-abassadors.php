@@ -8,7 +8,7 @@
 
         <div class="row">
         <div class="col-md-6">
-        <h2><span>onePULSE Foundation Memorial</span>Ambassadors' Council</h2>
+        <h2><span>onePULSE Foundation Memorial</span>Chairman’s Ambassadors Council</h2>
 
             </div>
 

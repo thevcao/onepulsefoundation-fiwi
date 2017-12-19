@@ -8,7 +8,7 @@
 
         <div class="row">
         <div class="col-md-6">
-        <h2><span>onePULSE Foundation Memorial</span>Advisory Council</h2>
+        <h2><span>onePULSE Foundation Memorial</span>Task Force Advisory Council</h2>
 
             </div>
 
@@ -32,7 +32,7 @@
                 <div class="line"></div>
 
 
-                <p>The Task Force is an appointed volunteer coalition of family members of victims, survivors, and local community leaders.  This committee will give recommendations and guidance to the Board of Trustees to create, build, and financially maintain a permanent national memorial at the Pulse site.  The Task Force serves as the advisory committee who will formulate the process of building what will become an iconic tribute to the 49 angels taken from us on that horrible night, as well as to the survivors, brave first responders, surgeons, and medical providers who served so selflessly.</p>
+                <p>The Task Force is an appointed volunteer coalition of family members of victims, survivors, and local community leaders. This committee will give recommendations and guidance to the Board of Trustees to create, build, and financially maintain a permanent national memorial at the Pulse site.  The Task Force serves as the planning committee who will formulate the process of building what will become an iconic tribute to the 49 Angels taken from us on that horrible night, as well as to the survivors, brave first responders, surgeons, and medical providers who served so selflessly.</p>
 
                 <p>Still in formation, the Task Force will break into different subcommittees who will each play a role in the gathering of data that will reflect the wishes of the victims’ families, the survivors, and the community at large.</p>
 

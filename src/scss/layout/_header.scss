@@ -48,10 +48,16 @@
 
 
 
-                            @media(max-width: 1300px) {
+                            @media(max-width: 1600px) {
 
-                                font-size: 12px;
-                                padding: 10px 10px;
+                                font-size: 14px;
+//                                padding: 10px 10px;
+                            }
+
+                            @media(max-width: 1440px) {
+
+                                font-size: 13px;
+                                padding: 10px 15px;
                             }
                             &:before {
                                 opacity: 0;
@@ -1039,12 +1045,12 @@
                 .full-menu ul li a {
                     text-align: left;
                     display: block;
-                    font-size: 7vw;
+                    font-size: 6vw;
                     letter-spacing: -.05em;
                     opacity: 0;
                     transition: opacity .5s ease, transform .5s ease;
                     transform: translateY(-10px);
-                    padding: 3vw 0;
+                    padding: 2.5vw 0;
                 }
                 .menu-open .full-menu ul li a {}
                 .menu-open .full-menu ul li a {
@@ -1053,7 +1059,7 @@
                 }
                 #menu-mobile-menu.menu li a span {
                     display: block;
-                    font-size: 4.25vw;
+                    font-size: 3.5vw;
                     margin-bottom: 1vw;
                     letter-spacing: -.05em;
                 }

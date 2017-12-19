@@ -127,7 +127,7 @@
                                 <?php endif; endif; endwhile; wp_reset_postdata();?>
 
 
-                            <h3 class="mt64">How can I volunteer with the onePULSE Foundation?</h3>
+                            <h3 class="mt64">Volunteer with the onePULSE Foundation</h3>
 
                             <p>We cannot achieve our mission without volunteers like you! To volunteer with the Foundation please fill out our volunteer form. Let’s show the world that #WeWillNotLetHateWin.</p>
 
