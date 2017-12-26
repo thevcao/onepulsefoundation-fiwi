@@ -34,11 +34,26 @@
                     <p class="mt0 mb8"><a class="" href="mailto:info@onePULSEFoundation.org"><b>email</b> info@onePULSEfoundation.org</a></p>
                 <p class="mt0 mb16"><a href="tel:407-775-2437"><span>office</span> 407-775-2437</a></p>
 
-                <p class="mt0 mb0"><span>Media Inquiries Only:</span></p>
-                <h4 class="mb8">Sara Brady</h4>
+                <h4 class="mb8">Event, Outreach and Volunteer Coordination</h4>
+                <p class="mt0 mb0"><span>email</span> <a href="mailto:np@onepulsefoundation.org">np@onepulsefoundation.org</a></p>
+                <p class="mt0 mb8"><span>mobile</span> <a href="tel:407.775.2437">407.775.2437</a></p>
 
-                <p class="mt0 mb0"><span>office</span> <a href="tel:407-702-6632">407-702-6632</a></p>
-                <p class="mt0 mb8"><span>mobile</span> <a href="tel">407-408-4000</a></p>
+                <h4 class="mb8">Accounting and Billing Inquiries</h4>
+                <p class="mt0 mb0"><span>email</span> <a href="mailto:office@onepulsefoundation.org">office@onepulsefoundation.org</a></p>
+                <p class="mt0 mb8"><span>mobile</span> <a href="tel:407.775.2436">407.775.2436</a></p>
+
+                <h4 class="mb8">Fundraising Inquiries</h4>
+                <p class="mt0 mb0"><span>email</span> <a href="mailto:ls@onepulsefoundation.org">ls@onepulsefoundation.org</a></p>
+
+                <h4 class="mb8">Media Requests</h4>
+                <p class="mt0 mb0"><span>email</span> <a href="mailto:media@onepulsefoundation.org">media@onepulsefoundation.org</a></p>
+
+
+                <h4 class="mb8">Employment or General Inquiries</h4>
+                <p class="mt0 mb0"><span>email</span> <a href="mailto:info@onepulsefoundation.org">info@onepulsefoundation.org</a></p>
+
+                <h4 class="mb8">CEO/Executive Director</h4>
+                <p class="mt0 mb0"><span>email</span> <a href="mailto:bp@onepulsefoundation.org">bp@onepulsefoundation.org</a></p>
 
                 </div>
 
