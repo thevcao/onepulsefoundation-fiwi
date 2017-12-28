@@ -257,7 +257,7 @@ p.description.indicator-hint:after {
     display: block;
 }
 
-.submit:after {
+.login .submit:after {
     content: 're-establecer su contraseña';
     display: block;
     text-transform: capitalize;
@@ -286,7 +286,10 @@ p.message.register:after {
     content: 'Regístrate para la página web';
     display: block;
 }
+#adminmenu .wp-submenu-head, #adminmenu a.menu-top,  #wpadminbar *, h1, h2, h3, h4, h5, h6 {
 
+    font-weight: bold !important;
+}
 @media screen and (max-width: 782px) {}
 
 .login form {
@@ -307,4 +310,8 @@ body.login input[type="text"], body.login input[type="password"] {
     animation-iteration-count: infinite;
     background: none !important;
     box-shadow: none  !important;
+}
+.wp-core-ui .button-group.button-small .button, .wp-core-ui .button.button-small, .wp-core-ui .button-group.button-large .button, .wp-core-ui .button.button-large {
+    height: auto;
+    line-height: 1;
 }

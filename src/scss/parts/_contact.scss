@@ -1,111 +1,425 @@
 .contact-form {
-	form {
-		pointer-events: all;
-	}
-	input.wpcf7-form-control {
-		width: 95%;
-		padding: 20px 5px 5px;
-		margin-bottom: 10px;
-		border: none;
-		border-bottom: 3px solid #EEE;
-		font-size: 14px;
-		outline: none;
-		transition: all .3s ease;
-		-webkit-border-radius: 0;
-	}
-	textarea.wpcf7-form-control {
-		padding: 20px 5px 5px;
-		width: 95%;
-		border: none;
-		border-bottom: 3px solid #eee;
-		margin-bottom: 10px;
-		font-size: 14px;
-		outline: none;
-		transition: all .3s ease;
-	}
-	.wpcf7-form-control:active,
-	.wpcf7-form-control:focus {
-		border-bottom-color: black;
-	}
-	input.wpcf7-form-control.wpcf7-submit.btn {
-		padding: 10px;
-		font-size: 22px;
-		background: #fff;
-		border: 3px solid #000;
-		color: #000;
-		outline: none;
-		transition: all .3s ease;
-		margin: 10px 20px 10px auto;
-		border-radius: 100px;
-	}
-	input.wpcf7-form-control.wpcf7-submit.btn:hover {
-		background: black;
-		color: white;
-	}
-	.contact-info p {
-		line-height: 1.5;
-		span {
-			font-weight: bold;
-		}
-	}
+    form {
+        pointer-events: all;
+    }
+    input.wpcf7-form-control {
+        width: 95%;
+        padding: 20px 5px 5px;
+        margin-bottom: 10px;
+        border: none;
+        border-bottom: 3px solid #EEE;
+        font-size: 14px;
+        outline: none;
+        transition: all .3s ease;
+        -webkit-border-radius: 0;
+    }
+    textarea.wpcf7-form-control {
+        padding: 20px 5px 5px;
+        width: 95%;
+        border: none;
+        border-bottom: 3px solid #eee;
+        margin-bottom: 10px;
+        font-size: 14px;
+        outline: none;
+        transition: all .3s ease;
+    }
+    .wpcf7-form-control:active,
+    .wpcf7-form-control:focus {
+        border-bottom-color: black;
+    }
+    input.wpcf7-form-control.wpcf7-submit.btn {
+        padding: 10px;
+        font-size: 22px;
+        background: #fff;
+        border: 3px solid #000;
+        color: #000;
+        outline: none;
+        transition: all .3s ease;
+        margin: 10px 20px 10px auto;
+        border-radius: 100px;
+    }
+    input.wpcf7-form-control.wpcf7-submit.btn:hover {
+        background: black;
+        color: white;
+    }
+    .contact-info p {
+        line-height: 1.5;
+        span {
+            font-weight: bold;
+        }
+    }
+}
+.newsletter {
+    margin-bottom: 5rem;
+    @media(max-width: 768px) {
+        margin-bottom: 0;
+    }
+    .flex-row {
+        display: flex;
+        &.align-items-center {
+            align-items: center;
+        }
+        @media(max-width: 769px) {
+            display: block;
+        }
+    }
+    span.wpcf7-not-valid-tip {
+        left: auto;
+        right: auto;
+        text-align: center;
+        display: block;
+        width: 100%;
+        color: white;
+        opacity: 1;
+        top: 0;
+    }
+    background: linear-gradient(135deg, #00a8de 0%, #333391 50%, #e91388 100%);
+    background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, yellow 71.42%, #34d400 85.71%, #00a8de 100%);
+    animation: donateanimate 10s alternate linear infinite;
+    //    transition: transform 300ms ease;
+    background-size: 500%;
+    padding: 3rem 0;
+    h2,
+    p {
+        color: white;
+        animation: newslettertext 10s alternate linear infinite;
+    }
+    h2 {
+        margin-bottom: 1rem;
+    }
+    p {
+        margin-bottom: 0;
+    }
+    form {
+        pointer-events: all;
+    }
+    label {
+        left: auto;
+        right: auto;
+        text-align: center;
+        display: block;
+        width: 100%;
+        color: white;
+        opacity: 1;
+        top: 0;
+        font-size: 10px;
+        margin-top: 10px;
+        animation: newslettertext 10s alternate linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease;
+    }
+    input.wpcf7-form-control {
+        //        width: 100%;
+        //        padding: 20px 5px 5px;
+        //        margin-bottom: 10px;
+        //        border: none;
+        //        border-bottom: 3px solid #EEE;
+        //        font-size: 14px;
+        //        outline: none;
+        //        transition: all .3s ease;
+        //        -webkit-border-radius: 0;
+        //        background: none;
+        //        text-align: center;
+        //        color: white;
+        //        animation: bordercolor 10s alternate linear infinite;
+        padding: 1rem 10px;
+        //        font-size: 22px;
+        background: none;
+        border: 3px solid white;
+        color: white;
+        animation: bordercolor 10s alternate linear infinite;
+        outline: none;
+        transition: all .3s ease;
+        margin: 2rem auto 0 auto;
+        border-radius: 100px;
+        text-align: center;
+        display: block;
+        width: 100%;
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: white;
+            animation: newslettertext 10s alternate linear infinite !important;
+        }
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: white;
+            animation: newslettertext 10s alternate linear infinite;
+        }
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            color: white;
+            animation: newslettertext 10s alternate linear infinite;
+        }
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            color: white;
+            animation: newslettertext 10s alternate linear infinite;
+        }
+    }
+    textarea.wpcf7-form-control {
+        //        padding: 20px 5px 5px;
+        //        width: 95%;
+        //        border: none;
+        //        border-bottom: 3px solid #eee;
+        //        margin-bottom: 10px;
+        //        font-size: 14px;
+        //        outline: none;
+        //        transition: all .3s ease;
+        padding: 10px;
+        font-size: 22px;
+        background: none;
+        border: 3px solid white;
+        color: white;
+        animation: bordercolor 10s alternate linear infinite;
+        outline: none;
+        transition: all .3s ease;
+        margin: 10px auto 0 auto;
+        border-radius: 100px;
+        text-align: center;
+    }
+    .wpcf7-form-control:active,
+    .wpcf7-form-control:focus {
+        border-bottom-color: white;
+    }
+    input.wpcf7-form-control.wpcf7-submit.btn {
+        padding: 10px;
+        font-size: 22px;
+        background: none;
+        border: 3px solid white;
+        color: white;
+        animation: bordercolor 10s alternate linear infinite;
+        outline: none;
+        transition: all .3s ease;
+        margin: 10px auto 0 auto;
+        border-radius: 100px;
+        text-align: center;
+        &:hover {
+            //            background: white !important;
+            //            color: $r !important;
+            //            opacity: 1 !important;
+            //            animation: subscribehover 10s ease infinite both;
+            opacity: .5;
+        }
+    }
+    input.wpcf7-form-control.wpcf7-submit.btn:hover {
+        //        background: black;
+        //        color: white;
+    }
+    .contact-info p {
+        line-height: 1.5;
+        span {
+            font-weight: bold;
+        }
+    }
 }
 span.wpcf7-not-valid-tip {
-	font-size: 10px;
-	position: absolute;
-	width: 100px;
-	left: 0;
-	right: 0;
-	z-index: 1;
-	margin-top: -10px;
-	text-align: right;
-	opacity: .5;
+    font-size: 10px;
+    position: absolute;
+    width: 100px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin-top: -10px;
+    text-align: right;
+    opacity: .5;
 }
 .contact-form input.wpcf7-form-control.wpcf7-not-valid {
-	border-color: rgba(233, 30, 99, 0.69);
+    border-color: rgba(233, 30, 99, 0.69);
 }
 .wpcf7-response-output {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 1000;
-	background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
-	animation: donateanimate 3s alternate linear infinite;
-	background-size: 500%;
-	color: #fff;
-	border: none !important;
-	margin: 0 !important;
-	text-align: center;
-	font-weight: bold;
+    //    position: fixed;
+    //    bottom: 0;
+    //    left: 0;
+    //    right: 0;
+    //    z-index: 1000;
+    //    background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
+    //    animation: donateanimate 3s alternate linear infinite;
+    //    background-size: 500%;
+    //    color: #fff;
+    //    border: none !important;
+    //    margin: 0 !important;
+    //    text-align: center;
+    //    font-weight: bold;
+    //    z-index: 100000;
+}
+.newsletter {
+    div.wpcf7-response-output {
+        position: absolute;
+        top: 0;
+        padding: 1rem 10px;
+        background: none;
+        border: 3px solid white;
+        background: white;
+        outline: none;
+        transition: all .3s ease;
+        margin: 2rem auto 0 auto;
+        border-radius: 100px;
+        text-align: center;
+
+        width: auto;
+        left: 0;
+        right: 0;
+        line-height: 1.25;
+        &:before {
+            content: '';
+            position: absolute;
+            right: 10px;
+            top: 32%;
+            font-family: fontawesome;
+            pointer-events: none;
+        }
+    }
+
+span.wpcf7-not-valid-tip {
+    position: absolute;
+    margin-top: -80px !important;
+    width: 444px !important;
+    color: black !important;
+
+    @media(max-width: 444px) {
+
+
+        width: 85vw !important;
+    }
+
+    }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-	.contact-form.pb120 {
-		padding-bottom: 32px;
-	}
+    .contact-form.pb120 {
+        padding-bottom: 32px;
+    }
 }
 @media (max-width:768px) {
-	
-		html:not(.ipad) {
-
-	.page-id-20 .contact-form.pb120.hidden-xs {
-		display: block !important;
-	}
-	.page-id-20 .mobile-cta {
-		display: none !important
-	}
-	}
+    html:not(.ipad) {
+        .page-id-20 .contact-form.pb120.hidden-xs {
+            display: block !important;
+        }
+        .page-id-20 .mobile-cta {
+            display: none !important
+        }
+    }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-	
-	html:not(.ipad) {
-	.page-id-20 .contact-form.pb120.hidden-xs {
-		display: block !important;
-	}
-	.page-id-20 .mobile-cta {
-		display: none !important
-	}	
-	
+    html:not(.ipad) {
+        .page-id-20 .contact-form.pb120.hidden-xs {
+            display: block !important;
+        }
+        .page-id-20 .mobile-cta {
+            display: none !important
+        }
+    }
 }
+@keyframes newslettertext {
+    0% {
+        color: white;
+    }
+    14.28% {
+        color: white;
+    }
+    28.57% {
+        color: white;
+    }
+    42.85% {
+        color: white;
+    }
+    57.14% {
+        color: white;
+    }
+    71.42% {
+        color: black;
+    }
+    85.71% {
+        color: black;
+    }
+    100% {
+        color: black;
+    }
+}
+@keyframes bordercolor {
+    0% {
+        color: white;
+        border-color: white;
+    }
+    14.28% {
+        color: white;
+        border-color: white;
+    }
+    28.57% {
+        color: white;
+        border-color: white;
+    }
+    42.85% {
+        color: white;
+        border-color: white;
+    }
+    57.14% {
+        color: white;
+        border-color: white;
+    }
+    71.42% {
+        color: black;
+        border-color: black;
+    }
+    85.71% {
+        color: black;
+        border-color: black;
+    }
+    100% {
+        color: black;
+        border-color: black;
+    }
+}
+@keyframes subscribehover {
+    0% {
+        color: $r;
+    }
+    20% {
+        color: $o;
+    }
+    40% {
+        color: $y;
+    }
+    60% {
+        color: $g;
+    }
+    80% {
+        color: $b;
+    }
+    100% {
+        color: $r;
+    }
+    0% {
+        color: #00a8de;
+        background: white;
+    }
+    14.28% {
+        color: #333391;
+        background: white;
+    }
+    28.57% {
+        color: #e91388;
+        background: white;
+    }
+    42.85% {
+        color: #eb2d2e;
+        background: white;
+    }
+    57.14% {
+        color: orange;
+        border-color: white;
+    }
+    71.42% {
+        color: yellow;
+        background: black;
+    }
+    85.71% {
+        color: #34d400;
+        background: black;
+    }
+    100% {
+        color: #00a8de;
+        background: black;
+    }
 }

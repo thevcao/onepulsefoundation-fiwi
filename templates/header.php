@@ -37,15 +37,15 @@ get_template_part('templates/head');
         <div class="col-sm-11 col-xs-8 height tm text-right p-xs-0">
             <div class="menu-container">
                 <div class="row">
-                    <div class="col-sm-7 hidden-sm hidden-ls-pt hidden-xs">
+                    <div class="col-sm-8 hidden-sm hidden-ls-pt hidden-xs">
                         <?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
                     </div>
-                    <div class="col-sm-2 col-xs-9 p0 tab-pt">
+                    <div class="col-md-1 col-sm-2 col-xs-9 p0 tab-pt">
                         <div class="lang-toggle">
                             <ul>
-                            <li><?php echo do_shortcode('[glt language="English" label="English"]');?>
+                            <li><?php echo do_shortcode('[glt language="English" label=""]');?>
                                 </li>
-                            <li><?php echo do_shortcode('[glt language="Spanish" label="Español"]');?>
+                            <li><?php echo do_shortcode('[glt language="Spanish" label=""]');?>
                                 </li>
                             </ul>
 
@@ -96,11 +96,26 @@ get_template_part('templates/head');
                 <p class="mt0 mb0"><span>office</span> <a href="tel":><?php the_field('contact_office','options');?></a></p>
                 <p class="mt0 mb8"><a class="" href="mailto:info@onePULSEFoundation.org"><b>email</b> info@onePULSEfoundation.org</a></p>
                 <p class="mt0 mb16"><a href="tel:407-775-2437"><span>office</span> 407-775-2437</a></p>
-                <p class="mt0 mb0"><span>Media Inquiries Only:</span></p>
-                <h4 class="mb8">Sara Brady</h4>
+                <h4 class="mb8">Event, Outreach and Volunteer Coordination</h4>
+                <p class="mt0 mb0"><span>email</span> <a href="mailto:np@onepulsefoundation.org">np@onepulsefoundation.org</a></p>
+                <p class="mt0 mb8"><span>mobile</span> <a href="tel:407.775.2437">407.775.2437</a></p>
 
-                <p class="mt0 mb0"><span>office</span> <a href="tel:407-702-6632">407-702-6632</a></p>
-                <p class="mt0 mb8"><span>mobile</span> <a href="tel">407-408-4000</a></p>
+                <h4 class="mb8">Accounting and Billing Inquiries</h4>
+                <p class="mt0 mb0"><span>email</span> <a href="mailto:office@onepulsefoundation.org">office@onepulsefoundation.org</a></p>
+                <p class="mt0 mb8"><span>mobile</span> <a href="tel:407.775.2436">407.775.2436</a></p>
+
+                <h4 class="mb8">Fundraising Inquiries</h4>
+                <p class="mt0 mb0"><span>email</span> <a href="mailto:ls@onepulsefoundation.org">ls@onepulsefoundation.org</a></p>
+
+                <h4 class="mb8">Media Requests</h4>
+                <p class="mt0 mb0"><span>email</span> <a href="mailto:media@onepulsefoundation.org">media@onepulsefoundation.org</a></p>
+
+
+                <h4 class="mb8">Employment or General Inquiries</h4>
+                <p class="mt0 mb0"><span>email</span> <a href="mailto:info@onepulsefoundation.org">info@onepulsefoundation.org</a></p>
+
+                <h4 class="mb8">CEO/Executive Director</h4>
+                <p class="mt0 mb0"><span>email</span> <a href="mailto:bp@onepulsefoundation.org">bp@onepulsefoundation.org</a></p>
                 </div>
 
 
@@ -114,14 +129,14 @@ get_template_part('templates/head');
 </div>
 
 <div class="full-menu">
-    <div class="container">
-        <div class="col-md-6 hidden-xs">
+    <div class="container-fluid">
+        <div class="col-md-8 hidden-xs">
             <?php wp_nav_menu( array( 'theme_location' => 'full-one' ) ); ?>
         </div>
         <div class="col-md-6 visible-xs">
             <?php wp_nav_menu( array( 'theme_location' => 'full-mobile' ) ); ?>
         </div>
-        <div class="col-md-6 hidden-xs">
+        <div class="col-md-3 hidden-xs">
             <h3>Latest News</h3>
             <?php $args = array(
 

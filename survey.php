@@ -26,38 +26,27 @@
     <div class="container pb64">
 
 
-            <?php if ( is_user_logged_in())  { ?>
 
 
-        <h1><span>onePULSE Foundation</span>Memorial Survey</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="donate-hero">
+                    <h2>Thank You</h2>
+                </div>
+            </div>
+            <div class="col-md-7">
 
-        <a href="#english" class="btn survey-toggle">Continue in English</a>
-        <a href="#spanish" class="btn survey-toggle" >Continuar en Español</a>
+        <h1>The onePULSE Memorial survey is now closed</h1>
 
-        <div id="english">
+        <p>The onePULSE Foundation Memorial Survey was available online to the public from September 13 to October 31, 2017. This survey contained thoughtful questions pertaining to the look and feel to be conveyed at the future memorial site.  The survey also sought to gain insight from the community as to who to honor and what issues to address. The results of this survey will be presented in December. Following data analysis of the survey, the RFP will be created and ultimately the public design competition will be announced in June 2018.</p>
 
-        <?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]');?>
+<p>Please reach out to info@onePULSEfoundation.org if you wish to provide feedback for the onePULSE Foundation Memorial and Museum. </p>
+
+
+            </div>
         </div>
-        <div id="spanish">
-
-        <?php echo do_shortcode('[gravityform id="2" title="false" description="false" ajax="true"]');?>
-        </div>
-
-        <?php the_content();?>
-
-<?php } else {?>
 
 
-        <h1>Please Sign in or Create a User Account to Participate in the Survey</h1>
-
-        <div class="survey-login">
-                <?php wp_login_form(); ?>
-        </div>
-        <p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/us.svg"> Please create a user account to complete the survey. <a href="<?php echo wp_registration_url(); ?>">Create an Account</a></p>
-        <p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/span.svg"> Por favor crea una cuenta de usuario para completar la encuesta. <a href="<?php echo wp_registration_url(); ?>">Crea Una Cuenta</a></p>
-
-
-<?php }?>
 
     </div>
 

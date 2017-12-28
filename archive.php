@@ -26,12 +26,9 @@
                     <div class="row">
                         <div class="col-md-8">
 
-                            <h1>Latest News</h1>
+                            <h1><?php single_cat_title(); ?></h1>
 
-                            <?php // Display blog posts on any page @ http://m0n.co/l
-                                    $temp = $wp_query; $wp_query= null;
-                                    $wp_query = new WP_Query(); $wp_query->query('showposts=10' . '&paged='.$paged);
-                                    while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+                                 <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
 
 
                                 <div class="item mt32 mb64">
@@ -43,11 +40,34 @@
                                     <div class="pt8"></div>
                                     <a href="<?php the_permalink();?>" class="btn left">Read More</a>
                                 </div>
-                                <?php endwhile; wp_reset_postdata();?>
+                                <?php endwhile; endif; ?>
 
 
 
 
+
+                        </div>
+                        <div class="col-md-4">
+                            <?php $taxonomy     = 'category';
+                                                $orderby      = 'name';
+                                                $show_count   = false;
+                                                $pad_counts   = false;
+                                                $hierarchical = true;
+                                                $title        = '';
+
+                                                $args = array(
+                                                  'taxonomy'     => $taxonomy,
+                                                  'orderby'      => $orderby,
+                                                  'show_count'   => $show_count,
+                                                  'pad_counts'   => $pad_counts,
+                                                  'hierarchical' => $hierarchical,
+                                                  'title_li'     => $title
+                                                );
+                                                ?>
+
+                                                <ul class="media-cat">
+                                                    <?php wp_list_categories( $args ); ?>
+                                                </ul>
 
                         </div>
                     </div>
@@ -58,4 +78,27 @@
 
 
             </section>
+
+<section class="pagination">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+
+                </div>
+                <div class="col-sm-6">
+
+                <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
             <?php get_template_part('templates/footer'); ?>

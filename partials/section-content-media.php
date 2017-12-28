@@ -49,7 +49,7 @@
                     <div class="col-md-6 col-md-push-5 mm col-md-offset-1 mb-xs-32">
 
 
-                        <div class="mm" data-stellar-ratio="1">
+                        <div class="canvas-container" data-stellar-ratio="1">
                             <div class="line mb16"></div>
                             <img id="featured-image" class="grayscale mm" src="<?php echo $large;?>" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
                             <img data-stellar-ratio="1.25" class="over-image" src="<?php echo $image['sizes']['large'];?>" data-stellar-offset-parent="true" data-stellar-vertical-offset="-200" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
@@ -103,7 +103,7 @@
                     </div>
 
 
-                    <div class="col-md-5 col-md-pull-7 <?php if($media_type == 'Image'): echo 'mm'; endif;?>">
+                    <div class="col-md-5 col-md-pull-7 watch-me <?php if($media_type == 'Image'): echo 'mm'; endif;?>">
 
                         <div class="content">
 

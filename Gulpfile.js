@@ -20,11 +20,11 @@ gulp.task('browser-sync', function() {
     './templates/*.php',
     '/wp-json'
     ];
- 
+
     //initialize browsersync
     browserSync.init(files, {
     //browsersync with a php server
-    proxy: "http://onepulsefoundation.onpu.dev",
+    proxy: "http://onepulse.local",
     notify: false
     });
 });
@@ -33,9 +33,9 @@ gulp.task('browser-sync', function() {
 // CSS task
 gulp.task('styles', () => {
   return gulp.src('src/scss/main.scss')
-	.pipe(sassGlob())
-	.pipe(sourcemaps.init())
-	.pipe(plugins.plumber())
+    .pipe(sassGlob())
+    .pipe(sourcemaps.init())
+    .pipe(plugins.plumber())
     .pipe(plugins.sass({ outputStyle: 'compressed' }))
     .pipe(plugins.postcss([
       require('autoprefixer')({ browsers: ['last 2 versions'] })
@@ -44,7 +44,7 @@ gulp.task('styles', () => {
     .pipe(plugins.sourcemaps.write('.'))
     .pipe(plugins.plumber.stop())
     .pipe(gulp.dest('dist/css'))
-	.pipe(browserSync.stream())
+    .pipe(browserSync.stream())
     .pipe(plugins.size({ title: 'styles' }));
 });
 
@@ -76,8 +76,8 @@ gulp.task('scripts', () => {
 
 gulp.task('modernizr', () => {
   return gulp.src([
-	  'dist/js/*.js',
-	  'dist/css/*.css'
+      'dist/js/*.js',
+      'dist/css/*.css'
   ])
     .pipe(plugins.modernizr())
     .pipe(plugins.concat('modernizr.min.js'))

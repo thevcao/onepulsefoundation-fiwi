@@ -4,8 +4,8 @@
  $properties = new CPT(
      array(
          'post_type_name' => 'task-member',
-         'singular'       => 'Task Member',
-         'plural'         => 'Task Members',
+         'singular'       => 'Task Force',
+         'plural'         => 'Task Force',
          'slug'           => 'task-members',
      ),
      array(

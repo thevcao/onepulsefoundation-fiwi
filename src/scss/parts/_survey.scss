@@ -1,3 +1,30 @@
+.survey-quote {
+
+
+font-weight: bold;
+
+}
+
+
+.signature {
+
+    padding-top: 100px;
+    background-image: url(../../dist/img/signature.svg);
+    background-size: 250px;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+
+
+    span {
+
+        display: block;
+        font-weight: bold;
+        font-size: 10px;
+
+
+    }
+}
+
 .gform_wrapper .gf_progressbar_percentage,
 .gform_wrapper {
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
