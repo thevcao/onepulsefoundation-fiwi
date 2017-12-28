@@ -147,7 +147,7 @@
 
                     if ($('html').hasClass('orientation_portrait') && $(window).width() < 768) {
 
-                        $('.full-menu').css('padding-top', header);
+//                        $('.full-menu').css('padding-top', header);
                         $('section').first('section').not('.home-hero').css('padding-top', (header + 10));
                         $('footer').css('padding-bottom', ($('.donate-bar').outerHeight()));
 
@@ -165,7 +165,7 @@
                     } else {
 
                         $('.home-hero').css('padding-top', padding).css('padding-bottom', padding);
-                        $('.full-menu').css('padding-top', header + 50);
+//                        $('.full-menu').css('padding-top', header + 50);
                         $('.page-main section').first('section').css('padding-top', (header + 50));
                         $('.post-image').css('margin-top', header);
                     }
@@ -269,6 +269,17 @@
 
 
                 });
+                $('.question').click(function () {
+
+                    $('.faq-item').not($(this).parents('.faq-item')).removeClass('active');
+                    $('.faq-item .answer').children('p, ul').not($(this).next('.answer').children('p, ul')).slideUp(500);
+                    $(this).next('.answer').children('p, ul').slideToggle(500);
+                    $(this).parents('.faq-item').toggleClass('active');
+
+                    return false;
+
+
+                });
 
 
 
@@ -346,6 +357,10 @@
                 }
 
 
+                if (document.location.href.indexOf('staging') === -1 || document.location.href.indexOf('dev') === -1){
+
+
+
                 $('.shirt-btn').click(function () {
 
 
@@ -356,26 +371,62 @@
                     });
 
                 });
-                $('a[title="Donate"]').click(function () {
+                $('a[title="Donate"].btn.clipped').click(function () {
 
 
                     ga('send', {
                         hitType: 'event',
-                        eventCategory: 'Donate Click',
+                        eventCategory: 'Survey Click To Click - Top Button',
                         eventAction: 'click'
                     });
 
-                });
-                $('.donate-bar a').click(function () {
+                    console.log('Donate - Top Button');
 
+                });
+                $('.donate-bar .hidden-xs, .donate-bar .visible-xs.kit-btn').click(function () {
+                    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                    ga('send', {
+                        hitType: 'event',
+                        eventCategory: 'Survey Click Mobile - Bottom Bar',
+                        eventAction: 'click'
+                    });
+                    } else {
 
                     ga('send', {
                         hitType: 'event',
-                        eventCategory: 'Donate Click - Mobile',
+                        eventCategory: 'Survey Click Desktop - Bottom Bar',
                         eventAction: 'click'
                     });
 
+                    }
+
+
+                    console.log('Survey Click To -  Bottom Bar');
                 });
+                $('.survey-toggle').click(function () {
+
+
+                    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                    ga('send', {
+                        hitType: 'event',
+                        eventCategory: 'Survey Start - Mobile',
+                        eventAction: 'click'
+                    });
+                    } else {
+
+                    ga('send', {
+                        hitType: 'event',
+                        eventCategory: 'Survey Start - Desktop',
+                        eventAction: 'click'
+                    });
+
+                    }
+
+
+
+                    console.log('Survey Start');
+                });
+
                 $('a[href="https://fiwi-onepulsefoundation.s3.amazonaws.com/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf"]').click(function () {
 
 
@@ -397,8 +448,7 @@
 
                 });
 
-
-
+                   }
 
                 //					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
@@ -960,8 +1010,130 @@
             finalize: function () {
                 // JavaScript to be fired on all pages, after page specific JS is fired
 
+                function halftone(){
+
+                                    // try to create a WebGL canvas (will fail if WebGL isn't supported)
+                     if ($('#featured-image').length) {
+
+                    // convert the image to a texture
+
+                    var image = document.getElementById('featured-image');
+
+                    image.crossOrigin = 'Anonymous';
+                    window.onload = function () {
+
+                        var canvas = fx.canvas();
+
+                        var texture = canvas.texture(image);
+                        // apply the ink filter
+                        canvas.draw(texture).colorHalftone(320, 239.5, 0.25, 4).update();
+
+                        // replace the image with the canvas
+                        image.parentNode.insertBefore(canvas, image);
+                        image.parentNode.removeChild(image);
+
+                        // Note: instead of swapping the &lt;canvas&gt; tag with the &lt;img&gt; tag
+                        // as done above, we could have just transferred the contents of
+                        // the image directly:
+                        //
+                        //     image.src = canvas.toDataURL('image/png');
+                        //
+                        // This has two disadvantages. First, it is much slower, so it
+                        // would be a bad idea to do this repeatedly. If you are going
+                        // to be repeatedly updating a filter it's much better to use
+                        // the &lt;canvas&gt; tag directly. Second, this requires that the
+                        // image is hosted on the same domain as the script because
+                        // JavaScript has direct access to the image contents. When the
+                        // two tags were swapped using the previous method, JavaScript
+                        // actually doesn't have access to the image contents and this
+                        // does not violate the same origin policy.
+                    };
+                    image.src = $('#featured-image').attr('src');
+                    $('.canvas-container').css('height', $('.watch-me').outerHeight());
+                    }
+
+                }
 
 
+                    halftone();
+
+                $(window).resize(function(){
+
+
+                    halftone();
+
+                })
+
+
+
+
+
+
+
+                $('.btn, .nav-previous a.left, .nav-next a.left').not('.clipped').each(function(){
+
+                    $(this).prepend('<div></div>');
+
+
+                });
+
+                $('.newsletter input.wpcf7-form-control').click(function(){
+
+                    var value = $(this).val();
+
+                    if(value == 'Enter Your Email to Subscribe'){
+
+
+                    $(this).val('');
+
+                    }
+
+
+                });
+                $('.wpcf7-response-output').click(function(){
+
+
+                    $(this).fadeOut(300);
+
+                    return false;
+
+
+                });
+                $('.newsletter input.wpcf7-form-control').keyup(function(){
+
+                    var value = $(this).val();
+
+                    if(value !== 'Enter Your Email to Subscribe'){
+
+
+
+                        $('.newsletter label').css('opacity','1');
+                    }
+
+
+                })
+                $('.newsletter input.wpcf7-form-control').blur(function(){
+
+                    var value = $(this).val();
+
+                    if(value == ''){
+
+
+                    $(this).val('Enter Your Email to Subscribe');
+                        $('.newsletter label').css('opacity','0');
+
+                    }
+
+
+                })
+
+
+//                if($('.invert-header').length){
+//
+//                    var bg = $('.page-main .home-hero').
+//
+//
+//                }
 
 
             }

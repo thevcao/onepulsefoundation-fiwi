@@ -30,7 +30,6 @@
     }
 }
 html:not(.ie) {
-
     .page-id-384 .donate-hero h2 {
         background-color: rgb(156, 39, 176);
         background-blend-mode: overlay;
@@ -44,7 +43,8 @@ html:not(.ie) {
 }
 .win {
     body,
-    p, .btn {
+    p,
+    .btn {
         font-family: Arial;
         letter-spacing: -.005em;
     }
@@ -363,7 +363,22 @@ html:not(.ie) {
         min-width: 100%;
     }
     .translated-ltr .home .home-hero h2 {
-    font-size: 20vw !important;
+        font-size: 20vw !important;
+    }
+    .canvas-container {
+        //        display: none;
+        canvas {
+            display: none;
+        }
+        height: auto !important;
+    }
+    .page-main .content-left .over-image {
+        position: relative;
+        margin: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        border: none;
     }
 }
 @media(max-width:375px) {
@@ -374,11 +389,81 @@ html:not(.ie) {
 p img {
     height: auto;
 }
-
 .postid-414 .post-body .post-image img {
     object-position: -200px 25%;
 }
-
 .postid-414 .vjs-youtube .vjs-poster {
     background-position: 50% 0%;
+}
+.mobile {
+    &:not(.ipad) .home-hero .home-play i:after {
+        animation: none !important;
+    }
+    .newsletter {
+        background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, #ff0 71.42%, #34d400 85.71%, #00a8de 100%);
+        animation: none !important;
+        background-size: 500%;
+        background-position: 0% 0%;
+        color: white !important;
+        a,
+        * {
+            animation: none !important;
+        }
+    }
+    &:not(.ipad) .donate-bar {
+        background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, #ff0 71.42%, #34d400 85.71%, #00a8de 100%);
+        animation: none !important;
+        background-size: 500%;
+        background-position: 50% 50%;
+        color: white !important;
+        a,
+        * {
+            animation: none !important;
+        }
+    }
+}
+.no-hover {
+    &:hover {
+        color: $r !important;
+        animation: animation-ie 10s ease infinite both;
+    }
+    &:before,
+    &:after {
+        content: none !important;
+    }
+}
+//.home-about:not(:first-of-type) .over-image {
+//    display: none !important;
+//}
+.post-body {
+
+
+
+    .col-md-8 {
+
+        p {
+
+            .alignleft {
+
+
+                float: left;
+                margin: 1rem;
+                margin-left: 0;
+
+
+            }
+            .alignright {
+
+
+                float: right;
+                margin: 1rem;
+                margin-right: 0;
+
+
+            }
+
+
+        }
+
+    }
 }

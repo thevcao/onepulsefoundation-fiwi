@@ -1,166 +1,181 @@
 .page-cta {
-	overflow: hidden;
-	.over {
-		position: absolute;
-		top: 5%;
-		right: 0;
-		h3 {
-			font-size: 64px;
-			color: white;
-			text-align: right;
-		}
-	}
-	.dupe {
-		position: absolute;
-		top: 5%;
-		left: 5px;
-		h3 {
-			font-size: 64px;
-		}
-	}
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-	.content {
-		padding: 50px 50px 50px 100px;
-	}
-	
-	.img-attrib {
-		
-		left: 20px;
-		bottom: 5px;
-	}
+    overflow: hidden;
+
+
+    .row {
+
+        display: flex;
+    }
+    .over {
+        position: absolute;
+        top: 5%;
+        right: 0;
+        z-index: 1;
+        h3 {
+            font-size: 64px;
+            color: white;
+            text-align: right;
+        }
+    }
+    .dupe {
+        position: absolute;
+        top: 5%;
+        left: 5px;
+        h3 {
+            font-size: 64px;
+        }
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+//            max-height: 60vh;
+        position: absolute;
+        z-index: 0;
+    }
+    .content {
+        padding: 50px 50px 50px 100px;
+    }
+
+    .img-attrib {
+
+        left: 20px;
+        bottom: 5px;
+    }
+
+    .img-overlay {
+    max-height: 100%;
+        z-index: 0;
+}
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-	.page-cta .dupe,
-	.page-cta .over {
-		top: 0;
-	}
-	.page-cta .content {
-		padding-top: 150px !important;
-		padding-right: 80px !important;
-	}
-	body:not(.home) section.page-cta.mb80 {
-		padding-top: 32px !important;
-	}
-	//	.home-about .col-md-6.col-md-offset-1 {
-	//		margin-top: -100px;
-	//		margin-bottom: 100px;
-	//	}
+    .page-cta .dupe,
+    .page-cta .over {
+        top: 0;
+    }
+    .page-cta .content {
+        padding-top: 150px !important;
+        padding-right: 80px !important;
+    }
+    body:not(.home) section.page-cta.mb80 {
+        padding-top: 32px !important;
+    }
+    //	.home-about .col-md-6.col-md-offset-1 {
+    //		margin-top: -100px;
+    //		margin-bottom: 100px;
+    //	}
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-	.page-cta .dupe,
-	.page-cta .over {
-		top: 0;
-	}
-	.page-cta .content {
-		padding-top: 150px !important;
-		padding-right: 50px !important;
-	}
-	section.page-cta.mb80 {
-		padding-top: 32px !important;
-		margin-bottom: 0 !important;
-	}
+    .page-cta .dupe,
+    .page-cta .over {
+        top: 0;
+    }
+    .page-cta .content {
+        padding-top: 150px !important;
+        padding-right: 50px !important;
+    }
+    section.page-cta.mb80 {
+        padding-top: 32px !important;
+        margin-bottom: 0 !important;
+    }
 }
 @media (max-width:768px) {
-	
-		html:not(.ipad) {
 
-	.mobile-cta .text-white {
-		text-shadow: 2px 2px 42px #000;
-	}
-	.mobile-cta .text-white {
-		font-size: 2rem;
-	}
-	.mobile-cta .content {
-		padding: 25px 5% !important;
-	}
-	.mobile-cta {
-		background-image: url(../../dist/img/curated/curated-1.jpg);
-		background-size: 150vw auto;
-		background-position: 50%;
-		.btn.clipped {
-			position: relative;
-			z-index: 1;
-			background: white;
-			padding: 13px 10px;
-		}
-		.btn.clipped:before {
-			content: 'Together We Can. Contact Us \f1d8' !important;
-			font-family: Helvetica Neue, fontawesome;
-			position: absolute;
-			left: 0;
-			width: 100%;
-			top: 0;
-			height: 100%;
-			border-radius: 100px;
-			z-index: 10;
-			background-image: url(../../dist/img/curated/curated-1.jpg);
-			background-size: 150vw auto;
-			background-position: 50%;
-			background-attachment: fixed;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: rgba(0, 0, 0, .4);
-			padding: 13px 10px;
-			opacity: 1;
-			animation: none;
-		}
-	}
-	.img-overlay {
-		background: linear-gradient(-45deg, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
-	}
-	}
+        html:not(.ipad) {
+
+    .mobile-cta .text-white {
+        text-shadow: 2px 2px 42px #000;
+    }
+    .mobile-cta .text-white {
+        font-size: 2rem;
+    }
+    .mobile-cta .content {
+        padding: 25px 5% !important;
+    }
+    .mobile-cta {
+        background-image: url(../../dist/img/curated/curated-1.jpg);
+        background-size: 150vw auto;
+        background-position: 50%;
+        .btn.clipped {
+            position: relative;
+            z-index: 1;
+            background: white;
+            padding: 13px 10px;
+        }
+        .btn.clipped:before {
+            content: 'Together We Can. Contact Us \f1d8' !important;
+            font-family: Helvetica Neue, fontawesome;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            top: 0;
+            height: 100%;
+            border-radius: 100px;
+            z-index: 10;
+            background-image: url(../../dist/img/curated/curated-1.jpg);
+            background-size: 150vw auto;
+            background-position: 50%;
+            background-attachment: fixed;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: rgba(0, 0, 0, .4);
+            padding: 13px 10px;
+            opacity: 1;
+            animation: none;
+        }
+    }
+    .img-overlay {
+        background: linear-gradient(-45deg, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
+    }
+    }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-	
-	html:not(.ipad) {
-	.mobile-cta .text-white {
-		text-shadow: 2px 2px 42px #000;
-	}
-	.mobile-cta .text-white {
-		font-size: 2rem;
-	}
-	.mobile-cta .content {
-		padding: 25px 5% !important;
-	}
-	.mobile-cta {
-		background-image: url(../../dist/img/curated/curated-1.jpg);
-		background-size: 150vw auto;
-		background-position: 50%;
-		overflow: hidden;
-		.btn.clipped {
-			position: relative;
-			z-index: 1;
-			background: white;
-			padding: 13px 10px;
-		}
-		.btn.clipped:before {
-			content: 'Together We Can. Contact Us \f1d8' !important;
-			font-family: Helvetica Neue, fontawesome;
-			position: absolute;
-			left: 0;
-			width: 100%;
-			top: 0;
-			height: 100%;
-			border-radius: 100px;
-			z-index: 10;
-			background-image: url(../../dist/img/curated/curated-1.jpg);
-			background-size: 150vw auto;
-			background-position: 50%;
-			background-attachment: fixed;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: rgba(0, 0, 0, .4);
-			padding: 13px 10px;
-			opacity: 1;
-			animation: none;
-		}
-	}
-	.img-overlay {
-		background: linear-gradient(-45deg, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
-	}	
-	
+
+    html:not(.ipad) {
+    .mobile-cta .text-white {
+        text-shadow: 2px 2px 42px #000;
+    }
+    .mobile-cta .text-white {
+        font-size: 2rem;
+    }
+    .mobile-cta .content {
+        padding: 25px 5% !important;
+    }
+    .mobile-cta {
+        background-image: url(../../dist/img/curated/curated-1.jpg);
+        background-size: 150vw auto;
+        background-position: 50%;
+        overflow: hidden;
+        .btn.clipped {
+            position: relative;
+            z-index: 1;
+            background: white;
+            padding: 13px 10px;
+        }
+        .btn.clipped:before {
+            content: 'Together We Can. Contact Us \f1d8' !important;
+            font-family: Helvetica Neue, fontawesome;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            top: 0;
+            height: 100%;
+            border-radius: 100px;
+            z-index: 10;
+            background-image: url(../../dist/img/curated/curated-1.jpg);
+            background-size: 150vw auto;
+            background-position: 50%;
+            background-attachment: fixed;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: rgba(0, 0, 0, .4);
+            padding: 13px 10px;
+            opacity: 1;
+            animation: none;
+        }
+    }
+    .img-overlay {
+        background: linear-gradient(-45deg, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
+    }
+
 }
 }

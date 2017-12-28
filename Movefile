@@ -1,13 +1,15 @@
 global:
   sql_adapter: "default"
 local:
-  vhost: 'http://onepulsefoundation.onpu.dev'
-  wordpress_path: '/Users/viccao/Desktop/Development/VVV/vagrant-local/www/onepulse/htdocs/'
+  vhost: 'http://onepulse.local'
+  wordpress_path: '/Users/viccao/Desktop/Development/Docker/onpu/www/'
   database:
-    name: 'onepulse'
-    user: 'external'
-    password: 'external'
-    host: '192.168.50.4'
+    name: 'wordpress'
+    user: 'wordpress'
+    password: 'password'
+    host: '0.0.0.0'
+    mysqldump_options: "--ignore-table=wordpress.wp_cdb072e7bb_rg_form --ignore-table=wordpress.wp_cdb072e7bb_rg_form_meta --ignore-table=wordpress.wp_cdb072e7bb_rg_form_view  --ignore-table=wordpress.wp_cdb072e7bb_rg_incomplete_submissions --ignore-table=wordpress.wp_cdb072e7bb_rg_lead --ignore-table=wordpress.wp_cdb072e7bb_rg_lead_detail --ignore-table=wordpress.wp_cdb072e7bb_rg_lead_detail_long --ignore-table=wordpress.wp_cdb072e7bb_rg_lead_meta --ignore-table=wordpress.wp_cdb072e7bb_rg_lead_notes --ignore-table=wordpress.wp_cdb072e7bb_wfBadLeechers --ignore-table=wordpress.wp_cdb072e7bb_wfBlockedCommmentLog --ignore-table=wordpress.wp_cdb072e7bb_wfBlockedIPLog --ignore-table=wordpress.wp_cdb072e7bb_wfBlocks --ignore-table=wordpress.wp_cdb072e7bb_wfBlocksAdv --ignore-table=wordpress.wp_cdb072e7bb_wfConfig --ignore-table=wordpress.wp_cdb072e7bb_wfCrawlers --ignore-table=wordpress.wp_cdb072e7bb_wfFileMods --ignore-table=wordpress.wp_cdb072e7bb_wfHits --ignore-table=wordpress.wp_cdb072e7bb_wfHoover --ignore-table=wordpress.wp_cdb072e7bb_wfIssues --ignore-table=wordpress.wp_cdb072e7bb_wfKnownFileList --ignore-table=wordpress.wp_cdb072e7bb_wfLeechers --ignore-table=wordpress.wp_cdb072e7bb_wfLockedOut --ignore-table=wordpress.wp_cdb072e7bb_wfLocs --ignore-table=wordpress.wp_cdb072e7bb_wfLogins --ignore-table=wordpress.wp_cdb072e7bb_wfNet404s --ignore-table=wordpress.wp_cdb072e7bb_wfNotifications --ignore-table=wordpress.wp_cdb072e7bb_wfPendingIssues --ignore-table=wordpress.wp_cdb072e7bb_wfReverseCache --ignore-table=wordpress.wp_cdb072e7bb_wfScanners --ignore-table=wordpress.wp_cdb072e7bb_wfSNIPCache --ignore-table=wordpress.wp_cdb072e7bb_wfStatus --ignore-table=wordpress.wp_cdb072e7bb_wfThrottleLog --ignore-table=wordpress.wp_cdb072e7bb_wfVulnScanners"
+
   exclude:
     - '.git/'
     - '.gitignore'
@@ -20,6 +22,8 @@ local:
     - 'wp-content/*.sql'
     - 'node_modules/*'
     - '.DS_Store'
+    - 'wordfence'
+
 staging:
   vhost: 'http://onepulsefoundation.onpu.site.staging.findsomewinmore.com'
   wordpress_path: '/srv/users/onepulsefoundation-opnu/apps/onepulsefoundation-site/public/'
@@ -28,6 +32,8 @@ staging:
     user: 'wjdF4QMTMPTH'
     password: 'HLJ3Lg3J5S5tHf8S'
     host: 'localhost'
+    mysqldump_options: " --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_rg_form --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_rg_form_meta --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_rg_form_view --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_rg_incomplete_submissions --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_rg_lead --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_rg_lead_detail --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_rg_lead_detail_long --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_rg_lead_meta --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_rg_lead_notes --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfBadLeechers --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfBlockedCommmentLog --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfBlockedIPLog --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfBlocks --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfBlocksAdv --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfConfig --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfCrawlers --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfFileMods --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfHits --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfHoover --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfIssues --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfKnownFileList --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfLeechers --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfLockedOut --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfLocs --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfLogins --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfNet404s --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfNotifications --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfPendingIssues --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfReverseCache --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfScanners --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfSNIPCache --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfStatus --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfThrottleLog --ignore-table=onepulsefoundation-site-wp-9DBl3LfE.wp_cdb072e7bb_wfVulnScanners"
+
   exclude:
     - '.git/'
     - '.gitignore'
@@ -41,11 +47,14 @@ staging:
     - '.htaccess'
     - 'node_modules/'
     - '.DS_Store'
+    - 'wordfence'
+
   ssh:
     host: '50.56.174.21'
     user: 'onepulsefoundation-opnu'
     password: 'RoxpjgXyqraXaUdycy4VvWdW'
     rsync_options: '--verbose'
+
 production:
   vhost: 'https://onepulsefoundation.org'
   wordpress_path: '/srv/users/onepulse/apps/one-pulse-foundation-main/public/'
@@ -54,6 +63,8 @@ production:
     user: 'u8qC8zr0JIPJ'
     password: 'ElSbLMDaodjUg8OE'
     host: 'localhost'
+    mysqldump_options: " --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_rg_form --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_rg_form_meta --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_rg_form_view --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_rg_incomplete_submissions --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_rg_lead --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_rg_lead_detail --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_rg_lead_detail_long --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_rg_lead_meta --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_rg_lead_notes  --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfBadLeechers --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfBlockedCommmentLog --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfBlockedIPLog --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfBlocks --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfBlocksAdv --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfConfig --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfCrawlers --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfFileMods --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfHits --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfHoover --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfIssues --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfKnownFileList --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfLeechers --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfLockedOut --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfLocs --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfLogins --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfNet404s --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfNotifications --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfPendingIssues --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfReverseCache --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfScanners --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfSNIPCache --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfStatus --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfThrottleLog --ignore-table=one-pulse-foundation-main-wp-zZOGjQ66.wp_cdb072e7bb_wfVulnScanners"
+
   exclude:
     - '.git/'
     - '.gitignore'
@@ -67,34 +78,10 @@ production:
     - '.htaccess'
     - 'node_modules/'
     - '.DS_Store'
+    - 'wordfence'
+
   ssh:
     host: '107.170.18.118'
-    user: 'onepulse'
-    password: 'YeBZiG.y@NFmdYtD6Wed}'
-    rsync_options: '--verbose'
-production2:
-  vhost: 'https//:onepulsefoundation.org'
-  wordpress_path: '/srv/users/onepulse/apps/one-pulse-foundation-main/public/'
-  database:
-    name: 'one-pulse-foundation-main-wp-zZOGjQ66'
-    user: 'u8qC8zr0JIPJ'
-    password: 'ElSbLMDaodjUg8OE'
-    host: 'localhost'
-  exclude:
-    - '.git/'
-    - '.gitignore'
-    - '.sass-cache/'
-    - 'bin/'
-    - 'tmp/*'
-    - 'Gemfile*'
-    - 'Movefile.yml'
-    - 'wp-config.php'
-    - 'wp-content/*.sql'
-    - '.htaccess'
-    - 'node_modules/'
-    - '.DS_Store'
-  ssh:
-    host: '162.243.243.107'
     user: 'onepulse'
     password: 'YeBZiG.y@NFmdYtD6Wed}'
     rsync_options: '--verbose'

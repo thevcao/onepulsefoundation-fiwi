@@ -1065,3 +1065,121 @@ function onpu_redirect_users_by_role() {
 
 } // cm_redirect_users_by_role
 add_action( 'admin_init', 'onpu_redirect_users_by_role' );
+
+
+//Google Maps ACF API Key
+
+function my_acf_init() {
+
+    acf_update_setting('google_api_key', 'AIzaSyDPEOw-wsN277jVGGNYmNtqG6SuI768IUk');
+}
+
+add_action('acf/init', 'my_acf_init');
+
+//Google Maps API Key
+
+function googlemaps_load_scripts()
+{
+    wp_register_script('googlemaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDPEOw-wsN277jVGGNYmNtqG6SuI768IUk', null, null, false);
+    wp_enqueue_script('googlemaps');
+}
+add_action('wp_enqueue_scripts', 'googlemaps_load_scripts');
+
+function posts_orderby_lastname ($orderby_statement)
+{
+  $orderby_statement = "RIGHT(post_title, LOCATE(' ', REVERSE(post_title)) - 1) ASC";
+    return $orderby_statement;
+}
+
+function ga_event_registration() {
+
+$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
+if (strpos($url,'wp-login.php?checkemail=registered') == true) {?>
+
+<script>
+
+    (function ($) {
+
+        'use strict';
+
+            if ((document.location.href.indexOf('staging') === -1 || document.location.href.indexOf('dev') === -1)){
+
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-97989536-1', 'auto');
+              ga('send', 'pageview');
+
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+                    ga('send', {
+                        hitType: 'event',
+                        eventCategory: 'User Registration Success - Mobile',
+                        eventAction: 'registration'
+                    });
+
+                } else {
+
+                    ga('send', {
+                        hitType: 'event',
+                        eventCategory: 'User Registration Success - Desktop',
+                        eventAction: 'registration'
+                    });
+
+                }
+                console.log('User registration');
+            }
+
+//            }
+
+    })(jQuery);
+
+
+</script>
+
+<?php } }
+add_action( 'login_head', 'ga_event_registration' );
+
+add_filter('rest_enabled', '_return_false');
+add_filter('rest_jsonp_enabled', '_return_false');
+
+add_action("gform_after_submission", "gf_ga_tracking", 1, 2);
+function gf_ga_tracking($entry, $form) {
+    ?>
+    <script type="text/javascript">
+
+
+            if ((document.location.href.indexOf('staging') === -1 || document.location.href.indexOf('dev') === -1)){
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-97989536-1', 'auto');
+
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+                    ga('send', {
+                        hitType: 'event',
+                        eventCategory: 'Survey Complete - Mobile',
+                        eventAction: 'conversion'
+                    });
+
+                } else {
+
+                    ga('send', {
+                        hitType: 'event',
+                        eventCategory: 'Survey Complete - Desktop',
+                        eventAction: 'conversion'
+                    });
+
+                }
+
+                console.log('Survey Complete');
+            }
+    </script>
+
+<?php }
