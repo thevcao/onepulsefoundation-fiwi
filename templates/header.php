@@ -37,10 +37,10 @@ get_template_part('templates/head');
         <div class="col-sm-11 col-xs-8 height tm text-right p-xs-0">
             <div class="menu-container">
                 <div class="row">
-                    <div class="col-sm-7 hidden-sm hidden-ls-pt hidden-xs">
+                    <div class="col-sm-8 hidden-sm hidden-ls-pt hidden-xs">
                         <?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
                     </div>
-                    <div class="col-sm-2 col-xs-9 p0 tab-pt">
+                    <div class="col-md-1 col-sm-2 col-xs-9 p0 tab-pt">
                         <div class="lang-toggle">
                             <ul>
                             <li><?php echo do_shortcode('[glt language="English" label=""]');?>

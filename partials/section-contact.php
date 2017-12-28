@@ -36,11 +36,11 @@
 
                 <h4 class="mb8">Event, Outreach and Volunteer Coordination</h4>
                 <p class="mt0 mb0"><span>email</span> <a href="mailto:np@onepulsefoundation.org">np@onepulsefoundation.org</a></p>
-                <p class="mt0 mb8"><span>mobile</span> <a href="tel:407.775.2437">407.775.2437</a></p>
+                <p class="mt0 mb8"><span>phone</span> <a href="tel:407.775.2437">407.775.2437</a></p>
 
                 <h4 class="mb8">Accounting and Billing Inquiries</h4>
                 <p class="mt0 mb0"><span>email</span> <a href="mailto:office@onepulsefoundation.org">office@onepulsefoundation.org</a></p>
-                <p class="mt0 mb8"><span>mobile</span> <a href="tel:407.775.2436">407.775.2436</a></p>
+                <p class="mt0 mb8"><span>phone</span> <a href="tel:407.775.2436">407.775.2436</a></p>
 
                 <h4 class="mb8">Fundraising Inquiries</h4>
                 <p class="mt0 mb0"><span>email</span> <a href="mailto:ls@onepulsefoundation.org">ls@onepulsefoundation.org</a></p>
