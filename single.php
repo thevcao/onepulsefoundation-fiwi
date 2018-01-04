@@ -35,7 +35,7 @@
                         <script>
                         console.log('<?php echo $featnurl;?>');
                         </script>
-                            <?php if( has_post_thumbnail()): echo '<img id="featured-image" class="hidden-xs" src="'. $featnurl .'">'; endif;?>
+                            <?php if( has_post_thumbnail()): echo '<img crossorigin="anonymous" id="featured-image" class="hidden-xs" src="'. $featnurl .'">'; endif;?>
                         <?php //if( has_post_thumbnail()): echo '<img class="over-image" src="'. $featurl .'">'; endif;?>
 
                         <?php if($source == 'File'): ?>
@@ -81,7 +81,7 @@
 
             <?php } else{ ?>
                         <?php  $featbanner = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner' ); $featurl = $featbanner['0']; ?>
-                            <?php if( has_post_thumbnail()): echo '<img id="featured-image" class="hidden-xs" src="'. $featurl .'">'; endif;?>
+                            <?php if( has_post_thumbnail()): echo '<img id="featured-image" crossorigin="anonymous" class="hidden-xs" src="'. $featurl .'">'; endif;?>
                         <?php if( has_post_thumbnail()): echo '<img class="over-image" src="'. $featurl .'">'; endif;?>
 
             <?php } ?>
