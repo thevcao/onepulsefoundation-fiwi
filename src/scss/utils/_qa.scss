@@ -436,10 +436,7 @@ p img {
 //    display: none !important;
 //}
 
-p a:hover {
-    color: black;
-    animation: animation-ie 10s ease infinite both;
-}
+
 .post-body {
 
 
@@ -471,4 +468,8 @@ p a:hover {
         }
 
     }
+}
+p a:hover {
+    color: black;
+    animation: animation-ie 10s ease infinite both;
 }
