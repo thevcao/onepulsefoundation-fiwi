@@ -435,6 +435,11 @@ p img {
 //.home-about:not(:first-of-type) .over-image {
 //    display: none !important;
 //}
+
+p a:hover {
+    color: black;
+    animation: animation-ie 10s ease infinite both;
+}
 .post-body {
 
 

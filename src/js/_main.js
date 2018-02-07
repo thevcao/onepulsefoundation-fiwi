@@ -260,7 +260,7 @@
 
                 });
 
-                $('a').not('.full-menu ul li a, .home-play, .task-link, .logo').each(function () {
+                $('a').not('.full-menu ul li a, .home-play, .task-link, .logo, p a').each(function () {
                     if ($('html').not('.mobile')) {
                         var title = $(this).text();
 
