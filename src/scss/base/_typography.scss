@@ -1,228 +1,238 @@
-body,
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: -.025em
+}
 p {
-	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 2;
-	letter-spacing: -.025em
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 2;
+    letter-spacing: -.025em
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-	line-height: 1.1;
-	font-weight: bold;
-	letter-spacing: -.05em;
-	span {
-		display: block;
-		font-size: 75%;
-		margin-bottom: 5px;
-		&.small {
-			font-size: 50%;
-			letter-spacing: -.05em;
-		}
-	}
+    line-height: 1.1;
+    font-weight: bold;
+    letter-spacing: -.05em;
+    font-weight: bold;
+//    margin: 0 0 1rem;
+    span {
+        display: block;
+        font-size: 75%;
+        margin-bottom: 5px;
+        &.small {
+            font-size: 50%;
+            letter-spacing: -.05em;
+        }
+    }
 }
 h1 {
-	font-size: 3em
+    font-size: 3rem
 }
 h2 {
-	font-size: 2.75em;
+    font-size: 2.15rem;
+}
+h3 {
+    font-size: 1.75rem;
+}
+h4 {
+    font-size: 1.5rem;
+}
+h5 {
+    font-size: 1.25rem;
 }
 .clip {
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	animation: linkanimate 1s alternate linear infinite;
-	background-size: 500%;
-	&.red {
-		background: $rgrad;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 500%;
-	}
-	&.yellow {
-		background: $ygrad;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 500%;
-	}
-	&.orange {
-		background: $ograd;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 500%;
-	}
-	&.green {
-		background: $ggrad;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 500%;
-	}
-	&.blue {
-		background: $bgrad;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 500%;
-	}
-	&.purple {
-		background: $pgrad;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 500%;
-	}
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: linkanimate 1s alternate linear infinite;
+    background-size: 500%;
+    &.red {
+        background: $rgrad;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 500%;
+    }
+    &.yellow {
+        background: $ygrad;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 500%;
+    }
+    &.orange {
+        background: $ograd;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 500%;
+    }
+    &.green {
+        background: $ggrad;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 500%;
+    }
+    &.blue {
+        background: $bgrad;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 500%;
+    }
+    &.purple {
+        background: $pgrad;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 500%;
+    }
 }
 .task-link {
-	span {
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		animation: linkanimate 1s alternate linear infinite;
-		background-size: 500%;
-	}
-	&.red span {
-		background: $rgrad;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 500%;
-	}
-	&.red:hover {
-		color: $r;
-	}
-	&.orange span {
-		background: $ograd;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 500%;
-	}
-	&.orange:hover {
-		color: $o;
-	}
-	&.green span {
-		background: $ggrad;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 500%;
-	}
-	&.green:hover {
-		color: $g;
-	}
-	&.blue span {
-		background: $bgrad;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 500%;
-	}
-	&.blue:hover {
-		color: $b;
-	}
-	&.purple span {
-		background: $pgrad;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 500%;
-	}
-	&.purple:hover {
-		color: $p;
-	}
+    span {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: linkanimate 1s alternate linear infinite;
+        background-size: 500%;
+    }
+    &.red span {
+        background: $rgrad;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 500%;
+    }
+    &.red:hover {
+        color: $r;
+    }
+    &.orange span {
+        background: $ograd;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 500%;
+    }
+    &.orange:hover {
+        color: $o;
+    }
+    &.green span {
+        background: $ggrad;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 500%;
+    }
+    &.green:hover {
+        color: $g;
+    }
+    &.blue span {
+        background: $bgrad;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 500%;
+    }
+    &.blue:hover {
+        color: $b;
+    }
+    &.purple span {
+        background: $pgrad;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 500%;
+    }
+    &.purple:hover {
+        color: $p;
+    }
 }
 .fa {
-	position: relative;
-	z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 @media (max-width:1441px) {
-	body,
-	p {
-		font-size: 14px;
-	}
+    body,
+    p {
+        font-size: 14px;
+    }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-	body,
-	p {
-		font-size: 12px;
-	}
+    body,
+    p {
+        font-size: 12px;
+    }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {}
 @media (max-width:768px) {
-	html:not(.ipad) {
-		h1 {
-			font-size: 3rem;
-		}
-		h2 {
-			font-size: 3rem;
-		}
-		h1 span,
-		h2 span,
-		h3 span,
-		h4 span,
-		h5 span {
-			font-size: 1rem;
-			letter-spacing: -.025em;
-		}
-		h1,
-		h2,
-		h3,
-		h4 {
-			margin: .25em 0;
-		}
-	}
+    html:not(.ipad) {
+        h1 {
+            font-size: 3rem;
+        }
+        h2 {
+            font-size: 3rem;
+        }
+        h1 span,
+        h2 span,
+        h3 span,
+        h4 span,
+        h5 span {
+            font-size: 1rem;
+            letter-spacing: -.025em;
+        }
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: .25em 0;
+        }
+    }
 }
 @media (max-width:560px) {
-	html:not(.ipad) {
-		h1 {
-			font-size: 2rem;
-		}
-		h2 {
-			font-size: 1.75rem;
-		}
-		h1 span,
-		h2 span,
-		h3 span,
-		h4 span,
-		h5 span {
-			font-size: 1rem;
-			letter-spacing: -.025em;
-		}
-		h1,
-		h2,
-		h3,
-		h4 {
-			margin: .25rem 0;
-		}
-	}
-	
-
+    html:not(.ipad) {
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.75rem;
+        }
+        h1 span,
+        h2 span,
+        h3 span,
+        h4 span,
+        h5 span {
+            font-size: 1rem;
+            letter-spacing: -.025em;
+        }
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: .25rem 0;
+        }
+    }
 }
 .maxw_767.orientation_landscape {
-	h1 {
-		font-size: 2rem;
-	}
-	h2 {
-		font-size: 1.75rem;
-	}
-	h1 span,
-	h2 span,
-	h3 span,
-	h4 span,
-	h5 span {
-		font-size: 1rem;
-		letter-spacing: -.025em;
-	}
-	h1,
-	h2,
-	h3,
-	h4 {
-		margin: .25rem 0;
-	}
-	
-	.donate-bar {
-		
-		padding: 1rem;
-	}
-	
-	.donate-bar a {
-		
-		font-size: 1rem;
-	}
-	
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    h1 span,
+    h2 span,
+    h3 span,
+    h4 span,
+    h5 span {
+        font-size: 1rem;
+        letter-spacing: -.025em;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin: .25rem 0;
+    }
+    .donate-bar {
+        padding: 1rem;
+    }
+    .donate-bar a {
+        font-size: 1rem;
+    }
 }

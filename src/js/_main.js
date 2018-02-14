@@ -630,7 +630,7 @@
                         $('.full-menu').removeClass("transition");
                     }
                 );
-                $("a").not('a[download], a[href="#"], .nturl, .modal-toggle, .modal-toggle a, .pop-link, ul.tabs li a, .woocommerce-product-gallery__image a, a[target="_blank"], a[target="blank"], .survey-toggle').click(function (e) {
+                $("a").not('.tab-links a, a[download], a[href="#"], .nturl, .modal-toggle, .modal-toggle a, .pop-link, ul.tabs li a, .woocommerce-product-gallery__image a, a[target="_blank"], a[target="blank"], .survey-toggle').click(function (e) {
 
 
                     var link = $(this).attr('href');
@@ -1147,6 +1147,109 @@
             finalize: function () {
                 // JavaScript to be fired on the home page, after the init JS
 
+
+            }
+        },
+        'page_template_information': {
+            init: function () {
+                // JavaScript to be fired on the home page
+
+
+            },
+            finalize: function () {
+                // JavaScript to be fired on the home page, after the init JS
+
+                $('.tab-links a').click(function(){
+
+                    var link = $(this).attr('href');
+
+                    $('.tab').not(this).slideUp(500);
+                    $(link).slideToggle(500);
+                    $('.tab-links a').not(this).removeClass('active');
+                    $(this).addClass('active');
+
+                    return false;
+
+
+                });
+                    function initMap() {
+
+                        var pulse = {
+                            info: '<h4>onePULSE Interim Memorial</h4><p>1912 S Orange Ave<br>Orlando, FL 32806</p><a class="btn" href="https://goo.gl/ubiUW5" title="Get Directions">Get Directions</a>',
+                            lat: 28.5195909,
+                            long: -81.3766744,
+                            pin: {
+                                url: '/wp-content/themes/onepulse/dist/img/main-pin.png', // url
+                                scaledSize: new google.maps.Size(56, 85), // size
+                            }
+
+                        };
+
+                        var parking1 = {
+                            info: '<h4>Street Parking on South Orange Avenue</h4>',
+                            lat: 28.5194956,
+                            long: -81.3763761,
+                            pin: {
+                                url: '/wp-content/themes/onepulse/dist/img/parking-pin.png', // url
+                                scaledSize: new google.maps.Size(56, 85), // size
+                            }
+                        };
+
+                        var parking2 = {
+                            info: '<h4>Street Parking on Esther Street</h4>',
+                            lat: 28.519326,
+                            long: -81.377313,
+                            pin: {
+                                url: '/wp-content/themes/onepulse/dist/img/parking-pin.png', // url
+                                scaledSize: new google.maps.Size(56, 85), // size
+                            }
+                        };
+                        var parking3 = {
+                            info: '<h4>Public Parking Lot</h4>',
+                            lat: 28.520907,
+                            long: -81.376736,
+                            pin: {
+                                url: '/wp-content/themes/onepulse/dist/img/parking-pin.png', // url
+                                scaledSize: new google.maps.Size(56, 85), // size
+                            }
+                        };
+
+                        var locations = [
+                          [pulse.info, pulse.lat, pulse.long, pulse.pin, 0],
+                          [parking1.info, parking1.lat, parking1.long, parking1.pin, 1],
+                          [parking2.info, parking2.lat, parking2.long, parking2.pin, 2],
+                          [parking3.info, parking3.lat, parking3.long, parking3.pin, 3],
+                        ];
+
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 18,
+                            center: new google.maps.LatLng(28.520408,-81.3770772),
+//                            mapTypeId: google.maps.MapTypeId.ROADMAP,
+                            styles: [{"featureType":"all","elementType":"all","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":-30}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#353535"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#656565"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#505050"}]},{"featureType":"poi","elementType":"geometry.stroke","stylers":[{"color":"#808080"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#454545"}]}]
+
+                        });
+
+                        var infowindow = new google.maps.InfoWindow({});
+
+                        var marker, i;
+
+                        for (i = 0; i < locations.length; i++) {
+                            marker = new google.maps.Marker({
+                                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                                map: map,
+                                icon: locations[i][3]
+                            });
+
+                            google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                                return function () {
+                                    infowindow.setContent(locations[i][0]);
+                                    infowindow.open(map, marker);
+                                }
+                            })(marker, i));
+                        }
+                    }
+
+                initMap();
 
             }
         }, // About us page, note the change from about-us to about_us.

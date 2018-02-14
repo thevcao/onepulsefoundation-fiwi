@@ -1183,3 +1183,24 @@ function gf_ga_tracking($entry, $form) {
     </script>
 
 <?php }
+
+
+//Map Shortcode
+
+function onpu_map()
+{
+
+  $html = '<div id="map"></div>';
+  return $html;
+}
+add_shortcode( 'map', 'onpu_map');
+
+//Line Shortcode
+
+function onpu_line()
+{
+
+  $html = '<div class="line"></div>';
+  return $html;
+}
+add_shortcode( 'line', 'onpu_line');
