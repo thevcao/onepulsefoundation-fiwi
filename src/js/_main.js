@@ -1175,7 +1175,7 @@
                     function initMap() {
 
                         var pulse = {
-                            info: '<h4>onePULSE Interim Memorial</h4><p>1912 S Orange Ave<br>Orlando, FL 32806</p><a class="btn" href="https://goo.gl/ubiUW5" title="Get Directions">Get Directions</a>',
+                            info: '<h4>Pulse Interim Memorial</h4><p>1912 S Orange Ave<br>Orlando, FL 32806</p><a class="btn" href="https://goo.gl/ubiUW5" title="Get Directions">Get Directions</a>',
                             lat: 28.5195909,
                             long: -81.3766744,
                             pin: {

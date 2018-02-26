@@ -132,11 +132,17 @@ $newsimage = get_field('news_image', 'options');?>
 </div>
 <div class="donate-bar">
     <div class="row">
-        <div class="col-sm-12 col-xs-6">
+        <!--<div class="col-sm-12 col-xs-6">
             <a href="/donate" class="hidden-xs">Donate to the onePULSE Foundation <i class="fa fa-chevron-right"></i></a>
+        </div>-->
+        <div class="col-sm-12 col-xs-6">
+            <a href="/onepulse-foundation-memorial/memorial-information/" class="hidden-xs">Visit the Pulse Interim Memorial <i class="fa fa-chevron-right"></i></a>
         </div>
-        <div class="col-sm-12 col-xs-6 visible-xs">
+        <!--<div class="col-sm-12 col-xs-6 visible-xs">
             <a href="/donate" class="visible-xs">Donate <i class="fa fa-chevron-right"></i></a>
+        </div>-->
+        <div class="col-sm-12 col-xs-6 visible-xs">
+            <a href="/onepulse-foundation-memorial/memorial-information/" class="visible-xs">Visit <i class="fa fa-chevron-right"></i></a>
         </div>
     </div>
 </div>

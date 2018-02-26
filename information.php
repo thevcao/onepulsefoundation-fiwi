@@ -34,14 +34,45 @@
             </div>
         </div>
 
+            <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-6">
+            <div class="contact-info">
+            <h5 class="mt8 mb8">Address and Information</h5>
+
+                <p class="mt0 mb8"><a href="https://www.google.com/maps/dir/''/pulse+nightclub/@28.5195729,-81.4467147,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88e77b0c438a83bf:0x72a789a251c26b61!2m2!1d-81.3766744!2d28.5195909" target="_blank"><b><i class="fa fa-location-arrow"></i></b> 1912 S Orange Ave, Orlando, FL 32806</a></p>
+
+            <!--<p class="mt0 mb0"><span>office</span> <a href="tel":><?php the_field('contact_office','options');?></a></p>-->
+                <p class="mt0 mb64"><a class="" href="mailto:info@onePULSEFoundation.org"><b><i class="fa fa-envelope"></i></b> info@onePULSEfoundation.org</a></p>
+
+            </div>
+
+            </div>
+            <div class="col-md-6">
+            <div class="contact-info">
+
+            <h5 class="mt8 mb8">Hours of Operations</h5>
+                <p class="mt0 mb8"><b><i class="fa fa-clock-o"></i></b> Daily from 7:30 AM to 9:00 PM</p>
+                <p class="mt0 mb32"><b><i class="fa fa-calendar"></i></b> Extended Hours during the Remembrance Week and the holidays</p>
+
+            </div>
+
+            </div>
+            </div>
+
+
+        </div>
+
         <div class="row">
 
             <div class="col-md-3">
 
                 <?php if( have_rows('info') ):?>
                 <ul class="tab-links">
-                <?php while ( have_rows('info') ) : the_row();?>
-                    <li><a href="#<?php $var = sanitize_title_for_query( get_sub_field('title') ); echo esc_attr( $var);?>"><?php the_sub_field('title');?></a></li>
+                <?php $i = 0; while ( have_rows('info') ) : the_row(); $i++;?>
+                    <li><a <?php if($i == 1): echo 'class="active"'; endif;?> href="#<?php $var = sanitize_title_for_query( get_sub_field('title') ); echo esc_attr( $var);?>"><?php the_sub_field('title');?></a></li>
 
                 <?php endwhile; ?>
                 </ul>

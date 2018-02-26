@@ -67,7 +67,7 @@
                             <div class="row">
                                 <div class="col-md-12">
 
-                                   <h2><span>Visiting the</span>onePULSE Interim Memorial</h2>
+                                   <h2><span>Visiting the</span>Pulse Interim Memorial</h2>
 
 
 
@@ -80,8 +80,8 @@
                                     <div class="col-md-6 col-md-push-5 col-md-offset-1 mb-xs-32 parallax-container">
                                         <div class="line" data-stellar-ratio="1.9"></div>
                                         <div data-stellar-ratio="2">
-                                            <img class="img-parallax" src="/wp-content/uploads/2017/04/Memorial-Perspective_Day-2-1024x683.jpg">
-
+                                            <img class="img-parallax" src="/wp-content/uploads/2018/02/New-Renderings-_Page_3-1-e1519654164312.jpg">
+                                            <label class="img-attrib">View from Orange Avenue</label>
                                         </div>
 
                                     </div>
@@ -92,7 +92,7 @@
                                         <div class="contact-info">
                                         <h5 class="mb8">Address and Information</h5>
 
-                                            <p class="mt0 mb8"><a href="ttps://goo.gl/ubiUW5" target="_blank"><b><i class="fa fa-location-arrow"></i></b> 1227 E Concord St, Orlando, FL 32803</a></p>
+                                            <p class="mt0 mb8"><a href="https://www.google.com/maps/dir/''/pulse+nightclub/@28.5195729,-81.4467147,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88e77b0c438a83bf:0x72a789a251c26b61!2m2!1d-81.3766744!2d28.5195909" target="_blank"><b><i class="fa fa-location-arrow"></i></b> 1912 S Orange Ave, Orlando, FL 32806</a></p>
 
                                         <!--<p class="mt0 mb0"><span>office</span> <a href="tel":><?php the_field('contact_office','options');?></a></p>-->
                                             <p class="mt0 mb32"><a class="" href="mailto:info@onePULSEFoundation.org"><b><i class="fa fa-envelope"></i></b> info@onePULSEfoundation.org</a></p>
