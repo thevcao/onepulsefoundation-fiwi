@@ -95,6 +95,12 @@ if( have_rows('section') ):
 
         endif;
 
+        if( get_row_layout() == 'memorial_info' ):
+            include( locate_template( 'partials/section-info.php', false, false ) );
+
+
+        endif;
+
     $count++; endwhile;
 
 endif;

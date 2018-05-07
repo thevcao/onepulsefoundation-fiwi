@@ -149,6 +149,8 @@
 }
 @media (max-width:768px) {
     html:not(.ipad) {
+
+
         .home .home-hero .col-md-10.col-center-ls-tab {
             padding: 0 10%;
         }
@@ -266,6 +268,11 @@
             background-attachment: fixed;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+                .home .information {
+
+            display: block;
         }
     }
 }
