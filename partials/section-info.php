@@ -49,7 +49,7 @@
                                     <div class="col-md-6 col-md-offset-1 mb-xs-32 parallax-container">
                                         <div class="line" data-stellar-ratio="1.9"></div>
                                         <div data-stellar-ratio="2">
-                                            <img class="img-parallax" src="/wp-content/uploads/2018/02/New-Renderings-_Page_3-1-e1519654164312.jpg">
+                                            <img class="img-parallax" src="/wp-content/uploads/2018/05/New-Renderings-_Page_2-e1519320959365.jpg">
                                             <label class="img-attrib">View from Orange Avenue</label>
                                         </div>
 
