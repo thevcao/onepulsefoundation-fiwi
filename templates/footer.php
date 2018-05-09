@@ -35,7 +35,7 @@ $newsimage = get_field('news_image', 'options');?>
                         $random_result = array_rand($images ,1);
                         $newsimage = $images[$random_result];?>
 
-                <img src="<?php echo $newsimage['sizes']['banner']; ?>" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
+                <img src="<?php echo $newsimage['sizes']['large']; ?>" alt="<?php if (!$newsimage['alt'] == null): echo $newsimage['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
                 <?php if (!$newsimage['caption'] == null): echo '<label class="img-attrib">' . $newsimage['caption'] . '</label>'; endif; ?>
                 <div class="over">
                     <h3>News and Updates</h3>

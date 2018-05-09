@@ -80,7 +80,7 @@
                                     <div class="col-md-6 col-md-push-5 col-md-offset-1 mb-xs-32 parallax-container">
                                         <div class="line" data-stellar-ratio="1.9"></div>
                                         <div data-stellar-ratio="2">
-                                            <img class="img-parallax" src="/wp-content/uploads/2018/05/New-Renderings-_Page_2-e1519320959365.jpg">
+                                            <img class="img-parallax" src="/wp-content/uploads/2018/05/New-Renderings-_Page_2-e1519320959365-1024x545.jpg">
                                             <label class="img-attrib">View from Orange Avenue</label>
                                         </div>
 
@@ -125,23 +125,23 @@
 
 
                     <?php $images = get_field('default_gallery', 'options'); $counter = 0;
-foreach( $images as $image ): ?>
+                          foreach( $images as $image ): ?>
 
 
                         <?php if(++$counter % 3 === 0) {?>
                             <div class="item">
-                                <img class="img-parallax" src="<?php echo $image['sizes']['large']; ?>" data-stellar-ratio="1.5" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
+                                <img class="img-parallax" data-lazy="<?php echo $image['sizes']['slide-gallery']; ?>" data-src="<?php echo $image['sizes']['large']; ?>" data-stellar-ratio="1.5" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
                                 <?php if (!$image['caption'] == null): echo '<label class="img-attrib" data-stellar-ratio="1.5">' . $image['caption'] . '</label>'; endif; ?>
                             </div>
                             <?php } elseif(++$counter % 2 === 0) {?>
                                 <div class="item">
-                                    <img class="img-parallax" src="<?php echo $image['sizes']['large']; ?>" data-stellar-ratio="1.25" data-stellar-offset-parent="true" data-stellar-vertical-offset="-200" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
+                                    <img class="img-parallax" data-lazy="<?php echo $image['sizes']['slide-gallery']; ?>" data-src="<?php echo $image['sizes']['large']; ?>" data-stellar-ratio="1.25" data-stellar-offset-parent="true" data-stellar-vertical-offset="-200" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
                                     <?php if (!$image['caption'] == null): echo '<label class="img-attrib" data-stellar-ratio="1.25" data-stellar-offset-parent="true" data-stellar-vertical-offset="-200">' . $image['caption'] . '</label>'; endif; ?>
                                 </div>
                                 <?php }elseif(++$counter % 1 === 0) {?>
                                     <div class="item">
 
-                                        <img class="img-parallax" src="<?php echo $image['sizes']['large']; ?>" data-stellar-ratio="1.75" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
+                                        <img class="img-parallax" data-lazy="<?php echo $image['sizes']['slide-gallery']; ?>" data-src="<?php echo $image['sizes']['large']; ?>" data-stellar-ratio="1.75" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
                                         <?php if (!$image['caption'] == null): echo '<label class="img-attrib" data-stellar-ratio="1.75">' . $image['caption'] . '</label>'; endif; ?>
                                     </div>
                                     <?php }?>

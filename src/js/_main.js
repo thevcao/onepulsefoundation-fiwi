@@ -26,6 +26,18 @@
                     fullHero();
 
 
+                    if($('.retina_2x').length){
+
+                      $('.featured-slider .item img').each(function(){
+
+
+                        $(this).attr('data-lazy', $(this).attr('data-src'));
+
+                      });
+
+                    }
+
+
                     $('.page-cta').each(function () {
 
                         var wrapper = $('.over h3'),
@@ -47,6 +59,7 @@
 
 
                     $('.gallery').slick({
+                        lazyLoad: 'ondemand',
                         dots: true,
                         infinite: true,
                         speed: 750,
