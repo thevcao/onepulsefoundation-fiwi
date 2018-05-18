@@ -98,8 +98,8 @@
 
 
                 $(window).resize(function () {
-                    paddingHelp();
-                    pulseSet();
+//                    paddingHelp();
+//                    pulseSet();
                     fullHero();
 
                 })
@@ -107,8 +107,8 @@
                 window.addEventListener("orientationchange", function () {
 
                     setTimeout(function () {
-                        paddingHelp();
-                        pulseSet();
+//                        paddingHelp();
+//                        pulseSet();
                         fullHero();
                     }, 500);
 
@@ -120,33 +120,33 @@
 
 
                 function paddingHelp() {
-                    if ($(window).width() > 768) {
-
-                        $('.page-cta .content').each(function () {
-                            var containerWidth = $('.container').outerWidth(),
-                                windowWidth = $(window).outerWidth(),
-                                remainingPad = (windowWidth - containerWidth),
-                                half = (remainingPad / 2);
-                            $(this).css('padding-right', half);
-                        });
-                        $('.content-left .content').each(function () {
-                            var containerWidth = $('.container').outerWidth(),
-                                windowWidth = $(window).outerWidth(),
-                                remainingPad = (windowWidth - containerWidth),
-                                half = ((remainingPad / 2));
-
-                            if ($('html').hasClass('ie')) {
-
-
-                                $(this).css('padding-left', half + 30);
-
-                            } else {
-                                $(this).css('padding-left', half + 15);
-
-
-                            }
-                        });
-                    }
+//                    if ($(window).width() > 768) {
+//
+//                        $('.page-cta .content').each(function () {
+//                            var containerWidth = $('.container').outerWidth(),
+//                                windowWidth = $(window).outerWidth(),
+//                                remainingPad = (windowWidth - containerWidth),
+//                                half = (remainingPad / 2);
+////                            $(this).css('padding-right', half);
+//                        });
+//                        $('.content-left .content').each(function () {
+//                            var containerWidth = $('.container').outerWidth(),
+//                                windowWidth = $(window).outerWidth(),
+//                                remainingPad = (windowWidth - containerWidth),
+//                                half = ((remainingPad / 2));
+//
+//                            if ($('html').hasClass('ie')) {
+//
+//
+////                                $(this).css('padding-left', half + 30);
+//
+//                            } else {
+////                                $(this).css('padding-left', half + 15);
+//
+//
+//                            }
+//                        });
+//                    }
                 }
 
                 function fullHero() {
@@ -161,7 +161,7 @@
                     if ($('html').hasClass('orientation_portrait') && $(window).width() < 768) {
 
 //                        $('.full-menu').css('padding-top', header);
-                        $('section').first('section').not('.home-hero').css('padding-top', (header + 10));
+//                        $('section').first('section').not('.home-hero').css('padding-top', (header + 10) + '!important');
                         $('footer').css('padding-bottom', ($('.donate-bar').outerHeight()));
 
 
@@ -170,16 +170,16 @@
 
                     } else if ($('html').hasClass('orientation_landscape') && $(window).width() < 768) {
 
-                        $('.full-menu').css('padding-top', ($('.menu-toggle').outerHeight() + 20));
+//                        $('.full-menu').css('padding-top', ($('.menu-toggle').outerHeight() + 20));
                         //							$('section').first('section').not('.home-hero').css('padding-top', (header + 10));
                         //							$('footer').css('padding-bottom', ($('.donate-bar').outerHeight() - 20));
 
 
                     } else {
 
-                        $('.home-hero').css('padding-top', padding).css('padding-bottom', padding);
+//                        $('.home-hero').css('padding-top', padding).css('padding-bottom', padding);
 //                        $('.full-menu').css('padding-top', header + 50);
-                        $('.page-main section').first('section').css('padding-top', (header + 50));
+//                        $('.page-main section').first('section').css('padding-top', (header + 50)  + '!important');
                         $('.post-image').css('margin-top', header);
                     }
 
@@ -192,46 +192,46 @@
                 function pulseSet() {
 
 
-                    if ($(window).width() < 415) {
-
-
-                        var fullheight = $(window).height();
-                        var auto = 'auto' + fullheight;
-
-                        $('.donate-hero h2').fitText(1);
-                        //					$('.page-main .home-hero h2').fitText(1);
-                        $('.home .home-hero h2').fitText(.9);
-                        $('.invert-header .home-hero h2.clone-shadow, .invert-header .home-hero h2').fitText(3.75);
-                        $('.home-play i').fitText(.33, {
-                            maxFontSize: '126px'
-                        });
-                        $('.home .home-hero h2').css('background-size', auto);
-
-
-                        console.log('mobile portrait');
-
-                    } else {
-
-                        $('.donate-hero h2').fitText(2);
-                        $('.home-hero h2').fitText(1.75);
-
-                        if ($('body').hasClass('page-id-166')) {
-
-                            $('.page-main .home-hero h2').fitText(5);
-
-                        } else {
-
-                            $('.page-main .home-hero h2').fitText(4);
-
-                        }
-                        $('.hidden-xs .home-play i').fitText(.35, {
-                            maxFontSize: '126px'
-                        });
-                        $('.visible-xs .home-play i').fitText(1, {
-                            maxFontSize: '126px'
-                        });
-                        //						$('footer').css('padding-bottom', '0');
-                    }
+//                    if ($(window).width() < 415) {
+//
+//
+//                        var fullheight = $(window).height();
+//                        var auto = 'auto' + fullheight;
+//
+//                        $('.donate-hero h2').fitText(1);
+//                        //					$('.page-main .home-hero h2').fitText(1);
+//                        $('.home .home-hero h2').fitText(.9);
+//                        $('.invert-header .home-hero h2.clone-shadow, .invert-header .home-hero h2').fitText(3.75);
+//                        $('.home-play i').fitText(.33, {
+//                            maxFontSize: '126px'
+//                        });
+//                        $('.home .home-hero h2').css('background-size', auto);
+//
+//
+//                        console.log('mobile portrait');
+//
+//                    } else {
+//
+//                        $('.donate-hero h2').fitText(2);
+//                        $('.home-hero h2').fitText(1.75);
+//
+//                        if ($('body').hasClass('page-id-166')) {
+//
+//                            $('.page-main .home-hero h2').fitText(5);
+//
+//                        } else {
+//
+//                            $('.page-main .home-hero h2').fitText(4);
+//
+//                        }
+//                        $('.hidden-xs .home-play i').fitText(.35, {
+//                            maxFontSize: '126px'
+//                        });
+//                        $('.visible-xs .home-play i').fitText(1, {
+//                            maxFontSize: '126px'
+//                        });
+//                        //						$('footer').css('padding-bottom', '0');
+//                    }
 
 
 
@@ -290,6 +290,22 @@
                     $(this).parents('.faq-item').toggleClass('active');
 
                     return false;
+
+
+                });
+                $('.search-toggle').click(function () {
+
+                    $('html').addClass('search-open');
+
+                    return false;
+
+
+                });
+                $('.search-clear, .search-cover').click(function () {
+
+                    $('html').removeClass('search-open');
+
+//                    return false;
 
 
                 });
@@ -715,7 +731,7 @@
 
 
                 $(window).resize(function () {
-                    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && $(window).width() > 768) {
                         stellarinit();
                     }
                 });
@@ -913,7 +929,7 @@
 
 
 
-                        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && $(window).width() > 768) {
                             stellarinit();
                         }
 
@@ -1188,7 +1204,7 @@
                     function initMap() {
 
                         var pulse = {
-                            info: '<h4>Pulse Interim Memorial</h4><p>1912 S Orange Ave<br>Orlando, FL 32806</p><a class="btn" href="https://goo.gl/ubiUW5" title="Get Directions">Get Directions</a>',
+                            info: '<h4>Pulse Interim Memorial</h4><p>1912 S Orange Ave<br>Orlando, FL 32806</p><a class="btn" href="https://goo.gl/ubiUW5" title="Get Directions"><div></div>Get Directions</a>',
                             lat: 28.5195909,
                             long: -81.3766744,
                             pin: {

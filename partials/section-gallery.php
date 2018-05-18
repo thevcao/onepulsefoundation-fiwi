@@ -9,7 +9,7 @@ $gallery = get_sub_field('gallery_type');
 ;?>
 
 
-<section class="featured-slider pt64 pb120 pt-xs-32 pb-xs-0">
+<section class="featured-slider pt-sm-5 pb120 pt-xs-32 pb-xs-0">
 
     <div class="gallery">
 

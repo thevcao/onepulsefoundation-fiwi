@@ -2,7 +2,7 @@
 
 <div class="main-wrapper">
         <div class="post-body">
-            <section class="pt120 pb120 pt-xs-0 pb-xs-0">
+            <section class="pt-sm-5 pb120 pt-xs-0 pb-xs-0">
                 <div class="container">
 
 

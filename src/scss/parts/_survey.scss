@@ -19,7 +19,7 @@ font-weight: bold;
 
         display: block;
         font-weight: bold;
-        font-size: 10px;
+        font-size: rem(10);
 
 
     }
@@ -62,7 +62,7 @@ font-weight: bold;
 .survey-login input {
     pointer-events: all;
     padding: 20px 5px 5px;
-    margin-bottom: 10px;
+    margin-bottom: rem(10);
     border: none;
     border-bottom: 3px solid #EEE;
     font-size: 14px;
@@ -86,7 +86,7 @@ font-weight: bold;
     margin-bottom: 1rem;
 }
 .gform_wrapper ul.gfield_radio li label {
-    font-size: 12px;
+    font-size: rem(12);
     padding: .5rem .25rem;
     position: relative;
     top: 3px;
@@ -122,7 +122,7 @@ font-weight: bold;
 }
 .survey-login {
     label {
-        font-size: 12px;
+        font-size: rem(12);
     }
 }
 .survey-login input#wp-submit {
@@ -156,7 +156,7 @@ font-weight: bold;
 
     input {
         -webkit-appearance: none;
-        padding: 15px;
+        padding: rem(15);
         background: #fff;
         border-radius: 100%;
         border: 5px solid #eee;
@@ -187,7 +187,7 @@ font-weight: bold;
     outline: none;
     transform: scale(0.9);
     transform-origin: 50% 50% 0;
-    margin-left: -10px;
+    margin-left: -rem(10);
 }
 
 .gform_wrapper .gfield_checkbox li label input:checked+label:before, .gform_wrapper .gfield_radio li input:checked+label:before {
@@ -374,7 +374,7 @@ li.hidden {
 
 #spanish .validation_message:before {
     content: 'Repusta es reequrida';
-    font-size: 12px;
+    font-size: rem(12);
 }
 
 #spanish .validation_error:before {
@@ -432,13 +432,13 @@ li.hidden {
 }
 
 .ui-datepicker {
-    border-radius: 10px !important;
+    border-radius: rem(10) !important;
 }
 
 .ui-datepicker-header {
     background: black !important;
-    border-top-left-radius: 10px !important;
-    border-top-right-radius: 10px !important;
+    border-top-left-radius: rem(10) !important;
+    border-top-right-radius: rem(10) !important;
 }
 
 .ui-datepicker-calendar .ui-state-default {
@@ -446,19 +446,19 @@ li.hidden {
 }
 
 table.ui-datepicker-calendar {
-    border-bottom-left-radius: 10px !important;
-    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: rem(10) !important;
+    border-bottom-right-radius: rem(10) !important;
     position: relative !important;
     overflow: hidden !important;
 }
 
 a.ui-datepicker-prev.ui-corner-all {
-    border-top-left-radius: 10px !important;
+    border-top-left-radius: rem(10) !important;
 }
 
 .ui-datepicker-title {
-    border-top-left-radius: 10px !important;
-    border-top-right-radius: 10px !important;
+    border-top-left-radius: rem(10) !important;
+    border-top-right-radius: rem(10) !important;
     background: black !important;
 }
 

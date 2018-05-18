@@ -37,8 +37,10 @@ gulp.task('styles', () => {
     .pipe(sourcemaps.init())
     .pipe(plugins.plumber())
     .pipe(plugins.sass({ outputStyle: 'compressed' }))
+    .on('error', plugins.sass.logError)
     .pipe(plugins.postcss([
-      require('autoprefixer')({ browsers: ['last 2 versions'] })
+      require('autoprefixer')({ browsers: ['last 2 versions', 'last 2 iOS versions', 'ie >= 9'] }),
+      require('postcss-flexbugs-fixes')
     ]))
     .pipe(plugins.rename('styles.min.css'))
     .pipe(plugins.sourcemaps.write('.'))

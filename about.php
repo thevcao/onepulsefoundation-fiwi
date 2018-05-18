@@ -23,12 +23,12 @@
 
 <div class="about-main">
 
-        <section class="home-hero pt120 pb120">
+        <section class="home-hero pt-sm-5 pb120">
             <div class="img-overlay left"></div>
 <!--			<div class="over"></div>-->
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-lg-10 col-md-12">
                         <h2 class="clone-shadow">Our mission is to create a sanctuary of hope around this tragic day in American history which honors the 49 lives that were taken, the 68 injured victims, and the first responders and healthcare professionals who cared for the victims.</h2>
                         <h2>Our mission is to create a sanctuary of hope around this tragic day in American history which honors the 49 lives that were taken, the 68 injured victims, and the first responders and healthcare professionals who cared for the victims.</h2>
 
@@ -40,7 +40,7 @@
         </section>
 
 
-<section class="home-about pt120 pb120">
+<section class="home-about pt-sm-5 pb120">
     <div class="container">
 
 
@@ -69,7 +69,7 @@
 
 </section>
 
-<section class="task-force pt120 pb120 mb120">
+<section class="task-force pt-sm-5 pb120 mb120">
     <div class="container">
 
 

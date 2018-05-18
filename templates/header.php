@@ -22,51 +22,66 @@ get_template_part('templates/head');
 
     </div>
 </div>
+<div class="search-cover"></div>
+<header class="main-header utility">
+  <div class="row">
+    <div class="container-fluid col-sm-10 mx-auto">
 
-    <header class="main-header">
-        <div class="container-fluid">
-        <div class="col-sm-1 col-xs-2 height hidden-xs hidden-sm">
+      <div class="row align-items-center">
+        <div class="col-sm-2">
             <a href="/" class="logo">
                 <?php echo file_get_contents(get_stylesheet_directory() . '/dist/img/nav-logo.svg'); ?>
             </a>
-            </div>
-        <div class="col-sm-1 col-xs-4 height visible-sm visible-xs p0">
-            <a href="/" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo-horizontal.svg">
-            </a>
-            </div>
-        <div class="col-sm-11 col-xs-8 height tm text-right p-xs-0">
-            <div class="menu-container">
-                <div class="row">
-                    <div class="col-sm-8 hidden-sm hidden-ls-pt hidden-xs">
-                        <?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
-                    </div>
-                    <div class="col-md-1 col-sm-2 col-xs-9 p0 tab-pt">
-                        <div class="lang-toggle">
-                            <ul>
-                            <li><?php echo do_shortcode('[glt language="English" label=""]');?>
-                                </li>
-                            <li><?php echo do_shortcode('[glt language="Spanish" label=""]');?>
-                                </li>
-                            </ul>
+        </div>
+        <div class="col-sm-10">
+            <div class="row">
+                <div class="col-md-4 ml-auto">
+                    <div class="lang-toggle">
+                        <ul>
+                        <li><?php echo do_shortcode('[glt language="English" label="English"]');?>
+                            </li>
+                        <li><?php echo do_shortcode('[glt language="Spanish" label="Spanish"]');?>
+                            </li>
+                        </ul>
 
 
-                        </div>
-                    </div>
-                    <div class="col-sm-1 col-xs-2 tab-pt">
-                        <a class="menu-toggle" href="#"><span></span><span></span><span></span></a>
-                    </div>
-                    <div class="col-sm-2 mt-up hidden-xs">
-                    <a href="<?php the_permalink(77);?>" class="btn clipped"><div class="overlay"></div>Donate</a>
-                    <a href="<?php the_permalink(77);?>" class="btn clipped over">Donate</a>
                     </div>
                 </div>
-
             </div>
+                <div class="row">
+                    <div class="col-md-12">
+
+                            <?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
+                  </div>
+              </div>
+                <div class="row action-menu">
+                    <div class="col-md-12 text-right">
+
+                      <?php wp_nav_menu( array( 'theme_location' => 'action',
+                                              'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s
+                                              <li>
+                                              <a href="#" class="search-toggle"><i class="fa fa-search"></i></a>
+                                              </li>
+                                              </ul>'
+                                              ) ); ?>
+
+                      <div class="search-container">
+                        <?php echo get_search_form();?>
+
+
+                      </div>
+
+                  </div>
+              </div>
+
 
             </div>
         </div>
+    </div>
 
-    </header>
+  </div>
+</header>
+
 <div class="contact-form modal visible-xs" id="contact-modal">
     <div class="container container-fluid">
 
@@ -127,35 +142,3 @@ get_template_part('templates/head');
     </div>
 
 </div>
-
-<div class="full-menu">
-    <div class="container-fluid col-lg-11">
-        <div class="col-md-8 hidden-xs">
-            <?php wp_nav_menu( array( 'theme_location' => 'full-one' ) ); ?>
-        </div>
-        <div class="col-md-6 visible-xs">
-            <?php wp_nav_menu( array( 'theme_location' => 'full-mobile' ) ); ?>
-        </div>
-        <div class="col-md-3 hidden-xs">
-            <h3>Latest News</h3>
-            <?php $args = array(
-
-                'posts_per_page' => 3,
-                'order'   => 'DESC',
-                'post_type' => 'post',
-            );
-
-
-
-            $loop = new WP_Query( $args );
-            while ( $loop->have_posts() ) : $loop->the_post(); $category = get_the_category(); ?>
-        <div class="item mt16 mb16">
-            <h4 class="mb8"><a href="<?php the_permalink();?>"><?php echo get_the_title();?></a></h4>
-            <h5 class="mt0"><?php the_date();?></h5>
-            </div>
-            <?php endwhile; wp_reset_postdata();?>
-
-        </div>
-    </div>
-</div>
-

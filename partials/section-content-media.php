@@ -17,36 +17,13 @@
 ?>
 
 
-        <section class="home-about pt120 pt-xs-32 pb-xs-32 content-left">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-
-                        <?php if (!$count): ?>
-                            <h1><span><?php the_sub_field('subheadline');?></span><?php the_sub_field('headline');?></h1>
-                            <?php else:?>
-                                <h2><span><?php the_sub_field('subheadline');?></span><?php the_sub_field('headline');?></h2>
-                                <?php endif;?>
+        <section class="home-about pt-11 pb-11 pt-sm-5 pb-sm-5 content-left">
 
 
-
-
-
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="row tab-pt-resize">
-
-
-
-
-
+          <div class="media-over">
+            <div class="row">
                 <?php if($media_type == 'Image'):?>
-                    <div class="col-md-6 col-md-push-5 mm col-md-offset-1 mb-xs-32">
+                    <div class="col-md-6 ml-auto mb-xs-32">
 
 
                         <div class="canvas-container" data-stellar-ratio="1">
@@ -56,9 +33,9 @@
                         </div>
 
                         <?php elseif($media_type == 'Video'):?>
-                            <div class="col-md-6 col-md-push-5 col-md-offset-1 mb-xs-32">
+                        <div class="col-md-6 ml-auto mb-xs-32">
 
-                                <div class="video-container" data-stellar-ratio="1.5" data-stellar-offset-parent="true" data-stellar-vertical-offset="600">
+                                <div class="video-container" data-stellar-ratio="1.5" data-stellar-offset-parent="true" data-stellar-vertical-offset="0">
 
 
 
@@ -103,17 +80,41 @@
                     </div>
 
 
-                    <div class="col-md-5 col-md-pull-7 watch-me <?php if($media_type == 'Image'): echo 'mm'; endif;?>">
+            </div>
 
-                        <div class="content">
+          </div>
 
-                            <?php the_sub_field('content');?>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-5">
 
-                                <?php if(get_sub_field('cta_link')): $link = get_sub_field('cta_link'); echo '<a class="btn left" href="'. get_the_permalink($link->ID) .'">' . get_sub_field('cta_text') .'</a>'; endif;?>
+                        <?php if (!$count): ?>
+                            <h1><span><?php the_sub_field('subheadline');?></span><?php the_sub_field('headline');?></h1>
+                            <?php else:?>
+                                <h2><span><?php the_sub_field('subheadline');?></span><?php the_sub_field('headline');?></h2>
+                                <?php endif;?>
+
+
+
+
+
+                    </div>
+                </div>
+
+                <div class="row">
+                        <div class="col-md-5">
+
+                            <div class="content">
+
+                                <?php the_sub_field('content');?>
+
+                                    <?php if(get_sub_field('cta_link')): $link = get_sub_field('cta_link'); echo '<a class="btn left" href="'. get_the_permalink($link->ID) .'">' . get_sub_field('cta_text') .'</a>'; endif;?>
+
+                            </div>
 
                         </div>
 
-                    </div>
+                </div>
 
             </div>
 

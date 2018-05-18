@@ -6,8 +6,8 @@ a {
 .nav-previous a,
 .nav-next a {
     font-family: 'Helvetica Neue', fontawesome;
-    margin: 10px auto;
-    padding: 15px 10px;
+    margin: rem(10) auto;
+    padding: rem(15) rem(10);
     border: 3px solid #000;
     color: black;
     border-radius: 100px;
@@ -27,7 +27,7 @@ a {
         background-repeat: no-repeat;
         //		background-attachment: fixed;
         //        content: attr(title);
-        padding: 15px 10px;
+        padding: rem(15) rem(10);
         position: absolute;
         top: 0;
         left: 0;
@@ -75,7 +75,7 @@ a {
         background-repeat: no-repeat;
         //		background-attachment: fixed;
         content: attr(title);
-        padding: 15px 10px;
+        padding: rem(15) rem(10);
         position: absolute;
         top: 0;
         left: 0;
@@ -116,10 +116,10 @@ a {
         opacity: 1;
     }
     &.right {
-        margin: 10px 0 10px auto;
+        margin: rem(10) 0 rem(10) auto;
     }
     &.left {
-        margin: 10px auto 10px 0;
+        margin: rem(10) auto rem(10) 0;
     }
     &.clipped {
         z-index: 1;
@@ -127,7 +127,7 @@ a {
         background: none;
         color: rgba(0, 0, 0, 0);
         border-radius: 100px;
-        padding: 15px 25px;
+        padding: rem(15) 25px;
         text-decoration: none;
         font-size: 18px;
         background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
@@ -217,7 +217,7 @@ body:not(.scrolled).invert-header .btn.clipped:hover {
             //            background: none;
             //            color: rgba(0, 0, 0, 0);
             //            border-radius: 100px;
-            //            padding: 15px 25px;
+            //            padding: rem(15) 25px;
             //            text-decoration: none;
             //            font-size: 18px;
             //            //            background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
@@ -238,10 +238,10 @@ body:not(.scrolled).invert-header .btn.clipped:hover {
             //            background-size: 500%;
             //            background-attachment: fixed;
             &.right {
-                margin: 2rem 0 10px auto;
+                margin: 2rem 0 rem(10) auto;
             }
             &.left {
-                margin: 2rem auto 10px 0;
+                margin: 2rem auto rem(10) 0;
             }
             .overlay {
                 //                display: none;
@@ -308,7 +308,7 @@ html.mac {
                 //            background: none;
                 //            color: rgba(0, 0, 0, 0);
                 //            border-radius: 100px;
-                //            padding: 15px 25px;
+                //            padding: rem(15) 25px;
                 //            text-decoration: none;
                 //            font-size: 18px;
                 //            //            background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
@@ -329,10 +329,10 @@ html.mac {
                 //            background-size: 500%;
                 //            background-attachment: fixed;
                 &.right {
-                    margin: 2rem 0 10px auto;
+                    margin: 2rem 0 rem(10) auto;
                 }
                 &.left {
-                    margin: 2rem auto 10px 0;
+                    margin: 2rem auto rem(10) 0;
                 }
                 .overlay {
                     //                display: none;
@@ -387,7 +387,7 @@ html.firefox {
                 //            background: none;
                 //            color: rgba(0, 0, 0, 0);
                 //            border-radius: 100px;
-                //            padding: 15px 25px;
+                //            padding: rem(15) 25px;
                 //            text-decoration: none;
                 //            font-size: 18px;
                 //            //            background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
@@ -457,10 +457,10 @@ html.safari.mac {
         }
     }
     .btn.clipped {
-        padding: 12px 25px;
+        padding: rem(12) 25px;
         margin-top: 0;
         &.over {
-            padding: 12px 25px;
+            padding: rem(12) 25px;
         }
     }
 }
@@ -471,7 +471,7 @@ html.safari.mac {
 //        background: none;
 //        color: rgba(0, 0, 0, 0);
 //        border-radius: 100px;
-//        padding: 12px 25px;
+//        padding: rem(12) 25px;
 //        text-decoration: none;
 //        font-size: 18px;
 //        background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
@@ -517,23 +517,23 @@ html.safari.mac {
     }
     .btn {
         &.clipped {
-            font-size: 12px;
-            padding: 10px;
+            font-size: rem(12);
+            padding: rem(10);
             &.over {
-                padding: 10px;
+                padding: rem(10);
             }
         }
     }
     .page-id-12 .btn.clipped,
     .invert-header .btn.clipped {
-        font-size: 12px;
-        padding: 10px;
+        font-size: rem(12);
+        padding: rem(10);
     }
     .page-id-12.scrolled .btn.clipped,
     .scrolled .btn.clipped.over,
     .scrolled .btn.clipped {
-        font-size: 12px;
-        padding: 10px;
+        font-size: rem(12);
+        padding: rem(10);
         margin-top: 3px !important;
     }
     .btn:not(.clipped):after {
@@ -554,7 +554,7 @@ html.safari.mac {
         .btn,
         .btn.left,
         .btn.right {
-            margin: 10px auto 32px;
+            margin: rem(10) auto rem(32);
             font-size: 1rem;
         }
         .invert-header .btn.clipped,

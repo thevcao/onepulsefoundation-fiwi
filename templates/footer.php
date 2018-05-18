@@ -24,8 +24,9 @@ $newsimage = get_field('news_image', 'options');?>
     </div>
 </section>
 <section class="page-cta mb80 hidden-xs">
-    <div class="">
+    <div class="footer-bg">
         <div class="row">
+            <div class="dupe col-sm-5"><h3></h3></div>
             <div class="col-sm-7 p0 oh">
                 <div class="img-overlay"></div>
 
@@ -41,9 +42,13 @@ $newsimage = get_field('news_image', 'options');?>
                     <h3>News and Updates</h3>
                 </div>
             </div>
-            <div class="col-sm-5 p0">
+      </div>
+  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 ml-auto">
 
-                <div class="dupe"><h3></h3></div>
+
 
 
                 <div class="content">
@@ -78,7 +83,7 @@ $newsimage = get_field('news_image', 'options');?>
             <div class="col-xs-12">
                 <div class="content">
 
-                    <div class="pt64"></div>
+                    <div class="pt-sm-5"></div>
                     <a href="#contact-modal" class="btn clipped modal-toggle" title="Together We Can. Contact Us ">Together We Can. Contact Us <i class="fa fa-send"></i></a>
                 </div>
             </div>
@@ -90,19 +95,19 @@ $newsimage = get_field('news_image', 'options');?>
 </section>
 
 <footer>
-    <div class="container mb16 hidden-xs">
-        <div class="container-fluid">
+    <div class="mb16 hidden-xs">
+        <div class="container-fluid col-10">
             <div class="col-sm-2">
                 <a href="/">
                     <?php echo file_get_contents(get_stylesheet_directory() . '/dist/img/nav-logo.svg'); ?>
                 </a>
             </div>
-            <div class="col-sm-9 col-offset-sm-1 text-right hidden-xs"><?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?></div>
+            <div class="col-sm-10 text-right hidden-xs"><?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?></div>
         </div>
 
     </div>
     <div class="copy">
-        <div class="container">
+        <div class="container-fluid col-10">
             <div class="row">
 
                 <div class="col-md-4 col-md-offset-8">
@@ -135,7 +140,7 @@ $newsimage = get_field('news_image', 'options');?>
         <!--<div class="col-sm-12 col-xs-6">
             <a href="/donate" class="hidden-xs">Donate to the onePULSE Foundation <i class="fa fa-chevron-right"></i></a>
         </div>-->
-        <div class="col-sm-12 col-xs-6">
+        <div class="container-fluid col-10 col-xs-6">
             <a href="/onepulse-foundation-memorial/memorial-information/" class="hidden-xs">Visit the Pulse Interim Memorial <i class="fa fa-chevron-right"></i></a>
         </div>
         <!--<div class="col-sm-12 col-xs-6 visible-xs">

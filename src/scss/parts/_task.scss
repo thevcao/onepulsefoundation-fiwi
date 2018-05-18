@@ -1,7 +1,7 @@
 .task-force {
     .img-attrib {
         left: 5px;
-        bottom: 15px;
+        bottom: rem(15);
     }
 }
 .task-link {
@@ -73,7 +73,7 @@
     }
     ul {
         list-style: none;
-        padding: 0 10px;
+        padding: 0 rem(10);
         font-size: 80%;
         li {
             font-weight: normal;
@@ -106,7 +106,7 @@
     }
     ul {
         list-style: none;
-        padding: 0 10px;
+        padding: 0 rem(10);
         font-size: 80%;
         li {
             font-weight: normal;
@@ -135,7 +135,7 @@
         width: calc(98% / 3);
     }
     .task-force.pb120 {
-        padding-bottom: 32px;
+        padding-bottom: rem(32);
     }
     .task-link {
         font-size: 3em;
@@ -154,7 +154,7 @@
         font-size: 4vw;
         display: inline-block;
         width: 49%;
-        margin: 10px 0;
+        margin: rem(10) 0;
     }
     #task-modal {
         padding: 15vw 5% 0;

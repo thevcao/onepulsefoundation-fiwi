@@ -28,6 +28,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-touch-fullscreen" content="yes" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
 <?php if(is_page('home')): echo '<link rel="prefetch" href="' . get_field('main_video','options') .'">'; endif;?>
 
     <?php // check if the flexible content field has rows of data

@@ -1,8 +1,20 @@
 .home-hero {
     //	background: url(../../dist/img/snap-1.jpg);
     //	background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+
+
+  // (768px)
+  @include media-breakpoint-down(md) {
+
+    height: auto;
+  }
+
     h2 {
-        font-size: 150px;
+        font-size: rem(180);
         line-height: .9;
         background-image: url(../../dist/img/curated/curated-1.jpg);
         background-size: cover;
@@ -36,7 +48,7 @@
         i {
             display: block;
             line-height: 1.1;
-            font-size: 126px;
+            font-size: rem(126);
             &:before {
                 background-image: url(../../dist/img/curated/curated-1.jpg);
                 background-size: cover;
@@ -54,7 +66,7 @@
         span {
             display: table-cell;
             vertical-align: middle;
-            font-size: 28px;
+            font-size: rem(28);
             line-height: 1.25;
             letter-spacing: -.025em;
             background-image: url(../../dist/img/curated/curated-1.jpg);
@@ -68,7 +80,7 @@
             -webkit-text-fill-color: transparent;
             span {
                 display: block;
-                font-size: 18px;
+                font-size: rem(18);
                 background-image: url(../../dist/img/curated/curated-1.jpg);
                 background-size: cover;
                 background-attachment: fixed;
@@ -108,7 +120,7 @@
         i:after {
             content: '\f101';
             font-family: "Flaticon";
-            left: 15px;
+            left: rem(15);
             top: 0px;
             line-height: 1.1;
         }
@@ -167,10 +179,13 @@
             }
         }
         a.home-play.visible-xs {
-            position: absolute;
-            top: 10vw;
-            right: 10vw;
-            width: 25vw;
+//            position: absolute;
+//            top: 10vw;
+//            right: 10vw;
+//            width: 25vw;
+              position: relative;
+              display: inline-block !important;
+              margin-top: rem(-80);
         }
         a.home-play.visible-xs i {
             font-size: 30vw;
@@ -189,7 +204,7 @@
         //		padding: 20vw 0 !important;
         //	}
         .mobile-links {
-            padding: 10vw 15px 3vw;
+            padding: 10vw rem(15) 3vw;
             ul {
                 list-style: none;
                 padding: 0;

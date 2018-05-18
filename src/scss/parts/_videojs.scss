@@ -138,8 +138,8 @@ $center-big-play-button: true; // true default
 .video-js {
     /* The base font size controls the size of everything, not just text.
      All dimensions use em-based sizes so that the scale along with the font size.
-     Try increasing it to 15px and see what happens. */
-    font-size: 10px;
+     Try increasing it to rem(15) and see what happens. */
+    font-size: rem(10);
     /* The main font color changes the ICON COLORS as well as the text */
     color: $primary-foreground-color;
 }
@@ -152,7 +152,7 @@ $center-big-play-button: true; // true default
 .vjs-sublime-skin .vjs-big-play-button {
     /* The font size is what makes the big play button...big.
      All width/height values use ems, which are a multiple of the font size.
-     If the .video-js font-size is 10px, then 3em equals 30px.*/
+     If the .video-js font-size is rem(10), then 3em equals 30px.*/
     font-size: 10em;
     /* We're using SCSS vars here because the values are used in multiple places.
      Now that font size is set, the following em values will be a multiple of the
@@ -177,7 +177,7 @@ $center-big-play-button: true; // true default
         margin-top: -($big-play-height / 2);
     }
     @else {
-        /* Align top left. 0.5em = 15px default */
+        /* Align top left. 0.5em = rem(15) default */
         left: 0.5em;
         top: 0.5em;
     }
@@ -276,7 +276,7 @@ $slider-bg-color: lighten($primary-background-color, 33%);
     top: 50%;
     height: 14px;
     width: 22px;
-    margin-right: 10px;
+    margin-right: rem(10);
 }
 .vjs-sublime-skin.vjs-fullscreen .vjs-fullscreen-control:after {
     background: #000;

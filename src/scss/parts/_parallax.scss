@@ -1,35 +1,35 @@
 .parallax-container {
 
-	position: relative;
-	transform: translateZ(0);
-	
-	img {
-		
-		height: 500px;
-		object-fit: cover;
-		width: 100%;
-		transform: translateZ(0);
-		position: relative;
-	}
-	
-	.img-attrib {
-		bottom: 20px;
-	}	
+  position: relative;
+  transform: translateZ(0);
+
+  img {
+
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+    transform: translateZ(0);
+    position: relative;
+  }
+
+  .img-attrib {
+    bottom: 20px;
+  }
 }
 
 .home-about {
-	.img-attrib {
-	left: 10px;
-	bottom: 15px;
+  .img-attrib {
+  left: rem(10);
+  bottom: rem(15);
 }
 }
 
 .float-container {
-	
-	
-	.img-attrib {
-		left: 10px;
-		bottom: 8px;
-	}
-	
+
+
+  .img-attrib {
+    left: rem(10);
+    bottom: 8px;
+  }
+
 }

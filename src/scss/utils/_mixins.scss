@@ -1,26 +1,99 @@
  // Set element positioning in a single statement
+ @mixin position($position: relative, $coordinates: null null null null) {
+   @if type-of($position)==list {
+     $coordinates: $position;
+     $position: relative;
+   }
+   $coordinates: unpack($coordinates);
+   $offsets: ( top: nth($coordinates, 1), right: nth($coordinates, 2), bottom: nth($coordinates, 3), left: nth($coordinates, 4));
+   position: $position;
+   @each $offset,
+   $value in $offsets {
+     @if is-length($value) {
+       #{$offset}: $value;
+     }
+   }
+ }
 
-@mixin position($position: relative, $coordinates: null null null null) {
+ @each $breakpoint in map-keys($grid-breakpoints) {
+   @include media-breakpoint-up($breakpoint) {
+     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+     // Some special margin utils
+     .m#{$infix}-auto {
+       margin: auto !important;
+     }
+     .mt#{$infix}-auto,
+     .my#{$infix}-auto {
+       margin-top: auto !important;
+     }
+     .mr#{$infix}-auto,
+     .mx#{$infix}-auto {
+       margin-right: auto !important;
+     }
+     .mb#{$infix}-auto,
+     .my#{$infix}-auto {
+       margin-bottom: auto !important;
+     }
+     .ml#{$infix}-auto,
+     .mx#{$infix}-auto {
+       margin-left: auto !important;
+     }
+   }
+ }
 
-  @if type-of($position) == list {
-    $coordinates: $position;
-    $position: relative;
-  }
 
-  $coordinates: unpack($coordinates);
+ $spaceamounts: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 100); // Adjust this to include the pixel amounts you need.
+ $sides: (top, bottom, left, right); // Leave this variable alone
+ // (768px)
+ @each $space in $spaceamounts {
+   @each $side in $sides {
+     .m#{str-slice($side, 0, 1)}-#{$space} {
+       margin-#{$side}: #{$space}rem !important;
+     }
+     .p#{str-slice($side, 0, 1)}-#{$space} {
+       padding-#{$side}: #{$space}rem !important;
+     }
+   }
+ }
 
-  $offsets: (
-    top:    nth($coordinates, 1),
-    right:  nth($coordinates, 2),
-    bottom: nth($coordinates, 3),
-    left:   nth($coordinates, 4)
-  );
 
-  position: $position;
+ @include media-breakpoint-down(lg) {
+   @each $space in $spaceamounts {
+     @each $side in $sides {
+       .m#{str-slice($side, 0, 1)}-lg-#{$space} {
+         margin-#{$side}: #{$space}rem !important;
+       }
+       .p#{str-slice($side, 0, 1)}-lg-#{$space} {
+         padding-#{$side}: #{$space}rem !important;
+       }
+     }
+   }
+ }
 
-  @each $offset, $value in $offsets {
-    @if is-length($value) {
-      #{$offset}: $value;
-    }
-  }
-}
+ @include media-breakpoint-down(md) {
+   @each $space in $spaceamounts {
+     @each $side in $sides {
+       .m#{str-slice($side, 0, 1)}-md-#{$space} {
+         margin-#{$side}: #{$space}rem !important;
+       }
+       .p#{str-slice($side, 0, 1)}-md-#{$space} {
+         padding-#{$side}: #{$space}rem !important;
+       }
+     }
+   }
+ }
+
+
+ @include media-breakpoint-down(sm) {
+   @each $space in $spaceamounts {
+     @each $side in $sides {
+       .m#{str-slice($side, 0, 1)}-sm-#{$space} {
+         margin-#{$side}: #{$space}rem !important;
+       }
+       .p#{str-slice($side, 0, 1)}-sm-#{$space} {
+         padding-#{$side}: #{$space}rem !important;
+       }
+     }
+   }
+ }
+
