@@ -27,8 +27,7 @@
 
                         ;?>
                     <?php if($source == 'File'): ?>
-                        <video id="home-video" class="video-js vjs-sublime-skin" controls preload="none" poster="<?php echo get_template_directory_uri(); ?>/dist/img/video-poster.jpg" data-setup='{"ga": {"eventsToTrack": ["play"]}}'>
-                            <source src="<?php the_field('main_video','options');?>" type='video/mp4'>
+                        <video id="home-video" class="video-js vjs-sublime-skin" poster="<?php echo get_template_directory_uri(); ?>/dist/img/video-poster.jpg" data-src="<?php the_field('main_video','options');?>" >
                         </video>
                         <?php elseif($ext_source == 'youtube'): ?>
                             <video id='home-video' class='video-js vjs-sublime-skin' playsinline controls poster="<?php echo get_template_directory_uri(); ?>/dist/img/video-poster.jpg" preload='none' width='100%' height='800' data-setup='{ "ga": {"eventsToTrack": ["play"]}, "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "<?php the_field(' ext_main_video ','options ');?>" }]}'></video>
@@ -40,11 +39,11 @@
                                     <a href="#" class="close"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/close.svg"></a>
             </div>
 
-            <section class="home-hero">
+            <section class="home-hero pt-15 pb-11 pt-lg-11 pb-lg-5 pt-md-10 pb-md-1 mt-lg-3 mb-lg-3 pt-sm-7">
                 <!--			<div class="over"></div>-->
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-11 col-center-ls-tab">
+                        <div class="col-xl-11 col-md-10 col-center-ls-tab">
                             <h2>We will not let hate win.<a href="#" class="home-play visible-xs"><i class="flaticon-play-button"></i></a>
 </h2>
                             <a href="#" class="home-play hidden-xs">

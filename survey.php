@@ -79,6 +79,6 @@
         <?php get_template_part('templates/footer'); ?>
 
         <script>
-    jQuery('li.hidden input').val('<?php $current_user = wp_get_current_user(); echo $current_user->user_email; ?>');
+//    jQuery('li.hidden input').val('<?php $current_user = wp_get_current_user(); echo $current_user->user_email; ?>');
 
     </script>

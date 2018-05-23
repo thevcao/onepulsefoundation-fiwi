@@ -1144,10 +1144,10 @@ if (strpos($url,'wp-login.php?checkemail=registered') == true) {?>
 <?php } }
 add_action( 'login_head', 'ga_event_registration' );
 
-add_filter('rest_enabled', '_return_false');
-add_filter('rest_jsonp_enabled', '_return_false');
+//add_filter('rest_enabled', '_return_false');
+//add_filter('rest_jsonp_enabled', '_return_false');
 
-add_action("gform_after_submission", "gf_ga_tracking", 1, 2);
+//add_action("gform_after_submission", "gf_ga_tracking", 1, 2);
 function gf_ga_tracking($entry, $form) {
     ?>
     <script type="text/javascript">
@@ -1286,3 +1286,13 @@ return $urls;
 }
 
 add_image_size( 'slide-gallery', 560, 999999 );
+
+
+add_filter('filter_entries','add_entry_id' );
+function add_entry_id($entries) {
+    foreach ($entries as &$entry) {
+        $entry["3"] = $entry["id"];
+    }
+    return $entries;
+}
+    add_filter("gform_confirmation_anchor", create_function("","return 0;"));

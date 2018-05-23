@@ -1,0 +1,146 @@
+        @keyframes animation-border {
+          0% {
+            border-color: $r;
+          }
+          20% {
+            border-color: $o;
+          }
+          40% {
+            border-color: $y;
+          }
+          60% {
+            border-color: $g;
+          }
+          80% {
+            border-color: $b;
+          }
+          100% {
+            border-color: $r;
+          }
+        }
+        .page-template-rfp, .page-template-rfp-submission {
+          .tab-links {
+            list-style: none;
+            padding: .5rem 1rem;
+            margin: 0;
+            @media(max-width: 767px) {
+              display: flex;
+              width: 90vw;
+              overflow-x: scroll;
+              -webkit-overflow-scrolling: touch;
+              padding: .5rem 1px;
+              margin: .5rem 0 1rem;
+              pointer-events: all;
+            }
+            li {
+              display: table;
+              &:before {
+                content: "\f0da";
+                font-family: fontawesome;
+                padding-right: .25em;
+                display: table-cell;
+                text-align: right;
+                line-height: 0;
+                position: relative;
+                color: black;
+              }
+              a {
+                font-weight: bold;
+                font-size: 1.1rem;
+                display: block;
+                padding: .5rem 0;
+                line-height: 1.5;
+                &.active,
+                &:hover {
+                  animation: animation-ie 10s ease infinite both;
+                }
+                &:before {
+                  content: none;
+                }
+              }
+              @media(max-width:767px) {
+                display: inline;
+                width: auto;
+                flex: 1 0 160px;
+                &:before {
+                  content: none;
+                }
+                a {
+                  display: block;
+                  font-size: .75rem;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  width: 150px;
+                  background: black;
+                  border-radius: 100px;
+                  text-align: center;
+                  color: white;
+                  padding: .25rem 1rem;
+                  border: 2px solid black;
+                  font-family: sans-serif;
+                  //                    padding-right: 1rem;
+                  &:after {
+                    //                        content: '';
+                    //                        position: relative;
+                    //                        background: black;
+                    //                        height: 100%;
+                    //                        width: 1rem;
+                    //                        right: 0;
+                    //                        top: 0;
+                    //                        z-index: 0;
+                  }
+                  &.active {
+                    background: white;
+                    animation: animation-ie 10s ease infinite both, animation-border 10s ease infinite both;
+                  }
+                }
+              }
+            }
+          }
+          .tabs {
+            .tab:not(:first-child) {
+              display: none;
+            }
+            figure {
+              margin: 0;
+              position: relative;
+              figcaption.wp-caption-text {
+                position: absolute;
+                z-index: 10;
+                bottom: rem(10);
+                padding: rem(10) 20px;
+                font-weight: bold;
+                background: white;
+              }
+            }
+          }
+          #map {
+            height: 600px;
+            pointer-events: all;
+            border: 5px solid black;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            margin: 1rem 0;
+            @media(max-width: 767px) {
+              height: 100vw;
+            }
+            h4 {
+              margin: .5rem 0 .5rem;
+              font-size: 1rem;
+              text-align: center;
+              font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+              letter-spacing: -.025em;
+              padding: 0 1rem;
+            }
+            p {
+              margin: 0 0 rem(12);
+              padding: 0 1rem;
+              line-height: 1.5;
+              text-align: center;
+              font-size: 14px;
+            }
+            div {
+              pointer-events: all;
+            }
+          }
+        }

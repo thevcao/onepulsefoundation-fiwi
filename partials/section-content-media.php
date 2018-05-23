@@ -17,13 +17,13 @@
 ?>
 
 
-        <section class="home-about pt-11 pb-11 pt-sm-5 pb-sm-5 content-left">
+        <section class="home-about pt-13 pb-11 pt-lg-11 pb-lg-3 pt-md-10 pb-md-1 mt-lg-2 mb-lg-3 pt-sm-7 content-left">
 
 
           <div class="media-over">
             <div class="row">
                 <?php if($media_type == 'Image'):?>
-                    <div class="col-md-6 ml-auto mb-xs-32">
+                    <div class="col-lg-6 ml-auto mb-xs-32">
 
 
                         <div class="canvas-container" data-stellar-ratio="1">
@@ -33,7 +33,7 @@
                         </div>
 
                         <?php elseif($media_type == 'Video'):?>
-                        <div class="col-md-6 ml-auto mb-xs-32">
+                        <div class="col-lg-6 ml-auto mb-xs-32">
 
                                 <div class="video-container" data-stellar-ratio="1.5" data-stellar-offset-parent="true" data-stellar-vertical-offset="0">
 
@@ -86,7 +86,7 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-md-5">
+                    <div class="col-lg-12">
 
                         <?php if (!$count): ?>
                             <h1><span><?php the_sub_field('subheadline');?></span><?php the_sub_field('headline');?></h1>
@@ -102,7 +102,7 @@
                 </div>
 
                 <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-lg-5">
 
                             <div class="content">
 

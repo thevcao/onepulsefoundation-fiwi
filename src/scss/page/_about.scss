@@ -59,8 +59,13 @@
       //        bottom: 0;
       left: 0;
       width: 100%;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         position: relative;
+        padding: 0 rem(30);
+        margin-bottom: 1rem;
+      }
+      @include media-breakpoint-down(sm) {
+        padding: 0 15px;
       }
     }
     canvas {
@@ -157,6 +162,12 @@
     width: 100%;
   }
 }
+@media (max-width:993px) {}
+body:not(.home) {
+  .home-about:not(:first-of-type) {
+    padding-top: 1rem !important;
+  }
+}
 @media (max-width:768px) {
   html:not(.ipad) {
     .page-main .home-hero h2.clone-shadow,
@@ -172,6 +183,7 @@
     }
     .video-container {
       margin-top: 1rem;
+      transform: none !important;
     }
     .page-main .home-hero h2.clone-shadow {
       display: none;

@@ -3,7 +3,7 @@ $baseFontSize: 16;
   @return $pixels / $context * 1rem;
 }
 html {
-  @include poly-fluid-sizing('font-size', (320px: 14px, 576px: 10px, 768px: 13px, 1024px: 14px, 1440px: 16px));
+  @include poly-fluid-sizing('font-size', (320px: 14px, 576px: 10px, 768px: 13px, 1024px: 14px, 1440px: 15px, 1600px: 16px));
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;

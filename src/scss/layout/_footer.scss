@@ -113,7 +113,7 @@ footer {
       font-size: 1rem;
       &:after {
 
-        content: none;
+        content: none !important;
       }
       &:hover {
         background: black;
@@ -220,6 +220,7 @@ footer {
       display: block;
       font-size: 1rem;
       font-weight: bold;
+      animation: none !important;
     }
     a.kit-btn {
       text-align: left;
@@ -234,7 +235,7 @@ footer {
     margin-top: rem(10);
   }
   footer .socials {
-    display: none;
+//    display: none;
   }
   .btn.shirt-btn.mt0.mb8 {
     margin: 1rem auto;
@@ -299,7 +300,7 @@ footer {
       margin-top: rem(10);
     }
     footer .socials {
-      display: none;
+//      display: none;
     }
     .btn.shirt-btn.mt0.mb8 {
       margin: 1rem auto;

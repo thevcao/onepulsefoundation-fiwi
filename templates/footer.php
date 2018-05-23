@@ -11,19 +11,19 @@
 $newsimage = get_field('news_image', 'options');?>
 <section class="newsletter">
     <div class="container">
-        <div class="row m0 flex-row align-items-center">
-            <div class="col-md-7">
+        <div class="row align-items-center">
+            <div class="col-sm-7">
                 <h2 class="mt0">Stay Informed</h2>
                 <p>Sign up to receive exclusive updates about the onePULSE Foundation.</p>
             </div>
-            <div class="col-md-5">
+            <div class="col-sm-5">
                     <?php echo do_shortcode('[contact-form-7 id="5374" title="Newsletter"]');?>
             </div>
         </div>
 
     </div>
 </section>
-<section class="page-cta mb80 hidden-xs">
+<section class="page-cta mb80 hidden-sm hidden-xs">
     <div class="footer-bg">
         <div class="row">
             <div class="dupe col-sm-5"><h3></h3></div>
@@ -67,27 +67,23 @@ $newsimage = get_field('news_image', 'options');?>
 
 
 </section>
-<section class="page-cta mobile-cta visible-xs">
+<section class="page-cta mobile-cta visible-sm visible-xs">
     <div class="container">
         <div class="img-overlay"></div>
 
-        <div class="row">
-            <div class="col-xs-10">
+        <div class="row align-items-center">
+            <div class="col-md-7 col-sm-12 col-11 mx-auto">
                 <div class="content">
                     <h2 class="text-white"><span>Contact onePULSE Foundation</span>Fight the War Against Hate</h2>
                 </div>
             </div>
-
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
+            <div class="col-md-5 col-sm-12 col-11 mx-auto">
                 <div class="content">
 
                     <div class="pt-sm-5"></div>
                     <a href="#contact-modal" class="btn clipped modal-toggle" title="Together We Can. Contact Us ">Together We Can. Contact Us <i class="fa fa-send"></i></a>
                 </div>
             </div>
-
         </div>
     </div>
     </div>
@@ -95,22 +91,25 @@ $newsimage = get_field('news_image', 'options');?>
 </section>
 
 <footer>
-    <div class="mb16 hidden-xs">
-        <div class="container-fluid col-10">
-            <div class="col-sm-2">
+    <div class="mb16 hidden-xs row">
+        <div class="col-xl-10 col-lg-11 col-sm-10 col-11 mx-auto">
+          <div class="row">
+            <div class="col-lg-2 hidden-sm">
                 <a href="/">
                     <?php echo file_get_contents(get_stylesheet_directory() . '/dist/img/nav-logo.svg'); ?>
                 </a>
             </div>
-            <div class="col-sm-10 text-right hidden-xs"><?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?></div>
-        </div>
+            <div class="col-lg-10 text-md-left text-right hidden-xs"><?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?></div>
+
+          </div>
+      </div>
 
     </div>
-    <div class="copy">
-        <div class="container-fluid col-10">
+    <div class="copy row">
+    <div class="col-xl-10 col-lg-11 col-sm-10 col-11 mx-auto">
             <div class="row">
 
-                <div class="col-md-4 col-md-offset-8">
+                <div class="col-md-4 ml-auto">
 
                     <ul class="socials">
                         <li><a href="http://www.facebook.com/onepulseorg" class="pop-link"><i class="fa fa-facebook"></i></a></li>
@@ -120,10 +119,10 @@ $newsimage = get_field('news_image', 'options');?>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-lg-8">
                     <p>&copy; <?php echo date("Y"); ?> onePULSE Foundation • PO Box 530036
                         Orlando, Fl 32853-0036</div>
-                <div class="col-md-4">
+                <div class="col-lg-4">
                     <a href="https://findsomewinmore.com" target="_blank" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/FIWI-classic-website-by-white.svg" class="fiwi"></a>
                 </div>
             </div>
@@ -140,12 +139,14 @@ $newsimage = get_field('news_image', 'options');?>
         <!--<div class="col-sm-12 col-xs-6">
             <a href="/donate" class="hidden-xs">Donate to the onePULSE Foundation <i class="fa fa-chevron-right"></i></a>
         </div>-->
-        <div class="container-fluid col-10 col-xs-6">
+        <div class="col-xl-10 col-lg-11 col-sm-10 col-11 mx-auto">
             <a href="/onepulse-foundation-memorial/memorial-information/" class="hidden-xs">Visit the Pulse Interim Memorial <i class="fa fa-chevron-right"></i></a>
         </div>
         <!--<div class="col-sm-12 col-xs-6 visible-xs">
             <a href="/donate" class="visible-xs">Donate <i class="fa fa-chevron-right"></i></a>
         </div>-->
+
+
         <div class="col-sm-12 col-xs-6 visible-xs">
             <a href="/onepulse-foundation-memorial/memorial-information/" class="visible-xs">Visit <i class="fa fa-chevron-right"></i></a>
         </div>

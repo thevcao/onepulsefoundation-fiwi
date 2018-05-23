@@ -25,15 +25,15 @@ get_template_part('templates/head');
 <div class="search-cover"></div>
 <header class="main-header utility">
   <div class="row">
-    <div class="container-fluid col-sm-10 mx-auto">
+    <div class="col-xl-10 col-lg-11 col-sm-10 col-12 mx-auto">
 
       <div class="row align-items-center">
-        <div class="col-sm-2">
+        <div class="col-2">
             <a href="/" class="logo">
                 <?php echo file_get_contents(get_stylesheet_directory() . '/dist/img/nav-logo.svg'); ?>
             </a>
         </div>
-        <div class="col-sm-10">
+        <div class="col-10 hidden-sm hidden-xs">
             <div class="row">
                 <div class="col-md-4 ml-auto">
                     <div class="lang-toggle">
@@ -76,6 +76,29 @@ get_template_part('templates/head');
 
 
             </div>
+        <div class="col-10 visible-sm visible-xs">
+          <div class="row">
+
+          <div class="col-md-11 col-6 ml-auto">
+              <div class="lang-toggle">
+                  <ul>
+                  <li><?php echo do_shortcode('[glt language="English" label="English"]');?>
+                      </li>
+                  <li><?php echo do_shortcode('[glt language="Spanish" label="Spanish"]');?>
+                      </li>
+                  </ul>
+
+
+              </div>
+          </div>
+
+          <div class="col-md-1 col-3"> <a class="menu-toggle" href="#" title=""><span></span><span></span><span></span></a></div>
+
+
+          </div>
+
+
+        </div>
         </div>
     </div>
 

@@ -22,7 +22,7 @@
 <div class="page-main">
 
 
-<section class="pt-11 pt-sm-5">
+  <section class="pt-11 pb-11 pt-lg-11 pb-lg-3 pt-md-10 pb-md-1 mt-lg-2 mb-lg-3 pt-sm-7">
     <div class="container pb64">
 
 
