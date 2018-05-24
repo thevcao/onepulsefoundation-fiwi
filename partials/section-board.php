@@ -2,7 +2,7 @@
 
 
 
-<section class="columns">
+<section class="columns" id="board">
     <div class="container">
 
 

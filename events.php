@@ -20,7 +20,7 @@
     <?php get_template_part('templates/header'); ?>
         <div class="main-wrapper">
 
-            <section class="archive-body pt-sm-5 pb120 pt-xs-64 pb-xs-0">
+            <section class="archive-body pt-13 pb-11 pt-lg-11 pb-lg-3 pt-md-10 pb-md-1 mt-lg-2 mb-lg-3 pt-sm-7">
 
                 <div class="container">
                     <div class="row">

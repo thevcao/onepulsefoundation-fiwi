@@ -1,66 +1,66 @@
 .donate-hero {
-	h2 {
-		font-size: 150px;
-		line-height: .9;
-		background-image: url(../../dist/img/curated/curated-1.jpg);
-		background-size: cover;
-		background-attachment: fixed;
-		background-position: 50%;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		margin: 0;
-	}
+  h2 {
+    font-size: 150px;
+    line-height: .9;
+    background-image: url(../../dist/img/curated/curated-1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+  }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-	.donate-main {
-		width: 75%;
-		margin: 0 auto;
-	}
-	.donate-main .container {
-		width: 100%;
-		padding: 0;
-	}
-	.donate-hero {
-		display: none;
-	}
-	.page-template-donate .pt240.pt-ls-80 {
-		padding-top: 100px;
-	}
+  .donate-main {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .donate-main .container {
+    width: 100%;
+    padding: 0;
+  }
+  .donate-hero {
+    display: none;
+  }
+  .page-template-donate .pt240.pt-ls-80 {
+    padding-top: 100px;
+  }
 
 }
-@media (max-width:768px) {
-	
-		html:not(.ipad) {
+@include media-breakpoint-down(sm) {
 
-	.donate-hero {
-		display: none;
-	}
-	
-	.ios {
-		#mc-donation {
-			padding-right: rem(10);
-			
-		}
-	}
-	
-	.donate-main .p-xs-0 {
-	
-		
-		padding: 0 rem(10);
+    html:not(.ipad) {
+
+  .donate-hero {
+    display: none;
+  }
+
+  .ios {
+    #mc-donation {
+      padding-right: rem(10);
+
+    }
+  }
+
+  .donate-main .p-xs-0 {
+
+
+    padding: 0 rem(10);
 }
-			
-	}
-	
+
+  }
+
 }
 @media (max-width:360px) {
 
-	
-		#mc-donation {
-			padding-right: 0;
-			height: 1400px !important;
-			
-		}
-	
+
+    #mc-donation {
+      padding-right: 0;
+      height: 1400px !important;
+
+    }
+
 }

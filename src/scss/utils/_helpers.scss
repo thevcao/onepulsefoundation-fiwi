@@ -764,7 +764,7 @@ section.home-about.pt120.pb120.pt-sm-0.pt-xs-16.hidden-xs {
 //    padding-bottom: 240px;
 }
 }
-@media (max-width:768px) {
+@include media-breakpoint-down(sm) {
     html:not(.ipad) {
 
   .p-xs-0 {

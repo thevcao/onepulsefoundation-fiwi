@@ -100,7 +100,7 @@
 //    transform: translateY(0%) translateZ(0);
 //    pointer-events: all;
 //}
-@media (max-width:768px) {
+@include media-breakpoint-down(sm) {
   html:not(.ipad) {
     .modal {
       padding: 15vw 5%;

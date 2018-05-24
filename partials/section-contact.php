@@ -2,8 +2,8 @@
 
 
 
-<section class="contact-form pb120 hidden-xs">
-    <div class="container container-fluid">
+<section class="contact-form pb120 hidden-xs <?php if (!$count): ?>pt-13 pb-11 pt-lg-11 pb-lg-3 pt-md-10 pb-md-1 mt-lg-2 mb-lg-3 pt-sm-7<?php endif;?>">
+    <div class="container">
 
 
         <div class="row">

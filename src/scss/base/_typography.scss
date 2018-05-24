@@ -31,7 +31,8 @@ h5 {
   //    margin: 0 0 1rem;
   span {
     display: block;
-    font-size: 75%;
+    font-size: .75em;
+    letter-spacing: -.04em;
     margin-bottom: 5px;
     &.small {
       font-size: 50%;
@@ -41,19 +42,19 @@ h5 {
 }
 h1 {
   font-size: 3rem;
-  margin-bottom: 2.5rem
+  margin-bottom: 1em
 }
 h2 {
   font-size: 2.15rem;
-  margin-bottom: 2rem;
+  margin-bottom: .5em;
 }
 h3 {
   font-size: 1.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: .25em;
 }
 h4 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: .1em;
 }
 h5 {
   font-size: 1.25rem;
@@ -171,79 +172,80 @@ h5 {
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {}
-@media (max-width:768px) {
-  html:not(.ipad) {
-    h1 {
-      font-size: 3rem;
-    }
-    h2 {
-      font-size: 3rem;
-    }
-    h1 span,
-    h2 span,
-    h3 span,
-    h4 span,
-    h5 span {
-      font-size: 1rem;
-      letter-spacing: -.025em;
-    }
-    h1,
-    h2,
-    h3,
-    h4 {
-      margin: .25em 0;
-    }
-  }
-}
-@media (max-width:560px) {
-  html:not(.ipad) {
-    h1 {
-      font-size: 2rem;
-    }
-    h2 {
-      font-size: 1.75rem;
-    }
-    h1 span,
-    h2 span,
-    h3 span,
-    h4 span,
-    h5 span {
-      font-size: 1rem;
-      letter-spacing: -.025em;
-    }
-    h1,
-    h2,
-    h3,
-    h4 {
-      margin: .25rem 0;
-    }
-  }
-}
-.maxw_767.orientation_landscape {
+@include media-breakpoint-down(sm) {
+  //  html:not(.ipad) {
   h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-bottom: .25em;
   }
   h2 {
-    font-size: 1.75rem;
+    font-size: 3rem;
+    margin-bottom: .25em;
   }
   h1 span,
   h2 span,
   h3 span,
   h4 span,
   h5 span {
-    font-size: 1rem;
-    letter-spacing: -.025em;
+    //      font-size: 1rem;
+    //      letter-spacing: -.025em;
   }
   h1,
   h2,
   h3,
   h4 {
-    margin: .25rem 0;
+    //      margin: .25em 0;
+  }
+  //  }
+}
+@include media-breakpoint-down(xs) {
+  //  html:not(.ipad) {
+  h1 {
+          font-size: 2rem;
+  }
+  h2 {
+          font-size: 2rem;
+  }
+  h1 span,
+  h2 span,
+  h3 span,
+  h4 span,
+  h5 span {
+    //      font-size: 1rem;
+    //      letter-spacing: -.025em;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    //      margin: .25rem 0;
+  }
+}
+.maxw_767.orientation_landscape {
+  h1 {
+    //    font-size: 2rem;
+  }
+  h2 {
+    //    font-size: 1.75rem;
+  }
+  h1 span,
+  h2 span,
+  h3 span,
+  h4 span,
+  h5 span {
+    //    font-size: 1rem;
+    //    letter-spacing: -.025em;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    //    margin: .25rem 0;
   }
   .donate-bar {
-    padding: 1rem;
+    //    padding: 1rem;
   }
   .donate-bar a {
-    font-size: 1rem;
+    //    font-size: 1rem;
   }
 }

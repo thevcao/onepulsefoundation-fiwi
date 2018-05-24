@@ -150,7 +150,7 @@
     margin-right: 5%;
   }
 }
-@media (max-width:768px) {
+@include media-breakpoint-down(sm) {
   html:not(.ipad) {
     .socials.shares li a i {
       line-height: 1.25;

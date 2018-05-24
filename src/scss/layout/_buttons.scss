@@ -546,7 +546,7 @@ html.safari.mac {
         margin-top: 0;
     }
 }
-@media (max-width:768px) {
+@include media-breakpoint-down(sm) {
     html:not(.ipad) {
         .btn:not(.clipped):after {
             content: none;

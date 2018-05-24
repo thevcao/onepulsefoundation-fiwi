@@ -165,3 +165,11 @@ get_template_part('templates/head');
     </div>
 
 </div>
+
+<div class="full-menu">
+    <div class="container">
+        <div class="col-12 mx-auto">
+            <?php wp_nav_menu( array( 'theme_location' => 'mobile' ) ); ?>
+        </div>
+    </div>
+</div>

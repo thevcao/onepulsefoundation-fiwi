@@ -805,7 +805,8 @@ function register_my_menu() {
   register_nav_menu('main',__( 'Main Menu' ));
   register_nav_menu('action',__( 'Action Links' ));
   register_nav_menu('full-one',__( 'Full Menu' ));
-  register_nav_menu('full-mobile',__( 'Mobile Menu' ));
+  register_nav_menu('full-mobile',__( 'Mobile Home Menu' ));
+  register_nav_menu('mobile',__( 'Mobile Main Menu' ));
   register_nav_menu('footer',__( 'Footer' ));
 
 }

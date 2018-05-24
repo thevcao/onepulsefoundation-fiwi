@@ -1,6 +1,6 @@
 <?php ;?>
 
-                <div aria-label="faq-nav">
+                <section id="donors">
 
 
             <?php if( have_rows('donors', 'options') ):?>
@@ -40,6 +40,6 @@
             <?php endwhile; ?>
             <?php endif; ?>
 
-                </div>
+                </section>
 
 

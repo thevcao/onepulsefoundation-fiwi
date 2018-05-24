@@ -1,6 +1,6 @@
 <?php ;?>
 
-    <section class="home-hero pt-13 pb-11 pt-lg-11 pb-lg-5 pt-md-10 pb-md-1 mb-lg-3 pt-sm-7">
+    <section class="home-hero pt-15 pb-11 pt-lg-11 pb-lg-5 pt-md-10 pb-md-1 mb-lg-3 pt-sm-9 pb-sm-4">
         <div class="img-overlay left"></div>
 
         <div class="container">

@@ -18,7 +18,12 @@
             border-color: $r;
           }
         }
-        .page-template-rfp, .page-template-rfp-submission {
+        .page-template-rfp,
+        .page-template-rfp-submission {
+          table.sticky-list,
+          table.sticky-list * {
+            padding: .15rem 1rem;
+          }
           .tab-links {
             list-style: none;
             padding: .5rem 1rem;

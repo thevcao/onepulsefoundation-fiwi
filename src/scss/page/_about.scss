@@ -61,10 +61,13 @@
       width: 100%;
       @include media-breakpoint-down(md) {
         position: relative;
-        padding: 0 rem(30);
+        padding: 0 calc((100vw - 720px) / 2);
         margin-bottom: 1rem;
       }
       @include media-breakpoint-down(sm) {
+        padding: 0 calc((100vw - 540px) / 2);
+      }
+      @include media-breakpoint-down(xs) {
         padding: 0 15px;
       }
     }
@@ -165,14 +168,20 @@
 @media (max-width:993px) {}
 body:not(.home) {
   .home-about:not(:first-of-type) {
-    padding-top: 1rem !important;
+//    padding-top: 3rem !important;
+
+    // (768px)
+    @include media-breakpoint-down(sm) {
+//    padding-top: 1rem !important;
+
+    }
+
   }
 }
-@media (max-width:768px) {
-  html:not(.ipad) {
+@include media-breakpoint-down(sm) {
     .page-main .home-hero h2.clone-shadow,
     .page-main .home-hero h2 {
-      font-size: 2rem;
+      font-size: 4rem;
       //		background-attachment: scroll;
       background-size: auto 100vh;
       background-color: rgba(255, 255, 255, 0.9);
@@ -209,11 +218,19 @@ body:not(.home) {
     label {
       font-size: 4vw;
     }
-  }
+
+}
+
+@include media-breakpoint-down(xs) {
+    .page-main .home-hero h2.clone-shadow,
+    .page-main .home-hero h2 {
+      font-size: 2rem;
+
+    }
+
 }
 @media (max-width:375px) {}
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-  html:not(.ipad) {
     .page-main .home-hero h2.clone-shadow,
     .page-main .home-hero h2 {
       //            font-size: 6vw !important;
@@ -235,5 +252,5 @@ body:not(.home) {
     .invert-header.menu-open .main-header svg {
       filter: invert(0)
     }
-  }
+
 }

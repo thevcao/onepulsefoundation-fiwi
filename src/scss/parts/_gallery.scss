@@ -146,7 +146,7 @@
     bottom: -50px;
   }
 }
-@media (max-width:768px) {
+@include media-breakpoint-down(sm) {
   html:not(.ipad) {
     .gallery .item {
       height: 66vw;

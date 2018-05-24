@@ -110,8 +110,7 @@
     }
   }
 }
-@media (max-width:768px) {
-    html:not(.ipad) {
+@include media-breakpoint-down(sm) {
 
   .member-body .post-image canvas {
     display: none;
@@ -138,13 +137,12 @@
     padding: 0 11%;
   }
   .task-force .container {
-    padding: 0 7%;
+//    padding: 0 7%;
   }
-  }
+
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
 
-  html:not(.ipad) {
   .member-body .post-image canvas {
     display: none;
   }
@@ -170,7 +168,7 @@
     padding: 0 3%;
   }
   .task-force .container {
-    padding: 0 10%;
+//    padding: 0 10%;
   }
   .member-body {
     .img-attrib {
@@ -179,5 +177,5 @@
       left: auto;
     }
   }
-}
+
 }

@@ -413,7 +413,7 @@ and (orientation : portrait) {
 
 }
 
-@media (max-width:768px) {
+@include media-breakpoint-down(sm) {
         html:not(.ipad) {
 
         .video-modal .video-js .vjs-tech {

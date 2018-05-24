@@ -12,11 +12,11 @@ $newsimage = get_field('news_image', 'options');?>
 <section class="newsletter">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-sm-7">
+            <div class="col-sm-7 col-11 mx-auto">
                 <h2 class="mt0">Stay Informed</h2>
                 <p>Sign up to receive exclusive updates about the onePULSE Foundation.</p>
             </div>
-            <div class="col-sm-5">
+            <div class="col-sm-5 col-11 mx-auto">
                     <?php echo do_shortcode('[contact-form-7 id="5374" title="Newsletter"]');?>
             </div>
         </div>

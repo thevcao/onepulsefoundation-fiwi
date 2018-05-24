@@ -29,13 +29,13 @@
   }
   input.wpcf7-form-control.wpcf7-submit.btn {
     padding: rem(10);
-    font-size: 22px;
+    font-size: rem(18);
     background: #fff;
     border: 3px solid #000;
     color: #000;
     outline: none;
     transition: all .3s ease;
-    margin: rem(10) 20px rem(10) auto;
+    margin: rem(10) rem(20) rem(10) auto;
     border-radius: 100px;
   }
   input.wpcf7-form-control.wpcf7-submit.btn:hover {
@@ -186,7 +186,7 @@
   }
   input.wpcf7-form-control.wpcf7-submit.btn {
     padding: rem(10);
-    font-size: 22px;
+    font-size: rem(18);
     background: none;
     border: 3px solid white;
     color: white;
@@ -196,6 +196,7 @@
     margin: rem(10) auto 0 auto;
     border-radius: 100px;
     text-align: center;
+
     &:hover {
       //            background: white !important;
       //            color: $r !important;
@@ -214,6 +215,10 @@
       font-weight: bold;
     }
   }
+    .ajax-loader {
+
+      display: none !important;
+    }
 }
 span.wpcf7-not-valid-tip {
   font-size: rem(10);
@@ -288,7 +293,7 @@ span.wpcf7-not-valid-tip {
     padding-bottom: rem(32);
   }
 }
-@media (max-width:768px) {
+@include media-breakpoint-down(sm) {
   html:not(.ipad) {
     .page-id-20 .contact-form.pb120.hidden-xs {
       display: block !important;

@@ -80,7 +80,7 @@ and (orientation : portrait) {
 
 }
 
-@media (max-width:768px) {
+@include media-breakpoint-down(sm) {
       html:not(.ipad) {
 
   .home-about .video-container .img-attrib {

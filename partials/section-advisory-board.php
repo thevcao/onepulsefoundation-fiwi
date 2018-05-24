@@ -2,7 +2,7 @@
 
 
 
-<section class="task-force pb120 pb-xs-32 pb-xs-32">
+<section class="task-force pb120 pb-xs-32 pb-xs-32" id="advisory-council">
     <div class="container">
 
 
@@ -21,7 +21,7 @@
         <?php $images = get_field('task_force_images', 'options');  foreach( $images as $image ): ?>
 
                 <div data-stellar-ratio="1.5">
-        <img class="img-parallax" src="<?php echo $image['sizes']['medium']; ?>" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
+        <img class="img-parallax mb-1" src="<?php echo $image['sizes']['medium']; ?>" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
         <?php echo '<label class="img-attrib">' . $image['caption'] . '</label>';?></div>
   <?php endforeach; ?>
 
