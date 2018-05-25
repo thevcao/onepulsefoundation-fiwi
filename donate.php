@@ -40,7 +40,7 @@
 
 
                             <div class="col-md-5">
-                                <h1><?php the_field('headline');?></h1>
+                                <h3 class="mt-2 mb-1"><?php the_field('headline');?></h3>
 
                                 <h4 class="text-left mb8">Share this</h4>
                                 <ul class="socials shares">
@@ -60,7 +60,7 @@
                                     <!--<img src="<?php echo get_template_directory_uri(); ?>/dist/img/shirt.svg">
                                     <a href="https://pulse-orlando-shirts.myshopify.com/collections/onepulse" class="btn shirt-btn mt0 mb8" target="_blank">Get Yours</a>-->
                                     <?php if(is_page('donate')):?>
-                                        <img src="/wp-content/uploads/2017/06/banners-all-1.jpg">
+                                        <img class="mb-1" src="/wp-content/uploads/2017/06/banners-all-1.jpg">
 
                                         <a href="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf" class="btn shirt-btn mt0 mb8" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf">Download 8 1/2' x 11' Flyer Kit</a>
                                         <a href="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf" class="btn shirt-btn mt0 mb32" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf">Download 4"x 8" Banner Kit</a>
@@ -70,7 +70,7 @@
 
 
 
-                            <div class="col-md-6 col-md-offset-1 pt-sm-5 pt-sm-16 p-xs-0">
+                            <div class="col-md-6 ml-auto pt-sm-5 pt-sm-16 p-xs-0">
 
                                 <?php the_field('right_column');?>
 

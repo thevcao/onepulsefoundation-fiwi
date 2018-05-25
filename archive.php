@@ -32,8 +32,8 @@
 
 
                                 <div class="item mt32 mb64">
-                                    <h2 class="mb8"><a class="no-hover" href="<?php the_permalink();?>"><?php echo get_the_title();?></a></h2>
-                                    <h3 class="mt0 mb32"><?php the_date();?></h3>
+                                    <h2 class=""><a class="no-hover" href="<?php the_permalink();?>"><?php echo get_the_title();?></a></h2>
+                                    <h5 class=""><?php the_date();?></h5>
                                     <p>
                                         <?php the_excerpt();?>
                                     </p>

@@ -1312,3 +1312,15 @@ function add_entry_id($entries) {
     return $entries;
 }
     add_filter("gform_confirmation_anchor", create_function("","return 0;"));
+
+
+
+//add_filter('filter_entries','show_only_approved' );
+//function show_only_approved($entries) {
+//    foreach ($entries as $entryKey => &$entryValue) {
+//        if ($entryValue["5"] == NULL) {
+//            unset($entries[$entryKey]);
+//        }
+//    }
+//    return $entries;
+//}

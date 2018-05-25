@@ -62,10 +62,10 @@
                                                 ?>
 
                                 <div class="item mt32 mb64">
-                                    <a class="no-hover" href="<?php the_permalink();?>"><h2 class="mb8"><?php echo get_the_title();?></h2></a>
-                                    <h3 class="mt0 mb16"><i class="fa fa-calendar"></i> <?php the_field('event_date');?></h3>
+                                    <a class="no-hover" href="<?php the_permalink();?>"><h2 class=""><?php echo get_the_title();?></h2></a>
+                                    <h5 class="mt0 mb16"><i class="fa fa-calendar"></i> <?php the_field('event_date');?></h5>
                                     <?php if(get_field('event_location')):?>
-                                    <h3 class="mt0 mb32"><a class="no-hover" href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $address;?>" target="_blank"><i class="fa fa-location-arrow"></i> <?php echo $address;?></a></h3>
+                                    <h5 class="mt0 mb32"><a class="no-hover" href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $address;?>" target="_blank"><i class="fa fa-location-arrow"></i> <?php echo $address;?></a></h5>
                                     <?php endif;?>
                                     <p>
                                         <?php the_excerpt();?>
@@ -119,7 +119,7 @@
                                                 ?>
 
                                 <div class="item mt32 mb64">
-                                    <a href="<?php the_permalink();?>"><h4 class="mb8"><?php echo get_the_title();?></h4></a>
+                                    <a href="<?php the_permalink();?>" class="no-hover"><h4 class="mb8"><?php echo get_the_title();?></h4></a>
 
                                     <div class="pt8"></div>
                                     <a href="<?php the_permalink();?>" class="btn left">Read More</a>

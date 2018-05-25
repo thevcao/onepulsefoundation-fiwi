@@ -1,4 +1,11 @@
 .post-body {
+      pointer-events: all;
+
+  * {
+
+    pointer-events: all;
+
+  }
   .col-lg-8 > .img-attrib {
     background: none;
     padding: 0;
@@ -78,12 +85,14 @@
 }
 .socials.shares {
   padding: 0;
-  margin: 0;
+  margin: 0 0 1rem;
   text-align: left;
+  float: none;
   li {
     line-height: 0;
     margin-left: 0;
-    margin-right: 5px;
+//    margin-right: 5px;
+    float: none;
     a {
       display: block;
       background: black;
