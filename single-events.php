@@ -118,7 +118,9 @@
                             <div class="col-md-7">
                                 <h1><?php echo get_the_title();?></h1>
                                     <h3 class="mt0 mb16"><i class="fa fa-calendar"></i> <?php the_field('event_date');?></h3>
+                                  <?php if(get_field('event_location')):?>
                                     <h3 class="mt0 mb32"><a href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $address;?>" target="_blank"><i class="fa fa-location-arrow"></i> <?php echo $address;?></a></h3>
+                              <?php endif;?>
                                 <h4 class="text-left mb8">Share this</h4>
                                 <ul class="socials shares">
                                     <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -128,6 +130,8 @@
                                 </ul>
 
                                 <?php the_content();?>
+
+
 
                             </div>
 
@@ -169,6 +173,8 @@
 
                                 <?php the_content();?>
 
+
+
                             </div>
 
 
@@ -193,6 +199,54 @@
                                 </div>
 
                             </div>
+
+                      <div class="row">
+                        <div class="col-md-12">
+
+
+                              <?php $sponsors = get_field('sponsors');
+                                    $sponsor_intro = get_field('sponsor_intro');
+
+                              ?>
+
+                              <?php if(get_field('main_sponsor')): echo '<h5 class="text-center">Proudly presented by:</h5>';?>
+                              <div class="container-fluid">
+                                <div class="row">
+
+                                  <div class="col-md-6 col-md-offset-3">
+                                    <img class="main-sponsor" src="<?php echo get_field('main_sponsor')['sizes']['large'];?>">
+                                  </div>
+                                </div>
+                              </div>
+                              <?php endif;?>
+                              <?php if(get_field('sponsors')):?>
+                              <div class="container-fluid">
+                                  <h5 class="text-center"><?php echo $sponsor_intro;?></h5>
+
+                                <ul class="sponsor-grid">
+                                  <?php foreach($sponsors as $sponsor):?>
+                                  <li><img src="<?php echo $sponsor['sizes']['large'];?>"></li>
+                                  <?php endforeach;?>
+                                </ul>
+
+                              </div>
+                              <?php endif;?>
+
+                              <?php if(get_field('vendors')): echo '<h5 class="text-center">Vendors</h5>';?>
+                              <div class="container-fluid">
+                                <div class="row">
+
+                                  <div class="col-md-8 col-md-offset-2">
+                                <?php the_field('vendors');?>
+                                  </div>
+                                </div>
+                              </div>
+                              <?php endif;?>
+
+                        </div>
+
+
+                      </div>
                                 <?php endif;?>
                     </div>
                 </div>
