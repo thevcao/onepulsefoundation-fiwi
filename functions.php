@@ -1224,6 +1224,21 @@ function my_mce_before_init_insert_formats( $init_array ) {
             'title' => 'Blue Text',
             'selector' => 'h1,h2,h3,h4,h5',
             'classes' => 'blue clip'
+        ),
+        array(
+            'title' => 'Button',
+            'selector' => 'a',
+            'classes' => 'btn'
+        ),
+        array(
+            'title' => 'Button (left)',
+            'selector' => 'a',
+            'classes' => 'btn left'
+        ),
+        array(
+            'title' => 'Button (right)',
+            'selector' => 'a',
+            'classes' => 'btn right'
         )
     );
     // Insert the array, JSON ENCODED, into 'style_formats'
