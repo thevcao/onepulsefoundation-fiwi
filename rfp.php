@@ -87,7 +87,7 @@
 
                 <?php } else {?>
 
-                <div class="row">
+                <div class="row align-items-end">
 
                   <div class="col-md-8">
                     <h1><span>Please Sign in or Create a User Account to </span>Participate in the RFP Submission for the Permanent Pulse Memorial</h1>
@@ -95,9 +95,14 @@
                     <div class="survey-login">
                             <?php wp_login_form(); ?>
                     </div>
+
+                    </div>
+                  <div class="col-md-4">
+
                     <p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/us.svg"> Please create a user account to complete the RFP Submission for the Permanent Pulse Memorial. <a href="<?php echo wp_registration_url(); ?>">Create an Account</a></p>
                     <p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/span.svg"> Por favor crea una cuenta de usuario para completar la encuesta. <a href="<?php echo wp_registration_url(); ?>">Crea Una Cuenta</a></p>
-                    </div>
+
+                  </div>
                 </div>
 
                 <?php }?>
@@ -112,24 +117,3 @@
 
 
         <?php get_template_part('templates/footer'); ?>
-
-        <script>
-//    jQuery('li.hidden input').val('<?php $current_user = wp_get_current_user(); echo $current_user->user_email; ?>');
-        jQuery(document).ready(function($) {
-            cell = $('.stickylist-fileupload');
-            cell.each(function(index) {
-                image = $(this).children('a').attr('href');
-                extension = image.split('.').pop();
-                if(extension == 'pdf') {
-
-                $(this).html('<a href="' + image + '" class="no-hover"><i class="fa fa-file-pdf"></i></a>');
-
-
-                } else {
-
-                $(this).html('<a href="' + image + '" class="no-hover"><img width="50" src="' + image + '"></a>');
-
-                }
-            });
-        });
-    </script>

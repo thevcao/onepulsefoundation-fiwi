@@ -41,6 +41,7 @@
                                         <a href="/onepulse-foundation-memorial/memorial-information/" class="btn left">Memorial & Visiting Information</a>
                                         <a href="https://signup.com/client/invitation2/secure/2317809/false#/invitation" class="btn left" target="_blank">Volunteer for the Interim Memorial</a>
 
+                                        <a href="https://signup.com/client/invitation2/secure/2317809/false#/invitation" class="btn left" target="_blank">Volunteer for the Interim Memorial</a>
 
                                     </div>
 

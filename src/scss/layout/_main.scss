@@ -84,9 +84,9 @@
         top: 0;
         bottom: 0;
         right: 0;
-        text-align: left;
+        text-align: inherit;
         display: inherit;
-        font-size: inherit;
+        font-size: left;
       }
       //      &:not(.home-play, .task-link):hover:before {
       //        opacity: 1;

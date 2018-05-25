@@ -111,23 +111,49 @@ footer {
       line-height: 1;
       height: 1.85rem;
       font-size: 1rem;
-      &:after {
+      transition: .3s ease;
+      display: flex;
+      align-items: center;
+      align-content: center;
 
-        content: none !important;
+      &:after {
+        content: '' !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        opacity: 0;
+        background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, #ff0 71.42%, #34d400 85.71%, #00a8de 100%);
+        animation: donateanimate 10s alternate linear infinite;
+        background-size: 100vw;
+        transition: inherit;
+        position: absolute;
+        border-radius: 100%;
+        margin: 0 !important;
       }
       &:hover {
         background: black;
-        color: white;
+        color: black;
 
+        &:after {
+
+          opacity: 1;
+        }
         i {
 
-          color: white;
+//          color: white;
         }
       }
       i {
         display: block;
         text-align: center;
         line-height: .95;
+        width: 100%;
+        left: -.05rem;
+        top: .05rem;
       }
     }
   }
