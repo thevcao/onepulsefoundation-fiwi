@@ -56,6 +56,7 @@
   }
   @media(max-width: 768px) {
     margin-bottom: 0;
+    margin-top: 0;
   }
   .flex-row {
     display: flex;
@@ -80,7 +81,7 @@
   background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, yellow 71.42%, #34d400 85.71%, #00a8de 100%);
   animation: donateanimate 10s alternate linear infinite;
   //    transition: transform 300ms ease;
-  background-size: 500%;
+  background-size: 300vw;
   padding: 3rem 0;
   h2,
   p {
@@ -242,7 +243,7 @@ span.wpcf7-not-valid-tip {
   //    z-index: 1000;
   //    background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
   //    animation: donateanimate 3s alternate linear infinite;
-  //    background-size: 500%;
+  //    background-size: 300vw;
   //    color: #fff;
   //    border: none !important;
   //    margin: 0 !important;

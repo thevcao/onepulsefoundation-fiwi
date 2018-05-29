@@ -29,8 +29,8 @@
 .ie {
   .gform_wrapper .gf_progressbar_percentage,
   .gform_wrapper {
-    font-family: "Arial", sans-serif;
-    letter-spacing: 0;
+//    font-family: "Arial", sans-serif;
+//    letter-spacing: 0;
   }
 }
 .gform_wrapper h1,
@@ -45,7 +45,7 @@
 .gform_wrapper textarea.medium,
 .survey-login input {
   pointer-events: all;
-  padding: 20px 5px 5px;
+  padding: rem(20) rem(5) rem(5);
   margin-bottom: rem(10);
   border: none;
   border-bottom: 3px solid #EEE;
@@ -91,10 +91,11 @@
 .gform_wrapper .gform_footer input[type=submit],
 .gform_wrapper .gform_page_footer input.button,
 .gform_wrapper .gform_page_footer input[type=submit] {
-  padding: .5rem 2rem;
+  padding: rem(15) rem(10) rem(12);
   border-radius: 100px;
+  min-width: 300px;
   outline: none;
-  border: 2px solid black;
+  border: 3px solid black;
   background: none;
   line-height: 1;
   font-weight: bold;

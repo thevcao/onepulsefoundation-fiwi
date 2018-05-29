@@ -54,7 +54,7 @@
                 <div class="mt32"></div>
                 <a href="#" class="btn left">Learn More</a>
             </div>
-            <div class="col-md-6 col-md-offset-1 parallax-container">
+            <div class="col-md-6 ml-auto parallax-container">
                 <label data-stellar-ratio="1.9"><span>onePULSE Foundation Founder</span>Barbara Poma Shares Her Message<div class="line"></div></label>
 
                 <div data-stellar-ratio="2">

@@ -6,8 +6,8 @@
     <div class="container">
 
 
-        <div class="row">
-        <div class="col-md-6">
+        <div class="row mb-1">
+        <div class="col-md-6 col-11 mx-md-down">
         <h2><span>onePULSE Foundation Memorial</span>Task Force Advisory Council</h2>
 
             </div>
@@ -27,7 +27,7 @@
 
 
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-11 mx-md-down">
 
                 <div class="line"></div>
 
@@ -65,7 +65,7 @@
 
             </div>
 
-            <div class="col-sm-8 col-sm-offset-2 visible-tab-pt visible-xs">
+            <div class="col-sm-8 ml-auto col-11 mx-auto visible-tab-pt visible-xs">
             <a href="#task-modal" class="btn modal-toggle">Meet the Advisory Council</a>
             </div>
         </div>

@@ -1308,17 +1308,32 @@ add_filter('filter_entries','add_entry_id' );
 function add_entry_id($entries) {
     foreach ($entries as &$entry) {
         $entry["3"] = $entry["id"];
+
+        $date = $entry["date_created"];
+        $date1 = explode(' ', $date);
+        $date2 = $date1[0];
+        $dateConverted = date("M d, Y", strtotime($date2));
+        $entry["6"] = $dateConverted;
     }
     return $entries;
 }
     add_filter("gform_confirmation_anchor", create_function("","return 0;"));
 
-
-
+//Approve Entries with Star
+add_filter('filter_entries','show_only_approved' );
+function show_only_approved($entries) {
+    foreach ($entries as $entryKey => &$entry) {
+        if ($entry["is_starred"] == 0) {
+            unset($entries[$entryKey]);
+        }
+    }
+    return $entries;
+}
+//Approve Entries with Approved Field
 //add_filter('filter_entries','show_only_approved' );
 //function show_only_approved($entries) {
 //    foreach ($entries as $entryKey => &$entryValue) {
-//        if ($entryValue["5"] == NULL) {
+//        if ($entryValue["5.1"] == null) {
 //            unset($entries[$entryKey]);
 //        }
 //    }
@@ -1326,20 +1341,20 @@ function add_entry_id($entries) {
 //}
 
 
-add_filter( 'gform_init_scripts_footer', '__return_true' );
-add_filter( 'gform_cdata_open', 'wrap_gform_cdata_open', 1 );
-function wrap_gform_cdata_open( $content = '' ) {
-if ( ( defined('DOING_AJAX') && DOING_AJAX ) || isset( $_POST['gform_ajax'] ) ) {
-return $content;
-}
-$content = 'document.addEventListener( "DOMContentLoaded", function() { ';
-return $content;
-}
-add_filter( 'gform_cdata_close', 'wrap_gform_cdata_close', 99 );
-function wrap_gform_cdata_close( $content = '' ) {
-if ( ( defined('DOING_AJAX') && DOING_AJAX ) || isset( $_POST['gform_ajax'] ) ) {
-return $content;
-}
-$content = ' }, false );';
-return $content;
-}
+//add_filter( 'gform_init_scripts_footer', '__return_true' );
+//add_filter( 'gform_cdata_open', 'wrap_gform_cdata_open', 1 );
+//function wrap_gform_cdata_open( $content = '' ) {
+//if ( ( defined('DOING_AJAX') && DOING_AJAX ) || isset( $_POST['gform_ajax'] ) ) {
+//return $content;
+//}
+//$content = 'document.addEventListener( "DOMContentLoaded", function() { ';
+//return $content;
+//}
+//add_filter( 'gform_cdata_close', 'wrap_gform_cdata_close', 99 );
+//function wrap_gform_cdata_close( $content = '' ) {
+//if ( ( defined('DOING_AJAX') && DOING_AJAX ) || isset( $_POST['gform_ajax'] ) ) {
+//return $content;
+//}
+//$content = ' }, false );';
+//return $content;
+//}

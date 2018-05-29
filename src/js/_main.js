@@ -18,9 +18,8 @@
       init: function () {
         // JavaScript to be fired on all pages
         $(window).load(function () {
-          paddingHelp();
-          $('.mm').matchHeight();
-          pulseSet();
+//          $('.mm').matchHeight();
+
           fullHero();
           if ($('.retina_2x').length) {
             $('.featured-slider .item img').each(function () {
@@ -69,111 +68,49 @@
           });
         });
         $(window).resize(function () {
-          //                    paddingHelp();
-          //                    pulseSet();
+
           fullHero();
         })
         window.addEventListener("orientationchange", function () {
           setTimeout(function () {
-            //                        paddingHelp();
-            //                        pulseSet();
+
             fullHero();
           }, 500);
           console.log('rotate')
         });
-        function paddingHelp() {
-          //                    if ($(window).width() > 768) {
-          //
-          //                        $('.page-cta .content').each(function () {
-          //                            var containerWidth = $('.container').outerWidth(),
-          //                                windowWidth = $(window).outerWidth(),
-          //                                remainingPad = (windowWidth - containerWidth),
-          //                                half = (remainingPad / 2);
-          ////                            $(this).css('padding-right', half);
-          //                        });
-          //                        $('.content-left .content').each(function () {
-          //                            var containerWidth = $('.container').outerWidth(),
-          //                                windowWidth = $(window).outerWidth(),
-          //                                remainingPad = (windowWidth - containerWidth),
-          //                                half = ((remainingPad / 2));
-          //
-          //                            if ($('html').hasClass('ie')) {
-          //
-          //
-          ////                                $(this).css('padding-left', half + 30);
-          //
-          //                            } else {
-          ////                                $(this).css('padding-left', half + 15);
-          //
-          //
-          //                            }
-          //                        });
-          //                    }
-        }
+
         function fullHero() {
           var fullHeight = $(window).outerHeight(),
             header = $('header').outerHeight(),
             contentHeight = $('.home-hero .container').outerHeight(),
             remaining = ((fullHeight + header) - contentHeight),
             padding = (remaining / 2);
-          if ($('html').hasClass('orientation_portrait') && $(window).width() < 768) {
-            //                        $('.full-menu').css('padding-top', header);
-            //                        $('section').first('section').not('.home-hero').css('padding-top', (header + 10) + '!important');
-            $('footer').css('padding-bottom', ($('.donate-bar').outerHeight() - 20));
-            //						$('.post-image').css('margin-top', header);
-          } else if ($('html').hasClass('orientation_landscape') && $(window).width() < 768) {
-            //                        $('.full-menu').css('padding-top', ($('.menu-toggle').outerHeight() + 20));
-            //							$('section').first('section').not('.home-hero').css('padding-top', (header + 10));
-            //							$('footer').css('padding-bottom', ($('.donate-bar').outerHeight() - 20));
-          } else {
-            //                        $('.home-hero').css('padding-top', padding).css('padding-bottom', padding);
-            //                        $('.full-menu').css('padding-top', header + 50);
-            //                        $('.page-main section').first('section').css('padding-top', (header + 50)  + '!important');
-            $('.post-image').css('margin-top', header);
-          }
+
+
+              if($(window).width() < 768){
+                $('.modal').css('padding-top', header * 1.25);
+                if($('section:first-child').length){
+
+                $('section:first-child').css('padding-top', header * 1.25);
+  //              $('section:first-child').removeClass('pt-sm-3');
+                $("section:first-child").removeClass (function (index, css) {
+                   return (css.match (/(^|\s)pt\S+/g) || []).join(' ');
+                });
+                }
+              } else {
+                if($('section:first-child').length){
+
+                  $('section:first-child').css('padding-top', header * 1.5);
+                  $("section:first-child").removeClass (function (index, css) {
+                     return (css.match (/(^|\s)pt\S+/g) || []).join(' ');
+                  });
+                }
+              }
+
+
+
         }
-        function pulseSet() {
-          //                    if ($(window).width() < 415) {
-          //
-          //
-          //                        var fullheight = $(window).height();
-          //                        var auto = 'auto' + fullheight;
-          //
-          //                        $('.donate-hero h2').fitText(1);
-          //                        //					$('.page-main .home-hero h2').fitText(1);
-          //                        $('.home .home-hero h2').fitText(.9);
-          //                        $('.invert-header .home-hero h2.clone-shadow, .invert-header .home-hero h2').fitText(3.75);
-          //                        $('.home-play i').fitText(.33, {
-          //                            maxFontSize: '126px'
-          //                        });
-          //                        $('.home .home-hero h2').css('background-size', auto);
-          //
-          //
-          //                        console.log('mobile portrait');
-          //
-          //                    } else {
-          //
-          //                        $('.donate-hero h2').fitText(2);
-          //                        $('.home-hero h2').fitText(1.75);
-          //
-          //                        if ($('body').hasClass('page-id-166')) {
-          //
-          //                            $('.page-main .home-hero h2').fitText(5);
-          //
-          //                        } else {
-          //
-          //                            $('.page-main .home-hero h2').fitText(4);
-          //
-          //                        }
-          //                        $('.hidden-xs .home-play i').fitText(.35, {
-          //                            maxFontSize: '126px'
-          //                        });
-          //                        $('.visible-xs .home-play i').fitText(1, {
-          //                            maxFontSize: '126px'
-          //                        });
-          //                        //						$('footer').css('padding-bottom', '0');
-          //                    }
-        }
+
         $('.img-attrib').each(function () {
           var width = $(this).prev('img').outerWidth();
           $(this).css('width', width - 20);
@@ -217,11 +154,20 @@
           $('html').removeClass('search-open');
           //                    return false;
         });
-        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+//        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
           var $document = $(document),
             $element = $('body'),
             className = 'scrolled';
           var headerHeight = ($('.home-hero').outerHeight() - $('header').outerHeight());
+
+          if($(window).width() < 768){
+
+            $document.scroll(function () {
+              $element.toggleClass(className, $document.scrollTop() > $('header').outerHeight());
+            });
+
+          } else {
+
           if ($('.home-hero').length) {
             $document.scroll(function () {
               $element.toggleClass(className, $document.scrollTop() > headerHeight);
@@ -231,7 +177,10 @@
               $element.toggleClass(className, $document.scrollTop() > $('header').outerHeight());
             });
           }
-        }
+
+          }
+
+//        }
         $('.home-play').click(function () {
           //						$('body').removeClass('loaded');
           var videoSrc = $('#home-video').attr('data-src');
@@ -380,16 +329,7 @@
         //					var myPlayer = videojs("home-video");
         //					myPlayer.webkitExitFullscreen();
         //				}
-        $('.woocommerce-product-gallery__image a').magnificPopup({
-          type: 'image',
-          mainClass: 'mfp-with-zoom mfp-fade',
-          removalDelay: 500,
-          preloader: false,
-          fixedContentPos: false,
-          gallery: {
-            enabled: true
-          }
-        });
+
         $('.video-modal .close').click(function () {
           //						$('body').removeClass('loaded');
           $('body').removeClass('modal-open');
@@ -444,18 +384,24 @@
             $('.full-menu').removeClass("transition");
           }
         );
-        $("a").not('.tab-links a, a[download], a[href="#"], .nturl, .modal-toggle, .modal-toggle a, .pop-link, ul.tabs li a, .woocommerce-product-gallery__image a, a[target="_blank"], a[target="blank"], .survey-toggle, .stickylist-fileupload a').click(function (e) {
-          var link = $(this).attr('href');
-          e.preventDefault();
-          $('.loader').addClass('once');
-          $('.spinner').css('opacity', '1').css('top', e.clientY).css('left', e.clientX);
-          setTimeout(function () {
-            window.location.href = link;
-          }, 1500);
-          setTimeout(function () {
-            $('.loader').removeClass('once');
-            $('.spinner').css('opacity', '0');
-          }, 2500);
+        $("a").not('.tab-links a, a[download], a[href="#"], .nturl, .modal-toggle, .modal-toggle a, .pop-link, ul.tabs li a, .woocommerce-product-gallery__image a, a[target="_blank"], a[target="blank"], .survey-toggle, .stickylist-fileupload a, #menu-full-mobile li.menu-item-has-children a').click(function (e) {
+
+          if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+            var link = $(this).attr('href');
+            e.preventDefault();
+            $('.loader').addClass('once');
+            $('.spinner').css('opacity', '1').css('top', e.clientY).css('left', e.clientX);
+            setTimeout(function () {
+              window.location.href = link;
+            }, 1500);
+            setTimeout(function () {
+              $('.loader').removeClass('once');
+              $('.spinner').css('opacity', '0');
+            }, 2500);
+
+          }
+
         });
         if (/iPhone/i.test(navigator.userAgent)) {
           $(window).scroll(function () {
@@ -627,11 +573,16 @@
         // JavaScript to be fired on all pages, after page specific JS is fired
         function halftone() {
           // try to create a WebGL canvas (will fail if WebGL isn't supported)
-          if ($('#featured-image').length) {
+//          if ($('#featured-image').length) {
+
+            $('.canvas-container').each(function(){
+
             // convert the image to a texture
-            var image = document.getElementById('featured-image');
+
+            var image = $(this).children('.grayscale')[0];
+//            var image = $(this);
             image.crossOrigin = 'Anonymous';
-            window.onload = function () {
+//            window.onload = function () {
               var canvas = fx.canvas();
               var texture = canvas.texture(image);
               // apply the ink filter
@@ -654,15 +605,121 @@
               // two tags were swapped using the previous method, JavaScript
               // actually doesn't have access to the image contents and this
               // does not violate the same origin policy.
-            };
-            image.src = $('#featured-image').attr('src');
-            $('.canvas-container').css('height', $('.watch-me').outerHeight());
-          }
+//            };
+//            image.src = $('#featured-image').attr('src');
+            var imgHeight = $(this).children('.over-image').outerHeight();
+            var imgWidth = $(this).children('.over-image').outerWidth();
+            var canvasWidth = $(this).outerWidth();
+            var imgRatio = imgHeight / imgWidth;
+            var canvasHeight = canvasWidth * imgRatio;
+
+            $(this).css('height', canvasHeight);
+
+            });
+            $('.post-image').each(function(){
+
+            // convert the image to a texture
+
+            var image = $('#featured-image')[0];
+            var overlayHeight = $('#featured-image').outerHeight();
+//            var image = $(this);
+            image.crossOrigin = 'Anonymous';
+//            window.onload = function () {
+              var canvas = fx.canvas();
+              var texture = canvas.texture(image);
+              // apply the ink filter
+              canvas.draw(texture).colorHalftone(320, 239.5, 0.25, 4).update();
+              // replace the image with the canvas
+              image.parentNode.insertBefore(canvas, image);
+              image.parentNode.removeChild(image);
+
+              $('.col-lg-5.col-11').prepend('<div class="overlay" style="height: ' + overlayHeight + 'px;"></div>');
+              // Note: instead of swapping the &lt;canvas&gt; tag with the &lt;img&gt; tag
+              // as done above, we could have just transferred the contents of
+              // the image directly:
+              //
+              //     image.src = canvas.toDataURL('image/png');
+              //
+              // This has two disadvantages. First, it is much slower, so it
+              // would be a bad idea to do this repeatedly. If you are going
+              // to be repeatedly updating a filter it's much better to use
+              // the &lt;canvas&gt; tag directly. Second, this requires that the
+              // image is hosted on the same domain as the script because
+              // JavaScript has direct access to the image contents. When the
+              // two tags were swapped using the previous method, JavaScript
+              // actually doesn't have access to the image contents and this
+              // does not violate the same origin policy.
+//            };
+//            image.src = $('#featured-image').attr('src');
+//            var imgHeight = $(this).children('.over-image').outerHeight();
+//            var imgWidth = $(this).children('.over-image').outerWidth();
+//            var canvasWidth = $(this).outerWidth();
+//            var imgRatio = imgHeight / imgWidth;
+//            var canvasHeight = canvasWidth * imgRatio;
+//
+//            $(this).css('height', canvasHeight);
+
+            });
+
+//          }
         }
+
+        $(window).load(function(){
+
         halftone();
-        $(window).resize(function () {
-          halftone();
+
         })
+        $(window).resize(function () {
+
+        if($('.post-image .overlay').length){
+
+          var newHeight = $('.post-image canvas').outerHeight();
+
+          $('.overlay').css('height', newHeight);
+        }
+        })
+
+        $('#menu-full-mobile li.menu-item-has-children a').click(function(){
+
+          if($(this).parents('li').hasClass('active')) {
+
+
+
+          } else {
+
+          $(this).parents('li').children('.sub-menu').delay(400).fadeIn(400);
+          $(this).parents('li').addClass('active');
+          $('.sub-menu').not($(this).parents('li').children('.sub-menu')).slideUp(400);
+          $('#menu-full-mobile > li').not($(this).parents('li')).slideUp(400);
+
+          if($('.translated-ltr').length){
+
+            var backLabel = 'Volver';
+
+          }  else {
+
+            var backLabel = 'Back';
+
+          }
+          $(this).parents('li').prepend('<a href="#" class="sub-back no-hover"><i class="fa fa-caret-left"></i>' + backLabel + '</a>');
+          return false;
+
+          }
+
+
+
+
+        });
+
+        $(document).on('click', '.sub-back', function(){
+
+          $('.sub-menu').slideUp(400);
+          $('#menu-full-mobile > li').slideDown(400).removeClass('active');
+          $('.sub-back').remove();
+          return false;
+
+
+        });
       $(window).load(function(){
         var headerHeight = $('header').outerHeight();
         if(window.location.hash) {
@@ -735,7 +792,7 @@
                 image = $(this).children('a').attr('href');
                 extension = image.split('.').pop();
                 if(extension == 'pdf') {
-                $(this).html('<a href="' + image + '" class="no-hover"><i class="fa fa-file-pdf"></i></a>');
+                $(this).html('<a href="' + image + '" class="btn right" title="View Submission "><div></div>View Submission <i class="fa fa-file-pdf"></i></a>');
                 } else {
                 $(this).html('<a href="' + image + '" class="no-hover"><img width="50" src="' + image + '"></a>');
                 }
@@ -778,6 +835,124 @@
           setTimeout(function(){
             $('.media-modal').remove();
           }, 750);
+
+
+        });
+
+
+      }
+    },
+
+    'page_template_ig': {
+      init: function () {
+        // JavaScript to be fired on the home page
+      },
+      finalize: function () {
+        // JavaScript to be fired on the home page, after the init JS
+        $('.tab-links a').click(function () {
+          if($(this).is('a[href^="#"]')) {
+          var link = $(this).attr('href');
+          $('.tab').not(this).slideUp(500);
+          $(link).slideToggle(500);
+          $('.tab-links a').not(this).removeClass('active');
+          $(this).addClass('active');
+          return false;
+          }
+        });
+
+
+
+        function makeThumb(page) {
+          // draw page to fit into 96x96 canvas
+          var vp = page.getViewport(1);
+          var canvas = document.createElement("canvas");
+          canvas.width = canvas.height = 200;
+          var scale = Math.min(canvas.width / vp.width, canvas.height / vp.height);
+          return page.render({canvasContext: canvas.getContext("2d"), viewport: page.getViewport(scale)}).promise.then(function () {
+            return canvas;
+          });
+        }
+
+//        PDFJS.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.489/pdf.worker.js";
+
+        $(document).ready(function() {
+
+
+//            cell = $('.stickylist-fileupload');
+            $('.stickylist-fileupload').each(function() {
+                var image = $(this).children('a').attr('href');
+                var extension = image.split('.').pop();
+                var parent =  $(this);
+
+                PDFJS.getDocument(image).promise.then(function (doc) {
+
+                  var pages = []; while (pages.length < 1) pages.push(1);
+                  return Promise.all(pages.map(function (num) {
+                    // create a div for each page and build a small canvas for it
+                    var div = document.createElement("div");
+
+//                    console.log(parent);
+
+
+                    $(parent).prepend(div);
+//                    document.parent.appendChild(div);
+
+                    return doc.getPage(num).then(makeThumb)
+                      .then(function (canvas) {
+                        div.appendChild(canvas);
+                    });
+                  }));
+                }).catch(console.error);
+
+
+                if(extension == 'pdf') {
+                $(this).html('<a href="' + image + '" class="btn right" title="View Submission "><div></div>View Submission <i class="fa fa-file-pdf"></i></a>');
+                } else {
+                $(this).html('<a href="' + image + '" class="no-hover"><img width="50" src="' + image + '"></a>');
+                }
+            });
+
+
+        });
+
+        $(document).on('click', '.stickylist-fileupload a', function(){
+
+          var file = $(this).attr('href');
+          var submissionID = $(this).parents('.is_read').children('.sort-1').text();
+          var desc = $(this).parents('.is_read').children('.sort-3').text();
+          var name = $(this).parents('.is_read').children('.sort-2').text();
+          $('html').addClass('view-pdf');
+
+          console.log('viewing ' + file);
+          console.log('ID ' + submissionID);
+          console.log('by ' + name);
+          console.log(desc);
+
+
+
+          $('body').append('<div class="media-modal"><div class="inner"><a href="#" class="close"><i class="fa fa-close"></i></a><div class="row"><div class="col-sm-8"><div class="iframe-wrapper"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div><iframe src="' + file + '"></iframe></div></div><div class="col-sm-4"><div class="content"><h2 class="mb-3">Entry #' + submissionID + '</h2><p>' + desc + '</p><p class="author">Submitted by: ' + name + '</p></div></div></div></div></div>');
+
+
+
+          setTimeout(function(){
+            $('.media-modal').addClass('transition-in');
+          }, 100);
+          return false;
+
+        });
+
+
+        $(document).on('click', '.media-modal .close', function(){
+
+          $('html').removeClass('view-pdf');
+
+          $(this).parents('.media-modal').removeClass('transition-in');
+
+          setTimeout(function(){
+            $('.media-modal').remove();
+          }, 750);
+
+          return false;
 
 
         });
@@ -912,6 +1087,8 @@
             })(marker, i));
           }
         }
+
+        if($('#map').length)
         initMap();
       }
     }, // About us page, note the change from about-us to about_us.

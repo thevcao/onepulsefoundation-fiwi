@@ -191,7 +191,7 @@ $headline_weight = get_field('body_font_weight','options');
 
 /*                background: linear-gradient(135deg, #00a8de 0%, #333391 50%, #e91388 100%);*/
 /*    animation: donateanimate 3s alternate linear infinite;*/
-/*    background-size: 500%;*/
+/*    background-size: 300vw;*/
 /*            background-attachment: fixed;*/
 
         }

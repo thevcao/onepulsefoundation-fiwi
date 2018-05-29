@@ -12,10 +12,10 @@
         <div class="member-body mb64 mb-xs-0">
             <section class="post-image">
                 <div class="row">
-                    <div class="col-lg-5 col-md-4 <?php the_field('overlay_color');?>" >
+                    <div class="col-lg-5 col-md-5 col-11 mx-md-down <?php the_field('overlay_color');?>" >
                         <?php $banner = get_field('banner');
                         $bannerlarge = $banner['sizes']['large'];
-                        $bannerlarge = str_replace('https://fiwi-onepulsefoundation.s3.amazonaws.com', 'https://onepulsefoundation.org', $bannerlarge);
+//                        $bannerlarge = str_replace('https://fiwi-onepulsefoundation.s3.amazonaws.com', 'https://onepulsefoundation.org', $bannerlarge);
 
                         echo '<img id="featured-image" src="'. $bannerlarge .'" alt="';
 
@@ -37,7 +37,7 @@
                         echo '">';
                         endif;?>
                     </div>
-                    <div class="<?php if(get_field('headshot')): echo 'col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-2'; else: echo 'col-md-4 col-md-offset-1'; endif;?> mt64 mb120">
+                    <div class="<?php if(get_field('headshot')): echo 'col-lg-4 offset-lg-2 col-10 mx-md-down mt64 mb120'; else: echo 'col-md-4 col-md-offset-1'; endif;?> mt64 mb120">
                         <h1><span class="<?php the_field('overlay_color');?> clip small"><?php the_field('title');?></span><?php echo get_the_title();?></h1>
 
                         <?php the_field('bio');?>

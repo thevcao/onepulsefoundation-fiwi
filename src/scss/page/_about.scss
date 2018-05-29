@@ -59,6 +59,7 @@
       //        bottom: 0;
       left: 0;
       width: 100%;
+//      top: 0;
       @include media-breakpoint-down(md) {
         position: relative;
         padding: 0 calc((100vw - 720px) / 2);
@@ -75,15 +76,30 @@
       filter: grayscale(.5);
       opacity: .75;
       width: 100%;
-      height: auto;
+      height: 100% !important;
+
+
+      // (768px)
+      @include media-breakpoint-down(md) {
+
+
+        display: none;
+      }
+
     }
     .over-image {
+
+
+      @include media-breakpoint-up(md) {
+
+
       position: absolute;
       bottom: 50%;
       width: 75%;
       margin-left: -5%;
       border: rem(10) solid #fff;
       left: 0;
+      }
     }
   }
 }

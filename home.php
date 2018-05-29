@@ -47,7 +47,7 @@
                             <h2>We will not let hate win.<a href="#" class="home-play visible-xs"><i class="flaticon-play-button"></i></a>
 </h2>
                             <a href="#" class="home-play hidden-xs">
-                                <div class="row mt32">
+                                <div class="row mt32 align-items-center">
                                     <div class="col-sm-2 mm"><i class="flaticon-play-button"></i>
                                     </div>
                                     <div class="col-sm-8 mm p0"><span title="Together We Can">Together We Can<span title="Witness Our Story Where Love Wins">Witness Our Story Where Love Wins</span></span>

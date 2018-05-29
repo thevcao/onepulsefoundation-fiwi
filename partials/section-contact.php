@@ -7,7 +7,7 @@
 
 
         <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 col-11 mx-auto">
 
                 <?php if (!$count): ?>
                     <h1><span>Contact onePULSE Foundation</span>Contact Us</h1><?php else:?>
@@ -17,12 +17,12 @@
 
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 col-11 mx-auto">
 
                     <?php echo do_shortcode('[contact-form-7 id="4" title="Contact Form"]');?>
 
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-11 mx-auto">
 
                 <div class="line mt-xs-32 mb-xs-32"></div>
 

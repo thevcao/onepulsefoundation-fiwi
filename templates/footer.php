@@ -155,6 +155,8 @@ $newsimage = get_field('news_image', 'options');?>
 
 <?php wp_footer(); ?>
 <script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs.ga.min.js"></script>
+
+
 <style>
     .debug-info {
 

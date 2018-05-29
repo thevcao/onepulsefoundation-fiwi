@@ -23,7 +23,7 @@
                         echo '<label class="img-attrib">' .$banner['caption'] . '</label></div>';?>
 
                         <div class="container">
-                            <div class="col-md-12">
+                            <div class="col-md-12 col-11 mx-auto">
 
 
 

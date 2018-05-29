@@ -139,7 +139,7 @@
 
 
 
-                            <div class="col-md-4 col-md-offset-1 mt120 mt-sm-0 mt-xs-0">
+                            <div class="col-md-4 ml-auto mt120 mt-sm-0 mt-xs-0">
 
 
                                 <div>
@@ -182,7 +182,7 @@
 
 
 
-                            <div class="col-md-4 col-md-offset-1 mt120 mt-sm-0 mt-xs-0">
+                            <div class="col-md-4 ml-auto mt120 mt-sm-0 mt-xs-0">
 
 
                                 <div>
@@ -216,7 +216,7 @@
                               <div class="container-fluid">
                                 <div class="row">
 
-                                  <div class="col-md-6 col-md-offset-3">
+                                  <div class="col-md-6 mx-auto">
                                     <img class="main-sponsor" src="<?php echo get_field('main_sponsor')['sizes']['large'];?>">
                                   </div>
                                 </div>
@@ -239,7 +239,7 @@
                               <div class="container-fluid">
                                 <div class="row">
 
-                                  <div class="col-md-8 col-md-offset-2">
+                                  <div class="col-md-8 mx-auto">
                                 <?php the_field('vendors');?>
                                   </div>
                                 </div>

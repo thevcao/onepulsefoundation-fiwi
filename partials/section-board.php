@@ -2,7 +2,7 @@
 
 
 
-<section class="columns" id="board">
+<section class="columns pt-sm-3" id="board">
     <div class="container">
 
 
@@ -20,7 +20,7 @@
             <div class="col-sm-12">
 
             <h3>Executive Council</h3>
-            <ul class="task-force-members mb64 mb-xs-32">
+            <ul class="task-force-members mb64 mb-xs-32 mb-sm-2">
             <?php $args = array(
 
                 'posts_per_page'    => -1,

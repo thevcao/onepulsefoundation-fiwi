@@ -54,7 +54,7 @@ gulp.task('styles', () => {
 
 // Fonts
 gulp.task('fonts', () => {
-  return gulp.src('src/fonts/**/*')
+  return gulp.src('src/fonts/*')
   .pipe(gulp.dest('dist/fonts'))
 })
 
@@ -87,6 +87,12 @@ gulp.task('modernizr', () => {
     .pipe(gulp.dest("dist/js/vendor/"))
 });
 
+// Vendor JS
+gulp.task('vendor', () => {
+  return gulp.src('src/js/vendor/*')
+  .pipe(gulp.dest('dist/js/vendor'))
+})
+
 // Optimizes images
 gulp.task('images', () => {
   return gulp.src('src/img/**/*')
@@ -102,14 +108,14 @@ gulp.task('images', () => {
 });
 
 // Build task
-gulp.task('build', ['styles', 'scripts', 'modernizr', 'images', 'fonts']);
+gulp.task('build', ['styles', 'scripts', 'modernizr', 'images', 'fonts', 'vendor']);
 
 // Watch task
 gulp.task('watch', () => {
   gulp.watch(['src/img/**/*'], ['images']);
   gulp.watch(['src/fonts/**/*'], ['fonts']);
   gulp.watch(['src/scss/**/*.scss'], ['styles']);
-  gulp.watch(['src/js/**/*.js'], ['scripts']);
+  gulp.watch(['src/js/**/*.js'], ['scripts', 'vendor']);
 });
 
 

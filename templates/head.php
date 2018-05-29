@@ -55,6 +55,7 @@ endif;
 
 ?>
 
+
   <script src="https://use.fontawesome.com/c6224e36ed.js"></script>
    <?php get_template_part('partials/meta', 'favicons'); ?>
 
@@ -69,8 +70,10 @@ endif;
 
     ?>
 
+  <script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/pdf.js" ></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/pdf.worker.js" ></script>
 
-<script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs.js"></script>
 <?php  $featbanner = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); $featurl = $featbanner['0']; ?>
 <?php if( has_post_thumbnail()): echo '<style>.page-id-' . get_the_ID() . ' .loader, .page-id-' . get_the_ID() . ' .donate-hero h2 { background-image:url('. $featurl .');}</style>'; echo '<meta property="og:image" content="'. $featurl .'" />'; endif;?>
 <?php if (get_field('banner')): $banner = get_field('banner');
