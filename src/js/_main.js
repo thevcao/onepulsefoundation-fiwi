@@ -204,10 +204,38 @@
           }
         });
         $('.question').click(function () {
+
+        var el = document.querySelector('html');
+        var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+        var fontSize = parseFloat(style);
+        var convertedREM = fontSize * 3;
+
+        var target = $(this).parents('.faq-item');
+
+//          if($('body').hasClass('scrolled')) {
+//
+//              var headerHeight = $('header').outerHeight() * 1.75;
+//
+//          } else {
+
+              var headerHeight = $('header').outerHeight();
+
+//          }
+          $('html, body').delay().animate({
+                    scrollTop: $(target).offset().top - headerHeight - $(target).outerHeight()
+            }, 1000);
           $('.faq-item').not($(this).parents('.faq-item')).removeClass('active');
           $('.faq-item .answer').children('p, ul').not($(this).next('.answer').children('p, ul')).slideUp(500);
+
+
+
+
           $(this).next('.answer').children('p, ul').slideToggle(500);
           $(this).parents('.faq-item').toggleClass('active');
+
+
+
+
           return false;
         });
         $('.search-toggle').click(function () {

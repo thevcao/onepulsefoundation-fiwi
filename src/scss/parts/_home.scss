@@ -1,3 +1,30 @@
+html:not(.mobile) {
+  @include media-breakpoint-up(lg) {
+    @media(max-height: 768px) {
+      .home-hero {
+
+        .col-xl-11.col-md-10.col-11.mx-auto.col-center-ls-tab {
+
+//          max-width: 100%;
+//          flex: 0 0 100%;
+        }
+        h2 {
+          font-size: 11rem;
+          width: 75%
+        }
+        .home-play i {
+          font-size: 7rem;
+        }
+
+        .mt32 {
+
+          margin-top: 0 !important;
+        }
+      }
+    }
+  }
+}
+
 .home-hero {
   //	background: url(../../dist/img/snap-1.jpg);
   //	background-size: cover;
@@ -183,9 +210,10 @@
     align-items: center;
     padding-top: 100px;
     // (768px)
-    @include media-breakpoint-down(lg) {
-      height: auto;
-    }
+  @include media-breakpoint-down(md) {
+    height: auto;
+    min-height: 80vh;
+  }
   }
 }
 //.parallax-window {

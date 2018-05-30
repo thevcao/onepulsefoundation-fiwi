@@ -20,11 +20,11 @@
     <?php get_template_part('templates/header'); ?>
         <div class="main-wrapper">
 
-            <section class="archive-body pt-13 pb-11 pt-lg-11 pb-lg-3 pt-md-10 pb-md-1 mt-lg-2 mb-lg-3 pt-sm-7">
+            <section class="archive-body pb-3 pb-lg-3 pb-md-3 pt-sm-3">
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-lg-8 col-md-12 col-11 mx-md-down">
 
                             <h1>FAQs</h1>
                         </div>
@@ -57,7 +57,7 @@
                         echo '<label class="img-attrib">' .$banner['caption'] . '</label></div>';?>
 
                         <div class="container">
-                            <div class="col-md-12">
+                            <div class="col-lg-12 col-md-12 col-11 mx-auto">
 
 
 
