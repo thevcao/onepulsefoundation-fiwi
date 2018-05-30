@@ -8,9 +8,10 @@
   // (768px)
   @include media-breakpoint-down(lg) {
     height: auto;
+    min-height: 80vh;
   }
   h2 {
-    font-size: rem(180);
+    font-size: 14rem;
     line-height: .9;
     background-image: url(../../dist/img/curated/curated-1.jpg);
     background-size: cover;
@@ -21,7 +22,11 @@
     -webkit-text-fill-color: transparent;
     margin: 0;
     // (768px)
-    @include media-breakpoint-down(md) {}
+    @include media-breakpoint-down(lg) {
+
+      font-size: 12rem;
+
+    }
     // (768px)
     @include media-breakpoint-down(sm) {}
   }
@@ -48,7 +53,13 @@
     i {
       display: block;
       line-height: 1.1;
-      font-size: rem(126);
+      font-size: 11rem;
+
+      // (768px)
+//      @include media-breakpoint-down(md) {
+//              font-size: 7.875rem;
+//      }
+
       &:before {
         background-image: url(../../dist/img/curated/curated-1.jpg);
         background-size: cover;
@@ -58,6 +69,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: .5;
+        padding-right: 1px;
       }
     }
     .mm {
@@ -80,6 +92,7 @@
       -webkit-text-fill-color: transparent;
       position: relative;
       overflow: hidden;
+      text-align: left;
       span {
         display: block;
         font-size: rem(18);
@@ -127,6 +140,7 @@
       left: rem(18);
       top: 0px;
       line-height: 1.1;
+      padding-right: 1px;
     }
     &:hover {
       &i:before,
@@ -334,9 +348,13 @@
     }
   }
   a.home-play.visible-xs i {
-    font-size: 30vw;
+    font-size: 25vw;
+    padding-right: 5px;
     &:before {
       background-size: auto 100vh;
+      left: 2px;
+      position: relative;
+      top: 1px;
       //			background-attachment: scroll;
     }
   }

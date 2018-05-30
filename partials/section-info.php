@@ -7,7 +7,7 @@
 
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-lg-12 col-md-12 col-11 mx-auto">
 
                                    <h2><span>Visiting the</span>Pulse Interim Memorial</h2>
 
@@ -20,7 +20,7 @@
 
                             <div class="row">
 
-                                <div class="col-lg-5 order-lg-1 order-md-2 order-2">
+                                <div class="col-lg-5 col-md-12 col-11 mx-md-down order-lg-1 order-md-2 order-2">
                                     <div class="">
                                         <p>The Pulse Memorial is a sanctuary of quiet reflection and love dedicated to honoring the senseless loss of innocent life and remembering the horrible attack that occurred on June 12, 2016.</p>
 
@@ -44,7 +44,7 @@
 
                                 </div>
 
-                                    <div class="col-lg-6 ml-lg-auto mb-xs-32 order-lg-2 order-md-1 order-1 parallax-container mb-lg-0 mb-md-3 mb-sm-3 mb-3">
+                                    <div class="col-lg-6 ml-lg-auto col-md-12 col-11 mx-md-down mb-xs-32 order-lg-2 order-md-1 order-1 parallax-container mb-lg-0 mb-md-3 mb-sm-3 mb-3">
                                         <div class="line" data-stellar-ratio="1.9"></div>
                                         <div data-stellar-ratio="2">
                                             <img class="img-parallax" src="/wp-content/uploads/2018/05/New-Renderings-_Page_2-e1519320959365-1024x545.jpg">

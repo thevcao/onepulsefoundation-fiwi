@@ -39,11 +39,11 @@
                                     <a href="#" class="close"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/close.svg"></a>
             </div>
 
-            <section class="home-hero pt-15 pb-11 pt-lg-11 pb-lg-5 pt-md-10 pb-md-1 mt-lg-3 mb-lg-3 pt-sm-7">
+            <section class="home-hero">
                 <!--			<div class="over"></div>-->
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-11 col-md-10 col-center-ls-tab">
+                        <div class="col-xl-11 col-md-10 col-11 mx-auto col-center-ls-tab">
                             <h2>We will not let hate win.<a href="#" class="home-play visible-xs"><i class="flaticon-play-button"></i></a>
 </h2>
                             <a href="#" class="home-play hidden-xs">
@@ -108,14 +108,14 @@
 
 
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-lg-5 col-md-12 col-11 mx-md-down">
                             <h2>About onePULSE Foundation Memorial</h2>
                             <?php the_field('home_about', 'options');?>
 
                                 <div class="mt32"></div>
                                 <a href="<?php the_permalink(12);?>" class="btn left">Learn More</a>
                         </div>
-                        <div class="col-md-6 ml-auto parallax-container">
+                        <div class="col-lg-6 ml-auto col-md-12 col-11 mx-md-down parallax-container">
                             <div class="line" data-stellar-ratio="1.9"></div>
 
                             <?php $images = get_field('home_about_images', 'options'); $counterAbout = 0;

@@ -20,7 +20,7 @@
     right: 0;
     z-index: 1;
     h3 {
-      font-size: 64px;
+      font-size: rem(64);
       color: white;
       text-align: right;
     }
@@ -30,7 +30,7 @@
     top: 10%;
     right: 0;
     h3 {
-      font-size: 64px;
+      font-size: rem(64);
       color: black;
     }
   }
@@ -51,7 +51,15 @@
   }
   .img-overlay {
     max-height: 100%;
+
     z-index: 0;
+
+    // (768px)
+    @include media-breakpoint-up(md) {
+    z-index: 1;
+
+    }
+
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
@@ -72,23 +80,81 @@
   //		margin-bottom: 100px;
   //	}
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  .page-cta .dupe,
-  .page-cta .over {
-    top: 0;
-  }
-  .page-cta .content {
-//    padding-top: 150px !important;
-//    padding-right: 50px !important;
-  }
-  section.page-cta.mb80 {
-//    padding-top: rem(32) !important;
-    margin-bottom: 0 !important;
-  }
-}
+//@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+//  .page-cta .dupe,
+//  .page-cta .over {
+//    top: 0;
+//  }
+//  .page-cta .content {
+////    padding-top: 150px !important;
+////    padding-right: 50px !important;
+//  }
+//  section.page-cta.mb80 {
+////    padding-top: rem(32) !important;
+//    margin-bottom: 0 !important;
+//  }
+//}
 
 // (768px)
 @include media-breakpoint-down(md) {
+
+
+//  html:not(.ipad) {
+
+  .mobile-cta {
+
+}
+    .mobile-cta .text-white {
+      text-shadow: 2px 2px 42px #000;
+    }
+    .mobile-cta .text-white {
+
+      position: relative;
+      z-index: 1;
+//      font-size: 2rem;
+    }
+    .mobile-cta .content {
+      padding: 8rem 0 !important;
+    }
+    .mobile-cta {
+      background-image: url(../../dist/img/curated/curated-1.jpg);
+      background-size: 150vw auto;
+      background-position: 50%;
+          font-size: 1.25rem;
+      .btn.clipped {
+        position: relative;
+        z-index: 1;
+        background: white;
+//        padding: 13px rem(10);
+        color: black;
+      }
+      .btn.clipped:before {
+        content: 'Together We Can. Contact Us \f1d8' !important;
+        font-family: 'Helvetica Neue', fontawesome;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 0;
+        height: 100%;
+        border-radius: inherit;
+        z-index: 10;
+        background-image: url(../../dist/img/curated/curated-1.jpg);
+        background-size: 150vw auto;
+        background-position: 50%;
+        background-attachment: fixed;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(0, 0, 0, .4);
+        padding: inherit;
+        opacity: 1;
+        animation: none;
+      }
+    }
+    .img-overlay {
+      background: linear-gradient(-45deg, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
+    }
+
+}
+@include media-breakpoint-down(sm) {
 
 
 //  html:not(.ipad) {
@@ -114,13 +180,13 @@
       }
       .btn.clipped:before {
         content: 'Together We Can. Contact Us \f1d8' !important;
-        font-family: Helvetica Neue, fontawesome;
+        font-family: 'Helvetica Neue', fontawesome;
         position: absolute;
         left: 0;
         width: 100%;
         top: 0;
         height: 100%;
-        border-radius: 100px;
+        border-radius: inherit;
         z-index: 10;
         background-image: url(../../dist/img/curated/curated-1.jpg);
         background-size: 150vw auto;
@@ -128,7 +194,7 @@
         background-attachment: fixed;
         -webkit-background-clip: text;
         -webkit-text-fill-color: rgba(0, 0, 0, .4);
-        padding: 13px rem(10);
+        padding: inherit;
         opacity: 1;
         animation: none;
       }
@@ -138,51 +204,51 @@
     }
 
 }
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-  html:not(.ipad) {
-    .mobile-cta .text-white {
-      text-shadow: 2px 2px 42px #000;
-    }
-    .mobile-cta .text-white {
-      font-size: 2rem;
-    }
-    .mobile-cta .content {
-      padding: 25px 5% !important;
-    }
-    .mobile-cta {
-      background-image: url(../../dist/img/curated/curated-1.jpg);
-      background-size: 150vw auto;
-      background-position: 50%;
-      overflow: hidden;
-      .btn.clipped {
-        position: relative;
-        z-index: 1;
-        background: white;
-        padding: 13px rem(10);
-      }
-      .btn.clipped:before {
-        content: 'Together We Can. Contact Us \f1d8' !important;
-        font-family: Helvetica Neue, fontawesome;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        top: 0;
-        height: 100%;
-        border-radius: 100px;
-        z-index: 10;
-        background-image: url(../../dist/img/curated/curated-1.jpg);
-        background-size: 150vw auto;
-        background-position: 50%;
-        background-attachment: fixed;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: rgba(0, 0, 0, .4);
-        padding: 13px rem(10);
-        opacity: 1;
-        animation: none;
-      }
-    }
-    .img-overlay {
-      background: linear-gradient(-45deg, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
-    }
-  }
-}
+//@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+//  html:not(.ipad) {
+//    .mobile-cta .text-white {
+//      text-shadow: 2px 2px 42px #000;
+//    }
+//    .mobile-cta .text-white {
+//      font-size: 2rem;
+//    }
+//    .mobile-cta .content {
+//      padding: 25px 5% !important;
+//    }
+//    .mobile-cta {
+//      background-image: url(../../dist/img/curated/curated-1.jpg);
+//      background-size: 150vw auto;
+//      background-position: 50%;
+//      overflow: hidden;
+//      .btn.clipped {
+//        position: relative;
+//        z-index: 1;
+//        background: white;
+//        padding: 13px rem(10);
+//      }
+//      .btn.clipped:before {
+//        content: 'Together We Can. Contact Us \f1d8' !important;
+//        font-family: Helvetica Neue, fontawesome;
+//        position: absolute;
+//        left: 0;
+//        width: 100%;
+//        top: 0;
+//        height: 100%;
+//        border-radius: 100px;
+//        z-index: 10;
+//        background-image: url(../../dist/img/curated/curated-1.jpg);
+//        background-size: 150vw auto;
+//        background-position: 50%;
+//        background-attachment: fixed;
+//        -webkit-background-clip: text;
+//        -webkit-text-fill-color: rgba(0, 0, 0, .4);
+//        padding: 13px rem(10);
+//        opacity: 1;
+//        animation: none;
+//      }
+//    }
+//    .img-overlay {
+//      background: linear-gradient(-45deg, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
+//    }
+//  }
+//}

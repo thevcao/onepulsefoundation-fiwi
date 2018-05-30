@@ -399,7 +399,7 @@ p img {
         animation: none !important;
     }
     .newsletter {
-//        background: linear-gradient(135deg, #00a8de 0%, #333391 calc(100% / 7), #e91388 calc((100% / 7) * 2), #eb2d2e calc((100% / 7) * 3), orange calc((100% / 7) * 4), #ff0 calc((100% / 7) * 5), #34d400 calc((100% / 7) * 6), #00a8de 100%);
+//        @include onpuGradient;
 //        animation: none !important;
 //        background-size: 500vh;
 //        background-position: 0% 0%;
@@ -410,7 +410,7 @@ p img {
         }
     }
     &:not(.ipad) .donate-bar {
-//        background: linear-gradient(135deg, #00a8de 0%, #333391 calc(100% / 7), #e91388 calc((100% / 7) * 2), #eb2d2e calc((100% / 7) * 3), orange calc((100% / 7) * 4), #ff0 calc((100% / 7) * 5), #34d400 calc((100% / 7) * 6), #00a8de 100%);
+//        @include onpuGradient;
       //        animation: none !important;
 //        background-size: 500vh;
 //        background-position: 50% 50%;

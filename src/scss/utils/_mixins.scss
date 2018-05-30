@@ -14,7 +14,6 @@
      }
    }
  }
-
  @each $breakpoint in map-keys($grid-breakpoints) {
    @include media-breakpoint-up($breakpoint) {
      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
@@ -40,8 +39,6 @@
      }
    }
  }
-
-
  $spaceamounts: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15); // Adjust this to include the pixel amounts you need.
  $sides: (top, bottom, left, right); // Leave this variable alone
  // (768px)
@@ -55,8 +52,6 @@
      }
    }
  }
-
-
  @include media-breakpoint-down(lg) {
    @each $space in $spaceamounts {
      @each $side in $sides {
@@ -69,7 +64,6 @@
      }
    }
  }
-
  @include media-breakpoint-down(md) {
    @each $space in $spaceamounts {
      @each $side in $sides {
@@ -82,8 +76,6 @@
      }
    }
  }
-
-
  @include media-breakpoint-down(sm) {
    @each $space in $spaceamounts {
      @each $side in $sides {
@@ -96,4 +88,40 @@
      }
    }
  }
-
+ @mixin onpuGradient {
+   background: linear-gradient(135deg, #00a8de 0%, #333391 calc(100% / 7), #e91388 calc((100% / 7) * 2), #eb2d2e calc((100% / 7) * 3), orange calc((100% / 7) * 4), #ff0 calc((100% / 7) * 5), #34d400 calc((100% / 7) * 6), #00a8de 100%);
+ }
+ .visible-md,
+ .visible-sm,
+ .visible-xs {
+   display: none;
+ }
+ @include media-breakpoint-down(lg) {
+   .hidden-lg {
+     display: none;
+   }
+ }
+ @include media-breakpoint-down(md) {
+   .hidden-md {
+     display: none;
+   }
+   .visible-md {
+     display: block !important;
+   }
+ }
+ @include media-breakpoint-down(sm) {
+   .hidden-sm {
+     display: none;
+   }
+   .visible-sm {
+     display: block !important;
+ }
+}
+ @include media-breakpoint-down(xs) {
+   .hidden-xs {
+     display: none;
+   }
+   .visible-xs {
+     display: block !important;
+   }
+ }

@@ -117,7 +117,7 @@ endif; wp_reset_postdata();?>
     $mobileCTA = get_field('mobile_contact_image', 'options');
     $donateImage = get_field('donate_hero', 'options');
 
-    echo '<style> html:not(.ipad) .mobile-cta, .mobile-cta.clipped:before {background-image:url('. $mobileCTA['sizes']['large'] .');} .donate-hero h2, .page-template-donate .loader {background-image:url('. $donateImage['sizes']['banner'] .');}
+    echo '<style> html:not(.ipad) .mobile-cta, .mobile-cta .btn.clipped:before {background-image:url('. $mobileCTA['sizes']['large'] .');} .donate-hero h2, .page-template-donate .loader {background-image:url('. $donateImage['sizes']['banner'] .');}
     </style>' ;
     if(is_page('home')):
     //echo '<meta property="og:image" content="'. $homeHero['sizes']['large'] .'" />';

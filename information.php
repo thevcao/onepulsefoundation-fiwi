@@ -71,7 +71,7 @@
 
         <div class="row">
 
-            <div class="col-md-3 col-11 mx-auto">
+            <div class="col-lg-3 col-md-12 col-11 mx-auto">
 
                 <?php if( have_rows('info') ):?>
                 <ul class="tab-links">
@@ -84,7 +84,7 @@
 
             </div>
 
-            <div class="col-md-8 ml-auto col-11 mx-auto tabs">
+            <div class="col-lg-8 col-md-12 ml-auto col-11 mx-auto tabs">
 
                 <?php if( have_rows('info') ):?>
                 <?php while ( have_rows('info') ) : the_row();?>

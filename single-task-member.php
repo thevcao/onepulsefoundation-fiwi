@@ -37,7 +37,7 @@
                         echo '">';
                         endif;?>
                     </div>
-                    <div class="<?php if(get_field('headshot')): echo 'col-lg-4 offset-lg-2 col-10 mx-md-down mt64 mb120'; else: echo 'col-md-4 col-md-offset-1'; endif;?> mt64 mb120">
+                    <div class="<?php if(get_field('headshot')): echo 'col-lg-4 offset-lg-2 col-md-11 col-10 mx-md-down mt64 mb120'; else: echo 'col-md-4 col-md-offset-1'; endif;?> mt64 mb120">
                         <h1><span class="<?php the_field('overlay_color');?> clip small"><?php the_field('title');?></span><?php echo get_the_title();?></h1>
 
                         <?php the_field('bio');?>

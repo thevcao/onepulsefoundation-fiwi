@@ -23,7 +23,7 @@
         <div class="post-body">
             <section class="post-image">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 col-11 mx-md-down">
                 <?php
 
                 $video = get_field('post_video');
@@ -115,7 +115,7 @@
 
             if(!$source == null):?>
 
-                            <div class="col-md-7">
+                            <div class="col-md-7 col-11 mx-md-down">
                                 <h1><?php echo get_the_title();?></h1>
                                     <h3 class="mt0 mb16"><i class="fa fa-calendar"></i> <?php the_field('event_date');?></h3>
                                   <?php if(get_field('event_location')):?>
@@ -139,7 +139,7 @@
 
 
 
-                            <div class="col-md-4 ml-auto mt120 mt-sm-0 mt-xs-0">
+                            <div class="col-md-4 ml-auto mt120 mt-sm-0 mt-xs-0 col-11 mx-md-down">
 
 
                                 <div>
@@ -161,7 +161,7 @@
 
                             <?php else: ?>
 
-                            <div class="col-md-7">
+                            <div class="col-md-7 col-11 mx-md-down">
                                 <h1><?php echo get_the_title();?></h1>
                                     <h3 class="mt0 mb16"><i class="fa fa-calendar"></i> <?php the_field('event_date');?></h3>
                                     <h3 class="mt0 mb32"><a href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $address;?>" target="_blank"><i class="fa fa-location-arrow"></i> <?php echo $address;?></a></h3>
@@ -182,7 +182,7 @@
 
 
 
-                            <div class="col-md-4 ml-auto mt120 mt-sm-0 mt-xs-0">
+                            <div class="col-md-4 ml-auto mt120 mt-sm-0 mt-xs-0 col-11 mx-md-down">
 
 
                                 <div>
@@ -204,7 +204,7 @@
                             </div>
 
                       <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 col-11 mx-auto">
 
 
                               <?php $sponsors = get_field('sponsors');

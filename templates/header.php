@@ -60,7 +60,7 @@ get_template_part('templates/head');
                       <?php wp_nav_menu( array( 'theme_location' => 'action',
                                               'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s
                                               <li>
-                                              <a href="#" class="search-toggle"><i class="fa fa-search"></i></a>
+                                              <a href="#" class="search-toggle no-hover"><i class="fa fa-search"></i></a>
                                               </li>
                                               </ul>'
                                               ) ); ?>

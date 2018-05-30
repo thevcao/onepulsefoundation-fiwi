@@ -30,7 +30,7 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-11 mx-auto">
+                    <div class="col-lg-12 col-md-12 col-11 mx-auto">
 
                         <?php if (!$count): ?>
                             <h1><span><?php the_sub_field('subheadline');?></span><?php the_sub_field('headline');?></h1>
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="row">
-                        <div class="col-lg-5 col-11 mx-md-down">
+                        <div class="col-lg-5 col-md-12 col-11 mx-md-down order-lg-1 order-md-2 order-2">
 
                             <div class="content">
 
@@ -58,7 +58,7 @@
 
                         </div>
                 <?php if($media_type == 'Image'):?>
-                    <div class="col-lg-6 ml-auto col-11 mx-md-down mb-lg-0 mb-md-0 mb-sm-3 mb-3">
+                    <div class="col-lg-6 col-md-12 ml-auto col-11 mx-md-down mb-lg-0 mb-md-0 mb-sm-3 order-lg-2 order-md-1 order-1">
 
 
                         <div class="canvas-container" data-stellar-ratio="1">
@@ -68,7 +68,7 @@
                         </div>
 
                         <?php elseif($media_type == 'Video'):?>
-                    <div class="col-lg-6 ml-auto col-11 mx-md-down mb-lg-0 mb-md-0 mb-sm-3 mb-3">
+                    <div class="col-lg-6 ml-auto col-md-12 col-11 mx-md-down mb-lg-0 mb-md-0 mb-sm-3 order-lg-2 order-md-1 order-1">
 
                                 <div class="video-container" data-stellar-ratio="1.25">
 
