@@ -78,26 +78,26 @@
 
 
             if($(window).width() < 991) {
-            $(this).find('.content').css("padding-top", (thisHeight * 1.5))
+//            $(this).find('.content').css("padding-top", (thisHeight * 1.5))
 
 
             } else {
 
             $(wrapper).html($(wrapper).html().split(movethis2).join(""));
             $(this).find('.dupe h3').text(movethis2);
-            $(this).find('.content').css("padding-top", (thisHeight * 2.5))
+//            $(this).find('.content').css("padding-top", (thisHeight * 2.5))
             }
 
-            $(window).resize(function () {
-            if($(window).width() < 991) {
-            $(this).find('.content').css("padding-top", (thisHeight * 1.5))
-            } else {
-
-
-
-            $(this).find('.content').css("padding-top", (thisHeight * 2.5))
-            }
-            });
+//            $(window).resize(function () {
+//            if($(window).width() < 991) {
+////            $(this).find('.content').css("padding-top", (thisHeight * 1.5))
+//            } else {
+//
+//
+//
+////            $(this).find('.content').css("padding-top", (thisHeight * 2.5))
+//            }
+//            });
 
 
 
@@ -121,7 +121,7 @@
 
             }
 
-                $('section').not('.home-hero, .newsletter, .page-cta').each(function(){
+                $('section').not('.home-hero, .newsletter, .page-cta, .page-main section:first-child').each(function(){
 
                   var ogClass = $(this).attr('class');
 
@@ -197,7 +197,7 @@
           }
           return false;
         });
-        $('a').not('.full-menu ul li a, .home-play, .task-link, .logo, p a, .stickylist-fileupload a').each(function () {
+        $('a').not('.home-play, .task-link, .logo, p a, .stickylist-fileupload a').each(function () {
           if ($('html').not('.mobile')) {
             var title = $(this).text();
             $(this).attr('title', title);
@@ -409,10 +409,10 @@
             setTimeout(function () {
               window.location.href = link;
             }, 1000);
-            setTimeout(function () {
-              $('.loader').removeClass('once');
-              $('.spinner').css('opacity', '0');
-            }, 2000);
+//            setTimeout(function () {
+//              $('.loader').removeClass('once');
+//              $('.spinner').css('opacity', '0');
+//            }, 1700);
 
           }
 
@@ -806,7 +806,7 @@
                 image = $(this).children('a').attr('href');
                 extension = image.split('.').pop();
                 if(extension == 'pdf') {
-                $(this).html('<a href="' + image + '" class="btn right" title="View Submission "><div></div>View Submission <i class="fa fa-file-pdf"></i></a>');
+                $(this).html('<a href="' + image + '" class="btn right" title="View Submission " target="blank"><div></div>View Submission <i class="fa fa-file-pdf"></i></a>');
                 } else {
                 $(this).html('<a href="' + image + '" class="no-hover"><img width="50" src="' + image + '"></a>');
                 }
@@ -927,7 +927,7 @@
 
 
                 if(extension == 'pdf') {
-                $(this).html('<a href="' + image + '" class="btn right" title="View Submission "><div></div>View Submission <i class="fa fa-file-pdf"></i></a>');
+                $(this).html('<a href="' + image + '" class="btn right" title="View Submission " target="blank"><div></div>View Submission <i class="fa fa-file-pdf"></i></a>');
                 } else {
                 $(this).html('<a href="' + image + '" class="no-hover"><img width="50" src="' + image + '"></a>');
                 }

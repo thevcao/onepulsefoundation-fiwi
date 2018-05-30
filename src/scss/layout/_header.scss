@@ -619,6 +619,9 @@
 
 
 }
+
+
+
 .full-menu {
   position: fixed;
   left: 0;
@@ -755,7 +758,14 @@
   }
 }
 
+// @media (max-width: 1439px)
+@include media-breakpoint-up(lg) {
 
+  .full-menu {
+  display: none;
+}
+
+}
 .menu-open {
   .main-header {
 //    background: rgba(0, 0, 0, 0);
@@ -1411,6 +1421,16 @@
     display: block;
     margin-bottom: 0;
   }
+}
+
+@include media-breakpoint-down(sm) {
+
+  .full-menu ul li a {
+
+    font-size: 1rem;
+    padding: .75rem 0;
+  }
+
 }
 @include media-breakpoint-down(xs) {
   html:not(.ipad) .full-menu {

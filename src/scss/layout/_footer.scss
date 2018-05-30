@@ -116,6 +116,7 @@ footer {
       display: flex;
       align-items: center;
       align-content: center;
+      position: relative;
 
       &:after {
         content: '' !important;

@@ -22,7 +22,7 @@
 <div class="page-main">
 
 
-  <section class="pt-11 pb-11 pt-lg-11 pb-lg-3 pt-md-10 pb-md-1 mt-lg-2 mb-lg-3 pt-sm-7">
+  <section class="pb-3 pb-lg-3 pb-md-3 pt-sm-3">
     <div class="container pb64">
 
 
@@ -36,11 +36,11 @@
 
       <?php if(is_page(6744)):?>
 
-        <div class="container-fluid">
+        <div class="">
 
         <div class="row">
 
-            <div class="col-md-6">
+            <div class="col-lg-6 col-md-12 col-11 mx-auto">
             <div class="contact-info">
             <h5 class="mt8 mb8">Address and Information</h5>
 
@@ -52,7 +52,7 @@
             </div>
 
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6 col-md-12 col-11 mx-auto">
             <div class="contact-info">
 
             <h5 class="mt8 mb8">Hours of Operations</h5>

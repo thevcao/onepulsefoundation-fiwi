@@ -79,9 +79,9 @@
         }
         &:hover {
           // (768px)
-          @include media-breakpoint-up(sm) {
-            color: rgba(0, 0, 0, 0);
-          }
+        @include media-breakpoint-up(sm) {
+          color: rgba(0, 0, 0, 0);
+        }
           text-decoration: none;
           * {
             text-decoration: none;

@@ -45,7 +45,7 @@ $newsimage = get_field('news_image', 'options');?>
       </div>
   </div>
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-sm-5 ml-auto">
 
 

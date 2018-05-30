@@ -1,5 +1,23 @@
 .page-cta {
   overflow: hidden;
+
+
+
+@include media-breakpoint-up(lg) {
+
+  height: 35rem;
+
+  .container {
+
+    height: 100%;
+
+    > .row {
+
+      height: 100%;
+    }
+  }
+}
+
   .footer-bg {
     position: absolute;
     top: 0;
