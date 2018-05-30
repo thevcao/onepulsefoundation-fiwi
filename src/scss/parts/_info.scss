@@ -118,11 +118,12 @@
             figure {
               margin: 0;
               position: relative;
+              width: 100% !important;
               figcaption.wp-caption-text {
                 position: absolute;
                 z-index: 10;
                 bottom: rem(10);
-                padding: rem(10) 20px;
+                padding: rem(10) 20px rem(7);
                 font-weight: bold;
                 background: white;
               }
