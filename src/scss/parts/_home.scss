@@ -288,7 +288,7 @@ html:not(.mobile) {
         a {
           span {
             display: block;
-            font-size: 4.25vw;
+            font-size: .55em;
             line-height: 1.1;
             padding-bottom: 5px;
             letter-spacing: -.03em;
@@ -296,12 +296,12 @@ html:not(.mobile) {
           display: block;
           color: black;
           font-weight: bold;
-          padding: 4vw 20px;
+          padding: 1rem 0 1rem;
           display: block;
           transition: color .5s ease;
           position: relative;
           line-height: 1.1;
-          font-size: 8vw;
+          font-size: 2.5rem;
           letter-spacing: -.035em;
           &:before {
             opacity: 0;

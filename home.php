@@ -43,7 +43,7 @@
                 <!--			<div class="over"></div>-->
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-11 col-md-12 col-11 mx-auto col-center-ls-tab">
+                        <div class="col-xl-11 col-md-12 col-sm-11 col-11 mx-auto col-center-ls-tab">
                             <h2>We will not let hate win.<a href="#" class="home-play visible-xs"><i class="flaticon-play-button"></i></a>
 </h2>
                             <a href="#" class="home-play hidden-xs">
@@ -158,9 +158,13 @@
 
             <section class="mobile-links visible-xs">
 
+              <div class="container">
 
-                <div class="">
+              <div class="col-12 mx-auto">
                     <?php wp_nav_menu( array( 'theme_location' => 'full-mobile' ) ); ?>
+              </div>
+              </div>
+
 
             </section>
 

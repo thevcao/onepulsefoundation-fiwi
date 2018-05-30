@@ -19,7 +19,6 @@
         // JavaScript to be fired on all pages
         $(window).load(function () {
 //          $('.mm').matchHeight();
-
           fullHero();
           ctaPadding();
           if ($('.retina_2x').length) {
@@ -27,8 +26,6 @@
               $(this).attr('data-lazy', $(this).attr('data-src'));
             });
           }
-
-
           $('.gallery').slick({
             lazyLoad: 'ondemand',
             dots: true,
@@ -68,26 +65,19 @@
           console.log('rotate')
         });
           function ctaPadding() {
-
           $('.page-cta').each(function () {
             var wrapper = $('.over h3'),
               movethis = $(wrapper).text(),
               movethis2 = movethis.split(" ").pop(),
               thisHeight = $(wrapper).outerHeight();
 //            console.log(movethis2);
-
-
             if($(window).width() < 991) {
 //            $(this).find('.content').css("padding-top", (thisHeight * 1.5))
-
-
             } else {
-
             $(wrapper).html($(wrapper).html().split(movethis2).join(""));
             $(this).find('.dupe h3').text(movethis2);
 //            $(this).find('.content').css("padding-top", (thisHeight * 2.5))
             }
-
 //            $(window).resize(function () {
 //            if($(window).width() < 991) {
 ////            $(this).find('.content').css("padding-top", (thisHeight * 1.5))
@@ -98,40 +88,25 @@
 ////            $(this).find('.content').css("padding-top", (thisHeight * 2.5))
 //            }
 //            });
-
-
-
           });
-
           }
-
         function fullHero() {
           var fullHeight = $(window).outerHeight(),
             contentHeight = $('.home-hero .container').outerHeight(),
             remaining = ((fullHeight + header) - contentHeight),
             padding = (remaining / 2);
-
             if($('body').hasClass('scrolled')) {
-
                 var header = $('header').outerHeight() * 1.25;
-
             } else {
-
                 var header = $('header').outerHeight();
-
             }
-
                 $('section').not('.home-hero, .newsletter, .page-cta, .page-main section:first-child').each(function(){
-
                   var ogClass = $(this).attr('class');
-
                   if($(this).attr('data-attr') == null) {
                   $(this).attr('data-attr', ogClass);
 //                  var storedClass = $(this).attr('data-attr');
                   }
-
                   if($(window).width() < 991){
-
                     $(this).removeClass (function (index, css) {
                        return (css.match (/(^|\s)pt\S+/g) || []).join(' ');
                     }).removeClass (function (index, css) {
@@ -141,40 +116,27 @@
                     }).removeClass (function (index, css) {
                        return (css.match (/(^|\s)mb\S+/g) || []).join(' ');
                     }).addClass('mobile-spacing')
-
-
                   } else {
-
-
                     $(this).attr('class', $(this).attr('data-attr'));
 //                    console.log('resizing - should be adding OG back:' + $(this).attr('data-attr'))
-
                   }
-
                 });
-
-
               if($(window).width() < 991){
-                $('.contact-modal').css('padding-top', header * 1.25);
+                $('.home .home-hero').css('padding-top', header * 1.25);
+                $('.contact-form.modal').css('padding-top', header * 1.25);
                 if($('section:first-child').length){
-
                 $('section:first-child').css('padding-top', header * 1.25);
   //              $('section:first-child').removeClass('pt-sm-3');
                 }
               } else {
                 if($('section:first-child').length){
-
                   $('section:first-child').css('padding-top', header * 1.5);
                   $("section:first-child").removeClass (function (index, css) {
                      return (css.match (/(^|\s)pt\S+/g) || []).join(' ');
                   });
                 }
               }
-
-
-
         }
-
         $('.img-attrib').each(function () {
           var width = $(this).prev('img').outerWidth();
           $(this).css('width', width - 20);
@@ -204,38 +166,25 @@
           }
         });
         $('.question').click(function () {
-
         var el = document.querySelector('html');
         var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
         var fontSize = parseFloat(style);
         var convertedREM = fontSize * 3;
-
         var target = $(this).parents('.faq-item');
-
 //          if($('body').hasClass('scrolled')) {
 //
 //              var headerHeight = $('header').outerHeight() * 1.75;
 //
 //          } else {
-
               var headerHeight = $('header').outerHeight();
-
 //          }
           $('html, body').delay().animate({
                     scrollTop: $(target).offset().top - headerHeight - $(target).outerHeight()
             }, 1000);
           $('.faq-item').not($(this).parents('.faq-item')).removeClass('active');
           $('.faq-item .answer').children('p, ul').not($(this).next('.answer').children('p, ul')).slideUp(500);
-
-
-
-
           $(this).next('.answer').children('p, ul').slideToggle(500);
           $(this).parents('.faq-item').toggleClass('active');
-
-
-
-
           return false;
         });
         $('.search-toggle').click(function () {
@@ -251,15 +200,11 @@
             $element = $('body'),
             className = 'scrolled';
           var headerHeight = ($('.home-hero').outerHeight() - $('header').outerHeight());
-
           if($(window).width() < 768){
-
             $document.scroll(function () {
               $element.toggleClass(className, $document.scrollTop() > $('header').outerHeight());
             });
-
           } else {
-
           if ($('.home-hero').length) {
             $document.scroll(function () {
               $element.toggleClass(className, $document.scrollTop() > headerHeight);
@@ -269,9 +214,7 @@
               $element.toggleClass(className, $document.scrollTop() > $('header').outerHeight());
             });
           }
-
           }
-
 //        }
         $('.home-play').click(function () {
           //						$('body').removeClass('loaded');
@@ -372,8 +315,6 @@
             });
           });
         }
-
-
         $('.video-modal .close').click(function () {
           $('body').removeClass('modal-open');
           var myPlayer = videojs("home-video");
@@ -427,9 +368,7 @@
           }
         );
         $("a").not('.tab-links a, a[download], a[href="#"], .nturl, .modal-toggle, .modal-toggle a, .pop-link, ul.tabs li a, .woocommerce-product-gallery__image a, a[target="_blank"], a[target="blank"], .survey-toggle, .stickylist-fileupload a, #menu-full-mobile li.menu-item-has-children a').click(function (e) {
-
           if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-
             var link = $(this).attr('href');
             e.preventDefault();
             $('.loader').addClass('once');
@@ -441,9 +380,7 @@
 //              $('.loader').removeClass('once');
 //              $('.spinner').css('opacity', '0');
 //            }, 1700);
-
           }
-
         });
         if (/iPhone/i.test(navigator.userAgent)) {
           $(window).scroll(function () {
@@ -616,11 +553,8 @@
         function halftone() {
           // try to create a WebGL canvas (will fail if WebGL isn't supported)
 //          if ($('#featured-image').length) {
-
             $('.canvas-container').each(function(){
-
             // convert the image to a texture
-
             var image = $(this).children('.grayscale')[0];
 //            var image = $(this);
             image.crossOrigin = 'Anonymous';
@@ -654,14 +588,10 @@
             var canvasWidth = $(this).outerWidth();
             var imgRatio = imgHeight / imgWidth;
             var canvasHeight = canvasWidth * imgRatio;
-
             $(this).css('height', canvasHeight);
-
             });
             $('.post-image').each(function(){
-
             // convert the image to a texture
-
             var image = $('#featured-image')[0];
             var overlayHeight = $('#featured-image').outerHeight();
 //            var image = $(this);
@@ -674,7 +604,6 @@
               // replace the image with the canvas
               image.parentNode.insertBefore(canvas, image);
               image.parentNode.removeChild(image);
-
               $('.col-lg-5.col-11').prepend('<div class="overlay" style="height: ' + overlayHeight + 'px;"></div>');
               // Note: instead of swapping the &lt;canvas&gt; tag with the &lt;img&gt; tag
               // as done above, we could have just transferred the contents of
@@ -700,67 +629,39 @@
 //            var canvasHeight = canvasWidth * imgRatio;
 //
 //            $(this).css('height', canvasHeight);
-
             });
-
 //          }
         }
-
         $(window).load(function(){
-
         halftone();
-
         })
         $(window).resize(function () {
-
         if($('.post-image .overlay').length){
-
           var newHeight = $('.post-image canvas').outerHeight();
-
           $('.overlay').css('height', newHeight);
         }
         })
-
         $('#menu-full-mobile li.menu-item-has-children a').click(function(){
-
           if($(this).parents('li').hasClass('active')) {
-
-
-
           } else {
-
           $(this).parents('li').children('.sub-menu').delay(400).fadeIn(400);
           $(this).parents('li').addClass('active');
           $('.sub-menu').not($(this).parents('li').children('.sub-menu')).slideUp(400);
           $('#menu-full-mobile > li').not($(this).parents('li')).slideUp(400);
-
           if($('.translated-ltr').length){
-
             var backLabel = 'Volver';
-
           }  else {
-
             var backLabel = 'Back';
-
           }
           $(this).parents('li').prepend('<a href="#" class="sub-back no-hover"><i class="fa fa-caret-left"></i>' + backLabel + '</a>');
           return false;
-
           }
-
-
-
-
         });
-
         $(document).on('click', '.sub-back', function(){
-
           $('.sub-menu').slideUp(400);
           $('#menu-full-mobile > li').slideDown(400).removeClass('active');
           $('.sub-back').remove();
           return false;
-
-
         });
       $(window).load(function(){
         var headerHeight = $('header').outerHeight();
@@ -840,58 +741,33 @@
                 }
             });
         });
-
         $(document).on('click', '.stickylist-fileupload a', function(){
-
           if($(window).width() > 991){
-
           var file = $(this).attr('href');
           var submissionID = $(this).parents('.is_read').children('.sort-0').text();
           var desc = $(this).parents('.is_read').children('.sort-2').text();
           var name = $(this).parents('.is_read').children('.sort-1').text();
           $('html').addClass('view-pdf');
-
           console.log('viewing ' + file);
           console.log('ID ' + submissionID);
           console.log('by ' + name);
           console.log(desc);
-
-
-
           $('body').append('<div class="media-modal"><div class="inner"><a href="#" class="close"><i class="fa fa-close"></i></a><div class="row"><div class="col-sm-8"><div class="iframe-wrapper"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div><iframe src="' + file + '"></iframe></div></div><div class="col-sm-4"><div class="content"><h2 class="mb-3">Entry #' + submissionID + '</h2><p>' + desc + '</p><p class="author">Submitted by: ' + name + '</p></div></div></div></div></div>');
-
-
-
           setTimeout(function(){
             $('.media-modal').addClass('transition-in');
           }, 100);
           return false;
-
-
           }
-
-
-
         });
-
-
         $(document).on('click', '.media-modal .close', function(){
-
           $('html').removeClass('view-pdf');
-
           $(this).parents('.media-modal').removeClass('transition-in');
-
           setTimeout(function(){
             $('.media-modal').remove();
           }, 750);
-
-
         });
-
-
       }
     },
-
     'page_template_ig': {
       init: function () {
         // JavaScript to be fired on the home page
@@ -908,9 +784,6 @@
           return false;
           }
         });
-
-
-
         function makeThumb(page) {
           // draw page to fit into 96x96 canvas
           var vp = page.getViewport(1);
@@ -921,97 +794,60 @@
             return canvas;
           });
         }
-
 //        PDFJS.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.489/pdf.worker.js";
-
         $(document).ready(function() {
-
-
 //            cell = $('.stickylist-fileupload');
             $('.stickylist-fileupload').each(function() {
                 var image = $(this).children('a').attr('href');
                 var extension = image.split('.').pop();
                 var parent =  $(this);
-
                 PDFJS.getDocument(image).promise.then(function (doc) {
-
                   var pages = []; while (pages.length < 1) pages.push(1);
                   return Promise.all(pages.map(function (num) {
                     // create a div for each page and build a small canvas for it
                     var div = document.createElement("div");
-
 //                    console.log(parent);
-
-
                     $(parent).prepend(div);
 //                    document.parent.appendChild(div);
-
                     return doc.getPage(num).then(makeThumb)
                       .then(function (canvas) {
                         div.appendChild(canvas);
                     });
                   }));
                 }).catch(console.error);
-
-
                 if(extension == 'pdf') {
                 $(this).html('<a href="' + image + '" class="btn right" title="View Submission " target="blank"><div></div>View Submission <i class="fa fa-file-pdf"></i></a>');
                 } else {
                 $(this).html('<a href="' + image + '" class="no-hover"><img width="50" src="' + image + '"></a>');
                 }
             });
-
-
         });
-
         $(document).on('click', '.stickylist-fileupload a', function(){
-
           if($(window).width() > 991){
-
           var file = $(this).attr('href');
           var submissionID = $(this).parents('.is_read').children('.sort-1').text();
           var desc = $(this).parents('.is_read').children('.sort-3').text();
           var name = $(this).parents('.is_read').children('.sort-2').text();
           $('html').addClass('view-pdf');
-
           console.log('viewing ' + file);
           console.log('ID ' + submissionID);
           console.log('by ' + name);
           console.log(desc);
-
-
-
           $('body').append('<div class="media-modal"><div class="inner"><a href="#" class="close"><i class="fa fa-close"></i></a><div class="row"><div class="col-sm-8"><div class="iframe-wrapper"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div><iframe src="' + file + '"></iframe></div></div><div class="col-sm-4"><div class="content"><h2 class="mb-3">Entry #' + submissionID + '</h2><p>' + desc + '</p><p class="author">Submitted by: ' + name + '</p></div></div></div></div></div>');
-
-
-
           setTimeout(function(){
             $('.media-modal').addClass('transition-in');
           }, 100);
           return false;
-
           }
-
-
         });
-
-
         $(document).on('click', '.media-modal .close', function(){
-
           $('html').removeClass('view-pdf');
-
           $(this).parents('.media-modal').removeClass('transition-in');
-
           setTimeout(function(){
             $('.media-modal').remove();
           }, 750);
-
           return false;
-
-
         });
-
-
       }
     },
     'page_template_information': {
@@ -1141,7 +977,6 @@
             })(marker, i));
           }
         }
-
         if($('#map').length)
         initMap();
       }
