@@ -206,9 +206,11 @@ html:not(.safari) {
 .gform_wrapper .gform_footer input.button,
 .gform_wrapper .gform_footer input[type=submit],
 .gform_wrapper .gform_page_footer input.button,
-.gform_wrapper .gform_page_footer input[type=submit] {
-  animation: buttonHover 10s ease infinite both;
+.gform_wrapper .gform_page_footer input[type=submit], input[type=submit] {
+  animation: buttonHover 10s alternate linear infinite;
   transition: .5s ease;
+  display: block;
+  width: 100%;
   &:hover {
     opacity: .5;
   }
@@ -480,10 +482,10 @@ html.safari.mac {
     }
   }
   .btn.clipped {
-    padding: rem(12) 25px;
-    margin-top: 0;
+//    padding: rem(12) 25px;
+//    margin-top: 0;
     &.over {
-      padding: rem(12) 25px;
+//      padding: rem(12) 25px;
     }
   }
 }

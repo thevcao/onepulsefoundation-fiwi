@@ -94,6 +94,22 @@
           text-decoration: none;
         }
       }
+
+
+      &.no-hover {
+        transition: .3s ease;
+        &:hover {
+          color: $b !important;
+          animation: animation-ie 10s alternate linear infinite;
+          animation-delay: .3s;
+        }
+        &:before,
+        &:after {
+          content: none !important;
+        }
+      }
+
+
       //      &:not(.home-play, .task-link):hover:before {
       //        opacity: 1;
       //      }
@@ -336,7 +352,7 @@
       i {
         margin-right: .5rem;
       }
-      animation: animation-ie 10s ease infinite both;
+      animation: animation-ie 10s alternate linear infinite;
       text-transform: capitalize;
     }
     .mx-md-down {

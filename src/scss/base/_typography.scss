@@ -5,7 +5,6 @@ $baseFontSize: 16;
 html {
   @include poly-fluid-sizing('font-size', (320px: 14px, 576px: 10px, 768px: 11px, 1024px: 12px, 1440px: 13px, 1600px: 14px));
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -20,27 +19,37 @@ p {
   font-size: 1rem;
   line-height: 2;
   letter-spacing: -.025em
-
-
-
 }
-
 p {
-
-  &+h1, &+h2, &+h3, &+h4, &+h5 {
-
+  &+h1,
+  &+h2,
+  &+h3,
+  &+h4,
+  &+h5 {
     // (768px)
-
     margin-top: 1em;
-
     @include media-breakpoint-down(sm) {
-
       margin-top: 3rem;
     }
-
   }
+  &.roygbiv {
+    animation: animation-ie 10s alternate linear infinite;
+  }
+  &.large {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  a:not(.btn) {
+    animation: animation-ie 10s alternate linear infinite;
+    font-weight: bold;
+
+    &:hover {
+    color: transparent;
+    animation: animation-ie 10s alternate linear infinite;
 
 
+    }
+  }
 }
 h1,
 h2,
@@ -54,14 +63,17 @@ h5 {
   //    margin: 0 0 1rem;
   span {
     display: block;
-    font-size: .75em;
+    font-size: .55em;
     letter-spacing: -.04em;
-    margin-bottom: 5px;
+    margin-bottom: rem(5);
     &.small {
       font-size: 50%;
       letter-spacing: -.05em;
       font-weight: bold;
     }
+  }
+  &.roygbiv {
+    animation: animation-ie 10s alternate linear infinite;
   }
 }
 h1 {
@@ -87,14 +99,10 @@ h5 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 300vw;
-
-
   // (768px)
   @include media-breakpoint-up(sm) {
-
-  animation: linkanimate 1s alternate linear infinite;
+    animation: linkanimate 1s alternate linear infinite;
   }
-
   &.red {
     background: $rgrad;
     -webkit-background-clip: text;
@@ -232,10 +240,10 @@ h5 {
 @include media-breakpoint-down(xs) {
   //  html:not(.ipad) {
   h1 {
-          font-size: 2rem;
+    font-size: 2rem;
   }
   h2 {
-          font-size: 2rem;
+    font-size: 2rem;
   }
   h1 span,
   h2 span,

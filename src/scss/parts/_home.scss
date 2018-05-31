@@ -157,7 +157,7 @@ html:not(.mobile) {
       transition: opacity .5s ease;
       position: absolute;
       left: 0;
-      //			animation: animation 10s ease infinite both;
+      //			animation: animation 10s alternate linear infinite;
       opacity: .5;
       //      margin-top: rem(3);
     }
@@ -309,7 +309,7 @@ html:not(.mobile) {
             content: attr(title);
             color: #000;
             background: linear-gradient(90deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 17%, rgba(233, 19, 136, 1) 34%, rgba(235, 45, 46, 1) 51%, rgba(253, 233, 43, 1) 68%, rgba(0, 158, 84, 1) 85%, rgba(0, 168, 222, 1) 100%);
-            animation: animation 10s ease infinite both;
+            animation: animation 10s alternate linear infinite;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-attachment: fixed;
@@ -444,7 +444,7 @@ html:not(.mobile) {
             content: attr(title);
             color: #000;
             background: linear-gradient(90deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 17%, rgba(233, 19, 136, 1) 34%, rgba(235, 45, 46, 1) 51%, rgba(253, 233, 43, 1) 68%, rgba(0, 158, 84, 1) 85%, rgba(0, 168, 222, 1) 100%);
-            animation: animation 10s ease infinite both;
+            animation: animation 10s alternate linear infinite;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-attachment: fixed;

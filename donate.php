@@ -70,7 +70,7 @@
 
 
 
-                            <div class="col-md-6 ml-auto pt-sm-5 pt-sm-16 p-xs-0">
+                            <div class="col-md-6 ml-auto pl-0 pr-0 pt-sm-5 pt-sm-16 p-xs-0">
 
                                 <?php the_field('right_column');?>
 

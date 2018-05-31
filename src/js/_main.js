@@ -165,12 +165,19 @@
             $(this).attr('title', title);
           }
         });
+        $('p .btn').each(function () {
+          if ($('html').not('.mobile')) {
+            var title = $(this).text();
+            $(this).attr('title', title);
+          }
+        });
         $('.question').click(function () {
         var el = document.querySelector('html');
         var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
         var fontSize = parseFloat(style);
         var convertedREM = fontSize * 3;
         var target = $(this).parents('.faq-item');
+        var item = $(this);
 //          if($('body').hasClass('scrolled')) {
 //
 //              var headerHeight = $('header').outerHeight() * 1.75;
@@ -178,13 +185,21 @@
 //          } else {
               var headerHeight = $('header').outerHeight();
 //          }
-          $('html, body').delay().animate({
-                    scrollTop: $(target).offset().top - headerHeight - $(target).outerHeight()
-            }, 1000);
-          $('.faq-item').not($(this).parents('.faq-item')).removeClass('active');
-          $('.faq-item .answer').children('p, ul').not($(this).next('.answer').children('p, ul')).slideUp(500);
-          $(this).next('.answer').children('p, ul').slideToggle(500);
-          $(this).parents('.faq-item').toggleClass('active');
+
+
+          $('.faq-item').not($(item).parents('.faq-item')).removeClass('active');
+          $('.faq-item .answer').children('p, ul').not($(item).next('.answer').children('p, ul')).slideUp(500);
+          $(item).next('.answer').children('p, ul').slideToggle(500);
+          $(item).parents('.faq-item').toggleClass('active');
+          setTimeout(function(){
+
+            $('html, body').delay().animate({
+                      scrollTop: $(item).offset().top - headerHeight - convertedREM
+              }, 1000);
+
+          }, 500);
+
+
           return false;
         });
         $('.search-toggle').click(function () {
@@ -200,21 +215,9 @@
             $element = $('body'),
             className = 'scrolled';
           var headerHeight = ($('.home-hero').outerHeight() - $('header').outerHeight());
-          if($(window).width() < 768){
-            $document.scroll(function () {
-              $element.toggleClass(className, $document.scrollTop() > $('header').outerHeight());
-            });
-          } else {
-          if ($('.home-hero').length) {
-            $document.scroll(function () {
-              $element.toggleClass(className, $document.scrollTop() > headerHeight);
-            });
-          } else {
-            $document.scroll(function () {
-              $element.toggleClass(className, $document.scrollTop() > $('header').outerHeight());
-            });
-          }
-          }
+          $document.scroll(function () {
+            $element.toggleClass(className, $document.scrollTop() > $('header').outerHeight());
+          });
 //        }
         $('.home-play').click(function () {
           //						$('body').removeClass('loaded');

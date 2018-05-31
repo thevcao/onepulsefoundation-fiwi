@@ -41,7 +41,7 @@
 
       // (768px)
       @include media-breakpoint-down(sm) {
-      animation: animation-ie 10s ease infinite both !important;
+      animation: animation-ie 10s alternate linear infinite !important;
 
       }
 
@@ -49,7 +49,7 @@
     a {
       color: white;
       font-size: 1rem;
-//      animation: animation-ie 10s ease infinite both !important;
+//      animation: animation-ie 10s alternate linear infinite !important;
       &:before {
         opacity: 1 !important;
       }
@@ -90,7 +90,7 @@
       //            content: attr(title);
       //            color: #000;
       //            background: linear-gradient(90deg, #00a8de 0%, #333391 17%, #e91388 34%, #eb2d2e 51%, #fde92b 68%, #009e54 85%, #00a8de 100%);
-      //            animation: animation 10s ease infinite both;
+      //            animation: animation 10s alternate linear infinite;
       //            background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, yellow 71.42%, #34d400 85.71%, #00a8de 100%);
       //            animation: donateanimate 10s alternate linear infinite;
       //            background-size: 300vw;
@@ -134,7 +134,7 @@
 
       a {
 
-      animation: animation-ie 10s ease infinite both !important;
+      animation: animation-ie 10s alternate linear infinite !important;
 
 
       }
@@ -142,7 +142,7 @@
 
     a {
 
-      animation: animation-ie 10s ease infinite both !important;
+      animation: animation-ie 10s alternate linear infinite !important;
 
 
     }

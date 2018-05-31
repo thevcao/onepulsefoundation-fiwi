@@ -1241,6 +1241,16 @@ function my_mce_before_init_insert_formats( $init_array ) {
             'title' => 'Button (right)',
             'selector' => 'a',
             'classes' => 'btn right'
+        ),
+        array(
+            'title' => 'ROYGBIV Text',
+            'selector' => 'p, h1,h2,h3,h4,h5',
+            'classes' => 'roygbiv'
+        ),
+        array(
+            'title' => 'Large paragraph text',
+            'selector' => 'p',
+            'classes' => 'large'
         )
     );
     // Insert the array, JSON ENCODED, into 'style_formats'

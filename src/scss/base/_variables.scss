@@ -1,9 +1,9 @@
-$r: #e40051;
+$r: #eb2d2e;
 $o: orange;
-$y: #ffdc19;
+$y: #ff0;
 $g: #34d400;
-$b: dodgerblue;
-$m: magenta;
+$b: #00a8de;
+$m: #e91388;
 $p: purple;
 
 $rgrad: linear-gradient(135deg, rgba(253,47,173,1) 0%,#e40051 100%);
@@ -12,3 +12,101 @@ $ograd: linear-gradient(135deg, #ffdc19 0%,rgba(255,162,7,1) 100%);
 $ggrad: linear-gradient(135deg, rgba(151,255,7,1) 0%,rgba(57,213,7,1) 100%);
 $bgrad: linear-gradient(135deg, dodgerblue 0%,rgba(7,41,254,1) 100%);
 $pgrad: linear-gradient(135deg, rgba(255,11,255,1) 0%,purple 100%);
+
+
+@keyframes animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100vw 0;
+  }
+}
+
+@keyframes animation-ie {
+  0% {
+    color: $b;
+  }
+  12.5% {
+    color: $p;
+  }
+  25% {
+    color: $m;
+  }
+  37.5% {
+    color: $r;
+  }
+  50% {
+    color: $o;
+  }
+  62.5% {
+    color: $y;
+  }
+  75% {
+    color: $g;
+  }
+  87.5% {
+    color: $b;
+  }
+  100% {
+    color: $p;
+  }
+}
+@keyframes buttonHover {
+  0% {
+    color: $b;
+    border-color: $b;
+  }
+  12.5% {
+    color: $p;
+    border-color: $p;
+  }
+  25% {
+    color: $m;
+    border-color: $m;
+  }
+  37.5% {
+    color: $r;
+    border-color: $r;
+  }
+  50% {
+    color: $o;
+    border-color: $o;
+  }
+  62.5% {
+    color: $y;
+    border-color: $y;
+  }
+  75% {
+    color: $g;
+    border-color: $g;
+  }
+  87.5% {
+    color: $b;
+    border-color: $b;
+  }
+  100% {
+    color: $p;
+    border-color: $p;
+  }
+}
+@keyframes submenu-shadow {
+  0% {
+    box-shadow: 0px 0px 18px $r;
+  }
+  20% {
+    box-shadow: 0px 0px 18px $o;
+  }
+  40% {
+    box-shadow: 0px 0px 18px $y;
+  }
+  60% {
+    box-shadow: 0px 0px 18px $g;
+  }
+  80% {
+    box-shadow: 0px 0px 18px $b;
+  }
+  100% {
+    box-shadow: 0px 0px 18px $r;
+  }
+}

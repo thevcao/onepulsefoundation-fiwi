@@ -31,7 +31,7 @@
       overflow: visible;
       color: $r;
       transition-delay: 0s;
-      animation: animation-ie 10s ease infinite both;
+      animation: animation-ie 10s alternate linear infinite;
       text-align: right;
       margin: 3px 0;
       right: 2.25rem;
@@ -39,22 +39,22 @@
       &::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
         color: $r;
-        animation: animation-ie 10s ease infinite both;
+        animation: animation-ie 10s alternate linear infinite;
       }
       &::-moz-placeholder {
         /* Firefox 19+ */
         color: $r;
-        animation: animation-ie 10s ease infinite both;
+        animation: animation-ie 10s alternate linear infinite;
       }
       &:-ms-input-placeholder {
         /* IE 10+ */
         color: $r;
-        animation: animation-ie 10s ease infinite both;
+        animation: animation-ie 10s alternate linear infinite;
       }
       &:-moz-placeholder {
         /* Firefox 18- */
         color: $r;
-        animation: animation-ie 10s ease infinite both;
+        animation: animation-ie 10s alternate linear infinite;
       }
     }
     .search-clear {
@@ -237,3 +237,98 @@
         }
       }
     }
+
+
+.search-page {
+  input#search {
+    border: none;
+    font-size: rem(22);
+    padding: 1rem 0;
+    display: block;
+    line-height: 1.2;
+    width: calc(100%);
+    outline: none;
+    font-family: fontawesome, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: bold;
+    letter-spacing: -.025em;
+    transition: inherit;
+    overflow: visible;
+    color: $r;
+    transition-delay: 0s;
+    animation: animation-ie 10s alternate linear infinite;
+    pointer-events: all;
+    border-bottom: 3px solid #eee;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+
+    // (768px)
+    @include media-breakpoint-down(md) {
+
+//      display: block;
+//      width: 100%;
+
+    }
+
+    input[type="submit"] {
+
+
+//      display: inline-block;
+    }
+
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: $r;
+      animation: animation-ie 10s alternate linear infinite;
+    }
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      color: $r;
+      animation: animation-ie 10s alternate linear infinite;
+    }
+    &:-ms-input-placeholder {
+      /* IE 10+ */
+      color: $r;
+      animation: animation-ie 10s alternate linear infinite;
+    }
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      color: $r;
+      animation: animation-ie 10s alternate linear infinite;
+    }
+  }
+  .search-clear {
+    display: none;
+  }
+  ol {
+    li {
+      margin-bottom: 1.5rem;
+      p:empty {
+        display: none;
+      }
+      a {
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 1rem;
+        white-space: normal;
+        word-wrap: break-word;
+        &.link {
+          font-size: 1rem;
+          margin-bottom: 1rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    // (768px)
+    @include media-breakpoint-down(md) {
+
+      padding: 0;
+      margin: 1rem 0 2rem;
+    }
+
+  }
+}

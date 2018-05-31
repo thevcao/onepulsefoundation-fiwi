@@ -64,7 +64,7 @@
                 line-height: 1.5;
                 &.active,
                 &:hover {
-                  animation: animation-ie 10s ease infinite both;
+                  animation: animation-ie 10s alternate linear infinite;
                 }
                 &:before {
                   content: none;
@@ -105,7 +105,7 @@
                   }
                   &.active {
                     background: white;
-                    animation: animation-ie 10s ease infinite both, animation-border 10s ease infinite both;
+                    animation: animation-ie 10s alternate linear infinite, animation-border 10s alternate linear infinite;
                   }
                 }
               }

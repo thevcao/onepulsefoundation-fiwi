@@ -374,7 +374,7 @@ li.hidden {
 .mac {
   .gform_wrapper .gf_progressbar_percentage {
     background: linear-gradient(90deg, #00a8de 0%, #333391 17%, #e91388 34%, #eb2d2e 51%, #fde92b 68%, #009e54 85%, #00a8de 100%) !important;
-    animation: animation 10s ease infinite both !important;
+    animation: animation 10s alternate linear infinite !important;
     background-size: 100vw !important;
   }
 }

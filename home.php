@@ -43,11 +43,11 @@
                 <!--			<div class="over"></div>-->
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-11 col-md-12 col-sm-11 col-11 mx-auto col-center-ls-tab">
+                        <div class="col-md-12 col-sm-11 col-11 mx-auto col-center-ls-tab">
                             <h2>We will not let hate win.<a href="#" class="home-play visible-xs"><i class="flaticon-play-button"></i></a>
 </h2>
                             <a href="#" class="home-play hidden-xs">
-                                <div class="row mt32 align-items-center">
+                                <div class="row align-items-center">
                                     <div class="col-sm-2 mm"><i class="flaticon-play-button"></i>
                                     </div>
                                     <div class="col-sm-8 mm p0"><span title="Together We Can">Together We Can<span title="Witness Our Story Where Love Wins">Witness Our Story Where Love Wins</span></span>
@@ -65,57 +65,14 @@
 
 
 
-            <section class="featured-slider pt-5 pb120 pt-sm-0 pb-xs-0">
-                <div class="mobile-tooltip"></div>
 
-                <div class="gallery">
-
-
-
-                    <?php $images = get_field('default_gallery', 'options'); $counter = 0;
-                          foreach( $images as $image ): ?>
-
-
-                        <?php if(++$counter % 3 === 0) {?>
-                            <div class="item">
-                                <img class="img-parallax" data-lazy="<?php echo $image['sizes']['slide-gallery']; ?>" data-src="<?php echo $image['sizes']['large']; ?>" data-stellar-ratio="1.5" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
-                                <?php if (!$image['caption'] == null): echo '<label class="img-attrib" data-stellar-ratio="1.5">' . $image['caption'] . '</label>'; endif; ?>
-                            </div>
-                            <?php } elseif(++$counter % 2 === 0) {?>
-                                <div class="item">
-                                    <img class="img-parallax" data-lazy="<?php echo $image['sizes']['slide-gallery']; ?>" data-src="<?php echo $image['sizes']['large']; ?>" data-stellar-ratio="1.25" data-stellar-offset-parent="true" data-stellar-vertical-offset="-200" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
-                                    <?php if (!$image['caption'] == null): echo '<label class="img-attrib" data-stellar-ratio="1.25" data-stellar-offset-parent="true" data-stellar-vertical-offset="-200">' . $image['caption'] . '</label>'; endif; ?>
-                                </div>
-                                <?php }elseif(++$counter % 1 === 0) {?>
-                                    <div class="item">
-
-                                        <img class="img-parallax" data-lazy="<?php echo $image['sizes']['slide-gallery']; ?>" data-src="<?php echo $image['sizes']['large']; ?>" data-stellar-ratio="1.75" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
-                                        <?php if (!$image['caption'] == null): echo '<label class="img-attrib" data-stellar-ratio="1.75">' . $image['caption'] . '</label>'; endif; ?>
-                                    </div>
-                                    <?php }?>
-
-
-                                        <?php endforeach; ?>
-
-
-
-                </div>
-            </section>
-
-
-            <section class="home-about pt-10 pb120 pt-sm-1 hidden-xs">
+            <section class="home-about pt-5 pt-sm-1 hidden-xs">
                 <div class="container">
 
 
                     <div class="row">
-                        <div class="col-lg-5 col-md-12 col-11 mx-md-down">
-                            <h2>About onePULSE Foundation Memorial</h2>
-                            <?php the_field('home_about', 'options');?>
 
-                                <div class="mt32"></div>
-                                <a href="<?php the_permalink(12);?>" class="btn left">Learn More</a>
-                        </div>
-                        <div class="col-lg-6 ml-auto col-md-12 col-11 mx-md-down parallax-container">
+                        <div class="col-lg-5 col-md-12 col-11 mx-md-down parallax-container">
                             <div class="line" data-stellar-ratio="1.9"></div>
 
                             <?php $images = get_field('home_about_images', 'options'); $counterAbout = 0;
@@ -150,7 +107,17 @@
 
 
                         </div>
-                    </div>
+
+
+                        <div class="col-lg-6 ml-auto col-md-12 col-11 mx-md-down">
+                            <h2>About onePULSE Foundation Memorial</h2>
+                              <?php the_field('home_about', 'options');?>
+
+                                <a href="<?php the_permalink(10);?>" class="btn left mt-3 mt-sm-1">About the Foundation</a>
+                                <a href="<?php the_permalink(12);?>" class="btn left mt-1">About the Memorial & Museum</a>
+                                <a href="<?php the_permalink(5297);?>" class="btn left mt-1">FAQs</a>
+                        </div>
+                  </div>
                 </div>
 
             </section>
@@ -166,6 +133,43 @@
               </div>
 
 
+            </section>
+
+            <section class="featured-slider pb-15 pt-sm-0 pb-xs-0">
+                <div class="mobile-tooltip"></div>
+
+                <div class="gallery">
+
+
+
+                    <?php $images = get_field('default_gallery', 'options'); $counter = 0;
+                          foreach( $images as $image ): ?>
+
+
+                        <?php if(++$counter % 3 === 0) {?>
+                            <div class="item">
+                                <img class="img-parallax" data-lazy="<?php echo $image['sizes']['slide-gallery']; ?>" data-src="<?php echo $image['sizes']['large']; ?>" data-stellar-ratio="1.5" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
+                                <?php if (!$image['caption'] == null): echo '<label class="img-attrib" data-stellar-ratio="1.5">' . $image['caption'] . '</label>'; endif; ?>
+                            </div>
+                            <?php } elseif(++$counter % 2 === 0) {?>
+                                <div class="item">
+                                    <img class="img-parallax" data-lazy="<?php echo $image['sizes']['slide-gallery']; ?>" data-src="<?php echo $image['sizes']['large']; ?>" data-stellar-ratio="1.25" data-stellar-offset-parent="true" data-stellar-vertical-offset="-200" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
+                                    <?php if (!$image['caption'] == null): echo '<label class="img-attrib" data-stellar-ratio="1.25" data-stellar-offset-parent="true" data-stellar-vertical-offset="-200">' . $image['caption'] . '</label>'; endif; ?>
+                                </div>
+                                <?php }elseif(++$counter % 1 === 0) {?>
+                                    <div class="item">
+
+                                        <img class="img-parallax" data-lazy="<?php echo $image['sizes']['slide-gallery']; ?>" data-src="<?php echo $image['sizes']['large']; ?>" data-stellar-ratio="1.75" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
+                                        <?php if (!$image['caption'] == null): echo '<label class="img-attrib" data-stellar-ratio="1.75">' . $image['caption'] . '</label>'; endif; ?>
+                                    </div>
+                                    <?php }?>
+
+
+                                        <?php endforeach; ?>
+
+
+
+                </div>
             </section>
 
 
