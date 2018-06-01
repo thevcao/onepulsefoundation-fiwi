@@ -92,6 +92,22 @@ html:not(.ie) {
   //}
 }
 .ie {
+
+  .main-header.utility ul#menu-action-links li a:not(.search-toggle) {
+
+              animation: animation-ie 10s alternate linear infinite !important;
+
+  }
+
+  .main-header.utility ul#menu-action-links li {
+
+    padding: .25rem 0;
+  }
+
+  .main-header.utility ul#menu-action-links li a.search-toggle {
+
+    top: .5rem;
+  }
   h1,
   h2,
   :before,

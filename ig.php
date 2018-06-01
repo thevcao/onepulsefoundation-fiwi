@@ -50,6 +50,7 @@
                         <?php endwhile; ?>
                         <?php endif; ?>
                           <li class=""><a href="#submit">Create New Submission</a></li>
+                          <li class=""><a href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></li>
 
 
                         </ul>
@@ -61,11 +62,6 @@
                         <h2>Ideas Generator for Pulse Memorial & Museum</h2>
                         <div class="mt-1 mb-2">
                         <p>The onePULSE Foundation is proud to announce the first phase of the process for designing and building a memorial, museum and associated open space, which will honor the memory of those lost and affected by the tragic events of June 12, 2016 at the Pulse Nightclub in Orlando, as well as to inspire and bring hope to all of those who visit this place of remembrance and education.</p>
-
-                        <p>We are reaching out to all of you seeking to connect with the onePULSE Foundation with your concepts and ideas for the memorial and museum. At this time, we are not looking for finished designs, but rather big, broad ideas that will enhance the work of the onePULSE Foundation, and those who will be working with us, so that we may approach the work ahead with the best set of options and ideas possible.
-                        </p>
-
-                          <p>We do not purport to have all the answers, nor are we able to connect directly with all of those interested parties who may wish to express their ideas, concepts and designs to us. We recognize that there are many approaches that could result in a brilliant and successful environment that will educate and inspire our community – and all of our visitors into the future. We ask for your help in tackling this very challenging task.</p>
 
                         </div>
                         <?php echo do_shortcode('[stickylist id="5"]');?>
@@ -107,22 +103,27 @@
 
                 <?php } else {?>
 
-                <div class="row align-items-end">
+                <div class="row">
+
+                  <div class="col-lg-8 col-md-12 col-11 mx-md-down">
+                  <h1><span>Please Sign in or Create a User Account to </span>Participate in the Ideas Generator for the Permanent Pulse Memorial</h1>
+
+                  </div>
+              </div>
+                <div class="row">
 
                   <div class="col-lg-5 mr-auto col-md-12 col-11 mx-md-down">
-                    <h1><span>Please Sign in or Create a User Account to </span>Participate in the Ideas Generator for the Permanent Pulse Memorial</h1>
 
-                    <div class="survey-login">
                     <p>The onePULSE Foundation is proud to announce the first phase of the process for designing and building a memorial, museum and associated open space, which will honor the memory of those lost and affected by the tragic events of June 12, 2016 at the Pulse Nightclub in Orlando, as well as to inspire and bring hope to all of those who visit this place of remembrance and education.</p>
 
                     <p>We are reaching out to all of you seeking to connect with the onePULSE Foundation with your concepts and ideas for the memorial and museum. At this time, we are not looking for finished designs, but rather big, broad ideas that will enhance the work of the onePULSE Foundation, and those who will be working with us, so that we may approach the work ahead with the best set of options and ideas possible.</p>
 
                     <p>We do not purport to have all the answers, nor are we able to connect directly with all of those interested parties who may wish to express their ideas, concepts and designs to us. We recognize that there are many approaches that could result in a brilliant and successful environment that will educate and inspire our community – and all of our visitors into the future. We ask for your help in tackling this very challenging task.</p>
 
-                    </div>
 
                     </div>
                   <div class="col-lg-6 col-md-12 col-11 mx-md-down">
+                    <div class="survey-login">
 
                     <div class="login-form">
 
@@ -137,6 +138,7 @@
                       <?php echo do_shortcode("[RM_Form id='2']");?>
 
 
+                    </div>
                     </div>
 
                   </div>

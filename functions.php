@@ -1060,7 +1060,7 @@ function onpu_redirect_users_by_role() {
         $role_name      = $current_user->roles[0];
 
         if ( 'subscriber' === $role_name ) {
-            wp_redirect( site_url() . '/survey/' );
+            wp_redirect( site_url() . '/onepulse-foundation-memorial/memorial-process/ideas-generator/' );
         } // if $role_name
 
     } // if DOING_AJAX
