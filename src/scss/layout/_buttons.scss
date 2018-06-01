@@ -378,7 +378,7 @@ html.ie {
 }
 
 }
-html:not(.safari) {
+html:not(.safari, .ie) {
   .btn,
   .nav-previous a,
   .nav-next a {
