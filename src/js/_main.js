@@ -774,6 +774,16 @@
     'page_template_ig': {
       init: function () {
         // JavaScript to be fired on the home page
+
+
+        $('.user-login-label a').click(function(){
+
+          $('.login-form').slideUp(500);
+          $('.reg-form').slideDown(500);
+
+          return false;
+
+        });
       },
       finalize: function () {
         // JavaScript to be fired on the home page, after the init JS

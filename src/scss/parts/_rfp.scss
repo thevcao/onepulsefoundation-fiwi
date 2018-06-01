@@ -444,11 +444,12 @@
         .sitemap-wrapper {
           position: relative;
           overflow: hidden;
-          height: 0;
+//          height: 0;
           width: 100%;
           background: black;
           padding-bottom: calc(64.5% + 70px);
           margin: 1rem 0;
+          min-height: 25rem;
           iframe {
             position: absolute;
             top: 0;
@@ -458,3 +459,84 @@
             border: 0;
           }
         }
+#wpadminbar {
+    display: none;
+}
+
+.login-form {
+
+
+  padding-bottom: 2rem;
+}
+
+
+.reg-form {
+    display: none;
+  .rmagic .rmrow {
+    span {
+      display: none;
+    }
+    .rminput {
+      input {
+        &[type="text"],
+        &[type="password"],
+        &[type="email"],
+        &[type="url"],
+        &[type="number"] {
+          pointer-events: all;
+          padding: 1.25rem .3125rem .3125rem;
+          margin-bottom: .625rem;
+          border: none;
+          border-bottom: 3px solid #EEE;
+          font-size: 1rem;
+          outline: none;
+          transition: all .3s ease;
+          -webkit-border-radius: 0;
+          min-height: 0;
+          height: auto !important;
+          line-height: 1;
+          box-shadow: none;
+
+          &:active, &:focus {
+
+            animation: buttonHover 10s alternate linear infinite;
+          }
+        }
+      }
+      textarea {
+        pointer-events: all;
+        padding: 1.25rem .3125rem .3125rem;
+        margin-bottom: .625rem;
+        border: none;
+        border-bottom: 3px solid #EEE;
+        font-size: 14px;
+        outline: none;
+        transition: all .3s ease;
+        -webkit-border-radius: 0;
+        min-height: 0;
+        height: auto !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+  .rmrow .rminput textarea {
+    height: 257px !important;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  .buttonarea {
+    margin: 0 !important;
+  }
+  .buttonarea input[type='submit'] {
+    margin-right: 45px;
+  }
+
+  .rmrow.rm_captcha_fieldrow .g-recaptcha > div {
+      margin-right: 45px;
+  }
+
+.pass-wrapper {
+    position: relative;
+    top: -.75rem;
+}
+}

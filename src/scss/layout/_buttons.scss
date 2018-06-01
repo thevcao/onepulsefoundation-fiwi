@@ -4,7 +4,7 @@ a {
 }
 .btn,
 .nav-previous a,
-.nav-next a {
+.nav-next a, .rmagic .buttonarea input[type='button'], .rmagic .buttonarea input[type='submit'] {
   font-family: 'Helvetica Neue', fontawesome;
   margin: rem(10) auto;
   padding: rem(15) rem(10) rem(12);
@@ -206,7 +206,7 @@ html:not(.safari) {
 .gform_wrapper .gform_footer input.button,
 .gform_wrapper .gform_footer input[type=submit],
 .gform_wrapper .gform_page_footer input.button,
-.gform_wrapper .gform_page_footer input[type=submit], input[type=submit] {
+.gform_wrapper .gform_page_footer input[type=submit], input[type=submit], .rmagic .buttonarea input[type='button'], .rmagic .buttonarea input[type='submit'] {
   animation: buttonHover 10s alternate linear infinite;
   transition: .5s ease;
   display: block;

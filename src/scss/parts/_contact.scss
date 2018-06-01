@@ -25,7 +25,9 @@
   }
   .wpcf7-form-control:active,
   .wpcf7-form-control:focus {
-    border-bottom-color: black;
+
+            animation: buttonHover 10s alternate linear infinite;
+
   }
   input.wpcf7-form-control.wpcf7-submit.btn {
     padding: rem(10);
@@ -427,3 +429,6 @@ span.wpcf7-not-valid-tip {
     background: black;
   }
 }
+
+
+

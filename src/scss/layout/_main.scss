@@ -40,6 +40,9 @@
     .page-main {
       background: white;
     }
+
+html:not(.ie) {
+
     a {
       line-height: 1.1;
       color: black;
@@ -123,7 +126,66 @@
       //        }
       //      }
     }
-    .invert-header {
+
+
+}
+
+html.ie {
+
+    a {
+      line-height: 1.1;
+      color: black;
+      text-decoration: none;
+      outline: none;
+      &:not(.home-play, .task-link, .btn, .pop-link, .close, .menu-toggle, .no-hover) {
+        position: relative;
+        transition: .3s ease;
+
+        &:hover {
+          color: $b !important;
+          animation: animation-ie 10s alternate linear infinite;
+          animation-delay: .3s;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+        * {
+          text-decoration: none;
+        }
+      }
+
+
+      &.no-hover {
+        transition: .3s ease;
+        &:hover {
+          color: $b !important;
+          animation: animation-ie 10s alternate linear infinite;
+          animation-delay: .3s;
+        }
+        &:before,
+        &:after {
+          content: none !important;
+        }
+      }
+
+
+      //      &:not(.home-play, .task-link):hover:before {
+      //        opacity: 1;
+      //      }
+      //      &:not(.home-play, .task-link):hover {
+      //        color: rgba(0, 0, 0, 0);
+      //        text-decoration: none;
+      //
+      //        &:before {
+      //
+      //          opacity: 1;
+      //        }
+      //      }
+    }
+
+
+}
+.invert-header {
       a {
         &:not(.home-play, .task-link, .btn, .pop-link, .close, .menu-toggle, .question, .no-hover) {
 

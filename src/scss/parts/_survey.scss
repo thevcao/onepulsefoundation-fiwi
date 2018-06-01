@@ -15,8 +15,8 @@
 }
 .gform_wrapper .gf_progressbar_percentage,
 .gform_wrapper {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  letter-spacing: 0;
+//  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+//  letter-spacing: 0;
   label {
     //        letter-spacing: 0;
     font-weight: normal;
@@ -55,7 +55,7 @@
   -webkit-border-radius: 0;
   &:active,
   &:focus {
-    border-bottom-color: black;
+            animation: buttonHover 10s alternate linear infinite;
   }
 }
 .gfield {
@@ -112,8 +112,7 @@
   width: 300px;
   height: auto;
   line-height: 1;
-  padding: 1rem;
-  padding: 1rem 2rem;
+  padding: rem(15) rem(10) rem(12);
   border-radius: 100px;
   outline: none;
   border: 2px solid black;
@@ -123,6 +122,7 @@
   letter-spacing: -.005rem;
   font-family: inherit;
   pointer-events: all;
+  margin-bottom: 2rem;
 }
 .gform_wrapper p {
   //    font-weight: bold;
@@ -357,10 +357,19 @@ li.hidden {
   line-height: 1.5;
   font-size: 14px;
   padding: 0rem;
+  max-width: 500px;
+
+  // (768px)
+  @include media-breakpoint-down(md) {
+  max-width: 100%;
+
+  }
+
   a {
     //        display: inliblock;
     font-weight: bold;
     display: block;
+    padding: 1rem 0;
     //        margin: 1rem;
     //        margin-bottom: 2rem;
     &:after {

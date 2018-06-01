@@ -109,30 +109,35 @@
 
                 <div class="row align-items-end">
 
-                  <div class="col-lg-8 col-md-12 col-11 mx-md-down">
+                  <div class="col-lg-5 mr-auto col-md-12 col-11 mx-md-down">
                     <h1><span>Please Sign in or Create a User Account to </span>Participate in the Ideas Generator for the Permanent Pulse Memorial</h1>
-                    <p>In order to contribute, please prepare either visual materials or text that may be submitted electronically via <strong>PDF file containing no more than 4 pages</strong>.</p>
-                    <ul>
-                        <li><strong>Max file size: 10MB</strong></li>
-                        <li><strong>Resolution: 300 dpi (dots per inch)</strong></li>
-                        <li><strong>Recommended maximum document length: 4 pages</strong></li>
-                        <li><strong>Accepted document formats: Please submit all print files in PDF X-1a format or higher with all fonts and images embedded.</strong></li>
-                        <li><strong>Embedded images must be a minimum of 266 ppi (pixels per inch).</strong></li>
-                    </ul>
-                    <p>A powerful sketch or list of ideas may be more effective than a lengthier submission. Please include within the PDF file your name, city/state/country and contact email. Submissions will be accepted through <strong>January 1, 2099</strong>.</p>
 
-                    <p>It is also our intention to display a selection of these submissions, electronically, in print or via physical display, as part of our ongoing process to remain engaged in public dialogue as we develop the plans for the memorial and museum. By submitting materials to us, you are granting us permission to distribute this material as described above. Credit for your work will be attached to any display or publication of these materials.</p>
-
-                    <p>No fee will be required for submissions nor will any fee be paid.</p>
                     <div class="survey-login">
-                            <?php wp_login_form(); ?>
+                    <p>The onePULSE Foundation is proud to announce the first phase of the process for designing and building a memorial, museum and associated open space, which will honor the memory of those lost and affected by the tragic events of June 12, 2016 at the Pulse Nightclub in Orlando, as well as to inspire and bring hope to all of those who visit this place of remembrance and education.</p>
+
+                    <p>We are reaching out to all of you seeking to connect with the onePULSE Foundation with your concepts and ideas for the memorial and museum. At this time, we are not looking for finished designs, but rather big, broad ideas that will enhance the work of the onePULSE Foundation, and those who will be working with us, so that we may approach the work ahead with the best set of options and ideas possible.</p>
+
+                    <p>We do not purport to have all the answers, nor are we able to connect directly with all of those interested parties who may wish to express their ideas, concepts and designs to us. We recognize that there are many approaches that could result in a brilliant and successful environment that will educate and inspire our community – and all of our visitors into the future. We ask for your help in tackling this very challenging task.</p>
+
                     </div>
 
                     </div>
-                  <div class="col-lg-4 col-md-12 col-11 mx-md-down">
+                  <div class="col-lg-6 col-md-12 col-11 mx-md-down">
 
-                    <p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/us.svg"> Please create a user account to complete the Ideas Generator for the Permanent Pulse Memorial. <a href="<?php echo wp_registration_url(); ?>">Create an Account</a></p>
-                    <p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/span.svg"> Por favor crea una cuenta de usuario para completar la encuesta. <a href="<?php echo wp_registration_url(); ?>">Crea Una Cuenta</a></p>
+                    <div class="login-form">
+
+                    <?php wp_login_form(); ?>
+
+                    <p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/us.svg"> Please create a user account to complete the Ideas Generator for the Permanent Pulse Memorial. <a href="#">Create an Account</a></p>
+                    <p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/span.svg"> Por favor crea una cuenta de usuario para completar la encuesta. <a href="#">Crea Una Cuenta</a></p>
+                    </div>
+
+                    <div class="reg-form">
+
+                      <?php echo do_shortcode("[RM_Form id='2']");?>
+
+
+                    </div>
 
                   </div>
                 </div>

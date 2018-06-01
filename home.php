@@ -43,7 +43,7 @@
                 <!--			<div class="over"></div>-->
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 col-sm-11 col-11 mx-auto col-center-ls-tab">
+                        <div class="col-md-11 col-sm-11 col-11 mx-md-down col-center-ls-tab">
                             <h2>We will not let hate win.<a href="#" class="home-play visible-xs"><i class="flaticon-play-button"></i></a>
 </h2>
                             <a href="#" class="home-play hidden-xs">
