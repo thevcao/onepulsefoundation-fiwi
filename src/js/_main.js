@@ -493,12 +493,7 @@
             }
           });
         }
-        if ($('html').hasClass('ie')) {
-          $('.parallax-container img').each(function () {
-            var img = $(this).attr('src');
-            $(this).parent('div').css('backgroundImage', 'url(' + img + ')').addClass('ie-polyfill');
-          })
-        }
+
         function stellarinit() {
           if ($('html.mac.safari').length) {
             $(window).stellar({
@@ -637,6 +632,15 @@
         }
         $(window).load(function(){
         halftone();
+        if ($('.ie').length) {
+          $('.parallax-container img, .bg-element img').each(function () {
+            var img = $(this).attr('src');
+            $(this).parent('div').addClass('ie-polyfill');
+            $(this).css('backgroundImage', 'url(' + img + ')').addClass('ie-polyfill');
+            $(this).attr('src', '/wp-content/themes/onepulse/dist/img/clear.gif')
+          })
+        }
+
         })
         $(window).resize(function () {
         if($('.post-image .overlay').length){

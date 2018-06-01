@@ -20,7 +20,7 @@
   img,
   svg {
     width: rem(115);
-    height: auto;
+    height: 6.6875rem;
     transition: all .5s ease;
     @include media-breakpoint-down(md) {
       width: 5rem;
@@ -429,8 +429,13 @@
         }
       }
       &#menu-action-links {
+
+          padding: 0 0 .75rem;
+
+
         li {
-          padding: .75rem 0;
+
+          padding: 0;
           a:not(.search-toggle) {
             font-size: 1rem;
             text-align: left;
@@ -598,6 +603,7 @@
         }
         svg {
           width: 80px;
+          height: 76.84px;
           transform: translateY(rem(15));
           g {
             opacity: 0;

@@ -98,7 +98,7 @@ if( have_rows('section') ):
 
         if( get_row_layout() == 'large_hero' ):
             $image = get_sub_field('hero_image');
-            echo '<style>.loader, .page-main .home-hero h2, .page-main .home-hero h2.clone-shadow, .page-main .home-hero, .btn.clipped .overlay, .invert-header .home-hero .btn div {background-image:url('. $image['sizes']['banner'] .')</style>';
+            echo '<style>.loader, .page-main .home-hero h2, .page-main .home-hero h2.clone-shadow, .page-main .home-hero, .btn.clipped .overlay, .invert-header .home-hero .btn div, .ie .home-hero {background-image:url('. $image['sizes']['banner'] .')</style>';
             echo '<meta property="og:image" content="'. $image['sizes']['large'] .'" />';
 
         endif;
@@ -117,7 +117,7 @@ endif; wp_reset_postdata();?>
     $mobileCTA = get_field('mobile_contact_image', 'options');
     $donateImage = get_field('donate_hero', 'options');
 
-    echo '<style> html:not(.ipad) .mobile-cta, .mobile-cta .btn.clipped:before {background-image:url('. $mobileCTA['sizes']['large'] .');} .donate-hero h2, .page-template-donate .loader {background-image:url('. $donateImage['sizes']['banner'] .');}
+    echo '<style> html:not(.ipad) .mobile-cta, .mobile-cta .btn.clipped:before, {background-image:url('. $mobileCTA['sizes']['large'] .');} .donate-hero h2, .page-template-donate .loader {background-image:url('. $donateImage['sizes']['banner'] .');}
     </style>' ;
     if(is_page('home')):
     //echo '<meta property="og:image" content="'. $homeHero['sizes']['large'] .'" />';
@@ -134,7 +134,7 @@ endif; wp_reset_postdata();?>
     $random_result = array_rand($images ,1);
     $homeHero = $images[$random_result];
 
-    echo '<style> .home .loader, .home .home-hero h2, .home .home-hero .home-play i:before, .home .home-hero .home-play span, .home .home-hero .home-play span span { background-image:url('. $homeHero['sizes']['banner'] .');}</style>';
+    echo '<style> .home .loader, .home .home-hero h2, .home .home-hero .home-play i:before, .home .home-hero .home-play span, .home .home-hero .home-play span span, .ie .home .home-hero { background-image:url('. $homeHero['sizes']['banner'] .');}</style>';
     echo '<meta property="og:image" content="'. $homeHero['sizes']['large'] .'" />';
 
      wp_reset_postdata();?>
