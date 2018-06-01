@@ -51,8 +51,8 @@ html:not(.ie) {
       &:not(.home-play, .task-link, .btn, .pop-link, .close, .menu-toggle, .no-hover) {
         position: relative;
         transition: .5s ease;
-        z-index: 0;
-        &:before {
+        z-index: 1;
+        &::before {
           opacity: 0;
           transition: opacity .5s ease;
           content: attr(title);
@@ -62,7 +62,7 @@ html:not(.ie) {
           background-size: 300vw;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          background-attachment: fixed;
+//          background-attachment: fixed;
           //            background-position: 50%;
           position: absolute;
           z-index: 1000;

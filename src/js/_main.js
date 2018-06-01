@@ -602,7 +602,13 @@
               // replace the image with the canvas
               image.parentNode.insertBefore(canvas, image);
               image.parentNode.removeChild(image);
-              $('.col-lg-5.col-11').prepend('<div class="overlay" style="height: ' + overlayHeight + 'px;"></div>');
+
+              if($('.single-task-member').length){
+
+              $('.post-image .col-lg-5.col-11').prepend('<div class="overlay" style="height: ' + overlayHeight + 'px;"></div>');
+
+
+              }
               // Note: instead of swapping the &lt;canvas&gt; tag with the &lt;img&gt; tag
               // as done above, we could have just transferred the contents of
               // the image directly:

@@ -69,10 +69,17 @@
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .page-cta .dupe,
-  .page-cta .over {
-    top: 0;
+
+
+  .mobile {
+
+
+    .page-cta .dupe,
+    .page-cta .over {
+      top: 0;
+    }
   }
+
   .page-cta .content {
     //    padding-top: 150px !important;
     //    padding-right: 80px !important;

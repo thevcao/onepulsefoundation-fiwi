@@ -58,6 +58,10 @@
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+
+  .mobile {
+
   .featured-slider {
     overflow: auto;
   }
@@ -89,6 +93,9 @@
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.69);
   }
+
+  }
+
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   .gallery .item {
