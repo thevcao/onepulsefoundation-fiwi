@@ -262,6 +262,14 @@
                     return false;
 
                 });
+
+
+              $('img[src="https://onepulsefoundation.org/wp-content/uploads/2017/10/Reservations-logo.png"]').click(function(){
+
+                var win = window.open('https://www.reservations.com/', '_blank');
+                win.focus();
+                return false;
+              });
                 $(document).on('click', '.shares .pop-link', function (e) {
                     e.preventDefault();
                     var poplink = $(this).attr('href');
