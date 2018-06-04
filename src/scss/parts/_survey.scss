@@ -112,10 +112,10 @@
   width: 300px;
   height: auto;
   line-height: 1;
-  padding: rem(15) rem(10) rem(12);
+  padding: .9375rem .625rem .65rem;
   border-radius: 100px;
   outline: none;
-  border: 2px solid black;
+  border: 3px solid black;
   background: none;
   line-height: 1;
   font-weight: bold;
@@ -368,14 +368,14 @@ li.hidden {
   a {
     //        display: inliblock;
     font-weight: bold;
-    display: block;
-    padding: 1rem 0;
+//    display: block;
+//    padding: 1rem 0;
     //        margin: 1rem;
     //        margin-bottom: 2rem;
     &:after {
-      content: "\f054";
-      margin-left: .25rem;
-      font-family: fontawesome;
+//      content: "\f054";
+//      margin-left: .25rem;
+//      font-family: fontawesome;
     }
   }
 }

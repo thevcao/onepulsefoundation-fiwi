@@ -93,6 +93,11 @@
                   border: 2px solid black;
                   font-family: sans-serif;
                   //                    padding-right: 1rem;
+
+                  &:before {
+
+                    content: none;
+                  }
                   &:after {
                     //                        content: '';
                     //                        position: relative;
@@ -105,7 +110,7 @@
                   }
                   &.active {
                     background: white;
-                    animation: animation-ie 10s alternate linear infinite, animation-border 10s alternate linear infinite;
+                    animation: buttonHover 10s alternate linear infinite;
                   }
                 }
               }

@@ -53,10 +53,21 @@
                           ]
           });
         });
-        $(window).resize(function () {
-//          ctaPadding();
-          fullHero();
-        })
+
+
+        var resizeTimer;
+
+        $(window).on('resize', function(e) {
+
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function() {
+
+            fullHero();
+
+          }, 250);
+
+        });
+
         window.addEventListener("orientationchange", function () {
           setTimeout(function () {
 //            ctaPadding();
@@ -95,10 +106,14 @@
             contentHeight = $('.home-hero .container').outerHeight(),
             remaining = ((fullHeight + header) - contentHeight),
             padding = (remaining / 2);
-            if($('body').hasClass('scrolled')) {
+            if($('body').hasClass('scrolled') && $(window).width() > 991) {
+
                 var header = $('header').outerHeight() * 1.25;
+
             } else {
+
                 var header = $('header').outerHeight();
+
             }
                 $('section').not('.home-hero, .newsletter, .page-cta, .page-main section:first-child').each(function(){
                   var ogClass = $(this).attr('class');
@@ -121,16 +136,21 @@
 //                    console.log('resizing - should be adding OG back:' + $(this).attr('data-attr'))
                   }
                 });
-              if($(window).width() < 991){
-                $('.home .home-hero').css('padding-top', header * 1.25);
-                $('.contact-form.modal').css('padding-top', header * 1.25);
+              if($(window).width() > 991){
+
                 if($('section:first-child').length){
                 $('section:first-child').css('padding-top', header * 1.25);
   //              $('section:first-child').removeClass('pt-sm-3');
                 }
               } else {
+
+
+                $('.home .home-hero').css('padding-top', header * 1.25);
+                $('.contact-form.modal').css('padding-top', header * 1.25);
+
+
                 if($('section:first-child').length){
-                  $('section:first-child').css('padding-top', header * 1.5);
+                  $('section:first-child').css('padding-top', header * 1.25);
                   $("section:first-child").removeClass (function (index, css) {
                      return (css.match (/(^|\s)pt\S+/g) || []).join(' ');
                   });
@@ -208,6 +228,7 @@
         });
         $('.search-clear, .search-cover').click(function () {
           $('html').removeClass('search-open');
+          return false;
           //                    return false;
         });
 //        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -648,12 +669,24 @@
         }
 
         })
-        $(window).resize(function () {
-        if($('.post-image .overlay').length){
-          var newHeight = $('.post-image canvas').outerHeight();
-          $('.overlay').css('height', newHeight);
-        }
-        })
+
+
+          var resizeTimer;
+
+          $(window).on('resize', function(e) {
+
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+
+            if($('.post-image .overlay').length){
+              var newHeight = $('.post-image canvas').outerHeight();
+              $('.overlay').css('height', newHeight);
+            }
+            }, 250);
+
+          });
+
+
         $('#menu-full-mobile li.menu-item-has-children a').click(function(){
           if($(this).parents('li').hasClass('active')) {
           } else {
@@ -788,9 +821,24 @@
 
         $('.user-login-label a').click(function(){
 
+          $('.login-form').slideDown(500);
+          $('.reg-form').slideUp(500);
+
+          return false;
+
+        });
+        $('.back').click(function(){
+
           $('.login-form').slideUp(500);
           $('.reg-form').slideDown(500);
 
+          return false;
+
+        });
+        $('#refresh').click(function(){
+
+
+          location.reload();
           return false;
 
         });
@@ -818,12 +866,18 @@
           });
         }
 //        PDFJS.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.489/pdf.worker.js";
+
+
         $(document).ready(function() {
 //            cell = $('.stickylist-fileupload');
             $('.stickylist-fileupload').each(function() {
                 var image = $(this).children('a').attr('href');
                 var extension = image.split('.').pop();
                 var parent =  $(this);
+
+
+              if($(window).width() > 991) {
+
                 PDFJS.getDocument(image).promise.then(function (doc) {
                   var pages = []; while (pages.length < 1) pages.push(1);
                   return Promise.all(pages.map(function (num) {
@@ -838,6 +892,8 @@
                     });
                   }));
                 }).catch(console.error);
+
+              }
                 if(extension == 'pdf') {
                 $(this).html('<a href="' + image + '" class="btn right" title="View Submission " target="blank"><div></div>View Submission <i class="fa fa-file-pdf"></i></a>');
                 } else {
@@ -845,6 +901,9 @@
                 }
             });
         });
+
+
+
         $(document).on('click', '.stickylist-fileupload a', function(){
           if($(window).width() > 991){
           var file = $(this).attr('href');

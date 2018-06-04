@@ -137,11 +137,11 @@ html:not(.ie) {
     background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, yellow 71.42%, #34d400 85.71%, #00a8de 100%);
     animation: donateanimate 10s alternate linear infinite;
     background-size: 300vw;
-    background-attachment: fixed;
+//    background-attachment: fixed;
     -webkit-background-clip: none;
     //        -webkit-text-fill-color: #fff;
-    background-size: 200%;
-    background-position: 0%;
+//    background-size: 200%;
+//    background-position: 0%;
     color: rgba(0, 0, 0, 0);
     border: none;
     width: 100%;
@@ -326,11 +326,11 @@ html.ie {
     background: linear-gradient(135deg, #00a8de 0%, #333391 14.28%, #e91388 28.57%, #eb2d2e 42.85%, orange 57.14%, yellow 71.42%, #34d400 85.71%, #00a8de 100%);
     animation: donateanimate 10s alternate linear infinite;
     background-size: 300vw;
-    background-attachment: fixed;
+//    background-attachment: fixed;
     -webkit-background-clip: none;
     //        -webkit-text-fill-color: #fff;
-    background-size: 200%;
-    background-position: 0%;
+//    background-size: 200%;
+//    background-position: 0%;
     color: rgba(0, 0, 0, 0);
     border: none;
     width: 100%;
@@ -399,11 +399,15 @@ html:not(.safari, .ie) {
 .gform_wrapper .gform_page_footer input.button,
 .gform_wrapper .gform_page_footer input[type=submit], input[type=submit], .rmagic .buttonarea input[type='button'], .rmagic .buttonarea input[type='submit'] {
   animation: buttonHover 10s alternate linear infinite;
-  transition: .5s ease;
+  transition: .3s ease;
   display: block;
   width: 100%;
+  filter: grayscale(1);
+
   &:hover {
-    opacity: .5;
+
+
+  filter: none;
   }
 }
 .nav-previous a,
