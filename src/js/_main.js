@@ -115,7 +115,7 @@
                 var header = $('header').outerHeight();
 
             }
-                $('section').not('.home-hero, .newsletter, .page-cta, .page-main section:first-child').each(function(){
+                $('section').not('.home-hero, .newsletter, .page-cta, .page-main section:first-child, .post-body section:first-child').each(function(){
                   var ogClass = $(this).attr('class');
                   if($(this).attr('data-attr') == null) {
                   $(this).attr('data-attr', ogClass);
@@ -391,7 +391,7 @@
             $('.full-menu').removeClass("transition");
           }
         );
-        $("a").not('.tab-links a, a[download], a[href="#"], .nturl, .modal-toggle, .modal-toggle a, .pop-link, ul.tabs li a, .woocommerce-product-gallery__image a, a[target="_blank"], a[target="blank"], .survey-toggle, .stickylist-fileupload a, #menu-full-mobile li.menu-item-has-children a').click(function (e) {
+        $("a").not('.tab-links a, a[download], a[href="#"], .nturl, .modal-toggle, .modal-toggle a, .pop-link, ul.tabs li a, .woocommerce-product-gallery__image a, a[target="_blank"], a[target="blank"], .survey-toggle, .stickylist-fileupload a, #menu-full-mobile li.menu-item-has-children a, div[id^="sticky-list-wrapper"] ul.pagination li a').click(function (e) {
           if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             var link = $(this).attr('href');
             e.preventDefault();
@@ -867,9 +867,9 @@
         }
 //        PDFJS.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.489/pdf.worker.js";
 
+        function createButtons() {
 
-        $(document).ready(function() {
-//            cell = $('.stickylist-fileupload');
+
             $('.stickylist-fileupload').each(function() {
                 var image = $(this).children('a').attr('href');
                 var extension = image.split('.').pop();
@@ -899,10 +899,50 @@
                 } else {
                 $(this).html('<a href="' + image + '" class="no-hover"><img width="50" src="' + image + '"></a>');
                 }
+                setTimeout(function(){
+                $('.sticky-list-wrapper').removeClass('loading');
+                $('.sticky-list-wrapper .spinner').remove();
+                }, 1000);
+
+
+
             });
+
+        }
+
+        $(document).ready(function() {
+//            cell = $('.stickylist-fileupload');
+            createButtons();
+
+          $('.sitemap-wrapper iframe').attr('data-src', $('.sitemap-wrapper iframe').attr('src'));
+          $('.sitemap-wrapper iframe').attr('src', '');
+          $('.sitemap-wrapper').prepend('<div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>');
+
+        });
+
+        $('.tab-links a[href="#site"]').click(function(){
+
+          setTimeout(function(){
+
+          $('.sitemap-wrapper iframe').attr('src', $('.sitemap-wrapper iframe').attr('data-src'));
+
+          }, 600);
+
         });
 
 
+        $('div[id^="sticky-list-wrapper"] ul.pagination li a').click(function(){
+
+
+          $('.sticky-list-wrapper').addClass('loading');
+          $('.sticky-list-wrapper').append('<div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>');
+          setTimeout(function(){
+
+          createButtons();
+
+          }, 500);
+
+        });
 
         $(document).on('click', '.stickylist-fileupload a', function(){
           if($(window).width() > 991){

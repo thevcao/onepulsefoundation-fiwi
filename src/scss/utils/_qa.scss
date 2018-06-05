@@ -503,14 +503,14 @@ p img {
 }
 .mobile {
   &:not(.ipad) .home-hero .home-play i:after {
-    animation: none !important;
+//    animation: none !important;
   }
   .newsletter {
     //        @include onpuGradient;
     //        animation: none !important;
     //        background-size: 500vh;
     //        background-position: 0% 0%;
-    color: white !important;
+//    color: white !important;
     a,
     * {
       //            animation: none !important;
@@ -521,10 +521,10 @@ p img {
     //        animation: none !important;
     //        background-size: 500vh;
     //        background-position: 50% 50%;
-    color: white !important;
+//    color: white !important;
     a,
     * {
-      animation: none !important;
+//      animation: none !important;
     }
   }
 }
@@ -552,3 +552,6 @@ p img {
 //    color: transparent;
 //    animation: animation-ie 10s alternate linear infinite;
 //}
+.menu-open *:not(.menu-toggle) {
+    animation-play-state: paused !important;
+}

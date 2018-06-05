@@ -48,7 +48,7 @@ $smores = new Smores(
         'js'              => '/dist/js/scripts.min.js',
         'modernizr'       => '/dist/js/vendor/modernizr.min.js',
         'jquery'          => '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js',
-        'jquery_fallback' => '/dist/js/vendor/jquery.min.js',
+//        'jquery_fallback' => '/dist/js/vendor/jquery.min.js',
 )
 );
 
@@ -1154,34 +1154,34 @@ function gf_ga_tracking($entry, $form) {
     <script type="text/javascript">
 
 
-            if ((document.location.href.indexOf('staging') === -1 || document.location.href.indexOf('dev') === -1)){
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-                ga('create', 'UA-97989536-1', 'auto');
-
-                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-
-                    ga('send', {
-                        hitType: 'event',
-                        eventCategory: 'Survey Complete - Mobile',
-                        eventAction: 'conversion'
-                    });
-
-                } else {
-
-                    ga('send', {
-                        hitType: 'event',
-                        eventCategory: 'Survey Complete - Desktop',
-                        eventAction: 'conversion'
-                    });
-
-                }
-
-                console.log('Survey Complete');
-            }
+//            if ((document.location.href.indexOf('staging') === -1 || document.location.href.indexOf('dev') === -1)){
+//            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+//                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+//                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+//            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+//
+//                ga('create', 'UA-97989536-1', 'auto');
+//
+//                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+//
+//                    ga('send', {
+//                        hitType: 'event',
+//                        eventCategory: 'Survey Complete - Mobile',
+//                        eventAction: 'conversion'
+//                    });
+//
+//                } else {
+//
+//                    ga('send', {
+//                        hitType: 'event',
+//                        eventCategory: 'Survey Complete - Desktop',
+//                        eventAction: 'conversion'
+//                    });
+//
+//                }
+//
+//                console.log('Survey Complete');
+//            }
     </script>
 
 <?php }
@@ -1351,20 +1351,20 @@ function show_only_approved($entries) {
 //}
 
 
-//add_filter( 'gform_init_scripts_footer', '__return_true' );
-//add_filter( 'gform_cdata_open', 'wrap_gform_cdata_open', 1 );
-//function wrap_gform_cdata_open( $content = '' ) {
-//if ( ( defined('DOING_AJAX') && DOING_AJAX ) || isset( $_POST['gform_ajax'] ) ) {
-//return $content;
-//}
-//$content = 'document.addEventListener( "DOMContentLoaded", function() { ';
-//return $content;
-//}
-//add_filter( 'gform_cdata_close', 'wrap_gform_cdata_close', 99 );
-//function wrap_gform_cdata_close( $content = '' ) {
-//if ( ( defined('DOING_AJAX') && DOING_AJAX ) || isset( $_POST['gform_ajax'] ) ) {
-//return $content;
-//}
-//$content = ' }, false );';
-//return $content;
-//}
+add_filter( 'gform_init_scripts_footer', '__return_true' );
+add_filter( 'gform_cdata_open', 'wrap_gform_cdata_open', 1 );
+function wrap_gform_cdata_open( $content = '' ) {
+if ( ( defined('DOING_AJAX') && DOING_AJAX ) || isset( $_POST['gform_ajax'] ) ) {
+return $content;
+}
+$content = 'document.addEventListener( "DOMContentLoaded", function() { ';
+return $content;
+}
+add_filter( 'gform_cdata_close', 'wrap_gform_cdata_close', 99 );
+function wrap_gform_cdata_close( $content = '' ) {
+if ( ( defined('DOING_AJAX') && DOING_AJAX ) || isset( $_POST['gform_ajax'] ) ) {
+return $content;
+}
+$content = ' }, false );';
+return $content;
+}

@@ -1,6 +1,6 @@
 html:not(.mobile) {
   @include media-breakpoint-up(lg) {
-    @media(max-height: 768px) {
+    @media(max-height: 699px) {
       .home-hero {
 
         .col-xl-11.col-md-10.col-11.mx-auto.col-center-ls-tab {
@@ -364,10 +364,11 @@ html:not(.mobile) {
 // (768px)
 @include media-breakpoint-down(xs) {
   .home .home-hero {
-    padding-top: 15vw;
+//    padding-top: 15vw;
+    min-height: 0;
     h2 {
       font-size: 27vw;
-      background-size: cover;
+      background-size: 65rem;
       //		background-attachment: scroll;
 //      padding-right: 1rem;
       width: 100%;
@@ -379,7 +380,7 @@ html:not(.mobile) {
     font-size: 25vw;
     padding-right: 5px;
     &:before {
-      background-size: auto 100vh;
+      background-size: 65rem;
       left: 2px;
       position: relative;
       top: 1px;
