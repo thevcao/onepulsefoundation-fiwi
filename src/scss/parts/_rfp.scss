@@ -320,8 +320,7 @@
               }
             }
           }
-          .sort-2,
-          .sort-1 {
+          .sort-2 {
             display: none;
           }
           #sticky-list-wrapper_5 {
@@ -346,15 +345,14 @@
             td {
               position: relative;
               z-index: 1;
-              &.sort-0,
-              &.sort-1 {
+              &.sort-0 {
                 display: initial;
                 width: auto;
               }
               &.sort-0 {
                 //                display: none;
               }
-              &.sort-2 {
+              &.sort-1 {
                 padding: 0 1rem;
                 font-size: 1.5rem;
                 animation: animation-ie 10s alternate linear infinite, animation-border 10s alternate linear infinite;
@@ -368,7 +366,7 @@
 
                 }
               }
-              &.sort-3 {
+              &.sort-2 {
                 font-size: 1.5rem;
                 margin: .5rem 0 1rem;
                 font-weight: bold;
@@ -385,7 +383,7 @@
 
 
               }
-              &.sort-4 {
+              &.sort-3 {
                 display: block;
                 min-height: 150px;
                 @include media-breakpoint-up(md) {
@@ -402,7 +400,12 @@
                 }
               }
               &.sort-1 {
-                display: none;
+//                display: none;
+
+              display: block;
+              width: 100%;
+              white-space: normal;
+
               }
               display: block;
               width: 100%;
@@ -471,7 +474,7 @@
             display: none;
           }
           .tabs {
-            .tab:not(:first-child) {
+            .tab:not(:first-of-type) {
               display: none;
             }
             figure {
@@ -522,6 +525,14 @@
         }
         label#label_5_7_1 {
           font-weight: bold;
+
+
+        }
+        input[type=checkbox]:checked+label#label_5_7_1 {
+
+          font-weight: bold !important;
+          animation: animation-ie 10s alternate linear infinite;
+
         }
         label#label_5_7_1:before {
           margin-bottom: 1rem;
@@ -673,4 +684,19 @@
     position: relative;
     top: -.75rem;
 }
+}
+
+// @media (max-width: 1439px)
+@include media-breakpoint-up(lg) {
+.rminput {
+    width: calc(100% - 250px);
+  }
+}
+.rmagic .rmrow .rminput select {
+    -webkit-appearance: none;
+    padding: .7rem .3125rem 0;
+    border-radius: 00;
+    border: none;
+    border-bottom: 3px solid #EEE;
+    min-height: 0;
 }

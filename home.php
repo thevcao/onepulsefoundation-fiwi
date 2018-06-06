@@ -80,7 +80,7 @@
 
                                 <?php if($counterAbout == 0) {?>
                                     <div data-stellar-ratio="2">
-                                        <img class="img-parallax" src="<?php echo $image['sizes']['large']; ?>">
+                                        <img class="img-parallax tall" src="<?php echo $image['sizes']['large']; ?>">
                                         <?php if (!$image['caption'] == null): echo '<label class="img-attrib">' . $image['caption'] . '</label>'; endif; ?>
                                     </div>
                                     <?php } elseif($counterAbout == 1) {?>
@@ -110,7 +110,7 @@
 
 
                         <div class="col-lg-6 ml-auto col-md-12 col-11 mx-md-down">
-                            <h2>About onePULSE Foundation Memorial</h2>
+                            <h2>About onePULSE Foundation</h2>
                               <?php the_field('home_about', 'options');?>
 
                                 <a href="<?php the_permalink(10);?>" class="btn left mt-3 mt-sm-1">About the Foundation</a>

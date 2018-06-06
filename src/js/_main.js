@@ -842,16 +842,25 @@
           return false;
 
         });
+
+        $('.tab-links li:first-child a').addClass('active');
       },
       finalize: function () {
         // JavaScript to be fired on the home page, after the init JS
         $('.tab-links a').click(function () {
           if($(this).is('a[href^="#"]')) {
+          if($(this).hasClass('active')){
+
+
+
+          } else {
           var link = $(this).attr('href');
+
           $('.tab').not(this).slideUp(500);
           $(link).slideToggle(500);
           $('.tab-links a').not(this).removeClass('active');
           $(this).addClass('active');
+          }
           return false;
           }
         });
@@ -948,14 +957,14 @@
           if($(window).width() > 991){
           var file = $(this).attr('href');
           var submissionID = $(this).parents('.is_read').children('.sort-1').text();
-          var desc = $(this).parents('.is_read').children('.sort-3').text();
-          var name = $(this).parents('.is_read').children('.sort-2').text();
+          var desc = $(this).parents('.is_read').children('.sort-2').text();
+//          var name = $(this).parents('.is_read').children('.sort-2').text();
           $('html').addClass('view-pdf');
           console.log('viewing ' + file);
           console.log('ID ' + submissionID);
           console.log('by ' + name);
           console.log(desc);
-          $('body').append('<div class="media-modal"><div class="inner"><a href="#" class="close"><i class="fa fa-close"></i></a><div class="row"><div class="col-sm-8"><div class="iframe-wrapper"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div><iframe src="' + file + '"></iframe></div></div><div class="col-sm-4"><div class="content"><h2 class="mb-3">Entry #' + submissionID + '</h2><p>' + desc + '</p><p class="author">Submitted by: ' + name + '</p></div></div></div></div></div>');
+          $('body').append('<div class="media-modal"><div class="inner"><a href="#" class="close"><i class="fa fa-close"></i></a><div class="row"><div class="col-sm-8"><div class="iframe-wrapper"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div><iframe src="' + file + '"></iframe></div></div><div class="col-sm-4"><div class="content"><h2 class="mb-3">Entry #' + submissionID + '</h2><p>' + desc + '</p></div></div></div></div></div>');
           setTimeout(function(){
             $('.media-modal').addClass('transition-in');
           }, 100);
@@ -972,6 +981,40 @@
         });
       }
     },
+
+    'page_template_submissions': {
+      init: function () {
+        // JavaScript to be fired on the home page
+
+
+        $('.user-login-label a').click(function(){
+
+          $('.login-form').slideDown(500);
+          $('.reg-form').slideUp(500);
+
+          return false;
+
+        });
+        $('.back').click(function(){
+
+          $('.login-form').slideUp(500);
+          $('.reg-form').slideDown(500);
+
+          return false;
+
+        });
+        $('#refresh').click(function(){
+
+
+          location.reload();
+          return false;
+
+        });
+      },
+      finalize: function () {
+        // JavaScript to be fired on the home page, after the init JS
+      }
+    },
     'page_template_information': {
       init: function () {
         // JavaScript to be fired on the home page
@@ -981,10 +1024,19 @@
         $('.tab-links a').click(function () {
           if($(this).is('a[href^="#"]')) {
           var link = $(this).attr('href');
+
+          if($(this).hasClass('active')){
+
+
+
+          } else {
+
           $('.tab').not(this).slideUp(500);
           $(link).slideToggle(500);
           $('.tab-links a').not(this).removeClass('active');
           $(this).addClass('active');
+          }
+
           return false;
           }
         });
@@ -1103,7 +1155,7 @@
         initMap();
       }
     }, // About us page, note the change from about-us to about_us.
-    'page_template_survey': {
+      'page_template_survey': {
       init: function () {
         $('.survey-toggle').click(function () {
             $('.survey-toggle').slideUp(500);

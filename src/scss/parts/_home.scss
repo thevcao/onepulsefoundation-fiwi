@@ -188,13 +188,13 @@ html:not(.mobile) {
 .translated-ltr {
   .home-hero .home-play i:after {
 
-    margin-top: rem(2);
+//    margin-top: rem(2);
 
 
   }
   .home-hero .home-play span:before,
   .home-hero .home-play span span:after {
-    margin-top: rem(5);
+//    margin-top: rem(5);
   }
   .home-hero .home-play span:before {
     content: 'Juntos podemos';
@@ -225,7 +225,7 @@ html:not(.mobile) {
 //	overflow: hidden;
 //}
 .translated-ltr .home .home-hero h2 {
-//  font-size: 9vw !important;
+  font-size: 10rem !important;
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}

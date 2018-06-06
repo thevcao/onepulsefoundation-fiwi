@@ -3,6 +3,23 @@
   position: relative;
   transform: translateZ(0);
 
+  div[data-stellar-ratio="2"] {
+
+
+    height: 100%;
+  }
+
+  // @media (max-width: 1439px)
+  @include media-breakpoint-down(lg) {
+
+
+    margin-bottom: 4rem !important;
+
+    .float-container {
+  display: none;
+}
+  }
+
   img {
 
     height: auto;
@@ -12,8 +29,13 @@
     position: relative;
 
 
+
+    &.tall {
+
+      height: 100%;
+    }
     // (768px)
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
 
       height: auto;
     }
