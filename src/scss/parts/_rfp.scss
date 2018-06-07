@@ -642,9 +642,11 @@
           line-height: 1;
           box-shadow: none;
 
-          &:active, &:focus {
+          &:focus {
 
+            border-color: $b !important;
             animation: buttonHover 10s alternate linear infinite;
+            animation-delay: .3s;
           }
         }
       }

@@ -53,9 +53,13 @@
   outline: none;
   transition: all .3s ease;
   -webkit-border-radius: 0;
-  &:active,
+
   &:focus {
+
+            border-color: $b !important;
             animation: buttonHover 10s alternate linear infinite;
+            animation-delay: .3s;
+
   }
 }
 .gfield {
