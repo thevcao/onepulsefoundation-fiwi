@@ -52,7 +52,7 @@
                           <li class=""><a href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></li>
 
                           <?php } else {?>
-                          <li class=""><a href="#account" >Login/Create an Account</a></li>
+                          <li class=""><a href="<?php the_permalink(10615);?>" >Login/Create an Account</a></li>
 
                           <?php }?>
 
