@@ -702,3 +702,81 @@
     border-bottom: 3px solid #EEE;
     min-height: 0;
 }
+
+.im-reg {
+
+      input {
+        &[type="text"],
+        &[type="password"],
+        &[type="email"],
+        &[type="url"],
+        &[type="number"] {
+          pointer-events: all;
+          padding: 1.25rem .3125rem .3125rem;
+          margin-bottom: .625rem;
+          border: none;
+          border-bottom: 3px solid #EEE;
+          font-size: 1rem;
+          outline: none;
+          transition: all .3s ease;
+          -webkit-border-radius: 0;
+          min-height: 0;
+          height: auto !important;
+          line-height: 1;
+          box-shadow: none;
+          width: 100%;
+          margin-bottom: 2rem;
+
+          &:focus {
+
+            border-color: $b !important;
+            animation: buttonHover 10s alternate linear infinite;
+            animation-delay: .3s;
+          }
+        }
+      }
+      textarea {
+        pointer-events: all;
+        padding: 1.25rem .3125rem .3125rem;
+        margin-bottom: .625rem;
+        border: none;
+        border-bottom: 3px solid #EEE;
+        font-size: 14px;
+        outline: none;
+        transition: all .3s ease;
+        -webkit-border-radius: 0;
+        min-height: 0;
+        height: auto !important;
+        box-shadow: none !important;
+        width: 100%;
+      }
+
+
+}
+
+.hidden_values {
+
+  display: none;
+}
+//.survey-login {
+//
+//  min-height: 100vh;
+//
+//  .login-container {
+//    position: absolute;
+//    top: 0;
+//    background: white;
+//    padding: 0;
+//    z-index: 1;
+//    width: 100%;
+//}
+//
+//.login-container h2 {
+//    width: 60%;
+//}
+//
+//}
+//#address.rm_address_type_ca .rm_ad_container .rm-address-hw input, #address.rm_address_type_ca .rm_ad_container .rm-address-hw select {
+//
+//  pointer-events: all;
+//}

@@ -226,6 +226,10 @@
           $('html').addClass('search-open');
           return false;
         });
+//        $('.login-toggle').click(function(){
+//
+//          return false;
+//        });
         $('.search-clear, .search-cover').click(function () {
           $('html').removeClass('search-open');
           return false;
@@ -819,7 +823,7 @@
         // JavaScript to be fired on the home page
 
 
-        $('.user-login-label a').click(function(){
+        $('.user-login-label a, .login-toggle').click(function(){
 
           $('.login-form').slideDown(500);
           $('.reg-form').slideUp(500);
@@ -987,7 +991,7 @@
         // JavaScript to be fired on the home page
 
 
-        $('.user-login-label a').click(function(){
+        $('.user-login-label a, .login-toggle').click(function(){
 
           $('.login-form').slideDown(500);
           $('.reg-form').slideUp(500);
@@ -1013,6 +1017,27 @@
       },
       finalize: function () {
         // JavaScript to be fired on the home page, after the init JS
+
+
+        $(window).load(function(){
+
+
+        if($('.hidden_values').length){
+
+
+          var name = $('#hidden_name').val();
+          var address = $('#hidden_address').val();
+          var country = $('#hidden_country').val();
+
+
+          $('#input_5_10').val(name);
+          $('#input_5_13').val(address);
+          $('#input_5_12').val(country);
+
+
+        }
+        })
+
       }
     },
     'page_template_information': {

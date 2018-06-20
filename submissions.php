@@ -43,7 +43,7 @@
                     <div class="reg-form">
                     <p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/us.svg"> Already a user? <a href="#">Sign In <i class="fa fa-angle-right"></i></a></p>
 
-                      <?php echo do_shortcode("[RM_Form id='2']");?>
+                      <?php custom_registration_function(); ?>
 
 
                     <!--<p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/span.svg"> Por favor crea una cuenta de usuario para completar la encuesta. <a href="#">Crea Una Cuenta</a></p>-->
@@ -64,6 +64,17 @@
                     <?php } else {?>
 
                       <h2>Ideas Generator for the Permanent Pulse Memorial</h2>
+
+                      <div class="hidden_values">
+
+                      <?php $current_user = wp_get_current_user();?>
+                      <input class="hidden" id="hidden_name" value="<?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname?>">
+                      <input class="hidden" id="hidden_address"
+                             value="<?php echo get_field('address', $current_user) . ', ' . get_field('city', $current_user) . ', ' . get_field('state', $current_user) . ' ' . get_field('zip', $current_user)?>">
+                      <input class="hidden" id="hidden_country"
+                             value="<?php echo get_field('country', $current_user);?>">
+
+                      </div>
 
                         <?php echo do_shortcode('[gravityform id="5" title="false" description="false" ajax="true"]');?>
                     <?php }?>

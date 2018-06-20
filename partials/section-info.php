@@ -47,8 +47,8 @@
                                     <div class="col-lg-6 ml-lg-auto col-md-12 col-11 mx-md-down mb-xs-32 order-lg-2 order-md-1 order-1 parallax-container mb-lg-0 mb-md-3 mb-sm-3 mb-3">
                                         <div class="canvas-container" data-stellar-ratio="2">
                                             <div class="line mb16"></div>
-                                            <img id="featured-image" crossorigin="anonymous" class="grayscale mm" src="/wp-content/uploads/2018/05/New-Renderings-_Page_2-e1519320959365-1024x545.jpg" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
-                                            <img data-stellar-ratio="1.25" class="over-image" src="/wp-content/uploads/2018/05/New-Renderings-_Page_2-e1519320959365-1024x545.jpg" data-stellar-offset-parent="true" data-stellar-vertical-offset="-200" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
+                                            <img id="featured-image" crossorigin="anonymous" class="grayscale mm" src="/wp-content/uploads/2018/06/onpu-im-7.jpg" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
+                                            <img data-stellar-ratio="1.25" class="over-image" src="/wp-content/uploads/2018/06/onpu-im-7.jpg" data-stellar-offset-parent="true" data-stellar-vertical-offset="-200" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
                                         </div>
                                     </div>
 
