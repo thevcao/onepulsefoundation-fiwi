@@ -1036,6 +1036,13 @@
 
 
         }
+        if (window.location.hash === '#login') {
+
+          $('.login-form').slideDown(0);
+          $('.reg-form').slideUp(0);
+
+        }
+
         })
 
       }

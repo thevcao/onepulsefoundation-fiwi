@@ -17,7 +17,7 @@
 ?>
 
 
-        <section class="home-about <?php if (!$count): ?>pt-13 pb-11 pt-lg-11 pb-lg-3 pt-md-10 pb-md-1 mt-lg-2 mb-lg-3 pt-sm-7<?php else:?>pt-5 pb-8 pb-lg-3 pt-md-10 pb-md-1 mt-lg-2 mb-lg-3 pt-sm-2<?php endif;?> content-left" id="<?php the_sub_field('nav_hash');?>">
+        <section class="home-about <?php if (!$count): ?><?php else:?>pt-5 pb-8 pb-lg-3 pt-md-10 pb-md-1 mt-lg-2 mb-lg-3 pt-sm-2<?php endif;?> content-left" id="<?php the_sub_field('nav_hash');?>">
 
 
           <!--<div class="media-over">

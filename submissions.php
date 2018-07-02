@@ -37,7 +37,7 @@
                     <div class="col-lg-9 col-md-12 col-11 mx-md-down ml-auto tabs">
 
                   <?php if ( !is_user_logged_in())  { ?>
-                  <h2><span>Please Sign in or Create a User Account to </span>Participate in the Ideas Generator for the Permanent Pulse Memorial</h2>
+                  <h2><span>Please sign in to participate in the </span>Ideas Generator for the permanent Pulse Memorial & Museum</h2>
 
                     <div class="survey-login">
                     <div class="reg-form">

@@ -1497,7 +1497,6 @@ function complete_registration() {
             update_user_meta($user, 'country', $_POST['field_5b2a81bdabf02']);
 
 
-
         echo '<p class="user-login-label success">Registration complete. <a href="#">Click here to log in.</a></p>';?>
 
         <script>
@@ -1587,3 +1586,20 @@ function custom_registration_shortcode() {
     custom_registration_function();
     return ob_get_clean();
 }
+
+
+function so174837_registration_email_alert( $user_id ) {
+    $user    = get_userdata( $user_id );
+    $email   = $user->user_email;
+    $username   = $user->user_login;
+    $name   = $user->first_name;
+    $site   = site_url();
+    $message = $name . ',<br><br>
+    Thank You for registering for the Pulse Memorial Ideas Generator.<br><br>
+    Please login to create an submission.<br><br>
+    <a href="' . $site . '/onepulse-foundation-memorial/memorial-process/ideas-generator/create-submission#login">Login</a><br><br>
+    Username: ' . $username . '';
+
+    wp_mail( $email, 'New User Registration: Pulse Memorial Ideas Generator', $message );
+}
+add_action('user_register', 'so174837_registration_email_alert');
