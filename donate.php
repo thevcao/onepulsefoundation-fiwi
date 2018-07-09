@@ -73,7 +73,11 @@
                             <div class="col-md-6 col-md-offset-1 pt64 pt-sm-16 p-xs-0">
 
                                 <?php the_field('right_column');?>
+                                <?php if(is_page('donate')):?>
 
+                                <script type="text/javascript" id="bloomerangForm247808"></script>
+
+                                <?php endif;?>
                                     <div class="shirt-cta visible-sm visible-xs">
                                         <?php if(is_page('donate')):?>
                                             <img src="/wp-content/uploads/2017/06/banners-all-1.jpg">
