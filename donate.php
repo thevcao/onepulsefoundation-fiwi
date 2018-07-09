@@ -54,6 +54,9 @@
 
 
                                 <div class="hidden-sm hidden-xs">
+
+
+
                                     <?php the_field('left_column');?>
                                 </div>
                                 <div class="shirt-cta hidden-sm hidden-xs">
@@ -71,8 +74,11 @@
 
 
                             <div class="col-md-6 ml-auto pl-0 pr-0 pt-sm-5 pt-sm-16 p-xs-0">
+                                <?php if(is_page('donate')):?>
 
-                                <?php the_field('right_column');?>
+                                <script type="text/javascript" id="bloomerangForm247808"></script>
+
+                                <?php else: the_field('right_column'); endif;?>
 
                                     <div class="shirt-cta visible-sm visible-xs">
                                         <?php if(is_page('donate')):?>
