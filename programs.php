@@ -79,6 +79,7 @@
                             <p>We cannot achieve our mission without volunteers like you! To volunteer with the Foundation please fill out our volunteer form. Let’s show the world that #WeWillNotLetHateWin.</p>
 
                             <a href="/volunteer-information-form" class="btn">Volunteer Information Form</a>
+                            <a href="https://signup.com/client/invitation2/secure/2317809/false#/invitation" class="btn" target="_blank">Volunteer for the Interim Memorial</a>
 
 
                         </div>
