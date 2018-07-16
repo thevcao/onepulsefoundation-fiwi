@@ -45,8 +45,9 @@
 
                         <?php endwhile; ?>
                         <?php endif; ?>
-
+                          <?php if(get_field('enable_ig_submissions')):?>
                           <li class=""><a href="#submissions">Submissions</a></li>
+                          <?php endif;?>
                           <?php if ( is_user_logged_in())  { ?>
                           <li class=""><a href="<?php the_permalink(10615);?>">Create New Submission</a></li>
                           <li class=""><a href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></li>
@@ -81,10 +82,14 @@
 
                         <?php endwhile; ?>
                         <?php endif; ?>
-                        <div class="tab" id="submissions">
+                          <?php if(get_field('enable_ig_submissions')):?>
+                            <div class="tab" id="submissions">
 
-                        <?php echo do_shortcode('[stickylist id="5"]');?>
-                        </div>
+                            <?php echo do_shortcode('[stickylist id="5"]');?>
+                            </div>
+                          <?php endif;?>
+
+
                     </div>
                 </div>
             </div>

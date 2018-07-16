@@ -13,6 +13,7 @@ footer {
     li {
       display: inline-block;
       line-height: 1;
+      padding: rem(10) 0;
 
       &:not(:last-child) {
 
@@ -26,8 +27,7 @@ footer {
       }
       a {
         font-weight: bold;
-        padding: rem(10) 0;
-        font-size: 14px;
+        font-size: rem(14);
         display: block;
         position: relative;
         transition: color .3s ease;
@@ -354,7 +354,7 @@ footer {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   .donate-bar a {
-    font-size: 1rem;
+//    font-size: 1rem;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {}

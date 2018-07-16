@@ -82,12 +82,19 @@
       display: block;
     }
   }
-  @media(max-width: 993px) {
+
+//// (768px)
+//@include media-breakpoint-down(md) {
+//
+//  column-count: 2;
+//  }
+@include media-breakpoint-down(md) {
     column-count: 2;
-  }
-  @media(max-width: 768px) {
-    column-count: 1;
     padding: 1rem 1rem 0;
+  }
+@include media-breakpoint-down(sm) {
+    column-count: 1;
+//    padding: 1rem 1rem 0;
   }
 }
 .donor-list {

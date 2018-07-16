@@ -20,11 +20,65 @@
     <?php get_template_part('templates/header'); ?>
         <div class="main-wrapper">
 
-            <section class="archive-body pt-13 pb-11 pt-lg-11 pb-lg-3 pt-md-10 pb-md-1 mt-lg-2 mb-lg-3 pt-sm-7">
+        <div class="page-main">
+            <section class="archive-body pb-11 pb-md-3 pt-sm-3">
 
                 <div class="container">
+
+                  <div class="row">
+                    <div class="col-md-12 col-11 mx-auto mr-lg-0">
+                    <h1>News and Updates</h1>
+
+                    </div>
+
+                  </div>
                     <div class="row">
-                        <div class="col-md-8">
+                          <?php if(is_page(11915)):?>
+
+
+                        <div class="col-md-8 order-lg-1 order-md-2 order-sm-2 order-2">
+
+
+
+
+
+                          <?php // Display blog posts on any page @ http://m0n.co/l
+                            $temp = $wp_query; $wp_query= null;
+                            $wp_query = new WP_Query(); $wp_query->query('showposts=10' . '&paged='.$paged);
+                            while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+
+
+
+                                <div class="item mt32 mb64">
+                                    <h2 class=""><a class="no-hover" href="<?php the_permalink();?>"><?php echo get_the_title();?></a></h2>
+                                    <h5 class=""><?php the_date();?></h5>
+                                    <h6>Posted in: <a href="<?php
+                                      $category = get_the_category();
+                                      $firstCategory = $category[0]->cat_link;
+                                      echo $firstCategory;?>"><?php
+                                      $category = get_the_category();
+                                      $firstCategory = $category[0]->cat_name;
+                                      echo $firstCategory;?></a></h6>
+                                    <p>
+                                        <?php the_excerpt();?>
+                                    </p>
+                                    <div class="pt8"></div>
+                                    <a href="<?php the_permalink();?>" class="btn left">Read More</a>
+                                </div>
+                                  <?php endwhile; ?>
+
+
+
+
+
+                        </div>
+
+                          <?php else:?>
+
+                        <div class="col-md-8 order-lg-1 order-md-2 order-sm-2 order-2">
+
+
+
 
                             <h1><?php single_cat_title(); ?></h1>
 
@@ -47,7 +101,9 @@
 
 
                         </div>
-                        <div class="col-md-4">
+                          <?php endif;?>
+
+                        <div class="col-md-4 order-lg-2 order-md-1 order-sm-1 order-1">
                             <?php $taxonomy     = 'category';
                                                 $orderby      = 'name';
                                                 $show_count   = false;
@@ -70,35 +126,37 @@
                                                 </ul>
 
                         </div>
+
+
                     </div>
                 </div>
 
+          <div class="pagination">
+                  <div class="container">
 
+                      <div class="row">
+                          <div class="col-sm-6">
+                              <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts <i class="fa fa-angle-left"></i>' ); ?></div>
+
+                          </div>
+                          <div class="col-sm-6">
+
+                          <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts <i class="fa fa-angle-right"></i>' ); ?></div>
+
+                          </div>
+
+                      </div>
+
+                  </div>
+
+
+              </div>
 
 
 
             </section>
 
-<section class="pagination">
-        <div class="container">
 
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
-
-                </div>
-                <div class="col-sm-6">
-
-                <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-    </section>
 
 
             <?php get_template_part('templates/footer'); ?>

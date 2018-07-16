@@ -43,6 +43,7 @@
     "merge-stream": "^0.1.7",
     "poly-fluid-sizing": "^1.1.0",
     "postcss-flexbugs-fixes": "^3.3.1",
+    "postcss-focus": "^3.0.0",
     "respond.js": "^1.4.2",
     "through2": "^2.0.1",
     "video.js": "^5.19.1"

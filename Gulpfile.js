@@ -40,7 +40,8 @@ gulp.task('styles', () => {
     .on('error', plugins.sass.logError)
     .pipe(plugins.postcss([
       require('autoprefixer')({ browsers: ['last 2 versions', 'last 2 iOS versions', 'ie >= 9'] }),
-      require('postcss-flexbugs-fixes')
+      require('postcss-flexbugs-fixes'),
+      require('postcss-focus')
     ]))
     .pipe(plugins.rename('styles.min.css'))
     .pipe(plugins.sourcemaps.write('.'))

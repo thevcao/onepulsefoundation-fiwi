@@ -62,17 +62,25 @@
 
   .mobile {
 
+    .slick-slider {
+
+}
+
   .featured-slider {
-    overflow: auto;
+//    overflow: auto;
+
+    padding: 3rem 0 !important;
   }
   .slick-next {
     right: rem(10);
+    display: none !important;
   }
   .slick-next:before {
     color: #000;
   }
   .slick-prev {
     left: rem(10);
+    display: none !important;
   }
   .slick-prev:before {
     color: #000;
@@ -89,7 +97,7 @@
     background-image: url(../../dist/img/tooltip.png);
     background-size: 80% auto;
     pointer-events: all;
-    background-position: 50% 0%;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.69);
   }
@@ -99,13 +107,13 @@
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   .gallery .item {
-    height: 400px;
+    height: 66vw;
     margin: 0;
   }
   .gallery .item img {
     margin: 0 auto;
-    height: 400px;
-    width: 80%;
+    height: 66vw;
+    width: 100%;
   }
   section.featured-slider.pt-sm-5.pb120 {
     padding-bottom: 0;
@@ -119,40 +127,40 @@
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   .gallery .item {
-    height: 400px;
+    height: 66vw;
     margin: 0;
   }
   .gallery .item img {
     margin: 0 auto;
-    height: 400px;
-    width: 80%;
+    height: 66vw;
+    width: 100%;
   }
   section.featured-slider.pt-sm-5.pb120 {
     //		padding-bottom: 0;
     //		padding-top: 0;
   }
+//  .featured-slider .slick-dots {
+//    bottom: -50px;
+//  }
+}
+//@media (max-width:993px) {
+//  .gallery .item {
+//    height: 400px;
+//    margin: 0;
+//  }
+//  .gallery .item img {
+//    margin: 0 auto;
+//    height: 400px;
+//    width: 80%;
+//  }
+//  section.featured-slider.pt-sm-5.pb120 {
+//    //		padding-bottom: 0;
+//    //		padding-top: 0;
+//  }
   .featured-slider .slick-dots {
     bottom: -50px;
   }
-}
-@media (max-width:993px) {
-  .gallery .item {
-    height: 400px;
-    margin: 0;
-  }
-  .gallery .item img {
-    margin: 0 auto;
-    height: 400px;
-    width: 80%;
-  }
-  section.featured-slider.pt-sm-5.pb120 {
-    //		padding-bottom: 0;
-    //		padding-top: 0;
-  }
-  .featured-slider .slick-dots {
-    bottom: -50px;
-  }
-}
+//}
 @include media-breakpoint-down(sm) {
   html:not(.ipad) {
     .gallery .item {

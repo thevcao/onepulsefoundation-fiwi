@@ -48,6 +48,7 @@ html:not(.ie) {
       color: black;
       text-decoration: none;
       outline: none;
+      font-weight: bold;
       &:not(.home-play, .task-link, .btn, .pop-link, .close, .menu-toggle, .no-hover) {
         position: relative;
         transition: .5s ease;
@@ -75,8 +76,10 @@ html:not(.ie) {
           right: 0;
           text-align: inherit;
           display: inherit;
-          font-size: left;
+          font-size: inherit;
           transition: inherit;
+          padding: 0;
+          margin: 0;
         }
         &:hover:before {
           opacity: 1;
@@ -138,6 +141,7 @@ html.ie {
       color: black;
       text-decoration: none;
       outline: none;
+      font-weight: bold;
       &:not(.home-play, .task-link, .btn, .pop-link, .close, .menu-toggle, .no-hover) {
         position: relative;
         transition: .3s ease;
@@ -278,11 +282,28 @@ html.ie {
     .media-cat {
       list-style: none;
       margin-top: 2rem;
+
+      // (768px)
+      @include media-breakpoint-down(sm) {
+
+        margin: 0;
+        padding: 0;
+
+        li {
+
+          display: inline-block;
+          margin-right: .5rem;
+
+        }
+
+
+      }
+
       a {
         font-weight: bold;
         font-size: 1.25rem;
         &:before {
-          top: rem(1) !important;
+//          top: rem(1) !important;
         }
       }
     }
@@ -306,50 +327,50 @@ html.ie {
       body {
         overflow-x: hidden;
       }
-      body:not(.home) section:nth-of-type(1) {
-        //        padding-top: 100px !important;
-      }
-      .col-center-ls-tab {
-        margin: 0 auto;
-        float: none;
-      }
-      .col-md-6.col-md-offset-1.parallax-container {
-        width: 45%;
-      }
-      .float-container .float-over {
-        height: 80px;
-      }
-      .float-container {
-        margin-left: 80%;
-      }
-      .mb80 {
-        margin-bottom: 40px;
-      }
+//      body:not(.home) section:nth-of-type(1) {
+//        //        padding-top: 100px !important;
+//      }
+//      .col-center-ls-tab {
+//        margin: 0 auto;
+//        float: none;
+//      }
+//      .col-md-6.col-md-offset-1.parallax-container {
+//        width: 45%;
+//      }
+//      .float-container .float-over {
+//        height: 80px;
+//      }
+//      .float-container {
+//        margin-left: 80%;
+//      }
+//      .mb80 {
+//        margin-bottom: 40px;
+//      }
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
       html,
       body {
         overflow-x: hidden;
       }
-      .spacer {
-        &.large {
-          min-height: 80px;
-        }
-        &.medium {
-          min-height: 40px;
-        }
-        &.small {
-          min-height: 20px;
-        }
-      }
-      .archive-body {
-        width: 75%;
-        margin: 0 auto;
-        .container {
-          width: 100%;
-          padding: 0;
-        }
-      }
+//      .spacer {
+//        &.large {
+//          min-height: 80px;
+//        }
+//        &.medium {
+//          min-height: 40px;
+//        }
+//        &.small {
+//          min-height: 20px;
+//        }
+//      }
+//      .archive-body {
+//        width: 75%;
+//        margin: 0 auto;
+//        .container {
+//          width: 100%;
+//          padding: 0;
+//        }
+//      }
     }
     @include media-breakpoint-down(md) {
       *[data-stellar-ratio] {
@@ -401,16 +422,16 @@ html.ie {
       //		.home-about .container > .row > div {
       //			padding: 0;
       //		}
-      .home-about.pt-sm-5.pt-xs-32.pb-xs-32.content-left {
-        padding-top: 0;
-      }
-      .page-main .container,
-      section > .row,
-      .archive-body .container {
-        max-width: 80%;
-        margin: 0 auto;
-        display: block;
-      }
+//      .home-about.pt-sm-5.pt-xs-32.pb-xs-32.content-left {
+//        padding-top: 0;
+//      }
+//      .page-main .container,
+//      section > .row,
+//      .archive-body .container {
+//        max-width: 80%;
+//        margin: 0 auto;
+//        display: block;
+//      }
     }
     .sub-back {
       i {
@@ -448,6 +469,10 @@ html.ie {
       h5,
       p,
       li {
-        pointer-events: all;
+        pointer-events: none;
+
+        a {
+          pointer-events: all;
+        }
       }
     }

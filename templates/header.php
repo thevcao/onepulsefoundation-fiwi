@@ -25,7 +25,7 @@ get_template_part('templates/head');
 <div class="search-cover"></div>
 <header class="main-header utility">
   <div class="row">
-    <div class="col-xl-10 col-lg-11 col-sm-10 col-12 mx-auto">
+    <div class="col-xl-10 col-lg-11 col-sm-11 col-12 mx-auto">
 
       <div class="row align-items-center">
         <div class="col-2">

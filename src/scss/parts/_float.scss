@@ -31,26 +31,26 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   .float-container {
     margin-top: -250px;
-    margin-bottom: 100px;
-    margin-left: 80%;
+    margin-bottom: 10px;
+    margin-left: -5%;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   .home-about .col-md-6.col-md-offset-1.parallax-container {
-    width: 100%;
-    margin: 50px auto 0;
+//    width: 100%;
+//    margin: 50px auto 0;
   }
   .home-about .line {
-    width: 50%;
+//    width: 50%;
   }
   .home-about .img-parallax {
-    width: 50%;
+//    width: 50%;
   }
   .float-container {
-    margin-left: 45%;
-    margin-top: -50%;
-    margin-bottom: 10%;
-    width: 100%;
+//    margin-left: 45%;
+//    margin-top: -50%;
+//    margin-bottom: 10%;
+//    width: 100%;
   }
   .home-about .img-parallax.float-over {
     height: 200px;

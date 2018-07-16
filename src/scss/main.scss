@@ -38,29 +38,30 @@
 'vendor/slick',
 'vendor/slick-theme';
 // Layout
-@import
-'parts/reveal',
-'layout/header',
-'layout/nav',
-'layout/footer',
-'layout/main',
-'layout/buttons',
-'parts/home',
-'parts/cta',
-'parts/parallax',
-'parts/gallery',
-'parts/modal',
-'parts/videojs',
-'parts/task',
-'parts/contact',
-'page/about',
-'page/posts',
-'page/member',
-'page/donate',
-'page/store',
-'parts/survey',
-'parts/float';
+//@import
+//'parts/reveal',
+//'layout/header',
+//'layout/nav',
+//'layout/footer',
+//'layout/main',
+//'layout/buttons',
+//'parts/home',
+//'parts/cta',
+//'parts/parallax',
+//'parts/gallery',
+//'parts/modal',
+//'parts/videojs',
+//'parts/task',
+//'parts/contact',
+//'page/about',
+//'page/posts',
+//'page/member',
+//'page/donate',
+//'page/store',
+//'parts/survey',
+//'parts/float';
 
+@import "page/*.scss";
 @import "layout/*.scss";
 @import "parts/*.scss";
 

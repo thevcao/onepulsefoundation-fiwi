@@ -178,9 +178,9 @@
     width: 100%;
   }
 }
-@media (max-width:993px) {}
 
-@include media-breakpoint-down(lg) {
+
+@include media-breakpoint-down(md) {
   .canvas-container {
     height: auto !important;
 
@@ -189,6 +189,19 @@
       display: none;
     }
   }
+}
+
+@media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: portrait) {
+  .canvas-container {
+    height: auto !important;
+
+    canvas {
+
+      display: none;
+    }
+  }
+
+
 }
 @include media-breakpoint-down(sm) {
   .page-main .home-hero h2.clone-shadow,

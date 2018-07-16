@@ -8,12 +8,11 @@
 ?>
     <?php get_template_part('templates/header'); ?>
 
-
-
         <div class="main-wrapper">
-            <div class="donate-main">
 
-                <section class="pt240 pt-xs-64 pt-ls-80 hidden-tab-ls">
+        <div class="page-main">
+
+                <section class="donate-main pb-11 pb-md-3 pt-sm-3">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-10">

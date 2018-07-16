@@ -72,7 +72,7 @@
 
                     <div class="row">
 
-                        <div class="col-lg-5 col-md-12 col-11 mx-md-down parallax-container">
+                        <div class="col-lg-5 col-md-6 col-11 mx-md-down parallax-container">
                             <div class="line" data-stellar-ratio="1.9"></div>
 
                             <?php $images = get_field('home_about_images', 'options'); $counterAbout = 0;
@@ -109,7 +109,7 @@
                         </div>
 
 
-                        <div class="col-lg-6 ml-auto col-md-12 col-11 mx-md-down">
+                        <div class="col-lg-6 ml-auto col-md-6 col-11 mx-md-down">
                             <h2>About onePULSE Foundation</h2>
                               <?php the_field('home_about', 'options');?>
 

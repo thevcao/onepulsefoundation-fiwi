@@ -24,15 +24,16 @@
             <?php $args = array(
 
                 'posts_per_page'    => -1,
-                'meta_key'         => 'order',
-                'orderby'    => 'meta_value',
-                'order'    => 'ASC',
+//                'meta_key'         => 'order',
+//                'orderby'    => 'meta_value',
+//                'order'    => 'ASC',
                 'post_type' => 'board',
                 'meta_query' => array(
 
                     'btitle' => array(
                         'key' => 'exec_council',
-                        'compare' => 'EXISTS'
+                        'value' => '"yes"',
+                        'compare' => 'LIKE'
                     ),
 
 
@@ -72,12 +73,17 @@
                 'posts_per_page'    => -1,
                 'post_type' => 'board',
                 'meta_query' => array(
+                  'relation' => 'OR', // Optional, defaults to "AND"
 
-                    'btitle' => array(
+                    array(
+                        'key' => 'exec_council',
+                        'value' => '"yes"',
+                        'compare' => 'NOT LIKE'
+                    ),
+                    array(
                         'key' => 'exec_council',
                         'compare' => 'NOT EXISTS'
-                    ),
-
+                    )
 
 
                 ),

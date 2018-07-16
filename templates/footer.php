@@ -55,7 +55,7 @@ $newsimage = get_field('news_image', 'options');?>
 
                     <p class="text-right">Find out the latest from the onePULSE Foundation, including important milestones and announcements, as we work to create a sanctuary of hope.</p>
 
-                    <a href="/category/news" class="btn right">See All </a>
+                    <a href="/news-and-updates" class="btn right">See All </a>
 
 
                 </div>
@@ -92,7 +92,7 @@ $newsimage = get_field('news_image', 'options');?>
 
 <footer>
     <div class="mb16 hidden-xs row">
-        <div class="col-xl-10 col-lg-11 col-md-10 col-sm-10 col-11 mx-auto">
+        <div class="col-xl-10 col-lg-11 col-md-12 col-sm-10 col-11 mx-auto">
           <div class="row">
             <div class="col-lg-2 hidden-sm">
                 <a href="/">

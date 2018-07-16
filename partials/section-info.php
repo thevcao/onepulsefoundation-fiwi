@@ -20,7 +20,7 @@
 
                             <div class="row">
 
-                                <div class="col-lg-5 col-md-12 col-11 mx-md-down order-lg-1 order-md-2 order-2">
+                                <div class="col-lg-5 col-md-6 col-11 mx-md-down order-lg-1 order-md-1 order-2">
                                     <div class="">
                                         <p>The Pulse Memorial is a sanctuary of quiet reflection and love dedicated to honoring the senseless loss of innocent life and remembering the horrible attack that occurred on June 12, 2016.</p>
 
@@ -44,7 +44,7 @@
 
                                 </div>
 
-                                    <div class="col-lg-6 ml-lg-auto col-md-12 col-11 mx-md-down mb-xs-32 order-lg-2 order-md-1 order-1 parallax-container mb-lg-0 mb-md-3 mb-sm-3 mb-3">
+                                    <div class="col-lg-6 ml-lg-auto col-md-6 col-11 mx-md-down mb-xs-32 order-lg-2 order-md-2 order-1 parallax-container mb-lg-0 mb-md-3 mb-sm-3 mb-3">
                                         <div class="canvas-container" data-stellar-ratio="2">
                                             <div class="line mb16"></div>
                                             <img id="featured-image" crossorigin="anonymous" class="grayscale mm" src="/wp-content/uploads/2018/06/onpu-im-7.jpg" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">

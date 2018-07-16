@@ -1,74 +1,53 @@
 .parallax-container {
-
   position: relative;
   transform: translateZ(0);
-
   div[data-stellar-ratio="2"] {
-
-
     height: 100%;
   }
-
   // @media (max-width: 1439px)
-  @include media-breakpoint-down(lg) {
-
-
+  @include media-breakpoint-down(sm) {
     margin-bottom: 4rem !important;
-
     .float-container {
-  display: none;
-}
+      display: none;
+    }
   }
-
   img {
-
     height: auto;
     object-fit: cover;
     width: 100%;
     transform: translateZ(0);
     position: relative;
-
-
-
     &.tall {
-
       height: 100%;
     }
     // (768px)
     @include media-breakpoint-down(md) {
-
       height: auto;
     }
-
   }
-    .over-image {
-      @include media-breakpoint-up(lg) {
-        position: absolute;
-        bottom: 50%;
-        width: 75%;
-        margin-left: -5%;
-        border: rem(10) solid #fff;
-        left: 0;
-      }
+  .over-image {
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      bottom: 50%;
+      width: 75%;
+      margin-left: -5%;
+      border: rem(10) solid #fff;
+      left: 0;
     }
+  }
   .img-attrib {
     bottom: 20px;
   }
 }
-
 .home-about {
   .img-attrib {
     left: 2rem;
     bottom: .25rem;
+  }
 }
-}
-
 .float-container {
-
-
   .img-attrib {
     left: rem(10);
     bottom: 8px;
   }
-
 }
