@@ -20,11 +20,12 @@
     <?php get_template_part('templates/header'); ?>
         <div class="main-wrapper">
 
-            <section class="archive-body pt-13 pb-11 pt-lg-11 pb-lg-3 pt-md-10 pb-md-1 mt-lg-2 mb-lg-3 pt-sm-7">
+        <div class="page-main">
+            <section class="archive-body pb-11 pb-md-3 pt-sm-3">
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-lg-8">
 
                             <h1><?php echo get_the_title();?></h1>
 
@@ -80,7 +81,7 @@
 
 
                         </div>
-                        <div class="col-md-3 col-md-offset-1">
+                        <div class="col-lg-3 col-lg-offset-1">
 
                             <h3 class="mt64">Past Events</h3>
 
@@ -131,7 +132,7 @@
 
                             <p>We cannot achieve our mission without volunteers like you! To volunteer with the Foundation please fill out our volunteer form. Let’s show the world that #WeWillNotLetHateWin.</p>
 
-                            <a href="/volunteer-information-form" class="btn">Volunteer Information Form</a>
+                            <a href="/volunteer-information-form" class="btn left">Volunteer Information Form</a>
 
 
                         </div>

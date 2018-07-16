@@ -76,6 +76,12 @@ footer {
       padding: 0;
       font-weight: bold;
       font-size: 11px;
+
+      // (768px)
+      @include media-breakpoint-down(md) {
+      font-size: 10px;
+      }
+
     }
   }
   .fiwi {
@@ -85,6 +91,13 @@ footer {
     margin-right: 0;
     display: block;
     padding: 3px 8px;
+
+
+          @include media-breakpoint-down(md) {
+    width: 100%;
+      }
+
+
   }
 }
 .socials {
