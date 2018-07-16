@@ -351,13 +351,15 @@
           }, 250);
           return false;
         });
-        $('.modal-toggle').click(function (e) {
+        $('.modal-toggle').click(function () {
           if ($('body').hasClass('menu-open')) {
             $('body').removeClass('modal-open');
           } else {
             $('body').addClass('menu-open modal-open');
           }
           var target = $(this).attr('href');
+
+          console.log(target);
           $('.modal').not(target).removeClass('view-modal');
           $(target).addClass('view-modal');
           if (target == '#contact-modal') {
