@@ -80,5 +80,5 @@ production:
   ssh:
     host: '107.170.18.118'
     user: 'onepulse'
-    password: 'YeBZiG.y@NFmdYtD6Wed}'
+#    password: 'YeBZiG.y@NFmdYtD6Wed}'
     rsync_options: '--verbose'

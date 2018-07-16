@@ -477,6 +477,12 @@
         .single-language {
           padding: 0 0 0 1rem;
           font-size: rem(14);
+
+          &:before {
+
+
+                padding: 0 0 0 1rem !important;
+          }
           &:after {
             content: none;
           }

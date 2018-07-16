@@ -272,6 +272,8 @@
                 }
                 &:before {
                   content: none;
+                  padding: inherit !important;
+                  line-height: inherit !important;
                 }
               }
               @include media-breakpoint-down(md) {
