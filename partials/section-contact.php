@@ -2,12 +2,12 @@
 
 
 
-<section class="contact-form pb120 hidden-xs">
-    <div class="container container-fluid">
+<section class="contact-form pb120 hidden-xs <?php if (!$count): ?>pt-13 pb-11 pt-lg-11 pb-lg-3 pt-md-10 pb-md-1 mt-lg-2 mb-lg-3 pt-sm-7<?php endif;?>">
+    <div class="container">
 
 
         <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 col-11 mx-auto">
 
                 <?php if (!$count): ?>
                     <h1><span>Contact onePULSE Foundation</span>Contact Us</h1><?php else:?>
@@ -17,12 +17,12 @@
 
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-lg-8 col-md-12 col-11 mx-auto">
 
                     <?php echo do_shortcode('[contact-form-7 id="4" title="Contact Form"]');?>
 
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-12 col-11 mx-auto">
 
                 <div class="line mt-xs-32 mb-xs-32"></div>
 

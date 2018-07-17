@@ -48,7 +48,7 @@ $smores = new Smores(
         'js'              => '/dist/js/scripts.min.js',
         'modernizr'       => '/dist/js/vendor/modernizr.min.js',
         'jquery'          => '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js',
-        'jquery_fallback' => '/dist/js/vendor/jquery.min.js',
+//        'jquery_fallback' => '/dist/js/vendor/jquery.min.js',
 )
 );
 
@@ -803,8 +803,10 @@ function change_howdy($translated, $text, $domain) {
 
 function register_my_menu() {
   register_nav_menu('main',__( 'Main Menu' ));
+  register_nav_menu('action',__( 'Action Links' ));
   register_nav_menu('full-one',__( 'Full Menu' ));
-  register_nav_menu('full-mobile',__( 'Mobile Menu' ));
+  register_nav_menu('full-mobile',__( 'Mobile Home Menu' ));
+  register_nav_menu('mobile',__( 'Mobile Main Menu' ));
   register_nav_menu('footer',__( 'Footer' ));
 
 }
@@ -1057,8 +1059,8 @@ function onpu_redirect_users_by_role() {
         $current_user   = wp_get_current_user();
         $role_name      = $current_user->roles[0];
 
-        if ( 'subscriber' === $role_name ) {
-            wp_redirect( site_url() . '/survey/' );
+        if ( $role_name == 'subscriber') {
+            wp_redirect( site_url() . '/onepulse-foundation-memorial/memorial-process/ideas-generator/' );
         } // if $role_name
 
     } // if DOING_AJAX
@@ -1143,43 +1145,43 @@ if (strpos($url,'wp-login.php?checkemail=registered') == true) {?>
 <?php } }
 add_action( 'login_head', 'ga_event_registration' );
 
-add_filter('rest_enabled', '_return_false');
-add_filter('rest_jsonp_enabled', '_return_false');
+//add_filter('rest_enabled', '_return_false');
+//add_filter('rest_jsonp_enabled', '_return_false');
 
-add_action("gform_after_submission", "gf_ga_tracking", 1, 2);
+//add_action("gform_after_submission", "gf_ga_tracking", 1, 2);
 function gf_ga_tracking($entry, $form) {
     ?>
     <script type="text/javascript">
 
 
-            if ((document.location.href.indexOf('staging') === -1 || document.location.href.indexOf('dev') === -1)){
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-                ga('create', 'UA-97989536-1', 'auto');
-
-                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-
-                    ga('send', {
-                        hitType: 'event',
-                        eventCategory: 'Survey Complete - Mobile',
-                        eventAction: 'conversion'
-                    });
-
-                } else {
-
-                    ga('send', {
-                        hitType: 'event',
-                        eventCategory: 'Survey Complete - Desktop',
-                        eventAction: 'conversion'
-                    });
-
-                }
-
-                console.log('Survey Complete');
-            }
+//            if ((document.location.href.indexOf('staging') === -1 || document.location.href.indexOf('dev') === -1)){
+//            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+//                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+//                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+//            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+//
+//                ga('create', 'UA-97989536-1', 'auto');
+//
+//                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+//
+//                    ga('send', {
+//                        hitType: 'event',
+//                        eventCategory: 'Survey Complete - Mobile',
+//                        eventAction: 'conversion'
+//                    });
+//
+//                } else {
+//
+//                    ga('send', {
+//                        hitType: 'event',
+//                        eventCategory: 'Survey Complete - Desktop',
+//                        eventAction: 'conversion'
+//                    });
+//
+//                }
+//
+//                console.log('Survey Complete');
+//            }
     </script>
 
 <?php }
@@ -1239,6 +1241,16 @@ function my_mce_before_init_insert_formats( $init_array ) {
             'title' => 'Button (right)',
             'selector' => 'a',
             'classes' => 'btn right'
+        ),
+        array(
+            'title' => 'ROYGBIV Text',
+            'selector' => 'p, h1,h2,h3,h4,h5',
+            'classes' => 'roygbiv'
+        ),
+        array(
+            'title' => 'Large paragraph text',
+            'selector' => 'p',
+            'classes' => 'large'
         )
     );
     // Insert the array, JSON ENCODED, into 'style_formats'
@@ -1300,3 +1312,294 @@ return $urls;
 }
 
 add_image_size( 'slide-gallery', 560, 999999 );
+
+
+add_filter('filter_entries','add_entry_id' );
+function add_entry_id($entries) {
+    foreach ($entries as &$entry) {
+        $entry["14"] = $entry["id"];
+
+        $date = $entry["date_created"];
+        $date1 = explode(' ', $date);
+        $date2 = $date1[0];
+        $dateConverted = date("M d, Y", strtotime($date2));
+        $entry["16"] = $dateConverted;
+    }
+    return $entries;
+}
+    add_filter("gform_confirmation_anchor", create_function("","return 0;"));
+
+//Approve Entries with Star
+add_filter('filter_entries','show_only_approved' );
+function show_only_approved($entries) {
+    foreach ($entries as $entryKey => &$entry) {
+        if ($entry["is_starred"] == 0) {
+            unset($entries[$entryKey]);
+        }
+    }
+    return $entries;
+}
+//Approve Entries with Approved Field
+//add_filter('filter_entries','show_only_approved' );
+//function show_only_approved($entries) {
+//    foreach ($entries as $entryKey => &$entryValue) {
+//        if ($entryValue["5.1"] == null) {
+//            unset($entries[$entryKey]);
+//        }
+//    }
+//    return $entries;
+//}
+
+
+add_filter( 'gform_init_scripts_footer', '__return_true' );
+add_filter( 'gform_cdata_open', 'wrap_gform_cdata_open', 1 );
+function wrap_gform_cdata_open( $content = '' ) {
+if ( ( defined('DOING_AJAX') && DOING_AJAX ) || isset( $_POST['gform_ajax'] ) ) {
+return $content;
+}
+$content = 'document.addEventListener( "DOMContentLoaded", function() { ';
+return $content;
+}
+add_filter( 'gform_cdata_close', 'wrap_gform_cdata_close', 99 );
+function wrap_gform_cdata_close( $content = '' ) {
+if ( ( defined('DOING_AJAX') && DOING_AJAX ) || isset( $_POST['gform_ajax'] ) ) {
+return $content;
+}
+$content = ' }, false );';
+return $content;
+}
+
+
+
+function registration_form( $username, $password, $email, $first_name, $last_name, $address, $city, $state, $zip, $country ) {
+    echo '
+    <form class="im-reg" action="' . $_SERVER['REQUEST_URI'] . '" method="post">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Account Information</h3>
+      </div>
+      <div class="col-md-7">
+        <input type="text" name="username" placeholder="Username *" value="' . ( isset( $_POST['username'] ) ? $username : null ) . '" required>
+      </div>
+      <div class="col-md-7">
+        <input type="password" name="password" placeholder="Password *" value="' . ( isset( $_POST['password'] ) ? $password : null ) . '" required>
+      </div>
+    </div>
+
+    <div class="line mt-3"></div>
+
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <h3>Personal Information</h3>
+
+      </div>
+      <div class="col-md-7">
+      <input type="text" name="fname" placeholder="First Name *" value="' . ( isset( $_POST['fname']) ? $first_name : null ) . '" required>
+      </div>
+      <div class="col-md-7">
+      <input type="text" name="lname" placeholder="Last Name *" value="' . ( isset( $_POST['lname']) ? $last_name : null ) . '" required>
+      </div>
+      <div class="col-md-7">
+        <input type="text" name="email" placeholder="Email Address *" value="' . ( isset( $_POST['email']) ? $email : null ) . '" required>
+
+      </div>
+    </div>
+    <div class="line mt-3"></div>
+
+    <div class="row mt-3">
+      <div class="col-md-12">
+
+        <h3>Address Information</h3>
+
+        <input type="text" class="field" placeholder="Address *" name="field_5b2a819aabefe" value="' . ( isset( $_POST['field_5b2a819aabefe']) ? $address : null ) . '" required>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <input type="text" class="field" placeholder="City *" name="field_5b2a81a4abeff" value="' . ( isset( $_POST['field_5b2a81a4abeff']) ? $city : null ) . '" required>
+      </div>
+      <div class="col-md-4">
+        <input type="text" class="field" placeholder="State or Region *" name="field_5b2a81adabf01" value="' . ( isset( $_POST['field_5b2a81adabf01']) ? $state : null ) . '" required>
+      </div>
+      <div class="col-md-4">
+        <input type="text" class="field" placeholder="Zip *" name="field_5b2a81adabf00" value="' . ( isset( $_POST['field_5b2a81adabf00']) ? $zip : null ) . '" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" class="field" placeholder="Country *" name="field_5b2a81bdabf02" value="' . ( isset( $_POST['field_5b2a81bdabf02']) ? $country : null ) . '" required>
+      </div>
+    </div>
+    <input class="btn left" type="submit" name="submit" value="Register"/>
+    </form>
+    ';
+}
+
+function registration_validation( $username, $password, $email, $first_name, $last_name, $address, $city, $state, $zip, $country )  {
+      global $reg_errors;
+      $reg_errors = new WP_Error;
+      if ( empty( $username) || empty( $password ) || empty( $email ) || empty( $address ) || empty( $city ) || empty( $state ) || empty( $zip ) || empty( $country ) ) {
+      $reg_errors->add('field', 'Required form field is missing');
+      }
+      if ( 4 > strlen( $username ) ) {
+      $reg_errors->add( 'username_length', 'Username too short. At least 4 characters is required' );
+      }
+      if ( username_exists( $username ) )
+      $reg_errors->add('user_name', 'Sorry, that username already exists!');
+      if ( ! validate_username( $username ) ) {
+      $reg_errors->add( 'username_invalid', 'Sorry, the username you entered is not valid' );
+      }
+      if ( 5 > strlen( $password ) ) {
+      $reg_errors->add( 'password', 'Password length must be greater than 5' );
+      }
+      if ( !is_email( $email ) ) {
+      $reg_errors->add( 'email_invalid', 'Email is not valid' );
+      }
+      if ( email_exists( $email ) ) {
+      $reg_errors->add( 'email', 'Email Already in use' );
+      }
+      if ( is_wp_error( $reg_errors ) ) {
+      foreach ( $reg_errors->get_error_messages() as $error ) {
+      echo '<div>';
+      echo '<strong>ERROR</strong>:';
+      echo $error . '<br/>';
+      echo '</div>';
+      }
+      }
+}
+function complete_registration() {
+    global $reg_errors, $username, $password, $email, $first_name, $last_name, $address, $city, $state, $zip, $country;
+    if ( 1 > count( $reg_errors->get_error_messages() ) ) {
+        $userdata = array(
+        'user_login'    =>   $username,
+        'user_email'    =>   $email,
+        'user_pass'     =>   $password,
+        'first_name'    =>   $first_name,
+        'last_name'     =>   $last_name,
+//        'field_5b2a819aabefe'       =>   $address,
+//        'field_5b2a81a4abeff'          =>   $city,
+//        'field_5b2a81adabf01'         =>   $state,
+//        'field_5b2a81adabf00'           =>   $zip,
+//        'field_5b2a81bdabf02'       =>   $country,
+        );
+        $user = wp_insert_user( $userdata );
+
+        if ( isset( $_POST['field_5b2a819aabefe'] ) )
+            update_user_meta($user, 'address', $_POST['field_5b2a819aabefe']);
+        if ( isset( $_POST['field_5b2a81a4abeff'] ) )
+            update_user_meta($user, 'city', $_POST['field_5b2a81a4abeff']);
+        if ( isset( $_POST['field_5b2a81adabf01'] ) )
+            update_user_meta($user, 'state', $_POST['field_5b2a81adabf01']);
+        if ( isset( $_POST['field_5b2a81adabf00'] ) )
+            update_user_meta($user, 'zip', $_POST['field_5b2a81adabf00']);
+        if ( isset( $_POST['field_5b2a81bdabf02'] ) )
+            update_user_meta($user, 'country', $_POST['field_5b2a81bdabf02']);
+
+
+        echo '<p class="user-login-label success">Registration complete. <a href="#">Click here to log in.</a></p>';?>
+
+        <script>
+
+        (function ($) {
+
+            'use strict';
+
+              $(window).load(function(){
+
+              jQuery('.im-reg, .user-login-label').not('.success').remove();
+
+
+              })
+        })(jQuery);
+
+        </script>
+        <?php
+    }
+}
+
+function custom_registration_function() {
+    if ( isset($_POST['submit'] ) ) {
+        registration_validation(
+        $_POST['username'],
+        $_POST['password'],
+        $_POST['email'],
+        $_POST['fname'],
+        $_POST['lname'],
+        $_POST['field_5b2a819aabefe'],
+        $_POST['field_5b2a81a4abeff'],
+        $_POST['field_5b2a81adabf01'],
+        $_POST['field_5b2a81adabf00'],
+        $_POST['field_5b2a81bdabf02']
+        );
+
+        // sanitize user form input
+        global $username, $password, $email, $first_name, $last_name, $address, $city, $state, $zip, $country;
+        $username   =   sanitize_user( $_POST['username'] );
+        $password   =   esc_attr( $_POST['password'] );
+        $email      =   sanitize_email( $_POST['email'] );
+        $first_name =   sanitize_text_field( $_POST['fname'] );
+        $last_name  =   sanitize_text_field( $_POST['lname'] );
+        $address    =   sanitize_text_field( $_POST['field_5b2a819aabefe'] );
+        $city       =   sanitize_text_field( $_POST['field_5b2a81a4abeff'] );
+        $state      =   sanitize_text_field( $_POST['field_5b2a81adabf01'] );
+        $zip        =   sanitize_text_field( $_POST['field_5b2a81adabf00'] );
+        $country    =   sanitize_text_field( $_POST['field_5b2a81bdabf02'] );
+
+        // call @function complete_registration to create the user
+        // only when no WP_error is found
+        complete_registration(
+        $username,
+        $password,
+        $email,
+        $first_name,
+        $last_name,
+        $address,
+        $city,
+        $state,
+        $zip,
+        $country
+        );
+    }
+
+    registration_form(
+        $username,
+        $password,
+        $email,
+        $first_name,
+        $last_name,
+        $address,
+        $city,
+        $state,
+        $zip,
+        $country
+        );
+}
+
+
+// Register a new shortcode: [cr_custom_registration]
+add_shortcode( 'cr_custom_registration', 'custom_registration_shortcode' );
+
+// The callback function that will replace [book]
+function custom_registration_shortcode() {
+    ob_start();
+    custom_registration_function();
+    return ob_get_clean();
+}
+
+
+function so174837_registration_email_alert( $user_id ) {
+    $user    = get_userdata( $user_id );
+    $email   = $user->user_email;
+    $username   = $user->user_login;
+    $name   = $user->first_name;
+    $site   = site_url();
+    $message = $name . ',<br><br>
+    Thank You for registering for the Pulse Memorial Ideas Generator.<br><br>
+    Please login to create an submission.<br><br>
+    <a href="' . $site . '/onepulse-foundation-memorial/memorial-process/ideas-generator/create-submission#login">Login</a><br><br>
+    Username: ' . $username . '';
+
+    wp_mail( $email, 'New User Registration: Pulse Memorial Ideas Generator', $message );
+}
+add_action('user_register', 'so174837_registration_email_alert');

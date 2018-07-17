@@ -4,7 +4,7 @@
     <?php $media_type = get_sub_field('media_type');
                     $image = get_sub_field('image');
                     $large = $image['sizes']['large'];
-                    $large = str_replace('https://fiwi-onepulsefoundation.s3.amazonaws.com', 'https://onepulsefoundation.org', $large);
+//                    $large = str_replace('https://fiwi-onepulsefoundation.s3.amazonaws.com', 'https://onepulsefoundation.org', $large);
 
                     $video = get_sub_field('video');
                     $poster = get_sub_field('poster');
@@ -17,11 +17,20 @@
 ?>
 
 
-        <section class="home-about pt120 pt-xs-32 pb-xs-32 content-left">
+        <section class="home-about <?php if (!$count): ?><?php else:?>pt-5 pb-8 pb-lg-3 pt-md-10 pb-md-1 mt-lg-2 mb-lg-3 pt-sm-2<?php endif;?> content-left" id="<?php the_sub_field('nav_hash');?>">
+
+
+          <!--<div class="media-over">
+            <div class="row">
+
+
+            </div>
+
+          </div>-->
 
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-lg-12 col-md-12 col-11 mx-auto">
 
                         <?php if (!$count): ?>
                             <h1><span><?php the_sub_field('subheadline');?></span><?php the_sub_field('headline');?></h1>
@@ -35,18 +44,21 @@
 
                     </div>
                 </div>
-            </div>
 
+                <div class="row">
+                        <div class="col-lg-5 col-md-12 col-11 mx-md-down order-lg-1 order-md-2 order-2">
 
+                            <div class="content">
 
-            <div class="row tab-pt-resize">
+                                <?php the_sub_field('content');?>
 
+                                    <?php if(get_sub_field('cta_link')): $link = get_sub_field('cta_link'); echo '<a class="btn left" href="'. get_the_permalink($link->ID) .'">' . get_sub_field('cta_text') .'</a>'; endif;?>
 
+                            </div>
 
-
-
+                        </div>
                 <?php if($media_type == 'Image'):?>
-                    <div class="col-md-6 col-md-push-5 mm col-md-offset-1 mb-xs-32">
+                    <div class="col-lg-6 col-md-12 ml-auto col-11 mx-md-down mb-lg-0 mb-md-0 mb-sm-3 order-lg-2 order-md-1 order-1">
 
 
                         <div class="canvas-container" data-stellar-ratio="1">
@@ -56,9 +68,9 @@
                         </div>
 
                         <?php elseif($media_type == 'Video'):?>
-                            <div class="col-md-6 col-md-push-5 col-md-offset-1 mb-xs-32">
+                    <div class="col-lg-6 ml-auto col-md-12 col-11 mx-md-down mb-lg-0 mb-md-0 mb-sm-3 order-lg-2 order-md-1 order-1">
 
-                                <div class="video-container" data-stellar-ratio="1.5" data-stellar-offset-parent="true" data-stellar-vertical-offset="600">
+                                <div class="video-container" data-stellar-ratio="1.25">
 
 
 
@@ -102,18 +114,7 @@
 
                     </div>
 
-
-                    <div class="col-md-5 col-md-pull-7 watch-me <?php if($media_type == 'Image'): echo 'mm'; endif;?>">
-
-                        <div class="content">
-
-                            <?php the_sub_field('content');?>
-
-                                <?php if(get_sub_field('cta_link')): $link = get_sub_field('cta_link'); echo '<a class="btn left" href="'. get_the_permalink($link->ID) .'">' . get_sub_field('cta_text') .'</a>'; endif;?>
-
-                        </div>
-
-                    </div>
+                </div>
 
             </div>
 

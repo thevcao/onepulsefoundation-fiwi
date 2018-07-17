@@ -2,12 +2,12 @@
 
 
 
-<section class="task-force pb120 pb-xs-32 pb-xs-32">
+<section class="task-force pb120 pb-xs-32 pb-xs-32" id="advisory-council">
     <div class="container">
 
 
         <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6 col-md-12 col-11 mx-md-down">
         <h2><span>onePULSE Foundation Memorial</span>Task Force Advisory Council</h2>
 
             </div>
@@ -15,19 +15,19 @@
 
         </div>
         <div class="row">
-            <div class="col-md-2 hidden-xs">
+            <div class="col-lg-2 hidden-md">
 
 
         <?php $images = get_field('task_force_images', 'options');  foreach( $images as $image ): ?>
 
                 <div data-stellar-ratio="1.5">
-        <img class="img-parallax" src="<?php echo $image['sizes']['medium']; ?>" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
+        <img class="img-parallax mb-1" src="<?php echo $image['sizes']['medium']; ?>" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
         <?php echo '<label class="img-attrib">' . $image['caption'] . '</label>';?></div>
   <?php endforeach; ?>
 
 
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6 col-md-12 col-11 mx-md-down">
 
                 <div class="line"></div>
 
@@ -36,13 +36,13 @@
 
                 <p>Still in formation, the Task Force will break into different subcommittees who will each play a role in the gathering of data that will reflect the wishes of the victims’ families, the survivors, and the community at large.</p>
 
-                <h4 class="text-right hidden-sm hidden-xs mt64">Select a Advisory Council Member to Read Full Bio <i class="fa fa-chevron-right"></i></h4>
+                <h4 class="text-right hidden-md mt64">Select a Advisory Council Member to Read Full Bio <i class="fa fa-chevron-right"></i></h4>
 
 
 
 
             </div>
-            <div class="col-md-4 text-right hidden-tab-pt hidden-xs">
+            <div class="col-lg-4 text-right hidden-tab-pt hidden-md">
                 <div data-stellar-ratio="2" data-stellar-offset-parent="true" data-stellar-vertical-offset="300">
 
             <?php $args = array(
@@ -65,7 +65,7 @@
 
             </div>
 
-            <div class="col-sm-8 col-sm-offset-2 visible-tab-pt visible-xs">
+            <div class="col-lg-8 col-md-12 ml-auto col-11 mx-auto visible-tab-pt visible-md">
             <a href="#task-modal" class="btn modal-toggle">Meet the Advisory Council</a>
             </div>
         </div>

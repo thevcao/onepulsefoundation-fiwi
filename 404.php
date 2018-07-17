@@ -19,29 +19,29 @@
 <?php get_template_part('templates/header'); ?>
 <div class="main-wrapper">
 
-<section class="archive-body pt120 pb120 pt-xs-64 pb-xs-0">
-	
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8">
-				
-				<h1>Lost?</h1>
-				
-				<p><a href="/">Back to homepage</a></p>
-				
+<section class="archive-body pt-sm-5 pb120 pt-xs-64 pb-xs-0">
 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
 
-				
-				
+        <h1>Lost?</h1>
 
-
-			</div>
-		</div>
-	</div>
+        <p><a href="/">Back to homepage</a></p>
 
 
 
 
-	
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
 </section>
 <?php get_template_part('templates/footer'); ?>

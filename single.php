@@ -33,7 +33,7 @@
                         ?>
 
                         <script>
-                        console.log('<?php echo $featnurl;?>');
+//                        console.log('<?php echo $featnurl;?>');
                         </script>
                             <?php if( has_post_thumbnail()): echo '<img crossorigin="anonymous" id="featured-image" class="hidden-xs" src="'. $featnurl .'">'; endif;?>
                         <?php //if( has_post_thumbnail()): echo '<img class="over-image" src="'. $featurl .'">'; endif;?>
@@ -92,7 +92,7 @@
 
             </section>
 
-            <section class="pt120 pb120 pt-xs-0 pb-xs-0">
+            <section class="pt-sm-5 pb120 pt-xs-0 pb-xs-0">
                 <div class="container">
 
 

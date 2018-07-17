@@ -2,12 +2,12 @@
 
 
 
-<section class="columns">
+<section class="columns pt-sm-3" id="board">
     <div class="container">
 
 
         <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 col-11 mx-auto">
 
 
                     <h2><span>onePULSE Foundation Memorial</span>Board of Trustees</h2>
@@ -17,10 +17,10 @@
         </div>
         <div class="row">
 
-            <div class="col-sm-12">
+            <div class="col-sm-12 col-11 mx-auto">
 
             <h3>Executive Council</h3>
-            <ul class="task-force-members mb64 mb-xs-32">
+            <ul class="task-force-members mb64 mb-xs-32 mb-sm-2">
             <?php $args = array(
 
                 'posts_per_page'    => -1,

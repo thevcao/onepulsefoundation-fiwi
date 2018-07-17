@@ -37,8 +37,11 @@ gulp.task('styles', () => {
     .pipe(sourcemaps.init())
     .pipe(plugins.plumber())
     .pipe(plugins.sass({ outputStyle: 'compressed' }))
+    .on('error', plugins.sass.logError)
     .pipe(plugins.postcss([
-      require('autoprefixer')({ browsers: ['last 2 versions'] })
+      require('autoprefixer')({ browsers: ['last 2 versions', 'last 2 iOS versions', 'ie >= 9'] }),
+      require('postcss-flexbugs-fixes'),
+      require('postcss-focus')
     ]))
     .pipe(plugins.rename('styles.min.css'))
     .pipe(plugins.sourcemaps.write('.'))
@@ -52,7 +55,7 @@ gulp.task('styles', () => {
 
 // Fonts
 gulp.task('fonts', () => {
-  return gulp.src('src/fonts/**/*')
+  return gulp.src('src/fonts/*')
   .pipe(gulp.dest('dist/fonts'))
 })
 
@@ -85,6 +88,12 @@ gulp.task('modernizr', () => {
     .pipe(gulp.dest("dist/js/vendor/"))
 });
 
+// Vendor JS
+gulp.task('vendor', () => {
+  return gulp.src('src/js/vendor/*')
+  .pipe(gulp.dest('dist/js/vendor'))
+})
+
 // Optimizes images
 gulp.task('images', () => {
   return gulp.src('src/img/**/*')
@@ -100,14 +109,14 @@ gulp.task('images', () => {
 });
 
 // Build task
-gulp.task('build', ['styles', 'scripts', 'modernizr', 'images', 'fonts']);
+gulp.task('build', ['styles', 'scripts', 'modernizr', 'images', 'fonts', 'vendor']);
 
 // Watch task
 gulp.task('watch', () => {
   gulp.watch(['src/img/**/*'], ['images']);
   gulp.watch(['src/fonts/**/*'], ['fonts']);
   gulp.watch(['src/scss/**/*.scss'], ['styles']);
-  gulp.watch(['src/js/**/*.js'], ['scripts']);
+  gulp.watch(['src/js/**/*.js'], ['scripts', 'vendor']);
 });
 
 

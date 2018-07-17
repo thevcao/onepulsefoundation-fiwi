@@ -28,6 +28,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-touch-fullscreen" content="yes" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
 <?php if(is_page('home')): echo '<link rel="prefetch" href="' . get_field('main_video','options') .'">'; endif;?>
 
     <?php // check if the flexible content field has rows of data
@@ -52,6 +55,7 @@ endif;
 
 ?>
 
+
   <script src="https://use.fontawesome.com/c6224e36ed.js"></script>
    <?php get_template_part('partials/meta', 'favicons'); ?>
 
@@ -66,8 +70,10 @@ endif;
 
     ?>
 
+  <script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/pdf.js" ></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/pdf.worker.js" ></script>
 
-<script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs.js"></script>
 <?php  $featbanner = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); $featurl = $featbanner['0']; ?>
 <?php if( has_post_thumbnail()): echo '<style>.page-id-' . get_the_ID() . ' .loader, .page-id-' . get_the_ID() . ' .donate-hero h2 { background-image:url('. $featurl .');}</style>'; echo '<meta property="og:image" content="'. $featurl .'" />'; endif;?>
 <?php if (get_field('banner')): $banner = get_field('banner');
@@ -92,7 +98,7 @@ if( have_rows('section') ):
 
         if( get_row_layout() == 'large_hero' ):
             $image = get_sub_field('hero_image');
-            echo '<style>.loader, .page-main .home-hero h2, .page-main .home-hero h2.clone-shadow, .page-main .home-hero, .btn.clipped .overlay, .invert-header .home-hero .btn div {background-image:url('. $image['sizes']['banner'] .')</style>';
+            echo '<style>.loader, .page-main .home-hero h2, .page-main .home-hero h2.clone-shadow, .page-main .home-hero, .btn.clipped .overlay, .invert-header .home-hero .btn div, .ie .home-hero {background-image:url('. $image['sizes']['banner'] .')</style>';
             echo '<meta property="og:image" content="'. $image['sizes']['large'] .'" />';
 
         endif;
@@ -111,7 +117,7 @@ endif; wp_reset_postdata();?>
     $mobileCTA = get_field('mobile_contact_image', 'options');
     $donateImage = get_field('donate_hero', 'options');
 
-    echo '<style> html:not(.ipad) .mobile-cta, .mobile-cta.clipped:before {background-image:url('. $mobileCTA['sizes']['large'] .');} .donate-hero h2, .page-template-donate .loader {background-image:url('. $donateImage['sizes']['banner'] .');}
+    echo '<style> .mobile-cta, .mobile-cta .btn.clipped:before {background-image:url('. $mobileCTA['sizes']['large'] .');} .donate-hero h2, .page-template-donate .loader {background-image:url('. $donateImage['sizes']['banner'] .');}
     </style>' ;
     if(is_page('home')):
     //echo '<meta property="og:image" content="'. $homeHero['sizes']['large'] .'" />';
@@ -128,7 +134,7 @@ endif; wp_reset_postdata();?>
     $random_result = array_rand($images ,1);
     $homeHero = $images[$random_result];
 
-    echo '<style> .home .loader, .home .home-hero h2, .home .home-hero .home-play i:before, .home .home-hero .home-play span, .home .home-hero .home-play span span { background-image:url('. $homeHero['sizes']['banner'] .');}</style>';
+    echo '<style> .home .loader, .home .home-hero h2, .home .home-hero .home-play i:before, .home .home-hero .home-play span, .home .home-hero .home-play span span, .ie .home .home-hero { background-image:url('. $homeHero['sizes']['banner'] .');}</style>';
     echo '<meta property="og:image" content="'. $homeHero['sizes']['large'] .'" />';
 
      wp_reset_postdata();?>

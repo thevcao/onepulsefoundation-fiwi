@@ -92,7 +92,7 @@
 
             </section>
 
-            <section class="pt120 pb120 pt-xs-0 pb-xs-0">
+            <section class="pt-sm-5 pb120 pt-xs-0 pb-xs-0">
                 <div class="container">
 
 
@@ -106,6 +106,7 @@
 
                             <div class="col-md-8">
                                 <h1><?php echo get_the_title();?></h1>
+                              <div>
                                 <h4 class="text-left mb8">Share this</h4>
                                 <ul class="socials shares">
                                     <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -113,6 +114,7 @@
                                     <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                                     <li><a href="https://plus.google.com/share?url=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                                 </ul>
+                              </div>
 
                                 <?php the_content();?>
 

@@ -1,238 +1,290 @@
+$baseFontSize: 16;
+@function rem($pixels, $context: $baseFontSize) {
+  @return $pixels / $context * 1rem;
+}
+html {
+  @include poly-fluid-sizing('font-size', (320px: 14px, 576px: 10px, 768px: 11px, 1024px: 12px, 1440px: 13px, 1600px: 14px));
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 2;
-    letter-spacing: -.025em
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 2;
+  letter-spacing: -.025em
 }
 p {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 2;
-    letter-spacing: -.025em
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 2;
+  letter-spacing: -.025em
+}
+p {
+  &+h1,
+  &+h2,
+  &+h3,
+  &+h4,
+  &+h5 {
+    // (768px)
+    margin-top: 1em;
+    @include media-breakpoint-down(sm) {
+      margin-top: 3rem;
+    }
+  }
+  &.roygbiv {
+    animation: animation-ie 10s alternate linear infinite;
+  }
+  &.large {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  a:not(.btn) {
+    animation: animation-ie 10s alternate linear infinite;
+    font-weight: bold;
+
+    &:hover {
+    color: transparent;
+    animation: animation-ie 10s alternate linear infinite;
+
+
+    }
+  }
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-    line-height: 1.1;
-    font-weight: bold;
-    letter-spacing: -.05em;
-    font-weight: bold;
-//    margin: 0 0 1rem;
-    span {
-        display: block;
-        font-size: 75%;
-        margin-bottom: 5px;
-        &.small {
-            font-size: 50%;
-            letter-spacing: -.05em;
-        }
+  line-height: 1.1;
+  font-weight: bold;
+  letter-spacing: -.05em;
+  font-weight: bold;
+  //    margin: 0 0 1rem;
+  span {
+    display: block;
+    font-size: .55em;
+    letter-spacing: -.04em;
+    margin-bottom: rem(5);
+    &.small {
+      font-size: 50%;
+      letter-spacing: -.05em;
+      font-weight: bold;
     }
+  }
+  &.roygbiv {
+    animation: animation-ie 10s alternate linear infinite;
+  }
 }
 h1 {
-    font-size: 3rem
+  font-size: 3rem;
+  margin-bottom: 1em
 }
 h2 {
-    font-size: 2.15rem;
+  font-size: 2.15rem;
+  margin-bottom: .5em;
 }
 h3 {
-    font-size: 1.75rem;
+  font-size: 1.75rem;
+  margin-bottom: .25em;
 }
 h4 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: .1em;
 }
 h5 {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 .clip {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300vw;
+  // (768px)
+  @include media-breakpoint-up(sm) {
+    animation: linkanimate 1s alternate linear infinite;
+  }
+  &.red {
+    background: $rgrad;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300vw;
+  }
+  &.yellow {
+    background: $ygrad;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300vw;
+  }
+  &.orange {
+    background: $ograd;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300vw;
+  }
+  &.green {
+    background: $ggrad;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300vw;
+  }
+  &.blue {
+    background: $bgrad;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300vw;
+  }
+  &.purple {
+    background: $pgrad;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300vw;
+  }
+}
+.task-link {
+  span {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: linkanimate 1s alternate linear infinite;
-    background-size: 500%;
-    &.red {
-        background: $rgrad;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 500%;
-    }
-    &.yellow {
-        background: $ygrad;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 500%;
-    }
-    &.orange {
-        background: $ograd;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 500%;
-    }
-    &.green {
-        background: $ggrad;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 500%;
-    }
-    &.blue {
-        background: $bgrad;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 500%;
-    }
-    &.purple {
-        background: $pgrad;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 500%;
-    }
-}
-.task-link {
-    span {
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: linkanimate 1s alternate linear infinite;
-        background-size: 500%;
-    }
-    &.red span {
-        background: $rgrad;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 500%;
-    }
-    &.red:hover {
-        color: $r;
-    }
-    &.orange span {
-        background: $ograd;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 500%;
-    }
-    &.orange:hover {
-        color: $o;
-    }
-    &.green span {
-        background: $ggrad;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 500%;
-    }
-    &.green:hover {
-        color: $g;
-    }
-    &.blue span {
-        background: $bgrad;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 500%;
-    }
-    &.blue:hover {
-        color: $b;
-    }
-    &.purple span {
-        background: $pgrad;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 500%;
-    }
-    &.purple:hover {
-        color: $p;
-    }
+    background-size: 300vw;
+  }
+  &.red span {
+    background: $rgrad;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300vw;
+  }
+  &.red:hover {
+    color: $r;
+  }
+  &.orange span {
+    background: $ograd;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300vw;
+  }
+  &.orange:hover {
+    color: $o;
+  }
+  &.green span {
+    background: $ggrad;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300vw;
+  }
+  &.green:hover {
+    color: $g;
+  }
+  &.blue span {
+    background: $bgrad;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300vw;
+  }
+  &.blue:hover {
+    color: $b;
+  }
+  &.purple span {
+    background: $pgrad;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300vw;
+  }
+  &.purple:hover {
+    color: $p;
+  }
 }
 .fa {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width:1441px) {
-    body,
-    p {
-        font-size: 14px;
-    }
+  body,
+  p {
+    //        font-size: 14px;
+  }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    body,
-    p {
-        font-size: 12px;
-    }
+  body,
+  p {
+    //        font-size: rem(12);
+  }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {}
-@media (max-width:768px) {
-    html:not(.ipad) {
-        h1 {
-            font-size: 3rem;
-        }
-        h2 {
-            font-size: 3rem;
-        }
-        h1 span,
-        h2 span,
-        h3 span,
-        h4 span,
-        h5 span {
-            font-size: 1rem;
-            letter-spacing: -.025em;
-        }
-        h1,
-        h2,
-        h3,
-        h4 {
-            margin: .25em 0;
-        }
-    }
+@include media-breakpoint-down(sm) {
+  //  html:not(.ipad) {
+  h1 {
+    font-size: 3rem;
+    margin-bottom: .25em;
+  }
+  h2 {
+    font-size: 3rem;
+    margin-bottom: .25em;
+  }
+  h1 span,
+  h2 span,
+  h3 span,
+  h4 span,
+  h5 span {
+    //      font-size: 1rem;
+    //      letter-spacing: -.025em;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    //      margin: .25em 0;
+  }
+  //  }
 }
-@media (max-width:560px) {
-    html:not(.ipad) {
-        h1 {
-            font-size: 2rem;
-        }
-        h2 {
-            font-size: 1.75rem;
-        }
-        h1 span,
-        h2 span,
-        h3 span,
-        h4 span,
-        h5 span {
-            font-size: 1rem;
-            letter-spacing: -.025em;
-        }
-        h1,
-        h2,
-        h3,
-        h4 {
-            margin: .25rem 0;
-        }
-    }
+@include media-breakpoint-down(xs) {
+  //  html:not(.ipad) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h1 span,
+  h2 span,
+  h3 span,
+  h4 span,
+  h5 span {
+    //      font-size: 1rem;
+    //      letter-spacing: -.025em;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    //      margin: .25rem 0;
+  }
 }
 .maxw_767.orientation_landscape {
-    h1 {
-        font-size: 2rem;
-    }
-    h2 {
-        font-size: 1.75rem;
-    }
-    h1 span,
-    h2 span,
-    h3 span,
-    h4 span,
-    h5 span {
-        font-size: 1rem;
-        letter-spacing: -.025em;
-    }
-    h1,
-    h2,
-    h3,
-    h4 {
-        margin: .25rem 0;
-    }
-    .donate-bar {
-        padding: 1rem;
-    }
-    .donate-bar a {
-        font-size: 1rem;
-    }
+  h1 {
+    //    font-size: 2rem;
+  }
+  h2 {
+    //    font-size: 1.75rem;
+  }
+  h1 span,
+  h2 span,
+  h3 span,
+  h4 span,
+  h5 span {
+    //    font-size: 1rem;
+    //    letter-spacing: -.025em;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    //    margin: .25rem 0;
+  }
+  .donate-bar {
+    //    padding: 1rem;
+  }
+  .donate-bar a {
+    //    font-size: 1rem;
+  }
 }

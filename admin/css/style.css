@@ -315,3 +315,24 @@ body.login input[type="text"], body.login input[type="password"] {
     height: auto;
     line-height: 1;
 }
+
+
+.rm-dash-widget-logo {
+
+  display: none;
+}
+
+#toplevel_page_rm_form_manage .wp-menu-name:before {
+
+  content: 'User Registration';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  font-weight: bold;
+  padding: 0;
+}
+
+#toplevel_page_rm_form_manage .wp-menu-name {
+
+  font-size: 0;
+}

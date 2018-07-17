@@ -82,7 +82,7 @@ class Smores
         if (!\is_admin()) {
             \wp_deregister_script('jquery');
             \wp_register_script('jquery', self::get_asset('jquery'), array(), null, false);
-            \add_filter('script_loader_src', array($this, 'jquery_local_fallback'), 10, 2);
+//            \add_filter('script_loader_src', array($this, 'jquery_local_fallback'), 10, 2);
         }
 
         \wp_enqueue_script('modernizr', \get_template_directory_uri() . self::get_asset('modernizr'), array(), null, false);

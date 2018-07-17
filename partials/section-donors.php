@@ -1,6 +1,6 @@
 <?php ;?>
 
-                <div aria-label="faq-nav">
+                <section id="donors">
 
 
             <?php if( have_rows('donors', 'options') ):?>
@@ -23,7 +23,7 @@
                         echo '<label class="img-attrib">' .$banner['caption'] . '</label></div>';?>
 
                         <div class="container">
-                            <div class="col-md-12">
+                            <div class="col-md-12 col-11 mx-auto">
 
 
 
@@ -40,6 +40,6 @@
             <?php endwhile; ?>
             <?php endif; ?>
 
-                </div>
+                </section>
 
 

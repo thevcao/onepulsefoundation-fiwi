@@ -25,7 +25,7 @@
 
 
                     </div>
-                    <div class="<?php if(get_field('headshot')): echo 'col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-2'; else: echo 'col-md-4 col-md-offset-1'; endif;?> mt64 mb120">
+                    <div class="<?php if(get_field('headshot')): echo 'col-lg-4 ml-auto col-md-5'; else: echo 'col-md-4 ml-auto'; endif;?> mt64 mb120">
                         <h1><?php echo get_the_title();?><span class="<?php the_field('overlay_color');?>small"><br><?php the_field('title');?></span></h1>
 
                         <?php the_field('bio');?>

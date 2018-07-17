@@ -2,12 +2,12 @@
 
 
 
-<section class="task-force pb120 pb-xs-32 pb-xs-32">
+<section class="task-force pb120 pb-xs-32 pb-xs-32 pt-sm-3" id="ambassadors">
     <div class="container">
 
 
         <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6 col-md-12 col-11 mx-md-down">
         <h2><span>onePULSE Foundation Memorial</span>Chairman’s Ambassadors Council</h2>
 
             </div>
@@ -16,7 +16,7 @@
         </div>
         <div class="row">
 
-            <div class="col-sm-12">
+            <div class="col-lg-12 col-md-12 col-11 mx-md-down">
 
             <ul class="task-force-members">
             <?php $args = array(

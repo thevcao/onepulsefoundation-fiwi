@@ -19,7 +19,7 @@
 
 <div class="main-wrapper">
 
-<div class="page-main">
+<div class="page-main" id="page-content">
 
 
     <?php // check if the flexible content field has rows of data

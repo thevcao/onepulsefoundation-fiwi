@@ -20,11 +20,12 @@
     <?php get_template_part('templates/header'); ?>
         <div class="main-wrapper">
 
-            <section class="archive-body pt120 pb120 pt-xs-64 pb-xs-0">
+        <div class="page-main">
+            <section class="archive-body pb-11 pb-md-3 pt-sm-3">
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-lg-8">
 
                             <h1><?php echo get_the_title();?></h1>
 
@@ -62,10 +63,10 @@
                                                 ?>
 
                                 <div class="item mt32 mb64">
-                                    <a class="no-hover" href="<?php the_permalink();?>"><h2 class="mb8"><?php echo get_the_title();?></h2></a>
-                                    <h3 class="mt0 mb16"><i class="fa fa-calendar"></i> <?php the_field('event_date');?></h3>
+                                    <a class="no-hover" href="<?php the_permalink();?>"><h2 class=""><?php echo get_the_title();?></h2></a>
+                                    <h5 class="mt0 mb16"><i class="fa fa-calendar"></i> <?php the_field('event_date');?></h5>
                                     <?php if(get_field('event_location')):?>
-                                    <h3 class="mt0 mb32"><a class="no-hover" href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $address;?>" target="_blank"><i class="fa fa-location-arrow"></i> <?php echo $address;?></a></h3>
+                                    <h5 class="mt0 mb32"><a class="no-hover" href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $address;?>" target="_blank"><i class="fa fa-location-arrow"></i> <?php echo $address;?></a></h5>
                                     <?php endif;?>
                                     <p>
                                         <?php the_excerpt();?>
@@ -80,7 +81,7 @@
 
 
                         </div>
-                        <div class="col-md-3 col-md-offset-1">
+                        <div class="col-lg-3 col-lg-offset-1">
 
                             <h3 class="mt64">Past Events</h3>
 
@@ -119,7 +120,7 @@
                                                 ?>
 
                                 <div class="item mt32 mb64">
-                                    <a href="<?php the_permalink();?>"><h4 class="mb8"><?php echo get_the_title();?></h4></a>
+                                    <a href="<?php the_permalink();?>" class="no-hover"><h4 class="mb8"><?php echo get_the_title();?></h4></a>
 
                                     <div class="pt8"></div>
                                     <a href="<?php the_permalink();?>" class="btn left">Read More</a>
@@ -131,7 +132,7 @@
 
                             <p>We cannot achieve our mission without volunteers like you! To volunteer with the Foundation please fill out our volunteer form. Let’s show the world that #WeWillNotLetHateWin.</p>
 
-                            <a href="/volunteer-information-form" class="btn">Volunteer Information Form</a>
+                            <a href="/volunteer-information-form" class="btn left">Volunteer Information Form</a>
 
 
                         </div>

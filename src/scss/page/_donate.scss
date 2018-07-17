@@ -28,27 +28,41 @@
   .page-template-donate .pt240.pt-ls-80 {
     padding-top: 100px;
   }
+
 }
-@media (max-width:768px) {
-  html:not(.ipad) {
-    .donate-hero {
-      display: none;
-    }
-    .ios {
-      #mc-donation {
-        padding-right: 10px;
-      }
-    }
-    .donate-main .p-xs-0 {
-      padding: 0 10px;
+@include media-breakpoint-down(sm) {
+
+    html:not(.ipad) {
+
+  .donate-hero {
+    display: none;
+  }
+
+  .ios {
+    #mc-donation {
+      padding-right: rem(10);
+
     }
   }
+
+  .donate-main .p-xs-0 {
+
+
+    padding: 0 rem(10);
+}
+
+  }
+
 }
 @media (max-width:360px) {
-  #mc-donation {
-    padding-right: 0;
-    height: 1400px !important;
-  }
+
+
+    #mc-donation {
+      padding-right: 0;
+      height: 1400px !important;
+
+    }
+
 }
 #donation-form-container {
   pointer-events: all;

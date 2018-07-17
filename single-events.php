@@ -23,7 +23,7 @@
         <div class="post-body">
             <section class="post-image">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 col-11 mx-md-down">
                 <?php
 
                 $video = get_field('post_video');
@@ -103,7 +103,7 @@
 
             </section>
 
-            <section class="pt120 pb120 pt-xs-0 pb-xs-0">
+            <section class="pt-sm-5 pb120 pt-xs-0 pb-xs-0">
                 <div class="container">
 
 
@@ -115,12 +115,13 @@
 
             if(!$source == null):?>
 
-                            <div class="col-md-7">
+                            <div class="col-md-7 col-11 mx-md-down">
                                 <h1><?php echo get_the_title();?></h1>
                                     <h3 class="mt0 mb16"><i class="fa fa-calendar"></i> <?php the_field('event_date');?></h3>
                                   <?php if(get_field('event_location')):?>
                                     <h3 class="mt0 mb32"><a href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $address;?>" target="_blank"><i class="fa fa-location-arrow"></i> <?php echo $address;?></a></h3>
                               <?php endif;?>
+                              <div>
                                 <h4 class="text-left mb8">Share this</h4>
                                 <ul class="socials shares">
                                     <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -128,6 +129,7 @@
                                     <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                                     <li><a href="https://plus.google.com/share?url=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                                 </ul>
+                              </div>
 
                                 <?php the_content();?>
 
@@ -137,7 +139,7 @@
 
 
 
-                            <div class="col-md-4 col-md-offset-1 mt120 mt-sm-0 mt-xs-0">
+                            <div class="col-md-4 ml-auto mt120 mt-sm-0 mt-xs-0 col-11 mx-md-down">
 
 
                                 <div>
@@ -159,10 +161,11 @@
 
                             <?php else: ?>
 
-                            <div class="col-md-7">
+                            <div class="col-md-7 col-11 mx-md-down">
                                 <h1><?php echo get_the_title();?></h1>
                                     <h3 class="mt0 mb16"><i class="fa fa-calendar"></i> <?php the_field('event_date');?></h3>
                                     <h3 class="mt0 mb32"><a href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo $address;?>" target="_blank"><i class="fa fa-location-arrow"></i> <?php echo $address;?></a></h3>
+                              <div>
                                 <h4 class="text-left mb8">Share this</h4>
                                 <ul class="socials shares">
                                     <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -170,7 +173,7 @@
                                     <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                                     <li><a href="https://plus.google.com/share?url=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                                 </ul>
-
+                              </div>
                                 <?php the_content();?>
 
 
@@ -179,7 +182,7 @@
 
 
 
-                            <div class="col-md-4 col-md-offset-1 mt120 mt-sm-0 mt-xs-0">
+                            <div class="col-md-4 ml-auto mt120 mt-sm-0 mt-xs-0 col-11 mx-md-down">
 
 
                                 <div>
@@ -201,7 +204,7 @@
                             </div>
 
                       <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 col-11 mx-auto">
 
 
                               <?php $sponsors = get_field('sponsors');
@@ -213,7 +216,7 @@
                               <div class="container-fluid">
                                 <div class="row">
 
-                                  <div class="col-md-6 col-md-offset-3">
+                                  <div class="col-md-6 mx-auto">
                                     <img class="main-sponsor" src="<?php echo get_field('main_sponsor')['sizes']['large'];?>">
                                   </div>
                                 </div>
@@ -236,7 +239,7 @@
                               <div class="container-fluid">
                                 <div class="row">
 
-                                  <div class="col-md-8 col-md-offset-2">
+                                  <div class="col-md-8 mx-auto">
                                 <?php the_field('vendors');?>
                                   </div>
                                 </div>

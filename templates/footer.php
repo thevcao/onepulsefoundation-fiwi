@@ -11,21 +11,22 @@
 $newsimage = get_field('news_image', 'options');?>
 <section class="newsletter">
     <div class="container">
-        <div class="row m0 flex-row align-items-center">
-            <div class="col-md-7">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-md-6 col-11 mx-md-down">
                 <h2 class="mt0">Stay Informed</h2>
                 <p>Sign up to receive exclusive updates about the onePULSE Foundation.</p>
             </div>
-            <div class="col-md-5">
+            <div class="col-lg-5 col-md-6 col-11 mx-md-down">
                     <?php echo do_shortcode('[contact-form-7 id="5374" title="Newsletter"]');?>
             </div>
         </div>
 
     </div>
 </section>
-<section class="page-cta mb80 hidden-xs">
-    <div class="">
+<section class="page-cta mb80 hidden-sm hidden-xs">
+    <div class="footer-bg">
         <div class="row">
+            <div class="dupe col-sm-5"><h3></h3></div>
             <div class="col-sm-7 p0 oh">
                 <div class="img-overlay"></div>
 
@@ -41,16 +42,20 @@ $newsimage = get_field('news_image', 'options');?>
                     <h3>News and Updates</h3>
                 </div>
             </div>
-            <div class="col-sm-5 p0">
+      </div>
+  </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-sm-5 ml-auto">
 
-                <div class="dupe"><h3></h3></div>
+
 
 
                 <div class="content">
 
                     <p class="text-right">Find out the latest from the onePULSE Foundation, including important milestones and announcements, as we work to create a sanctuary of hope.</p>
 
-                    <a href="/category/news" class="btn right">See All </a>
+                    <a href="/news-and-updates" class="btn right">See All </a>
 
 
                 </div>
@@ -62,27 +67,23 @@ $newsimage = get_field('news_image', 'options');?>
 
 
 </section>
-<section class="page-cta mobile-cta visible-xs">
+<section class="page-cta mobile-cta visible-sm visible-xs">
     <div class="container">
         <div class="img-overlay"></div>
 
-        <div class="row">
-            <div class="col-xs-10">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-md-6 col-11 mx-md-down">
                 <div class="content">
                     <h2 class="text-white"><span>Contact onePULSE Foundation</span>Fight the War Against Hate</h2>
                 </div>
             </div>
-
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
+            <div class="col-lg-5 col-md-6 col-11 mx-md-down">
                 <div class="content">
 
-                    <div class="pt64"></div>
+                    <div class="pt-sm-5"></div>
                     <a href="#contact-modal" class="btn clipped modal-toggle" title="Together We Can. Contact Us ">Together We Can. Contact Us <i class="fa fa-send"></i></a>
                 </div>
             </div>
-
         </div>
     </div>
     </div>
@@ -90,22 +91,25 @@ $newsimage = get_field('news_image', 'options');?>
 </section>
 
 <footer>
-    <div class="container mb16 hidden-xs">
-        <div class="container-fluid">
-            <div class="col-sm-2">
+    <div class="mb16 hidden-xs row">
+        <div class="col-xl-10 col-lg-11 col-md-12 col-sm-10 col-11 mx-auto">
+          <div class="row">
+            <div class="col-lg-2 hidden-sm">
                 <a href="/">
                     <?php echo file_get_contents(get_stylesheet_directory() . '/dist/img/nav-logo.svg'); ?>
                 </a>
             </div>
-            <div class="col-sm-9 col-offset-sm-1 text-right hidden-xs"><?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?></div>
-        </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-11 mx-md-down text-md-left text-right hidden-xs"><?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?></div>
+
+          </div>
+      </div>
 
     </div>
-    <div class="copy">
-        <div class="container">
+    <div class="copy row">
+    <div class="col-xl-10 col-lg-11 col-md-10 col-sm-10 col-11 mx-auto">
             <div class="row">
 
-                <div class="col-md-4 col-md-offset-8">
+                <div class="col-md-4 ml-auto">
 
                     <ul class="socials">
                         <li><a href="http://www.facebook.com/onepulseorg" class="pop-link"><i class="fa fa-facebook"></i></a></li>
@@ -135,20 +139,24 @@ $newsimage = get_field('news_image', 'options');?>
         <!--<div class="col-sm-12 col-xs-6">
             <a href="/donate" class="hidden-xs">Donate to the onePULSE Foundation <i class="fa fa-chevron-right"></i></a>
         </div>-->
-        <div class="col-sm-12 col-xs-6">
+        <div class="col-xl-10 col-lg-11 col-md-10 col-sm-10 col-11 mx-auto">
             <a href="/onepulse-foundation-memorial/memorial-information/" class="hidden-xs">Visit the Pulse Interim Memorial <i class="fa fa-chevron-right"></i></a>
         </div>
         <!--<div class="col-sm-12 col-xs-6 visible-xs">
             <a href="/donate" class="visible-xs">Donate <i class="fa fa-chevron-right"></i></a>
         </div>-->
+
+
         <div class="col-sm-12 col-xs-6 visible-xs">
-            <a href="/onepulse-foundation-memorial/memorial-information/" class="visible-xs">Visit <i class="fa fa-chevron-right"></i></a>
+            <a href="/onepulse-foundation-memorial/memorial-information/" class="visible-xs">Visit the Pulse Interim Memorial <i class="fa fa-chevron-right"></i></a>
         </div>
     </div>
 </div>
 
 <?php wp_footer(); ?>
 <script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs.ga.min.js"></script>
+
+
 <style>
     .debug-info {
 
