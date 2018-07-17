@@ -1506,6 +1506,17 @@ function complete_registration() {
             'use strict';
 
               $(window).load(function(){
+              <?php
+
+
+
+              $url = site_url();
+              $array = array('local', 'staging', 'localhost', 'dev');
+
+              if ((findenv($url, $array) === false)):?>
+              fbq('track', 'CompleteRegistration');
+              twq('track','CompleteRegistration');
+              <?php endif;?>
 
               jQuery('.im-reg, .user-login-label').not('.success').remove();
 
@@ -1603,3 +1614,11 @@ function so174837_registration_email_alert( $user_id ) {
     wp_mail( $email, 'New User Registration: Pulse Memorial Ideas Generator', $message );
 }
 add_action('user_register', 'so174837_registration_email_alert');
+
+function findenv($haystack, $needle, $offset=0) {
+  if(!is_array($needle)) $needle = array($needle);
+  foreach($needle as $query) {
+      if(strpos($haystack, $query, $offset) !== false) return true; // stop on first true result
+  }
+  return false;
+}
