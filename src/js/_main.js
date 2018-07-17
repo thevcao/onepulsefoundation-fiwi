@@ -787,7 +787,7 @@
                 image = $(this).children('a').attr('href');
                 extension = image.split('.').pop();
                 if(extension == 'pdf') {
-                $(this).html('<a href="' + image + '" class="btn right" title="View Submission " target="blank"><div></div>View Submission <i class="fa fa-file-pdf"></i></a>');
+                $(this).html('<a href="' + image + '" class="btn right" title="View Submission ï‡" target="blank"><div></div>View Submission <i class="fa fa-file-pdf"></i></a>');
                 } else {
                 $(this).html('<a href="' + image + '" class="no-hover"><img width="50" src="' + image + '"></a>');
                 }
@@ -890,8 +890,6 @@
                 var extension = image.split('.').pop();
                 var parent =  $(this);
 
-        });
-        $('.question').click(function () {
 
               if($(window).width() > 991) {
 
@@ -912,7 +910,7 @@
 
               }
                 if(extension == 'pdf') {
-                $(this).html('<a href="' + image + '" class="btn right" title="View Submission " target="blank"><div></div>View Submission <i class="fa fa-file-pdf"></i></a>');
+                $(this).html('<a href="' + image + '" class="btn right" title="View Submission ï‡" target="blank"><div></div>View Submission <i class="fa fa-file-pdf"></i></a>');
                 } else {
                 $(this).html('<a href="' + image + '" class="no-hover"><img width="50" src="' + image + '"></a>');
                 }
@@ -1028,13 +1026,11 @@
 
         if($('.hidden_values').length){
 
-          });
 
           var name = $('#hidden_name').val();
           var address = $('#hidden_address').val();
           var country = $('#hidden_country').val();
 
-        //					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
           $('#input_5_10').val(name);
           $('#input_5_13').val(address);
@@ -1066,10 +1062,6 @@
           if($(this).hasClass('active')){
 
 
-          gallery: {
-            enabled: true
-          }
-        });
 
           } else {
 
@@ -1728,7 +1720,7 @@
             if (jQuery('#bloomerangForm247808').length) {
 
               if (window.ActiveXObject) { // they are using IE < 11, which doesn't support TLS 1.1
-                html247808 = '<p style="color: red">​Your browser does not support the minimum security requirements for keeping your Credit Card information safe when processing payments. Please upgrade ​your browser or download the latest version of' +
+                html247808 = '<p style="color: red">â€‹Your browser does not support the minimum security requirements for keeping your Credit Card information safe when processing payments. Please upgrade â€‹your browser or download the latest version of' +
                   ' <a target=\'_blank\' href=\'https://www.google.com/chrome/browser/desktop/\'>Chrome</a> or <a target=\'_blank\' href=\'https://www.mozilla.org/en-US/firefox/new/\'>Firefox</a>.</p>';
               }
               jQuery('#bloomerangForm247808').after(html247808);
@@ -2240,18 +2232,10 @@
         startBloomerangLoad();
 
 
-      }
-    }, // Home page
-    'home': {
-      init: function () {
-        // JavaScript to be fired on the home page
 
       }
   }
 
-      },
-      finalize: function () {
-        // JavaScript to be fired on the home page, after the init JS
 
   };
   // The routing fires all common scripts, followed by the page specific scripts.
