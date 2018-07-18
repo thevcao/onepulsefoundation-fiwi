@@ -30,6 +30,9 @@ use Smores\Smores;
 use Smores\TopBarPageWalker;
 use Smores\TopBarWalker;
 
+
+$rand = rand();
+
 $smores = new Smores(
     array( // Includes
         'lib/admin',         // Add admin scripts
@@ -43,9 +46,9 @@ $smores = new Smores(
         'lib/widgets',       // Add widget scripts
     ),
     array( // Assets
-        'css'             => '/dist/css/styles.min.css',
+        'css'             => '/dist/css/styles.min.css?rand=' . $rand,
 //        'css'             => '/dist/css/styles.min.clean.css',
-        'js'              => '/dist/js/scripts.min.js',
+        'js'              => '/dist/js/scripts.min.js?rand=' . $rand,
         'modernizr'       => '/dist/js/vendor/modernizr.min.js',
         'jquery'          => '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js',
 //        'jquery_fallback' => '/dist/js/vendor/jquery.min.js',
@@ -1436,6 +1439,7 @@ function registration_form( $username, $password, $email, $first_name, $last_nam
     ';
 }
 
+
 function registration_validation( $username, $password, $email, $first_name, $last_name, $address, $city, $state, $zip, $country )  {
       global $reg_errors;
       $reg_errors = new WP_Error;
@@ -1514,6 +1518,7 @@ function complete_registration() {
               $array = array('local', 'staging', 'localhost', 'dev');
 
               if ((findenv($url, $array) === false)):?>
+              ga('send', 'event', 'User Registration');
               fbq('track', 'CompleteRegistration');
               twq('track','CompleteRegistration');
               <?php endif;?>
