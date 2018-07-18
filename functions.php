@@ -1175,7 +1175,7 @@ function gf_ga_tracking($entry, $form) {
                   t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
                   document,'script','https://connect.facebook.net/en_US/fbevents.js');
                   fbq('init', '334045860378572'); // Insert your pixel ID here.
-                  fbq('track', 'Idea Submission');
+                  fbq('track', 'IdeaSubmission');
 
                 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
