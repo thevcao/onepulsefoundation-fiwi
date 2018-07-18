@@ -1151,41 +1151,46 @@ add_action( 'login_head', 'ga_event_registration' );
 //add_filter('rest_enabled', '_return_false');
 //add_filter('rest_jsonp_enabled', '_return_false');
 
-//add_action("gform_after_submission", "gf_ga_tracking", 1, 2);
+add_action("gform_after_submission_5", "gf_ga_tracking", 1, 2);
 function gf_ga_tracking($entry, $form) {
     ?>
-    <script type="text/javascript">
+      <?php
+
+      $url = site_url();
+      $array = array('local', 'staging', 'localhost', 'dev');
+
+      if ((findenv($url, $array) === false)):?>
+            <!-- Twitter single-event website tag code -->
+            <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+            <script type="text/javascript">twttr.conversion.trackPid('nzvlc', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+            <noscript>
+            <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nzvlc&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+            <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nzvlc&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+            </noscript>
+
+              <script type="text/javascript">
+                  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+                  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+                  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+                  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+                  fbq('init', '334045860378572'); // Insert your pixel ID here.
+                  fbq('track', 'Idea Submission');
+
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                  ga('create', 'UA-97989536-1', 'auto');
+                  ga('send', 'event', 'Idea Submission');
+                  console.log('Submission Complete');
 
 
-//            if ((document.location.href.indexOf('staging') === -1 || document.location.href.indexOf('dev') === -1)){
-//            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-//                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-//                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-//            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-//
-//                ga('create', 'UA-97989536-1', 'auto');
-//
-//                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-//
-//                    ga('send', {
-//                        hitType: 'event',
-//                        eventCategory: 'Survey Complete - Mobile',
-//                        eventAction: 'conversion'
-//                    });
-//
-//                } else {
-//
-//                    ga('send', {
-//                        hitType: 'event',
-//                        eventCategory: 'Survey Complete - Desktop',
-//                        eventAction: 'conversion'
-//                    });
-//
-//                }
-//
-//                console.log('Survey Complete');
-//            }
-    </script>
+              </script>
+
+              <?php endif;?>
+
 
 <?php }
 
@@ -1455,7 +1460,9 @@ function registration_validation( $username, $password, $email, $first_name, $la
       $reg_errors->add( 'username_invalid', 'Sorry, the username you entered is not valid' );
       }
       if ( 5 > strlen( $password ) ) {
+
       $reg_errors->add( 'password', 'Password length must be greater than 5' );
+
       }
       if ( !is_email( $email ) ) {
       $reg_errors->add( 'email_invalid', 'Email is not valid' );
@@ -1472,6 +1479,7 @@ function registration_validation( $username, $password, $email, $first_name, $la
       }
       }
 }
+
 function complete_registration() {
     global $reg_errors, $username, $password, $email, $first_name, $last_name, $address, $city, $state, $zip, $country;
     if ( 1 > count( $reg_errors->get_error_messages() ) ) {
