@@ -91,6 +91,42 @@
 
 
                     </div>
+
+                    <div class="col-lg-3 col-md-12 col-11 mx-auto visible-sm visible-xs">
+                        <ul class="tab-links">
+
+                        <?php if( have_rows('info') ):?>
+
+
+                        <?php $i = 0; while ( have_rows('info') ) : the_row(); $i++;?>
+                          <li>
+                            <?php $linkType = get_sub_field('link_type');
+                                  if($linkType == 'link'):?>
+                              <a href="<?php $link = get_sub_field('link'); the_permalink($link->ID);?>"><?php the_sub_field('title');?></a>
+                            <?php else:?>
+                              <a href="#<?php $var = sanitize_title_for_query( get_sub_field('title') ); echo esc_attr( $var);?>"><?php the_sub_field('title');?></a>
+                            <?php endif;?>
+                          </li>
+
+                        <?php endwhile; ?>
+                        <?php endif; ?>
+                          <?php if(get_field('enable_ig_submissions')):?>
+                          <li class=""><a href="#submissions">Submissions</a></li>
+                          <?php endif;?>
+                          <?php if ( is_user_logged_in())  { ?>
+                          <li class=""><a href="<?php the_permalink(10615);?>">Create New Submission</a></li>
+                          <li class=""><a href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></li>
+
+                          <?php } else {?>
+                          <li class=""><a href="<?php the_permalink(10615);?>" >Login/Create an Account</a></li>
+
+                          <?php }?>
+
+
+
+                        </ul>
+                    </div>
+
                 </div>
             </div>
 

@@ -235,6 +235,26 @@
           return false;
           //                    return false;
         });
+
+
+        $('.tab-links').on({ 'touchstart' : function(){
+
+          if($(this).hasClass('swiped')){
+
+
+          } else {
+
+
+          $(this).addClass('swiped');
+
+          }
+
+
+
+
+        } });
+
+
 //        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
           var $document = $(document),
             $element = $('body'),

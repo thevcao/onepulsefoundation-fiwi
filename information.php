@@ -101,6 +101,20 @@
 
 
             </div>
+            <div class="col-lg-3 col-md-12 col-11 mx-auto visible-sm visible-xs">
+
+                <?php if( have_rows('info') ):?>
+                <ul class="tab-links">
+                <?php $i = 0; while ( have_rows('info') ) : the_row(); $i++;?>
+                    <li><a <?php if($i == 1): echo 'class="active"'; endif;?> href="#<?php $var = sanitize_title_for_query( get_sub_field('title') ); echo esc_attr( $var);?>"><?php the_sub_field('title');?></a></li>
+
+                <?php endwhile; ?>
+                </ul>
+                <?php endif; ?>
+
+            </div>
+
+
         </div>
         </div>
 

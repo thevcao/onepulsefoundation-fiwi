@@ -476,3 +476,37 @@ html.ie {
         }
       }
     }
+
+
+          .tab-links {
+
+            padding-top: 45px !important;
+            transition: .3s ease;
+
+            &.swiped {
+
+              padding-top: 0 !important;
+
+              &:before {
+
+                opacity: 0;
+              }
+            }
+            // (768px)
+            @include media-breakpoint-down(sm) {
+              &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 300px;
+                height: 50px;
+                top: 0;
+                left: 0;
+                background-image: url(../img/tab-tooltip.png);
+                background-size: 250px auto;
+                background-position: 0 50%;
+                background-repeat: no-repeat;
+                transition: inherit;
+              }
+            }
+          }
