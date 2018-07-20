@@ -45,6 +45,7 @@
     font-weight: bold;
     display: inline-table;
     width: 100%;
+      margin-bottom: .75rem;
     a {
       position: relative;
       transition: color .5s ease;
@@ -80,6 +81,7 @@
     li {
       font-weight: normal;
       display: block;
+      margin-bottom: 0;
     }
   }
 

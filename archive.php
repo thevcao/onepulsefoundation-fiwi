@@ -52,16 +52,15 @@
                                 <div class="item mt32 mb64">
                                     <h2 class=""><a class="no-hover" href="<?php the_permalink();?>"><?php echo get_the_title();?></a></h2>
                                     <h5 class=""><?php the_date();?></h5>
-                                    <h6>Posted in: <a href="<?php
+                                    <p>Posted in: <a  href="<?php
                                       $category = get_the_category();
-                                      $firstCategory = $category[0]->cat_link;
+                                      $firstCategory = get_category_link($category[0]);
                                       echo $firstCategory;?>"><?php
                                       $category = get_the_category();
                                       $firstCategory = $category[0]->cat_name;
-                                      echo $firstCategory;?></a></h6>
-                                    <p>
-                                        <?php the_excerpt();?>
-                                    </p>
+                                      echo $firstCategory;?></a></p>
+
+                                      <?php the_excerpt();?>
                                     <div class="pt8"></div>
                                     <a href="<?php the_permalink();?>" class="btn left">Read More</a>
                                 </div>

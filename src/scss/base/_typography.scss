@@ -43,6 +43,7 @@ p {
     animation: animation-ie 10s alternate linear infinite;
     font-weight: bold;
 
+    display: inline !important;
     &:hover {
     color: transparent;
     animation: animation-ie 10s alternate linear infinite;
@@ -55,7 +56,7 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5, h6 {
   line-height: 1.1;
   font-weight: bold;
   letter-spacing: -.05em;
@@ -75,22 +76,27 @@ h5 {
   &.roygbiv {
     animation: animation-ie 10s alternate linear infinite;
   }
+
+  a {
+
+    display: block;
+  }
 }
 h1 {
   font-size: 3rem;
-  margin-bottom: 1em
+  margin-bottom: .25em
 }
 h2 {
   font-size: 2.15rem;
-  margin-bottom: .5em;
+  margin-bottom: .15em;
 }
 h3 {
   font-size: 1.75rem;
-  margin-bottom: .25em;
+  margin-bottom: .05em;
 }
 h4 {
   font-size: 1.5rem;
-  margin-bottom: .1em;
+  margin-bottom: .01em;
 }
 h5 {
   font-size: 1.25rem;

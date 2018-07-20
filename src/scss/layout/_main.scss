@@ -53,6 +53,7 @@ html:not(.ie) {
         position: relative;
         transition: .5s ease;
         z-index: 1;
+        display: block;
         &::before {
           opacity: 0;
           transition: opacity .5s ease;
@@ -146,6 +147,7 @@ html.ie {
         position: relative;
         transition: .3s ease;
         z-index: 1;
+        display: block;
 
         &:hover {
           color: $b !important;
@@ -302,6 +304,7 @@ html.ie {
       a {
         font-weight: bold;
         font-size: 1.25rem;
+        padding: .5rem 0;
         &:before {
 //          top: rem(1) !important;
         }
