@@ -8,7 +8,9 @@
 ?>
     <?php get_template_part('templates/header'); ?>
 
-<div class="main-wrapper">
+        <div class="main-wrapper">
+
+        <div class="page-main">
         <div class="post-body">
             <section class="post-image">
                 <div class="row">
@@ -175,5 +177,7 @@
 
 
         </div>
+
+          </div>
 
         <?php get_template_part('templates/footer'); ?>

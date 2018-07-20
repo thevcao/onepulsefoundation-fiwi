@@ -19,8 +19,12 @@
                                                   $map_zoom = $values['zoom'];
                                                     endif;
                                                 ?>
-<div class="main-wrapper">
-        <div class="post-body">
+        <div class="main-wrapper">
+
+        <div class="page-main">
+
+
+          <section class="post-body">
             <section class="post-image">
                 <div class="row">
                     <div class="col-lg-8 col-11 mx-md-down">
@@ -258,6 +262,8 @@
 
 
 
+
+        </div>
 
         </div>
 

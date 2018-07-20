@@ -26,7 +26,7 @@
                 <div class="container">
 
                   <div class="row">
-                    <div class="col-md-12 col-11 mx-auto mr-lg-0">
+                    <div class="col-12 mx-auto mr-lg-0">
                     <h1>News and Updates</h1>
 
                     </div>

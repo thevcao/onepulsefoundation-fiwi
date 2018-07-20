@@ -8,8 +8,10 @@
 ?>
     <?php get_template_part('templates/header'); ?>
 
-<div class="main-wrapper">
-        <div class="member-body mb64 mb-xs-0">
+        <div class="main-wrapper">
+
+        <div class="page-main">
+          <div class="member-body mb64 mb-xs-0">
             <section class="post-image">
                 <div class="row">
                     <div class="col-lg-5 col-md-5 col-11 mx-md-down <?php the_field('overlay_color');?>" >
@@ -37,7 +39,7 @@
                         echo '">';
                         endif;?>
                     </div>
-                    <div class="<?php if(get_field('headshot')): echo 'col-lg-4 offset-lg-2 col-md-11 col-10 mx-md-down mt64 mb120'; else: echo 'col-md-4 col-md-offset-1'; endif;?> mt64 mb120">
+                    <div class="<?php if(get_field('headshot')): echo 'col-lg-4 offset-md-2 col-md-5 col-sm-11 col-11 mx-md-down mt64 mb120'; else: echo 'col-lg-4 mr-auto offset-lg-1 col-md-11 col-sm-11 col-11 mx-md-down'; endif;?> mt64 mb120">
                         <h1><span class="<?php the_field('overlay_color');?> clip small"><?php the_field('title');?></span><?php echo get_the_title();?></h1>
 
                         <?php the_field('bio');?>
@@ -53,5 +55,6 @@
 
 
         </div>
+      </div>
 
         <?php get_template_part('templates/footer'); ?>

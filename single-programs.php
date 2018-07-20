@@ -8,8 +8,11 @@
 ?>
     <?php get_template_part('templates/header'); ?>
 
-<div class="main-wrapper">
-        <div class="post-body">
+        <div class="main-wrapper">
+
+        <div class="page-main">
+
+          <div class="post-body">
             <section class="post-image">
                 <div class="row">
                     <div class="col-lg-8">
@@ -181,6 +184,8 @@
 
 
 
+
+        </div>
 
         </div>
 
