@@ -119,8 +119,9 @@
                                 </ul>
                               </div>
 
-                                <?php the_content();?>
-
+                                    <div class="single-content">
+                                    <?php the_content();?>
+                                    </div>
                                 <?php $pr = get_field('include_pr_snippet'); if(!$pr == null):?>
                                 <h3>About onePULSE Foundation</h3>
                                 <?php the_field('about_info');?>
@@ -173,8 +174,9 @@
                                     <li><a href="https://plus.google.com/share?url=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                                 </ul>
 
+                                    <div class="single-content">
                                     <?php the_content();?>
-
+                                    </div>
                                 </div>
                                 <?php endif;?>
                     </div>

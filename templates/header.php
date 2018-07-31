@@ -92,7 +92,13 @@ get_template_part('templates/head');
               </div>
           </div>
 
-          <div class="col-md-1 col-3"> <a class="menu-toggle" href="#" title=""><span></span><span></span><span></span></a></div>
+          <div class="col-md-1 col-3">
+            <a class="menu-toggle" href="#" title="">
+            <span class="null"></span>
+            <span class="null"></span>
+            <span class="null"></span>
+            </a>
+            </div>
 
 
           </div>

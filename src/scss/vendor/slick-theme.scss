@@ -132,6 +132,14 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-dotted.slick-slider {
     margin-bottom: 30px;
+
+  // (768px)
+  @include media-breakpoint-down(sm) {
+
+
+    margin-bottom: 0;
+  }
+
 }
 
 .slick-dots {
@@ -143,7 +151,7 @@ $slick-opacity-not-active: 0.25 !default;
     padding: 0;
     margin: 0;
     width: 100%;
-	z-index: 1;
+  z-index: 1;
     li {
         position: relative;
         display: inline-block;

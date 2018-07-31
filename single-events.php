@@ -135,8 +135,9 @@
                                 </ul>
                               </div>
 
-                                <?php the_content();?>
-
+                                    <div class="single-content">
+                                    <?php the_content();?>
+                                    </div>
 
 
                             </div>
@@ -178,8 +179,9 @@
                                     <li><a href="https://plus.google.com/share?url=<?php the_permalink();?>" class="pop-link" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                                 </ul>
                               </div>
-                                <?php the_content();?>
-
+                                    <div class="single-content">
+                                    <?php the_content();?>
+                                    </div>
 
 
                             </div>

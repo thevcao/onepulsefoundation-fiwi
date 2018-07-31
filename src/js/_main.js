@@ -595,6 +595,14 @@
       },
       finalize: function () {
         // JavaScript to be fired on all pages, after page specific JS is fired
+
+
+
+        $('.single-content p').each(function() {
+        var $this = $(this);
+        if($this.html().replace(/\s|&nbsp;/g, '').length == 0)
+        $this.remove();
+        });
         function halftone() {
           // try to create a WebGL canvas (will fail if WebGL isn't supported)
 //          if ($('#featured-image').length) {
