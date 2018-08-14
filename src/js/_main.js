@@ -17,6 +17,24 @@
     'common': {
       init: function () {
         // JavaScript to be fired on all pages
+
+
+        $('.search-toggle').click(function () {
+          $('html').addClass('search-open');
+          return false;
+        });
+//        $('.login-toggle').click(function(){
+//
+//          return false;
+//        });
+        $('.search-clear, .search-cover').click(function () {
+          $('html').removeClass('search-open');
+          return false;
+          //                    return false;
+        });
+
+
+
         $(window).load(function () {
 //          $('.mm').matchHeight();
           fullHero();
@@ -222,19 +240,7 @@
 
           return false;
         });
-        $('.search-toggle').click(function () {
-          $('html').addClass('search-open');
-          return false;
-        });
-//        $('.login-toggle').click(function(){
-//
-//          return false;
-//        });
-        $('.search-clear, .search-cover').click(function () {
-          $('html').removeClass('search-open');
-          return false;
-          //                    return false;
-        });
+
 
 
         $('.tab-links').on({ 'touchstart' : function(){

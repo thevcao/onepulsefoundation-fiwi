@@ -49,7 +49,7 @@ html:not(.ie) {
       text-decoration: none;
       outline: none;
       font-weight: bold;
-      &:not(.home-play, .task-link, .btn, .pop-link, .close, .menu-toggle, .no-hover) {
+      &:not(.home-play, .task-link, .btn, .pop-link, .close, .menu-toggle, .no-hover, .search-toggle, .search-clear) {
         position: relative;
         transition: .5s ease;
         z-index: 1;
@@ -143,7 +143,7 @@ html.ie {
       text-decoration: none;
       outline: none;
       font-weight: bold;
-      &:not(.home-play, .task-link, .btn, .pop-link, .close, .menu-toggle, .no-hover) {
+      &:not(.home-play, .task-link, .btn, .pop-link, .close, .menu-toggle, .no-hover, .search-toggle, .search-clear) {
         position: relative;
         transition: .3s ease;
         z-index: 1;
