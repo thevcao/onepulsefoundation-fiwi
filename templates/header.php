@@ -79,7 +79,7 @@ get_template_part('templates/head');
         <div class="col-10 visible-sm visible-xs">
           <div class="row">
 
-          <div class="col-md-11 col-6 ml-auto">
+          <div class="col-md-11 col-auto ml-auto">
               <div class="lang-toggle">
                   <ul>
                   <li><?php echo do_shortcode('[glt language="English" label="English"]');?>

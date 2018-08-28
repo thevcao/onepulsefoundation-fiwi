@@ -1161,20 +1161,20 @@
               scaledSize: new google.maps.Size(56, 85), // size
             }
           };
-          var parking3 = {
-            info: '<h4>Public Parking Lot</h4>',
-            lat: 28.520907,
-            long: -81.376736,
-            pin: {
-              url: '/wp-content/themes/onepulse/dist/img/parking-pin.png', // url
-              scaledSize: new google.maps.Size(56, 85), // size
-            }
-          };
+//          var parking3 = {
+//            info: '<h4>Public Parking Lot</h4>',
+//            lat: 28.520907,
+//            long: -81.376736,
+//            pin: {
+//              url: '/wp-content/themes/onepulse/dist/img/parking-pin.png', // url
+//              scaledSize: new google.maps.Size(56, 85), // size
+//            }
+//          };
           var locations = [
                           [pulse.info, pulse.lat, pulse.long, pulse.pin, 0],
                           [parking1.info, parking1.lat, parking1.long, parking1.pin, 1],
                           [parking2.info, parking2.lat, parking2.long, parking2.pin, 2],
-                          [parking3.info, parking3.lat, parking3.long, parking3.pin, 3],
+//                          [parking3.info, parking3.lat, parking3.long, parking3.pin, 3],
                         ];
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 18,

@@ -1338,7 +1338,7 @@
   }
 }
 @include media-breakpoint-down(sm) {
-  .full-menu ul li a {
+  .full-menu ul li a, .full-menu ul li .sub-menu li a {
     font-size: 1rem;
     padding: .75rem 0;
   }

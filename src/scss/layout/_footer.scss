@@ -218,6 +218,8 @@ footer {
   transition: transform 300ms ease;
 }
 @include media-breakpoint-down(sm) {
+
+
   footer {
     padding: rem(10) 0 0;
     padding-bottom: calc(2rem + 20px);

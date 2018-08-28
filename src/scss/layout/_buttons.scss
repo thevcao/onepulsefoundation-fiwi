@@ -775,8 +775,7 @@ html.safari.mac {
       margin: rem(10) auto rem(16);
       font-size: 1rem;
     }
-    .invert-header .btn.clipped,
-    .mobile-cta .btn.clipped {
+     html:not(.ie) .btn.clipped, html:not(.ie) .rmagic .buttonarea input[type='button'].clipped, html:not(.ie) .rmagic .buttonarea input[type='submit'].clipped {
       font-size: 1rem;
     }
 //  }

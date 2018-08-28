@@ -6,7 +6,7 @@
   }
   // @media (max-width: 1439px)
   @include media-breakpoint-down(sm) {
-    margin-bottom: 4rem !important;
+    margin-bottom: 2rem !important;
     .float-container {
       display: none;
     }
