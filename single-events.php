@@ -24,7 +24,9 @@
         <div class="page-main">
 
 
-          <section class="post-body">
+          <div class="post-body">
+          
+          <?php if( has_post_thumbnail() || get_field('post_video')):?>
             <section class="post-image">
                 <div class="row">
                     <div class="col-lg-8 col-11 mx-md-down">
@@ -106,6 +108,8 @@
                 </div>
 
             </section>
+            
+            <?php endif;?>
 
             <section class="pt-sm-5 pb120 pt-xs-0 pb-xs-0">
                 <div class="container">
@@ -262,6 +266,8 @@
 
             </section>
 
+
+        </div>
 
 
 
