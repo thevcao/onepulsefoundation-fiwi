@@ -37,13 +37,17 @@
                     <div class="col-lg-9 col-md-12 col-11 mx-md-down ml-auto tabs">
 
                   <?php if ( !is_user_logged_in())  { ?>
-                  <h2><span>Please sign in to participate in the </span>Ideas Generator for the permanent Pulse Memorial & Museum</h2>
+
+                  <h2><span>Submissions are now closed.</span>Thank you for your ongoing support.</h2>
+
+
+                  <!--<h2><span>Please sign in to participate in the </span>Ideas Generator for the permanent Pulse Memorial & Museum</h2>
 
                     <div class="survey-login">
                     <div class="reg-form">
-                    <p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/us.svg"> Already a user? <a href="#">Sign In <i class="fa fa-angle-right"></i></a></p>
+                    <p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/us.svg"> Already a user? <a href="#">Sign In <i class="fa fa-angle-right"></i></a></p>-->
 
-                      <?php custom_registration_function(); ?>
+                    <?php //custom_registration_function(); ?>
 
 
                     <!--<p class="user-login-label"><img class="lang-flag" src="<?php echo get_template_directory_uri(); ?>/dist/img/span.svg"> Por favor crea una cuenta de usuario para completar la encuesta. <a href="#">Crea Una Cuenta</a></p>-->
@@ -51,9 +55,10 @@
                     </div>
 
                     <div class="login-form">
-                    <p class="user-login-label"><a href="#" class="back"><i class="fa fa-angle-left"></i> Back</a></p>
+                    <p>Submissions are now closed. Thank you for your ongoing support.</p>
+                    <!--<p class="user-login-label"><a href="#" class="back"><i class="fa fa-angle-left"></i> Back</a></p>
 
-                    <?php wp_login_form(); ?>
+                    <?php wp_login_form(); ?>-->
 
 
                     </div>

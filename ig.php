@@ -49,11 +49,11 @@
                           <li class=""><a href="#submissions">Submissions</a></li>
                           <?php endif;?>
                           <?php if ( is_user_logged_in())  { ?>
-                          <li class=""><a href="<?php the_permalink(10615);?>">Create New Submission</a></li>
-                          <li class=""><a href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></li>
+                          <!--<li class=""><a href="<?php the_permalink(10615);?>">Create New Submission</a></li>-->
+                          <!--<li class=""><a href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></li>-->
 
                           <?php } else {?>
-                          <li class=""><a href="<?php the_permalink(10615);?>" >Login/Create an Account</a></li>
+                          <!--<li class=""><a href="<?php the_permalink(10615);?>" >Login/Create an Account</a></li>-->
 
                           <?php }?>
 
@@ -114,11 +114,11 @@
                           <li class=""><a href="#submissions">Submissions</a></li>
                           <?php endif;?>
                           <?php if ( is_user_logged_in())  { ?>
-                          <li class=""><a href="<?php the_permalink(10615);?>">Create New Submission</a></li>
-                          <li class=""><a href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></li>
+                          <!--<li class=""><a href="<?php the_permalink(10615);?>">Create New Submission</a></li>-->
+                          <!--<li class=""><a href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></li>-->
 
                           <?php } else {?>
-                          <li class=""><a href="<?php the_permalink(10615);?>" >Login/Create an Account</a></li>
+                          <!--<li class=""><a href="<?php the_permalink(10615);?>" >Login/Create an Account</a></li>-->
 
                           <?php }?>
 
