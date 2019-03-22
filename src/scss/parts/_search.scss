@@ -31,7 +31,7 @@
       overflow: visible;
       color: $r;
       transition-delay: 0s;
-      animation: animation-ie 10s alternate linear infinite;
+      animation: var(--colorFade);
       text-align: right;
       margin: 3px 0;
       right: 2.25rem;
@@ -39,22 +39,22 @@
       &::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
         color: $r;
-        animation: animation-ie 10s alternate linear infinite;
+        animation: var(--colorFade);
       }
       &::-moz-placeholder {
         /* Firefox 19+ */
         color: $r;
-        animation: animation-ie 10s alternate linear infinite;
+        animation: var(--colorFade);
       }
       &:-ms-input-placeholder {
         /* IE 10+ */
         color: $r;
-        animation: animation-ie 10s alternate linear infinite;
+        animation: var(--colorFade);
       }
       &:-moz-placeholder {
         /* Firefox 18- */
         color: $r;
-        animation: animation-ie 10s alternate linear infinite;
+        animation: var(--colorFade);
       }
     }
     .search-clear {
@@ -255,7 +255,7 @@
     overflow: visible;
     color: $r;
     transition-delay: 0s;
-    animation: animation-ie 10s alternate linear infinite;
+    animation: var(--colorFade);
     pointer-events: all;
     border-bottom: 3px solid #eee;
     padding: 1rem;
@@ -279,22 +279,22 @@
     &::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
       color: $r;
-      animation: animation-ie 10s alternate linear infinite;
+      animation: var(--colorFade);
     }
     &::-moz-placeholder {
       /* Firefox 19+ */
       color: $r;
-      animation: animation-ie 10s alternate linear infinite;
+      animation: var(--colorFade);
     }
     &:-ms-input-placeholder {
       /* IE 10+ */
       color: $r;
-      animation: animation-ie 10s alternate linear infinite;
+      animation: var(--colorFade);
     }
     &:-moz-placeholder {
       /* Firefox 18- */
       color: $r;
-      animation: animation-ie 10s alternate linear infinite;
+      animation: var(--colorFade);
     }
   }
   .search-clear {

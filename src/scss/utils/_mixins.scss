@@ -88,9 +88,7 @@
      }
    }
  }
- @mixin onpuGradient {
-   background: linear-gradient(135deg, #00a8de 0%, #333391 calc(100% / 7), #e91388 calc((100% / 7) * 2), #eb2d2e calc((100% / 7) * 3), orange calc((100% / 7) * 4), #ff0 calc((100% / 7) * 5), #34d400 calc((100% / 7) * 6), #00a8de 100%);
- }
+
  .visible-md,
  .visible-sm,
  .visible-xs {

@@ -84,7 +84,7 @@
                                         <video id="video" class="video-js vjs-sublime-skin" controls preload="none" width="100%" height="800" poster="<?php echo $poster['sizes']['large'];?>" data-setup='{"ga": {"eventsToTrack": ["play"]}}'>
                                             <source src="<?php echo $video;?>" type="video/mp4">
                                         </video>
-                                        <?php echo '<label class="img-attrib">' . $poster['caption'] . '</label>';?>
+                                        <?php echo '<label aria-hidden="true" class="img-attrib">' . $poster['caption'] . '</label>';?>
                                             <?php endif;?>
 
                                                 <?php if($ext_source == 'youtube'): ?>
@@ -100,7 +100,7 @@
                                                                     <div class="line"></div>
                                                             </label>
                                                             <video id='video' class='video-js vjs-sublime-skin' playsinline controls preload='none' width='100%' height='800' poster="<?php echo $poster['sizes']['large'];?>" data-setup='{ "ga": {"eventsToTrack": ["play"]}, "techOrder": ["vimeo"], "sources": [{ "type": "video/vimeo", "src": "<?php echo $url;?>" }], "vimeo": { "ytControls": 2 }}'></video>
-                                                            <?php echo '<label class="img-attrib">' . $poster['caption'] . '</label>';?>
+                                                            <?php echo '<label aria-hidden="true" class="img-attrib">' . $poster['caption'] . '</label>';?>
                                 </div>
 
                                 <?php endif;?>

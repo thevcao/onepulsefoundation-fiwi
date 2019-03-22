@@ -40,6 +40,7 @@
     "gulp-uncss": "^1.0.6",
     "html5shiv": "^3.7.3",
     "imagemin-pngquant": "^4.2.0",
+    "magnific-popup": "^1.1.0",
     "merge-stream": "^0.1.7",
     "poly-fluid-sizing": "^1.1.0",
     "postcss-flexbugs-fixes": "^3.3.1",

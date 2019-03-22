@@ -446,6 +446,11 @@ wp_enqueue_script( 'admin', get_template_directory_uri() . '/admin/js/scripts.js
 add_action( 'admin_enqueue_scripts', 'fiwi_admin_styles' );
 add_action( 'login_enqueue_scripts', 'fiwi_admin_styles' );
 
+function fiwi_add_editor_styles() {
+    add_editor_style( get_template_directory_uri() . '/admin/css/style.css');
+}
+add_action( 'init', 'fiwi_add_editor_styles' );
+
 //$counter = 0;
 //function fiwi_admin_fonts() {
 //
@@ -768,7 +773,7 @@ return [ 'ext' => $filetype['ext'], 'type' => $filetype['type'], 'proper_filenam
 
 function cc_mime_types( $mimes ){ $mimes['svg'] = 'image/svg+xml'; return $mimes; } add_filter( 'upload_mimes', 'cc_mime_types' );
 
-function fix_svg() { echo '<style> .attachment-266×266, .thumbnail img { width: 100% !important; height: auto !important; } </style>'; } add_action( 'admin_head', 'fix_svg' );
+function fix_svg() { echo '<style> .attachment-266×266, .thumbnail img { } </style>'; } add_action( 'admin_head', 'fix_svg' );
 
 //add_filter('get_user_option_admin_color', 'change_admin_color');
 //function change_admin_color($result) {
@@ -873,8 +878,7 @@ class GFLimitCheckboxes {
             ?>
 
 
-
-            <?php
+<?php
         endif;
 
         return $form;
@@ -1017,9 +1021,8 @@ new GFLimitCheckboxes(2, array(
 
 //add_filter( 'gform_confirmation_anchor', '__return_true' );
 
-add_filter( 'gform_confirmation_anchor', function() {
-    return 230;
-} );
+
+
 add_filter( 'allow_dev_auto_core_updates', '__return_false' );
 add_filter( 'auto_update_core', '__return_true' );
 add_filter( 'auto_core_update_send_email', '__return_false' );
@@ -1103,45 +1106,50 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 if (strpos($url,'wp-login.php?checkemail=registered') == true) {?>
 
 <script>
+  (function($) {
 
-    (function ($) {
+    'use strict';
 
-        'use strict';
+    if ((document.location.href.indexOf('staging') === -1 || document.location.href.indexOf('dev') === -1)) {
 
-            if ((document.location.href.indexOf('staging') === -1 || document.location.href.indexOf('dev') === -1)){
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-97989536-1', 'auto');
+      ga('send', 'pageview');
 
-              ga('create', 'UA-97989536-1', 'auto');
-              ga('send', 'pageview');
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
-                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'User Registration Success - Mobile',
+          eventAction: 'registration'
+        });
 
-                    ga('send', {
-                        hitType: 'event',
-                        eventCategory: 'User Registration Success - Mobile',
-                        eventAction: 'registration'
-                    });
+      } else {
 
-                } else {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'User Registration Success - Desktop',
+          eventAction: 'registration'
+        });
 
-                    ga('send', {
-                        hitType: 'event',
-                        eventCategory: 'User Registration Success - Desktop',
-                        eventAction: 'registration'
-                    });
+      }
+      console.log('User registration');
+    }
 
-                }
-                console.log('User registration');
-            }
+    //            }
 
-//            }
-
-    })(jQuery);
-
+  })(jQuery);
 
 </script>
 
@@ -1154,42 +1162,67 @@ add_action( 'login_head', 'ga_event_registration' );
 add_action("gform_after_submission_5", "gf_ga_tracking", 1, 2);
 function gf_ga_tracking($entry, $form) {
     ?>
-      <?php
+<?php
 
       $url = site_url();
       $array = array('local', 'staging', 'localhost', 'dev');
 
       if ((findenv($url, $array) === false)):?>
-            <!-- Twitter single-event website tag code -->
-            <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
-            <script type="text/javascript">twttr.conversion.trackPid('nzvlc', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
-            <noscript>
-            <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nzvlc&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
-            <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nzvlc&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
-            </noscript>
+<!-- Twitter single-event website tag code -->
+<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">
+  twttr.conversion.trackPid('nzvlc', {
+    tw_sale_amount: 0,
+    tw_order_quantity: 0
+  });
 
-              <script type="text/javascript">
-                  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-                  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-                  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-                  document,'script','https://connect.facebook.net/en_US/fbevents.js');
-                  fbq('init', '334045860378572'); // Insert your pixel ID here.
-                  fbq('track', 'IdeaSubmission');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nzvlc&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+  <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nzvlc&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+</noscript>
 
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<script type="text/javascript">
+  ! function(f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function() {
+      n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = !0;
+    n.version = '2.0';
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = !0;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s)
+  }(window,
+    document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '334045860378572'); // Insert your pixel ID here.
+  fbq('track', 'IdeaSubmission');
 
-                  ga('create', 'UA-97989536-1', 'auto');
-                  ga('send', 'event', 'Idea Submission');
-                  console.log('Submission Complete');
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
+  ga('create', 'UA-97989536-1', 'auto');
+  ga('send', 'event', 'Idea Submission');
+  console.log('Submission Complete');
 
-              </script>
+</script>
 
-              <?php endif;?>
+<?php endif;?>
 
 
 <?php }
@@ -1215,6 +1248,99 @@ function onpu_line()
 }
 add_shortcode( 'line', 'onpu_line');
 
+
+
+
+function selection_jury(){
+
+ob_start();
+
+?>
+
+
+<?php if( have_rows('jury') ):?>
+
+
+<div class="row jury">
+  <?php while ( have_rows('jury') ) : the_row();?>
+  <div class="col-6 col-sm-4 col-md-3 col-25">
+    <div class="inner-card">
+
+      <?php if(get_sub_field('member_image')):
+
+    $image = get_sub_field('member_image')['sizes']['large'];
+
+    else:
+
+    $image = 'https://ctvalleybrewing.com/wp-content/uploads/2017/04/avatar-placeholder.png';
+
+
+    endif;
+    ?>
+
+      <img src="<?php echo $image;?>" class="headshot">
+      <h5>
+        <?php the_sub_field('member_name');?>
+      </h5>
+      <p><strong>
+          <?php the_sub_field('member_title');?></strong></p>
+    </div>
+  </div>
+<?php endwhile; ?>
+</div>
+
+
+<?php endif; ?>
+
+<?php }
+add_shortcode( 'selection-jury', 'selection_jury');
+
+
+function rfq_faq(){
+
+ob_start();
+
+?>
+
+
+
+    <div aria-label="faq-nav" class="rfq-faq">
+
+        <?php if( have_rows('rfq_faq') ):?>
+
+        <h4>Q + A</h4>
+
+        <?php while ( have_rows('rfq_faq') ) : the_row();?>
+
+
+
+        <div class="row faq-item" tabindex="<?php echo $i++;?>">
+
+                <div class="col-lg-12 col-md-12 col-11 mx-auto">
+
+
+
+                    <div class="">
+                        <a href="#" class="question"><?php echo get_sub_field('rfq_faq_q');?></a>
+
+                        <div class="answer" id="">
+                        <?php echo get_sub_field('rfq_faq_a');?>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+    <?php endwhile; endif;?>
+
+    </div>
+
+
+
+
+<?php }
+
+add_shortcode( 'rfq-faq', 'rfq_faq');
 
 // Callback function to insert 'styleselect' into the $buttons array
 function my_mce_buttons_2( $buttons ) {
@@ -1511,14 +1637,13 @@ function complete_registration() {
 
         echo '<p class="user-login-label success">Registration complete. <a href="#">Click here to log in.</a></p>';?>
 
-        <script>
+<script>
+  (function($) {
 
-        (function ($) {
+    'use strict';
 
-            'use strict';
-
-              $(window).load(function(){
-              <?php
+    $(window).load(function() {
+      <?php
 
 
 
@@ -1526,19 +1651,18 @@ function complete_registration() {
               $array = array('local', 'staging', 'localhost', 'dev');
 
               if ((findenv($url, $array) === false)):?>
-              ga('send', 'event', 'User Registration');
-              fbq('track', 'CompleteRegistration');
-              twq('track','CompleteRegistration');
-              <?php endif;?>
+      ga('send', 'event', 'User Registration');
+      fbq('track', 'CompleteRegistration');
+      twq('track', 'CompleteRegistration');
+      <?php endif;?>
 
-              jQuery('.im-reg, .user-login-label').not('.success').remove();
+      jQuery('.im-reg, .user-login-label').not('.success').remove();
 
+    })
+  })(jQuery);
 
-              })
-        })(jQuery);
-
-        </script>
-        <?php
+</script>
+<?php
     }
 }
 
@@ -1635,3 +1759,15 @@ function findenv($haystack, $needle, $offset=0) {
   }
   return false;
 }
+
+
+
+function _remove_script_version( $src ){
+$parts = explode( '?ver', $src );
+return $parts[0];
+}
+add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
+add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
+
+
+add_filter( 'gform_confirmation_anchor', '__return_false' );

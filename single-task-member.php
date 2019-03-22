@@ -27,7 +27,7 @@
                             endif;
                             echo '">';
                             ?>
-                        <?php echo '<label class="img-attrib">' . $banner['caption'] . '</label>';?>
+                        <?php echo '<label aria-hidden="true" class="img-attrib">' . $banner['caption'] . '</label>';?>
                             <?php
                         if(get_field('headshot')): $headshot = get_field('headshot');
                         echo '<img class="over-image headshot" src="'. $headshot['sizes']['large'] .'" alt="';

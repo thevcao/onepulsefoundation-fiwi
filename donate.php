@@ -64,8 +64,8 @@
                                     <?php if(is_page('donate')):?>
                                         <img class="mb-1" src="/wp-content/uploads/2017/06/banners-all-1.jpg">
 
-                                        <a href="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf" class="btn shirt-btn mt0 mb8" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf">Download 8 1/2' x 11' Flyer Kit</a>
-                                        <a href="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf" class="btn shirt-btn mt0 mb32" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf">Download 4"x 8" Banner Kit</a>
+                                        <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf" class="btn shirt-btn mt0 mb8" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf">Download 8 1/2' x 11' Flyer Kit</a>
+                                        <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf" class="btn shirt-btn mt0 mb32" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf">Download 4"x 8" Banner Kit</a>
                                         <?php endif;?>
                                 </div>
                             </div>
@@ -83,8 +83,8 @@
                                         <?php if(is_page('donate')):?>
                                             <img src="/wp-content/uploads/2017/06/banners-all-1.jpg">
 
-                                            <a href="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf" class="btn shirt-btn mt0 mb8" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf">Download 8 1/2' x 11' Flyer Kit</a>
-                                            <a href="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf" class="btn shirt-btn mt0 mb8" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf">Download 4"x 8" Banner Kit</a>
+                                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf" class="btn shirt-btn mt0 mb8" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_FLIER_PRESS.pdf">Download 8 1/2' x 11' Flyer Kit</a>
+                                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf" class="btn shirt-btn mt0 mb8" target="_blank" download="/wp-content/uploads/2017/06/We_Will_Not_Let_Hate_Win_4X8_BANNER_PRESS.pdf">Download 4"x 8" Banner Kit</a>
                                             <?php endif;?>
                                     </div>
                             </div>

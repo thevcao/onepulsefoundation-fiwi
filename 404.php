@@ -27,7 +27,7 @@
 
         <h1>Lost?</h1>
 
-        <p><a href="/">Back to homepage</a></p>
+        <p><a href="<?php echo get_site_url(); ?>/">Back to homepage</a></p>
 
 
 

@@ -7,10 +7,10 @@
             <div class="row">
                     <div class="col-lg-10 col-md-12 col-11 mx-md-down">
                     <h2 class="clone-shadow"><?php the_sub_field('headline');?></h2>
-                    <h2><?php the_sub_field('headline');?></h2>
-                    <?php if(is_page(5286)): echo '<a href="/donate" class="btn left">Donate Today</a>'; endif;?>
+                    <h2 class="main"><?php the_sub_field('headline');?></h2>
+                    <?php if(is_page(5286)): echo '<a href="<?php echo get_site_url(); ?>/donate" class="btn left">Donate Today</a>'; endif;?>
                 </div>
             </div>
         </div>
-        <?php $image = get_sub_field('hero_image'); echo '<label class="img-attrib">' . $image['caption'] . '</label>';?>
+        <?php $image = get_sub_field('hero_image'); echo '<label aria-hidden="true" class="img-attrib">' . $image['caption'] . '</label>';?>
     </section>

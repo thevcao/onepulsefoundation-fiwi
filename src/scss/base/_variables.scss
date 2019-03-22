@@ -5,109 +5,215 @@ $g: #34d400;
 $b: #00a8de;
 $m: #e91388;
 $p: purple;
-
-$rgrad: linear-gradient(135deg, rgba(253,47,173,1) 0%,#e40051 100%);
-$ygrad: linear-gradient(135deg, rgba(255,162,7,1) 0%, #ffdc19 100%);
-$ograd: linear-gradient(135deg, #ffdc19 0%,rgba(255,162,7,1) 100%);
-$ggrad: linear-gradient(135deg, rgba(151,255,7,1) 0%,rgba(57,213,7,1) 100%);
-$bgrad: linear-gradient(135deg, dodgerblue 0%,rgba(7,41,254,1) 100%);
-$pgrad: linear-gradient(135deg, rgba(255,11,255,1) 0%,purple 100%);
-
+$rgrad: linear-gradient(135deg, rgba(253, 47, 173, 1) 0%, #e40051 100%);
+$ygrad: linear-gradient(135deg, rgba(255, 162, 7, 1) 0%, #ffdc19 100%);
+$ograd: linear-gradient(135deg, #ffdc19 0%, rgba(255, 162, 7, 1) 100%);
+$ggrad: linear-gradient(135deg, rgba(151, 255, 7, 1) 0%, rgba(57, 213, 7, 1) 100%);
+$bgrad: linear-gradient(135deg, dodgerblue 0%, rgba(7, 41, 254, 1) 100%);
+$pgrad: linear-gradient(135deg, rgba(255, 11, 255, 1) 0%, purple 100%);
 
 @keyframes animation {
   0% {
-    background-position: 0 0;
+    background-position: 0% 50%;
   }
+
   100% {
-    background-position: 100vw 0;
+    background-position: 100% 50%;
   }
+}
+
+@keyframes donateanimate {
+  0% {
+    //		background-size: 100%;
+    background-position: 0% 50%;
+  }
+
+  100% {
+    //		background-size: 800%;
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes linkanimate {
+  0% {
+    //		background-size: 100%;
+    background-position: 0% 50%;
+  }
+
+  100% {
+    //		background-size: 800%;
+    background-position: 100% 50%;
+  }
+}
+
+@mixin onpuGradient {
+  --colors: 9;
+  background: linear-gradient(135deg,
+    $b calc(100% / var(--colors) * 1),
+    $p calc(100% / var(--colors) * 2),
+    $m calc((100% / var(--colors)) * 3),
+    $r calc((100% / var(--colors)) * 4),
+    orange calc((100% / var(--colors)) * 5),
+    $y calc((100% / var(--colors)) * 6),
+    $g calc((100% / var(--colors)) * 7));
+}
+
+@mixin gradientLink {
+  @supports (-webkit-background-clip: text) {
+    @include onpuGradient;
+    animation: donateanimate 10s alternate linear infinite;
+    background-attachment: fixed;
+    background-size: 300vw;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translate3d(0,0,0);
+  }
+}
+
+@mixin gradientBG {
+  @supports (-webkit-background-clip: text) {
+    @include onpuGradient;
+    animation: donateanimate 10s alternate linear infinite;
+    background-attachment: fixed;
+    background-size: 300vw;
+    transform: translate3d(0,0,0);
+  }
+}
+
+:root {
+  --colorFade: animation-ie 10s alternate linear infinite;
+}
+
+
+@mixin gradientBefore {
+
+      filter: none;
+
+      &::before {
+      opacity: 0;
+      transition: opacity .5s ease;
+      content: attr(title);
+      color: #000;
+      animation: var(--colorFade);
+
+
+      @include gradientLink;
+
+      //          background-attachment: fixed;
+      //            background-position: 50%;
+      position: absolute;
+      z-index: 1000;
+      line-height: inherit;
+      margin: inherit;
+      padding: inherit;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      text-align: inherit;
+      display: inherit;
+      font-size: inherit;
+      transition: none;
+      will-change: opacity;
+      //          padding: 0;
+      //          margin: 0;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
 }
 
 @keyframes animation-ie {
   0% {
     color: $b;
   }
-  12.5% {
+
+  14.28% {
     color: $p;
   }
-  25% {
+
+  28.56% {
     color: $m;
   }
-  37.5% {
+
+  57.12% {
     color: $r;
   }
-  50% {
+
+  71.4% {
     color: $o;
   }
-  62.5% {
+
+  85.68% {
     color: $y;
   }
-  75% {
+
+  100% {
     color: $g;
   }
-  87.5% {
-    color: $b;
-  }
-  100% {
-    color: $p;
-  }
 }
+
 @keyframes buttonHover {
   0% {
     color: $b;
     border-color: $b;
   }
-  12.5% {
+
+  14.28% {
     color: $p;
     border-color: $p;
   }
-  25% {
+
+  28.56% {
     color: $m;
     border-color: $m;
   }
-  37.5% {
+
+  57.12% {
     color: $r;
     border-color: $r;
   }
-  50% {
+
+  71.4% {
     color: $o;
     border-color: $o;
   }
-  62.5% {
+
+  85.68% {
     color: $y;
     border-color: $y;
   }
-  75% {
+
+  100% {
     color: $g;
     border-color: $g;
   }
-  87.5% {
-    color: $b;
-    border-color: $b;
-  }
-  100% {
-    color: $p;
-    border-color: $p;
-  }
 }
+
 @keyframes submenu-shadow {
   0% {
-    box-shadow: 0 14px 28px rgba($r,0.19), 0 10px 10px rgba($r,0.23);
- ;
+    box-shadow: 0 14px 28px rgba($r, 0.19), 0 10px 10px rgba($r, 0.23);
+    ;
   }
+
   20% {
-    box-shadow: 0 14px 28px rgba($o,0.19), 0 10px 10px rgba($o,0.23);
+    box-shadow: 0 14px 28px rgba($o, 0.19), 0 10px 10px rgba($o, 0.23);
   }
+
   40% {
-    box-shadow: 0 14px 28px rgba($y,0.19), 0 10px 10px rgba($y,0.23);
+    box-shadow: 0 14px 28px rgba($y, 0.19), 0 10px 10px rgba($y, 0.23);
   }
+
   60% {
-    box-shadow: 0 14px 28px rgba($g,0.19), 0 10px 10px rgba($g,0.23);
+    box-shadow: 0 14px 28px rgba($g, 0.19), 0 10px 10px rgba($g, 0.23);
   }
+
   80% {
-    box-shadow: 0 14px 28px rgba($b,0.19), 0 10px 10px rgba($b,0.23);
+    box-shadow: 0 14px 28px rgba($b, 0.19), 0 10px 10px rgba($b, 0.23);
   }
+
   100% {
-    box-shadow: 0 14px 28px rgba($p,0.19), 0 10px 10px rgba($p,0.23);
+    box-shadow: 0 14px 28px rgba($p, 0.19), 0 10px 10px rgba($p, 0.23);
   }
 }

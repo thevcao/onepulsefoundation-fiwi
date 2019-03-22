@@ -25,7 +25,7 @@
 
 
           <div class="post-body">
-          
+
           <?php if( has_post_thumbnail() || get_field('post_video')):?>
             <section class="post-image">
                 <div class="row">
@@ -65,7 +65,7 @@
                             <video id="video" class="video-js vjs-sublime-skin" controls poster="<?php echo $poster['sizes']['large'];?>" preload="none" width="100%" height="800" data-setup='{"ga": {"eventsToTrack": ["play"]}}'>
                                 <source src="<?php echo $video;?>" type="video/mp4">
                             </video>
-                            <?php echo '<label class="img-attrib">' . $poster['caption'] . '</label>';?>
+                            <?php echo '<label aria-hidden="true" class="img-attrib">' . $poster['caption'] . '</label>';?>
                         </div>
                         <?php elseif($ext_source == 'youtube'): ?>
                         <div class="over-video">
@@ -74,7 +74,7 @@
                             <?php the_field('video_title');?>
                         </label>
                             <video id='video' class='video-js vjs-sublime-skin' playsinline controls poster="<?php echo $poster['sizes']['large'];?>" preload='none' width='100%' height='800' data-setup='{ "ga": {"eventsToTrack": ["play"]}, "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "<?php the_field('url');?>" }]}'></video>
-                            <?php echo '<label class="img-attrib">' . $poster['caption'] . '</label>';?>
+                            <?php echo '<label aria-hidden="true" class="img-attrib">' . $poster['caption'] . '</label>';?>
                         </div>
                         <?php elseif($ext_source == 'vimeo'): ?>
                             <div class="over-video">
@@ -83,7 +83,7 @@
                             <?php the_field('video_title');?>
                         </label>
                             <video id='video' class='video-js vjs-sublime-skin' playsinline controls poster="<?php echo $poster['sizes']['large'];?>" preload='none' width='100%' height='800' data-setup='{ "ga": {"eventsToTrack": ["play"]}, "techOrder": ["vimeo"], "sources": [{ "type": "video/vimeo", "src": "<?php the_field('url');?>" }], "vimeo": { "ytControls": 2 }}'></video>
-                            <?php echo '<label class="img-attrib">' . $poster['caption'] . '</label>';?>
+                            <?php echo '<label aria-hidden="true" class="img-attrib">' . $poster['caption'] . '</label>';?>
 
                         </div>
 
@@ -108,7 +108,7 @@
                 </div>
 
             </section>
-            
+
             <?php endif;?>
 
             <section class="pt-sm-5 pb120 pt-xs-0 pb-xs-0">

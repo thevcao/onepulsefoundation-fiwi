@@ -31,7 +31,7 @@
                     </div>
                 </div>
 
-                <div aria-label="faq-nav">
+                <div aria-label="faq-nav" class="faq-nav">
 
                         <?php $args = array(
 
@@ -54,7 +54,7 @@
                         echo '<div class="bg-element"><img class="bg-img" src="'. $banner['sizes']['large'] .'" alt="';
                         echo get_the_title() . ' - ' . get_bloginfo();
                         echo '">';
-                        echo '<label class="img-attrib">' .$banner['caption'] . '</label></div>';?>
+                        echo '<label aria-hidden="true" class="img-attrib">' .$banner['caption'] . '</label></div>';?>
 
                         <div class="container">
                             <div class="col-lg-12 col-md-12 col-11 mx-auto">

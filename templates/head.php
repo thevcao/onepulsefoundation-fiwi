@@ -98,7 +98,7 @@ if( have_rows('section') ):
 
         if( get_row_layout() == 'large_hero' ):
             $image = get_sub_field('hero_image');
-            echo '<style>.loader, .page-main .home-hero h2, .page-main .home-hero h2.clone-shadow, .page-main .home-hero, .btn.clipped .overlay, .invert-header .home-hero .btn div, .ie .home-hero {background-image:url('. $image['sizes']['banner'] .')</style>';
+            echo '<style>.loader, .page-main .home-hero h2, .page-main .home-hero h2.clone-shadow, .page-main .home-hero, .btn.clipped .overlay, .invert-header .home-hero .btn div, .ie .home-hero {background-image:url('. $image['sizes']['banner'] .')} :root { --header: url('. $image['sizes']['banner'] .')}</style>';
             echo '<meta property="og:image" content="'. $image['sizes']['large'] .'" />';
 
         endif;
@@ -185,7 +185,7 @@ endif; wp_reset_postdata();?>
         <div class="loader">
             <div class="spinner"></div>
             <?php if(is_page(7)): echo '<div class="quote" data-time="30000"><div class="quote-container"><p>"Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that."</p><p class="sig">- Martin Luther King, Jr.</p></div></div>'; endif;?>
-            <?php if (!$homeHero['caption'] == null && is_page('home')): echo '<label class="img-attrib">' . $homeHero['caption'] . '</label>'; endif; ?>
+            <?php if (!$homeHero['caption'] == null && is_page('home')): echo '<label aria-hidden="true" class="img-attrib">' . $homeHero['caption'] . '</label>'; endif; ?>
 
                 <?php // check if the flexible content field has rows of data
             if( have_rows('section') ):
@@ -195,7 +195,7 @@ endif; wp_reset_postdata();?>
 
                     if( get_row_layout() == 'large_hero' ):
                         $image = get_sub_field('hero_image');
-                        echo '<label class="img-attrib">' . $image['caption'] . '</label>';
+                        echo '<label aria-hidden="true" class="img-attrib">' . $image['caption'] . '</label>';
 
                     endif;
 

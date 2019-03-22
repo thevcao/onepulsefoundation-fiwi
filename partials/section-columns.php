@@ -19,7 +19,7 @@
         <div class="row">
             <?php if( have_rows('columns') ):?>
             <?php while ( have_rows('columns') ) : the_row(); ?>
-            <div class="col-md col-11 mx-auto">
+            <div class="col-md col-11 mx-auto editor">
 
             <?php the_sub_field('content');?>
             </div>

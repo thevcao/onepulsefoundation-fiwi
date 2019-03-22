@@ -132,7 +132,7 @@
 
                             <p>We cannot achieve our mission without volunteers like you! To volunteer with the Foundation please fill out our volunteer form. Let’s show the world that #WeWillNotLetHateWin.</p>
 
-                            <a href="/volunteer-information-form" class="btn left">Volunteer Information Form</a>
+                            <a href="<?php echo get_site_url(); ?>/volunteer-information-form" class="btn left">Volunteer Information Form</a>
 
 
                         </div>
