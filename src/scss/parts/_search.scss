@@ -179,6 +179,10 @@
     html {
       .searchwp-live-search-results {
 
+        display: none;
+
+
+
         // (768px)
         @include media-breakpoint-down(md) {
 
@@ -234,6 +238,13 @@
               font-size: 1rem;
             }
           }
+        }
+      }
+
+      &.search-open {
+
+        .searchwp-live-search-results {
+          display: block;
         }
       }
     }
