@@ -29,7 +29,7 @@ get_template_part('templates/head');
 
       <div class="row align-items-center">
         <div class="col-2">
-            <a href="/" class="logo">
+            <a href="<?php echo get_site_url(); ?>" class="logo">
                 <?php echo file_get_contents(get_stylesheet_directory() . '/dist/img/nav-logo.svg'); ?>
             </a>
         </div>

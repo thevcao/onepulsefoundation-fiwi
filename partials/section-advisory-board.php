@@ -22,7 +22,7 @@
 
                 <div data-stellar-ratio="1.5">
         <img class="img-parallax mb-1" src="<?php echo $image['sizes']['medium']; ?>" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
-        <?php echo '<label class="img-attrib">' . $image['caption'] . '</label>';?></div>
+        <?php echo '<label aria-hidden="true" class="img-attrib">' . $image['caption'] . '</label>';?></div>
   <?php endforeach; ?>
 
 

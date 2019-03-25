@@ -24,7 +24,7 @@
                         echo '<img id="featured-image" src="'. $banner['sizes']['large'] .'" alt="';
                         echo get_the_title() . ' - ' . get_bloginfo();
                         echo '">';
-                        echo '<label class="img-attrib">' .$banner['caption'] . '</label>';?>
+                        echo '<label aria-hidden="true" class="img-attrib">' .$banner['caption'] . '</label>';?>
 
 
                     </div>

@@ -1,0 +1,71 @@
+.page-id-14744 {
+  .donate-bar, .newsletter, .page-cta {
+    display: none;
+  }
+
+  footer .copy {
+    padding-bottom: 3rem;
+  }
+
+  .jury {
+    margin-bottom: 3rem;
+
+    // (768px)
+    @include media-breakpoint-up(lg) {
+      .col-25 {
+        max-width: calc(100% / 5);
+        flex: 1 1 calc(100% / 5);
+        margin-bottom: 2rem;
+      }
+    }
+
+    .inner-card {
+      padding: 1rem 1rem .5rem;
+      //      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      //      border-radius: 4px;
+      height: 100%;
+
+      //      display: flex;
+      //      flex-wrap: wrap;
+      .headshot {
+        border-radius: 100%;
+        height: 7rem;
+        width: 7rem;
+        margin: 0 auto 1rem;
+        border: .25rem solid #eee;
+        object-fit: cover;
+        object-position: 50% 5%;
+        display: block;
+        filter: grayscale(1);
+        transition: 0.5s ease;
+        animation: buttonHover 10s alternate linear infinite;
+        transform: translate3d(0,0,0);
+
+        &:hover {
+          filter: none;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        //        flex: 1 1 100%;
+      }
+
+      h5 {
+        text-align: center;
+        margin-bottom: .25rem;
+        //        font-size: 1rem;
+        //        flex: 1 1 100%;
+      }
+
+      p {
+        text-align: center;
+        font-size: .8rem;
+        line-height: 1.25;
+        margin: 0;
+        //        flex: 1 1 100%;
+      }
+    }
+  }
+}
+#gform_confirmation_message_4 {
+    padding: 5rem 0 25vh;
+}

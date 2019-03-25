@@ -1,30 +1,29 @@
 footer {
   padding: rem(32) 0 0;
 
-
   svg {
     width: 80px;
     height: 91.5px;
   }
+
   ul {
     list-style: none;
     padding: 0;
     margin: 30px 0;
+
     li {
       display: inline-block;
       line-height: 1;
       padding: rem(10) 0;
 
       &:not(:last-child) {
-
-
         a:after {
-
           content: '•';
           margin: 0 .25rem;
           color: black;
         }
       }
+
       a {
         font-weight: bold;
         font-size: rem(14);
@@ -33,43 +32,50 @@ footer {
         transition: color .3s ease;
         color: black;
         text-align: left;
+
         @media(max-width: 1300px) {
-//          font-size: rem(12);
-//          padding: rem(10) rem(10);
+          //          font-size: rem(12);
+          //          padding: rem(10) rem(10);
         }
+
         &:before {
-//          opacity: 0;
-//          transition: opacity .3s ease;
-//          content: attr(title);
-//          color: #000;
-//          background: linear-gradient(90deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 17%, rgba(233, 19, 136, 1) 34%, rgba(235, 45, 46, 1) 51%, rgba(253, 233, 43, 1) 68%, rgba(0, 158, 84, 1) 85%, rgba(0, 168, 222, 1) 100%);
-//          animation: animation 10s alternate linear infinite;
-//          -webkit-background-clip: text;
-//          -webkit-text-fill-color: transparent;
-//          background-attachment: fixed;
-//          background-position: 50%;
-//          position: absolute;
-//          z-index: 1000;
-//          transition: .3s ease;
-//          line-height: 1.1;
+          //          opacity: 0;
+          //          transition: opacity .3s ease;
+          //          content: attr(title);
+          //          color: #000;
+          //          background: linear-gradient(90deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 17%, rgba(233, 19, 136, 1) 34%, rgba(235, 45, 46, 1) 51%, rgba(253, 233, 43, 1) 68%, rgba(0, 158, 84, 1) 85%, rgba(0, 168, 222, 1) 100%);
+          //          animation: animation 10s alternate linear infinite;
+          //          -webkit-background-clip: text;
+          //          -webkit-text-fill-color: transparent;
+          //          background-attachment: fixed;
+          //          background-position: 50%;
+          //          position: absolute;
+          //          z-index: 1000;
+          //          transition: .3s ease;
+          //          line-height: 1.1;
           //    left: 0;
           //    top: 0;
         }
+
         &:hover:before {
           opacity: 1;
         }
+
         &:hover {
           color: rgba(0, 0, 0, 0);
         }
       }
+
       .single-language {
         padding: 6px 7px;
       }
     }
   }
+
   .copy {
     background: #000;
     padding: rem(10) 0 5rem 0;
+
     p {
       color: #fff;
       margin: 0;
@@ -79,11 +85,11 @@ footer {
 
       // (768px)
       @include media-breakpoint-down(md) {
-      font-size: 10px;
+        font-size: 10px;
       }
-
     }
   }
+
   .fiwi {
     width: 350px;
     height: auto;
@@ -92,20 +98,19 @@ footer {
     display: block;
     padding: 3px 8px;
 
-
-          @include media-breakpoint-down(md) {
-    width: 100%;
-      }
-
-
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
   }
 }
+
 .socials {
   padding: rem(10);
   margin: 0 0 1rem auto;
   display: block;
   text-align: right;
   float: right;
+
   li {
     display: inline-block;
     margin: 0;
@@ -113,9 +118,8 @@ footer {
     line-height: 1;
     float: left;
     margin-left: rem(5);
-//    margin-left: 5px;
 
-
+    //    margin-left: 5px;
     a {
       padding: .5rem 0;
       background: white;
@@ -125,7 +129,6 @@ footer {
       line-height: 1;
       height: 1.85rem;
       font-size: 1rem;
-      transition: .3s ease;
       display: flex;
       align-items: center;
       align-content: center;
@@ -141,27 +144,26 @@ footer {
         width: 100%;
         z-index: 0;
         opacity: 0;
-        @include onpuGradient;
-        animation: donateanimate 10s alternate linear infinite;
-        background-size: 300vw;
-        transition: inherit;
+        @include gradientBG;
+        transition: none;
         position: absolute;
         border-radius: 100%;
         margin: 0 !important;
       }
+
       &:hover {
         background: black;
         color: black;
 
         &:after {
-
           opacity: 1;
         }
-        i {
 
-//          color: white;
+        i {
+          //          color: white;
         }
       }
+
       i {
         display: block;
         text-align: center;
@@ -173,14 +175,19 @@ footer {
     }
   }
 }
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {}
+
 @media(max-width:1300px) {
   .socials li a i {
     //		line-height: 1.5;
   }
 }
+
 .donate-bar {
   position: fixed;
   bottom: 0;
@@ -189,14 +196,16 @@ footer {
   width: auto;
   padding: rem(17) rem(14) rem(14);
   z-index: 10000;
-  animation: donateanimate 3s alternate linear infinite;
-  @include onpuGradient;
-  animation: donateanimate 10s alternate linear infinite;
+  @include gradientBG;
+
   //		transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   //	transition: transform 300ms ease;
-  background-size: 300vw;
-  border-bottom: 20px solid black;
-  transform: translateY(20px);
+  // (640px)
+  @include media-breakpoint-down(sm) {
+    border-bottom: 20px solid black;
+    transform: translateY(20px);
+  }
+
   a {
     color: white !important;
     animation: newslettertext 10s alternate linear infinite !important;
@@ -204,34 +213,40 @@ footer {
     display: block;
     font-size: 1.5rem;
     font-weight: bold;
+    line-height: 1;
+
     &:hover {
       opacity: 1 !important;
+
       &:before {
         opacity: 0 !important;
       }
     }
   }
 }
+
 .donate-up .donate-bar {
   transform: translateY(0);
   //		transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
   transition: transform 300ms ease;
 }
+
 @include media-breakpoint-down(sm) {
-
-
   footer {
     padding: rem(10) 0 0;
     padding-bottom: calc(2rem + 20px);
     background: black;
+
     .copy {
       padding: 5px 0;
+
       p {
         line-height: 1.45;
         font-size: 1rem;
         color: white;
         text-align: right;
         padding-right: 8px;
+
         //				display: none;
         a {
           color: white;
@@ -239,9 +254,11 @@ footer {
       }
     }
   }
+
   .donate-up footer {
     padding-bottom: calc(10vw + 40px);
   }
+
   .donate-bar {
     position: fixed;
     bottom: 0;
@@ -250,36 +267,42 @@ footer {
     width: auto;
     padding: rem(14) rem(15) rem(11);
     z-index: 10000;
-//    background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
-//    animation: donateanimate 3s alternate linear infinite;
+    //    background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
+    //    animation: donateanimate 3s alternate linear infinite;
     //		transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
     transition: transform 300ms ease;
     background-size: 300vw;
     border-bottom: 20px solid black;
     transform: translateY(20px);
+
     a {
       color: white;
       text-align: right;
       display: block;
-//      font-size: 1rem;
+      //      font-size: 1rem;
       font-weight: bold;
       animation: none !important;
     }
+
     a.kit-btn {
       text-align: left;
     }
   }
+
   .donate-up .donate-bar {
     transform: translateY(0);
     //		transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
     transition: transform 300ms ease;
   }
+
   footer .fiwi {
     margin-top: rem(10);
   }
+
   footer .socials {
-//    display: none;
+    //    display: none;
   }
+
   .btn.shirt-btn.mt0.mb8 {
     margin: 1rem auto;
   }
@@ -287,140 +310,145 @@ footer {
 
 // (768px)
 @include media-breakpoint-down(xs) {
-//  html:not(.ipad) {
-    footer {
-      padding: rem(10) 0 0;
-      padding-bottom: calc(8vw + 40px);
-      background: black;
-      .copy {
-        padding: 5px 0;
-        p {
-          line-height: 1.45;
-          font-size: 2.5vw;
+
+  //  html:not(.ipad) {
+  footer {
+    padding: rem(10) 0 0;
+    padding-bottom: calc(8vw + 40px);
+    background: black;
+
+    .copy {
+      padding: 5px 0;
+
+      p {
+        line-height: 1.45;
+        font-size: 2.5vw;
+        color: white;
+        text-align: right;
+        padding-right: 8px;
+
+        //				display: none;
+        a {
           color: white;
-          text-align: right;
-          padding-right: 8px;
-          //				display: none;
-          a {
-            color: white;
-          }
         }
       }
     }
+  }
+
+  .donate-up footer {
+    padding-bottom: calc(8vw + 40px);
+  }
+
+  .donate-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    padding: .9rem .9375rem .9rem;
+    z-index: 10000;
+    //      background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
+    //      animation: donateanimate 3s alternate linear infinite;
+    //		transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: transform 300ms ease;
+    background-size: 300vw;
+    border-bottom: 20px solid black;
+    transform: translateY(20px);
+
+    a {
+      color: white !important;
+      text-align: right;
+      display: block;
+      font-size: 4vw;
+      font-weight: bold;
+    }
+
+    a.kit-btn {
+      text-align: left;
+    }
+  }
+
+  .donate-up .donate-bar {
+    transform: translateY(0);
+    //		transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+    transition: transform 300ms ease;
+  }
+
+  footer .fiwi {
+    margin-top: rem(10);
+  }
+
+  footer .socials {
+    //      display: none;
+  }
+
+  .btn.shirt-btn.mt0.mb8 {
+    margin: 1rem auto;
+  }
+
+  &.iphone.retina_3x {
     .donate-up footer {
-      padding-bottom: calc(8vw + 40px);
+      padding-bottom: 30px !important;
     }
+
     .donate-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: auto;
-      padding: .9rem .9375rem .9rem;
-      z-index: 10000;
-//      background: linear-gradient(135deg, rgba(0, 168, 222, 1) 0%, rgba(51, 51, 145, 1) 50%, rgba(233, 19, 136, 1) 100%);
-//      animation: donateanimate 3s alternate linear infinite;
-      //		transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
-      transition: transform 300ms ease;
-      background-size: 300vw;
-      border-bottom: 20px solid black;
-      transform: translateY(20px);
-      a {
-        color: white !important;
-        text-align: right;
-        display: block;
-        font-size: 4vw;
-        font-weight: bold;
-      }
-      a.kit-btn {
-        text-align: left;
-      }
+      //            border-bottom: 60px solid black;
+      //            transform: translateY(60px);
     }
+
     .donate-up .donate-bar {
-      transform: translateY(0);
+      transform: translateY(100%);
       //		transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
-      transition: transform 300ms ease;
+      //            transition: transform 300ms ease;
     }
-    footer .fiwi {
-      margin-top: rem(10);
-    }
-    footer .socials {
-//      display: none;
-    }
-    .btn.shirt-btn.mt0.mb8 {
-      margin: 1rem auto;
-    }
-    &.iphone.retina_3x {
-      .donate-up footer {
-        padding-bottom: 30px !important;
-      }
-      .donate-bar {
-        //            border-bottom: 60px solid black;
-        //            transform: translateY(60px);
-      }
-      .donate-up .donate-bar {
-        transform: translateY(100%);
-        //		transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
-        //            transition: transform 300ms ease;
-      }
-    }
-//  }
+  }
+
+  //  }
 }
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   .donate-bar a {
-//    font-size: 1rem;
+    //    font-size: 1rem;
   }
 }
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {}
+
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
   html:not(.ipad) {
     footer {
       margin: 0;
       padding: rem(10) 0 0;
       background: black;
+
       .copy p {
         line-height: 1.45;
         font-size: 2vw;
       }
     }
+
     .donate-up footer,
     footer {
       //            padding-bottom: 0 !important;
     }
+
     .donate-bar {
       position: relative;
       border-bottom: 0;
       margin: 0;
       transform: none;
     }
+
     .donate-bar.visible-xs {
       display: none !important;
     }
+
     .donate-up .donate-bar {
       transform: translateY(0);
       //		transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
       transition: transform 300ms ease;
     }
-  }
-}
-@keyframes donateanimate {
-  0% {
-    //		background-size: 100%;
-    background-position: 0% 50%;
-  }
-  100% {
-    //		background-size: 800%;
-    background-position: 100% 50%;
-  }
-}
-@keyframes linkanimate {
-  0% {
-    //		background-size: 100%;
-    background-position: 0% 0%;
-  }
-  100% {
-    //		background-size: 800%;
-    background-position: 100% 100%;
   }
 }

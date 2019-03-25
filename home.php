@@ -48,7 +48,7 @@
 </h2>
                             <a href="#" class="home-play hidden-xs">
                                 <div class="row align-items-center">
-                                    <div class="col-sm-2 mm"><i class="flaticon-play-button"></i>
+                                    <div class="col-sm-auto mm"><i class="flaticon-play-button"></i>
                                     </div>
                                     <div class="col-sm-8 mm p0"><span title="Together We Can">Together We Can<span title="Witness Our Story Where Love Wins">Witness Our Story Where Love Wins</span></span>
                                     </div>
@@ -81,19 +81,19 @@
                                 <?php if($counterAbout == 0) {?>
                                     <div data-stellar-ratio="2">
                                         <img class="img-parallax tall" src="<?php echo $image['sizes']['large']; ?>">
-                                        <?php if (!$image['caption'] == null): echo '<label class="img-attrib">' . $image['caption'] . '</label>'; endif; ?>
+                                        <?php if (!$image['caption'] == null): echo '<label aria-hidden="true" class="img-attrib">' . $image['caption'] . '</label>'; endif; ?>
                                     </div>
                                     <?php } elseif($counterAbout == 1) {?>
 
                                         <div class="float-container">
                                             <div data-stellar-ratio="1.5" data-stellar-offset-parent="true" data-stellar-vertical-offset="600">
                                                 <img class="img-parallax float-over" src="<?php echo $image['sizes']['medium']; ?>" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
-                                                <?php if (!$image['caption'] == null): echo '<label class="img-attrib">' . $image['caption'] . '</label>'; endif; ?>
+                                                <?php if (!$image['caption'] == null): echo '<label aria-hidden="true" class="img-attrib">' . $image['caption'] . '</label>'; endif; ?>
                                             </div>
                                             <?php } elseif($counterAbout == 2) {?>
                                                 <div data-stellar-ratio="1.5" data-stellar-offset-parent="true" data-stellar-vertical-offset="600">
                                                     <img class="img-parallax float-over" src="<?php echo $image['sizes']['medium']; ?>" alt="<?php if (!$image['alt'] == null): echo $image['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
-                                                    <?php if (!$image['caption'] == null): echo '<label class="img-attrib">' . $image['caption'] . '</label>'; endif; ?>
+                                                    <?php if (!$image['caption'] == null): echo '<label aria-hidden="true" class="img-attrib">' . $image['caption'] . '</label>'; endif; ?>
                                                 </div>
                                         </div>
                                         <?php }?>

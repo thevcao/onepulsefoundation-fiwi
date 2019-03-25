@@ -57,8 +57,8 @@
              <div class="col-md-4">
                  <div class="mt64 text-right">
                      <h3>Download Survey Results</h3>
-                     <a href="/wp-content/uploads/2018/03/Memorial-Survey-Results-Powerpoint-FINAL-.pdf" class="btn right" target="_blank" download>Download Survey Results</a>
-                     <a href="/wp-content/uploads/2018/03/Survey-Comments-FINAL.pdf" class="btn right" target="_blank" download>Download Survey Written Responses</a>
+                     <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2018/03/Memorial-Survey-Results-Powerpoint-FINAL-.pdf" class="btn right" target="_blank" download>Download Survey Results</a>
+                     <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2018/03/Survey-Comments-FINAL.pdf" class="btn right" target="_blank" download>Download Survey Written Responses</a>
                  </div>
 
 

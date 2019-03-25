@@ -17,7 +17,7 @@ $newsimage = get_field('news_image', 'options');?>
                 <p>Sign up to receive exclusive updates about the onePULSE Foundation.</p>
             </div>
             <div class="col-lg-5 col-md-6 col-11 mx-md-down">
-                    <?php echo do_shortcode('[contact-form-7 id="5374" title="Newsletter"]');?>
+                <?php echo do_shortcode('[contact-form-7 id="5374" title="Newsletter"]');?>
             </div>
         </div>
 
@@ -37,7 +37,7 @@ $newsimage = get_field('news_image', 'options');?>
                         $newsimage = $images[$random_result];?>
 
                 <img src="<?php echo $newsimage['sizes']['large']; ?>" alt="<?php if (!$newsimage['alt'] == null): echo $newsimage['alt']; else: echo get_the_title() . ' - ' . get_bloginfo(); endif; ?>">
-                <?php if (!$newsimage['caption'] == null): echo '<label class="img-attrib">' . $newsimage['caption'] . '</label>'; endif; ?>
+                <?php if (!$newsimage['caption'] == null): echo '<label aria-hidden="true" class="img-attrib">' . $newsimage['caption'] . '</label>'; endif; ?>
                 <div class="over">
                     <h3>News and Updates</h3>
                 </div>
@@ -55,7 +55,7 @@ $newsimage = get_field('news_image', 'options');?>
 
                     <p class="text-right">Find out the latest from the onePULSE Foundation, including important milestones and announcements, as we work to create a sanctuary of hope.</p>
 
-                    <a href="/news-and-updates" class="btn right">See All </a>
+                    <a href="<?php echo get_site_url(); ?>/news-and-updates" class="btn right">See All </a>
 
 
                 </div>
@@ -95,7 +95,7 @@ $newsimage = get_field('news_image', 'options');?>
         <div class="col-xl-10 col-lg-11 col-md-12 col-sm-10 col-11 mx-auto">
           <div class="row">
             <div class="col-lg-2 hidden-sm">
-                <a href="/">
+                <a href="<?php echo get_site_url(); ?>/">
                     <?php echo file_get_contents(get_stylesheet_directory() . '/dist/img/nav-logo.svg'); ?>
                 </a>
             </div>
@@ -137,18 +137,18 @@ $newsimage = get_field('news_image', 'options');?>
 <div class="donate-bar">
     <div class="row">
         <!--<div class="col-sm-12 col-xs-6">
-            <a href="/donate" class="hidden-xs">Donate to the onePULSE Foundation <i class="fa fa-chevron-right"></i></a>
+            <a href="<?php echo get_site_url(); ?>/donate" class="hidden-xs">Donate to the onePULSE Foundation <i class="fa fa-chevron-right"></i></a>
         </div>-->
         <div class="col-xl-10 col-lg-11 col-md-10 col-sm-10 col-11 mx-auto">
-            <a href="/onepulse-foundation-memorial/memorial-information/" class="hidden-xs">Visit the Pulse Interim Memorial <i class="fa fa-chevron-right"></i></a>
+            <a href="<?php echo get_site_url(); ?>/onepulse-foundation-memorial/memorial-information/" class="hidden-xs no-trans">Visit the Pulse Interim Memorial <i class="fa fa-chevron-right"></i></a>
         </div>
         <!--<div class="col-sm-12 col-xs-6 visible-xs">
-            <a href="/donate" class="visible-xs">Donate <i class="fa fa-chevron-right"></i></a>
+            <a href="<?php echo get_site_url(); ?>/donate" class="visible-xs">Donate <i class="fa fa-chevron-right"></i></a>
         </div>-->
 
 
         <div class="col-sm-12 col-xs-6 visible-xs">
-            <a href="/onepulse-foundation-memorial/memorial-information/" class="visible-xs">Visit the Pulse Interim Memorial <i class="fa fa-chevron-right"></i></a>
+            <a href="<?php echo get_site_url(); ?>/onepulse-foundation-memorial/memorial-information/" class="visible-xs no-trans">Visit the Pulse Interim Memorial <i class="fa fa-chevron-right"></i></a>
         </div>
     </div>
 </div>
