@@ -155,35 +155,5 @@ $newsimage = get_field('news_image', 'options');?>
 
 <?php wp_footer(); ?>
 <script src="<?php echo get_template_directory_uri(); ?>/dist/js/vendor/videojs.ga.min.js"></script>
-
-<style>
-    .debug-info {
-
-/*        position: fixed;*/
-/*        background: black;*/
-/*        color: white;*/
-/*        padding: .5rem 1rem;*/
-/*        left: 0;*/
-/*        top: 0;*/
-/*        width: 100%;*/
-/*            z-index: 10000;*/
-
-
-    }
-
-</style>
-<script>
-//(function ($) {
-//
-//    'use strict';
-//
-//
-//    var version = $('html').attr('class');
-//
-//    $('body').prepend('<p class="debug-info">' + version + '</p>');
-//
-//})(jQuery);
-
-</script>
 </body>
 </html>

@@ -8,18 +8,12 @@
 ?>
 <!doctype html>
 
-<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" <?php language_attributes(); ?> id="returnTop"><!--<![endif]-->
-<!-- the "no-js" class is for Modernizr. -->
+<html class="no-js" <?php language_attributes(); ?> id="returnTop">
 
 <head>
 
   <meta charset="<?php bloginfo( 'charset' ); ?>">
 
-  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="description" content="<?php bloginfo('description') ?>" />
 
@@ -208,10 +202,4 @@ endif; wp_reset_postdata();?>
 
 
         </div>
-
-
-<!--[if lt IE 8]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-
 
