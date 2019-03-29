@@ -411,7 +411,7 @@
             $('.full-menu').removeClass("transition");
           }
         );
-        $("a").not('a[href^="#"], a[href^="mailto"], a[href^="tel:"], .tab-links a, a[download], a[href="#"], .nturl, .modal-toggle, .modal-toggle a, .pop-link, ul.tabs li a, .woocommerce-product-gallery__image a, a[target="_blank"], a[target="blank"], .survey-toggle, .stickylist-fileupload a, #menu-full-mobile li.menu-item-has-children a, div[id^="sticky-list-wrapper"] ul.pagination li a, .pop').click(function (e) {
+        $("a").not('a[href^="#"], a[href^="mailto"], a[href^="tel:"], .tab-links a, a[download], a[href="#"], .nturl, .modal-toggle, .modal-toggle a, .pop-link, ul.tabs li a, .woocommerce-product-gallery__image a, a[target="_blank"], a[target="blank"], .survey-toggle, .stickylist-fileupload a, #menu-full-mobile li.menu-item-has-children a, div[id^="sticky-list-wrapper"] ul.pagination li a, .pop, .question').click(function (e) {
 
           if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             var link = $(this).attr('href');
@@ -846,10 +846,20 @@
         // JavaScript to be fired on the home page, after the init JS
       }
     },
-    'page_id_14744': {
+    'page_template_default': {
       init: function () {
 
+
+      },
+      finalize: function () {
+        // JavaScript to be fired on the home page, after the init JS
+
+
+        console.log('hello?');
+
         $('.question').click(function () {
+
+          console.log('q click');
           var el = document.querySelector('html');
           var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
           var fontSize = parseFloat(style);
@@ -869,9 +879,7 @@
           return false;
         });
 
-      },
-      finalize: function () {
-        // JavaScript to be fired on the home page, after the init JS
+
       }
     },
     'page_template_rfp': {
