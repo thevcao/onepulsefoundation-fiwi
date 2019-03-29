@@ -1306,12 +1306,17 @@ ob_start();
 
     <div aria-label="faq-nav" class="rfq-faq">
 
-        <?php if( have_rows('rfq_faq') ):?>
+        <?php if( have_rows('categories') ):?>
 
         <h4>Q + A</h4>
 
-        <?php while ( have_rows('rfq_faq') ) : the_row();?>
+        <?php while ( have_rows('categories') ) : the_row();?>
 
+        <h5 class="mt-3 mb-2"><?php echo get_sub_field('category');?></h5>
+
+        <?php if( have_rows('item') ):?>
+
+        <?php while ( have_rows('item') ) : the_row();?>
 
 
         <div class="row faq-item" tabindex="<?php echo $i++;?>">
@@ -1321,14 +1326,16 @@ ob_start();
 
 
                     <div class="">
-                        <a href="#" class="question"><?php echo get_sub_field('rfq_faq_q');?></a>
+                        <a href="#" class="question"><?php echo get_sub_field('question');?></a>
 
-                        <div class="answer" id="">
-                        <?php echo get_sub_field('rfq_faq_a');?>
+                        <div class="answer mt-1" id="">
+                        <?php echo get_sub_field('answer');?>
                         </div>
                     </div>
             </div>
         </div>
+
+    <?php endwhile; endif;?>
 
 
     <?php endwhile; endif;?>

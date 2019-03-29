@@ -874,7 +874,7 @@
           var headerHeight = $('header').outerHeight();
           //          }
 
-          $(item).parents('.faq-item').find('.answer').slideToggle(500);
+          $(item).parents('.faq-item').find('.answer').slideToggle(300);
 
           return false;
         });
