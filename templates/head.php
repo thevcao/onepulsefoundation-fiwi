@@ -23,7 +23,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-touch-fullscreen" content="yes" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
+  <meta name="google-site-verification" content="5b__nQM6nEwXVbkZcv6HySqIKoI8RcqYEwqSDkUHIjY" />
 
 <?php if(is_page('home')): echo '<link rel="prefetch" href="' . get_field('main_video','options') .'">'; endif;?>
 
