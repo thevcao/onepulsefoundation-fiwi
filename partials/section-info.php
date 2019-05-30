@@ -33,7 +33,7 @@
                                             <p class="mt0 mb32 pb-sm-0"><a class="" href="mailto:info@onePULSEFoundation.org"><b><i class="fa fa-envelope"></i></b> info@onePULSEfoundation.org</a></p>
 
                                         <h5 class="mt8 mb8">Hours of Operations</h5>
-                                            <p class="mt0 mb8"><b><i class="fa fa-clock-o"></i></b> Daily from 7:30 AM to 9:00 PM</p>
+                                            <p class="mt0 mb8"><b><i class="fa fa-clock-o"></i></b> <?php the_field('hours', 'options');?></p>
                                             <p class="mt0 mb32 pb-sm-0"><b><i class="fa fa-calendar"></i></b> Extended Hours during the Remembrance Week and the holidays</p>
 
                                         </div>
