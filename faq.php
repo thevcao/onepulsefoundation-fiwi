@@ -44,33 +44,33 @@
                         $i = 1; while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 
-                    <div class="row faq-item" tabindex="<?php echo $i++;?>">
+                                      <div class="row faq-item" tabindex="<?php echo $i++;?>">
 
-                            <?php
+                                              <?php
 
-                        $images = get_field('default_gallery', 'options');
-                        $random_result = array_rand($images ,1);
-                        $banner = $images[$random_result];
-                        echo '<div class="bg-element"><img class="bg-img" src="'. $banner['sizes']['large'] .'" alt="';
-                        echo get_the_title() . ' - ' . get_bloginfo();
-                        echo '">';
-                        echo '<label aria-hidden="true" class="img-attrib">' .$banner['caption'] . '</label></div>';?>
+                                          $images = get_field('default_gallery', 'options');
+                                          $random_result = array_rand($images ,1);
+                                          $banner = $images[$random_result];
+                                          echo '<div class="bg-element"><img class="bg-img" src="'. $banner['sizes']['large'] .'" alt="';
+                                          echo get_the_title() . ' - ' . get_bloginfo();
+                                          echo '">';
+                                          echo '<label aria-hidden="true" class="img-attrib">' .$banner['caption'] . '</label></div>';?>
 
-                        <div class="container">
-                            <div class="col-lg-12 col-md-12 col-11 mx-auto">
+                                          <div class="container">
+                                              <div class="col-lg-12 col-md-12 col-11 mx-auto">
 
 
 
-                                <div class="">
-                                    <a href="#" class="question"><?php echo get_the_title();?></a>
+                                                  <div class="">
+                                                      <a href="#" class="question"><?php echo get_the_title();?></a>
 
-                                    <div class="answer" id="">
-                                    <?php the_content();?>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-                </div>
+                                                      <div class="answer" id="">
+                                                      <?php the_content();?>
+                                                      </div>
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </div>
 
 
                                 <?php endwhile; wp_reset_postdata();?>

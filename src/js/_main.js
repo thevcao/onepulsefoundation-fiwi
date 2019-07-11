@@ -855,11 +855,7 @@
         // JavaScript to be fired on the home page, after the init JS
 
 
-        console.log('hello?');
-
         $('.question').click(function () {
-
-          console.log('q click');
           var el = document.querySelector('html');
           var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
           var fontSize = parseFloat(style);
@@ -874,7 +870,17 @@
           var headerHeight = $('header').outerHeight();
           //          }
 
-          $(item).parents('.faq-item').find('.answer').slideToggle(300);
+          $('.faq-item').not($(item).parents('.faq-item')).removeClass('active');
+          $('.faq-item .answer').children('p, ul').not($(item).next('.answer').children('p, ul')).slideUp(500);
+          $(item).next('.answer').children('p, ul').slideToggle(500);
+          $(item).parents('.faq-item').toggleClass('active');
+          setTimeout(function () {
+
+            $('html, body').delay().animate({
+              scrollTop: $(item).offset().top - headerHeight - convertedREM
+            }, 1000);
+
+          }, 500);
 
           return false;
         });

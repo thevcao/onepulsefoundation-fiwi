@@ -1,13 +1,10 @@
 <?php ;?>
 
-                <section id="donors">
+          <section id="donors" aria-label="faq-nav" class="faq-nav">
 
 
             <?php if( have_rows('donors', 'options') ):?>
             <?php $i = 0; while ( have_rows('donors', 'options') ) : the_row();?>
-
-
-
 
 
                     <div class="row faq-item" tabindex="<?php echo $i++;?>">
@@ -40,6 +37,6 @@
             <?php endwhile; ?>
             <?php endif; ?>
 
-                </section>
+          </section>
 
 
